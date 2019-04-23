@@ -1,0 +1,8 @@
+---------------------------------------------------
+Report for cell game_state
+   Instance path: game_state
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      35.00        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         28        100.0

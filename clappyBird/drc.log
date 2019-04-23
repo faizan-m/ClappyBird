@@ -1,0 +1,4 @@
+DRC: Design Rule Check Radiant (64-bit) 1.0.1.350.6
+Tue Apr 23 15:13:43 2019
+
+WARNING - The clock port [clap] is assigned to a non clock dedicated pin [42], which might affect the clock performance. Use dedicated clock resources for the port.

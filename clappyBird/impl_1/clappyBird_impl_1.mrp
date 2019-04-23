@@ -1,0 +1,207 @@
+      Lattice Mapping Report File for Design Module 'clappyBird_impl_1'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant (64-bit) 1.0.1.350.6
+Mapped on: Tue Apr 23 16:00:34 2019
+
+Design Information
+------------------
+
+Command line:   map clappyBird_impl_1_syn.udb
+     C:/Users/faiza/my_designs/clappyBird/pins.pdc -o clappyBird_impl_1.udb -gui
+
+Design Summary
+--------------
+
+   Number of slice registers:  28 out of  5280 (1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            35 out of  5280 (1%)
+      Number of logic LUT4s:               3
+      Number of ripple logic:             16 (32 LUT4s)
+   Number of IO sites used:   10 out of 39 (26%)
+      Number of IO sites used for general PIOs: 10
+      Number of IO sites used for I3Cs: 0 out of 2 (0%)
+      Number of IO sites used for PIOs+I3Cs: 10 out of 36 (28%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  2
+      Net forty_eight_mhz_clock: 11 loads, 11 rising, 0 falling (Driver: Pin
+     osc/CLKHF)
+      Net forty_eight_mhz_counter[19]: 4 loads, 4 rising, 0 falling (Driver: Pin
+     forty_eight_mhz_counter_46_47__i19/Q)
+   Number of Clock Enables:  1
+      Net VCC_net: 1 loads, 0 SLICEs
+   Number of LSRs:  0
+   Top 10 highest fanout non-clock nets:
+      Net n174: 9 loads
+      Net VCC_net: 3 loads
+      Net bird_y_pos_c_1: 2 loads
+      Net bird_y_pos_c_7: 2 loads
+      Net bird_y_pos_c_8: 2 loads
+      Net clap_c: 2 loads
+      Net n276: 2 loads
+      Net n303: 2 loads
+      Net n643: 2 loads
+      Net n688: 2 loads
+
+
+
+                                    Page 1
+
+
+
+
+
+
+
+
+   Number of warnings:  3
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: No port matched 'check'.
+WARNING - map: Can't resolve object 'check' in constraint 'ldc_set_location
+     -site {36} [get_ports check]'.
+WARNING - map: Remove invalid constraint 'ldc_set_location -site {36} [get_ports
+     check]'.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+
+| IO Name             | Direction | Levelmode |
+|                     |           |  IO_TYPE  |
++---------------------+-----------+-----------+
+| clap                | INPUT     | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[0]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[1]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[2]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[3]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[4]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[5]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[6]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[8]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+| bird_y_pos[7]       | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
+
+OSC Summary
+-----------
+
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            osc
+  OSC Type:                                     HSOSC_CORE
+  Power UP:                            NODE     VCC_net
+  Enable Signal:                       NODE     VCC_net
+  OSC Output:                          NODE     forty_eight_mhz_clock
+  DIV Setting:                                  0b00
+
+ASIC Components
+---------------
+
+Instance Name: osc
+         Type: HFOSC
+
+                                    Page 2
+
+
+
+
+
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 59 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor
+     Corporation,  All rights reserved.

@@ -1,0 +1,13 @@
+----------------------------------------------------------------------
+Report for cell game_state.TECH
+Register bits:  28 of 5280 (0.530%)
+I/O cells:      10
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        16          100.0
+                            FD1P3XZ        28          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         1          100.0
+                               LUT4         1          100.0
+                                 OB         9          100.0
+                              TOTAL        56

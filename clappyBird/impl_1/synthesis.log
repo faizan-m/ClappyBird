@@ -1,0 +1,193 @@
+synthesis:  version Radiant (64-bit) 1.0.1.350.6
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Apr 23 16:00:31 2019
+
+
+Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/Users/faiza/my_designs/clappyBird/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family : iCE40UP
+
+
+### Device  : iCE40UP5K
+
+
+### Package : SG48
+
+
+### Speed   : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = game_state.
+Target frequency = 1.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = clappyBird_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-vh2008
+
+-path C:/Users/faiza/my_designs/clappyBird (searchpath added)
+-path C:/Users/faiza/my_designs/clappyBird/impl_1 (searchpath added)
+-path C:/lscc/radiant/1.0/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/1.0/ip/pmi/pmi.v
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/1.0/ip/pmi/pmi.vhd
+VHDL library = work
+VHDL design file = C:/Users/faiza/my_designs/clappyBird/GameState.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/1.0/ip/pmi/pmi.v. VERI-1482
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(1): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_add.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(2): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(3): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_dsp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(4): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_mac.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(5): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(6): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_mult.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(7): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dp.v(47): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(8): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(9): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v. VERI-1328
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
+INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4): analyzing package components. VHDL-1014
+Analyzing VHDL file c:/users/faiza/my_designs/clappybird/gamestate.vhd. VHDL-1481
+INFO - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(5): analyzing entity game_state. VHDL-1012
+INFO - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(12): analyzing architecture synth. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "C:/Users/faiza/my_designs/clappyBird/impl_1". VHDL-1504
+Top module language type = VHDL.
+unit game_state is not yet analyzed. VHDL-1485
+c:/users/faiza/my_designs/clappybird/gamestate.vhd(5): executing game_state(synth)
+
+INFO - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(33): going to verilog side to elaborate module HSOSC. VHDL-1399
+INFO - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(33): back to VHDL to continue elaboration. VHDL-1400
+WARNING - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(10): replacing existing netlist game_state(synth). VHDL-1205
+Top module name (VHDL, mixed language): game_state
+Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+
+
+
+WARNING - synthesis: c:/users/faiza/my_designs/clappybird/gamestate.vhd(51): Register bird_y_pos_i1 is stuck at Zero. VDB-5013
+Applying 1.000000 MHz constraint to all clocks
+
+
+Starting design annotation....
+
+
+
+Starting full timing analysis...
+
+################### Begin Area Report (game_state)######################
+Number of register bits => 28 of 5280 (0 % )
+CCU2 => 16
+FD1P3XZ => 28
+HSOSC_CORE => 1
+IB => 1
+LUT4 => 1
+OB => 9
+################### End Area Report ##################
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 1
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : forty_eight_mhz_clock, loads : 0
+  Net : forty_eight_mhz_counter[19], loads : 1
+Clock Enable Nets
+Number of Clock Enables: 0
+Top 0 highest fanout Clock Enables:
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n174, loads : 9
+  Net : clap_c, loads : 2
+  Net : bird_y_pos_c_8, loads : 2
+  Net : bird_y_pos_c_7, loads : 2
+  Net : bird_y_pos_c_6, loads : 2
+  Net : bird_y_pos_c_5, loads : 2
+  Net : bird_y_pos_c_4, loads : 2
+  Net : bird_y_pos_c_3, loads : 2
+  Net : bird_y_pos_c_2, loads : 2
+  Net : bird_y_pos_c_1, loads : 2
+################### End Clock Report ##################
+
+Peak Memory Usage: 132.035  MB
+
+--------------------------------------------------------------
+Total CPU time for LSE flow : 1.953  secs
+Total REAL time for LSE flow : 2.000  secs
+--------------------------------------------------------------
