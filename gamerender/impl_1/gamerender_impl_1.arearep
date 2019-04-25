@@ -1,0 +1,42 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  20 of 5280 (0.379%)
+I/O cells:      9
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        12          100.0
+                            FD1P3XZ        20          100.0
+                         HSOSC_CORE         1          100.0
+                               LUT4        18          100.0
+                                 OB         9          100.0
+                              PLL_B         1          100.0
+SUB MODULES
+                           lscc_pll         1
+                                pll         1
+                                vga         1
+                              TOTAL        64
+----------------------------------------------------------------------
+Report for cell vga.v1
+Instance Path : vga_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12          100.0
+                            FD1P3XZ        20          100.0
+                               LUT4        18          100.0
+                              TOTAL        50
+----------------------------------------------------------------------
+Report for cell pll.v1
+Instance Path : pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+                           lscc_pll         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell lscc_pll.v1
+Instance Path : pll_inst.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1

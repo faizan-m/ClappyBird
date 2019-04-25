@@ -1,0 +1,1741 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.0.350.6
+
+Wed Apr 24 20:12:56 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt gamerender_impl_1.twr gamerender_impl_1.udb -gui
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  DESIGN CHECKING
+        1.1  SDC Constraints
+        1.2  Combinational Loop
+    2  CLOCK SUMMARY
+        2.1  Clock pll_inst/lscc_pll_inst/clk
+        2.2  Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE
+        2.3  Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+    3  TIMING ANALYSIS SUMMARY
+        3.1  Overall (Setup and Hold)
+            3.1.1  Constraint Coverage
+            3.1.2  Timing Errors
+            3.1.3  Total Timing Score
+        3.2  Setup Summary Report
+            3.2.1  Setup Constraint Slack Summary
+            3.2.2  Setup Critical Endpoint Summary 
+        3.3  Hold Summary Report
+            3.3.1  Hold Constraint Slack Summary
+            3.3.2  Hold Critical Endpoint Summary 
+        3.4  Unconstrained Report
+            3.4.1  Unconstrained Start/End Points
+            3.4.2  Start/End Points Without Timing Constraints
+    4  DETAILED REPORT
+        4.1  Setup Detailed Report
+            4.1.1  Setup Path Details For Constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+            4.1.2  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.1.3  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+        4.2  Hold Detailed Report
+            4.2.1  Hold Path Details For Constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+            4.2.2  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.2.3  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  DESIGN CHECKING
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+1.2  Combinational Loop
+========================
+None
+
+==============================================
+2  CLOCK SUMMARY
+==============================================
+
+2.1 Clock "pll_inst/lscc_pll_inst/clk"
+=======================
+create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+    Clock pll_inst/lscc_pll_inst/clk    |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From pll_inst/lscc_pll_inst/clk        |             Target |          20.833 ns |         48.001 MHz 
+                                        | Actual (all paths) |          20.830 ns |         48.008 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------
+    Clock pll_inst/lscc_pll_inst/clk    |   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE                                                              
+                                        |                         ---- |                      No path 
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL                                                              
+                                        |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------
+
+2.2 Clock "pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE"
+=======================
+create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+
+Single Clock Domain
+-----------------------------------------------------------------------------------------------------------
+Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE|                    |       Period       |     Frequency      
+-----------------------------------------------------------------------------------------------------------
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE|             Target |          39.800 ns |         25.126 MHz 
+                                            | Actual (all paths) |               ---- |               ---- 
+-----------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+----------------------------------------------------------------------------------------------------------
+Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE|   Worst Time Between Edges   |           Comment            
+----------------------------------------------------------------------------------------------------------
+ From pll_inst/lscc_pll_inst/clk            |                         ---- |                      No path 
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL                                                              
+                                            |                         ---- |                      No path 
+----------------------------------------------------------------------------------------------------------
+
+2.3 Clock "pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL"
+=======================
+create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------------
+Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------------
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|             Target |          39.800 ns |         25.126 MHz 
+                                              | Actual (all paths) |          12.821 ns |         77.997 MHz 
+-------------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+------------------------------------------------------------------------------------------------------------
+Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|   Worst Time Between Edges   |           Comment            
+------------------------------------------------------------------------------------------------------------
+ From pll_inst/lscc_pll_inst/clk              |                         ---- |                      No path 
+ From pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE  |                         ---- |                      No path 
+------------------------------------------------------------------------------------------------------------
+
+==============================================
+3  TIMING ANALYSIS SUMMARY
+==============================================
+
+3.1  Overall (Setup and Hold)
+==============================
+
+3.1.1  Constraint Coverage
+---------------------------
+Constraint Coverage: 65.3061%
+
+3.1.2  Timing Errors
+---------------------
+Timing Errors: 0 endpoints (setup), 0 endpoints (hold)
+
+3.1.3  Total Timing Score
+--------------------------
+Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
+
+3.2  Setup Summary Report
+==========================
+
+3.2.1  Setup Constraint Slack Summary
+--------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |   Actual (flop to flop)   |                |                
+             SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |             |             |                |                
+create_clock -name {pll_inst/lscc_pll_i                                                                                                    
+nst/clk} -period 20.8333333333333 [get_                                                                                                    
+nets clk]                               |   20.833 ns |    0.003 ns |    0   |   20.830 ns |  48.008 MHz |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTCORE} -source                                                                                                     
+[get_pins {pll_inst/lscc_pll_inst/u_PLL                                                                                                    
+_B/REFERENCECLK}] -multiply_by 67 -divi                                                                                                    
+de_by 128 [get_pins {pll_inst/lscc_pll_                                                                                                    
+inst/u_PLL_B/OUTCORE }]                 |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
+e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
+LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
+vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
+l_inst/u_PLL_B/OUTGLOBAL }]             |   39.800 ns |   26.979 ns |    4   |   12.821 ns |  77.997 MHz |       38       |        0       
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+3.2.2  Setup Critical Endpoint Summary 
+----------------------------------------
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+{vga_inst/row_num_27__i5/SR   vga_inst/row_num_27__i6/SR}              
+                                         |   26.980 ns 
+{vga_inst/row_num_27__i3/SR   vga_inst/row_num_27__i4/SR}              
+                                         |   26.980 ns 
+{vga_inst/row_num_27__i1/SR   vga_inst/row_num_27__i2/SR}              
+                                         |   26.980 ns 
+vga_inst/row_num_27__i0/SR               |   26.980 ns 
+vga_inst/row_num_27__i9/SR               |   27.576 ns 
+{vga_inst/row_num_27__i7/SR   vga_inst/row_num_27__i8/SR}              
+                                         |   27.576 ns 
+{vga_inst/row_num_27__i5/SP   vga_inst/row_num_27__i6/SP}              
+                                         |   30.304 ns 
+{vga_inst/row_num_27__i3/SP   vga_inst/row_num_27__i4/SP}              
+                                         |   30.304 ns 
+{vga_inst/row_num_27__i1/SP   vga_inst/row_num_27__i2/SP}              
+                                         |   30.304 ns 
+vga_inst/row_num_27__i0/SP               |   30.304 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           0 
+                                         |             
+-------------------------------------------------------
+
+3.3  Hold Summary Report
+=========================
+
+3.3.1  Hold Constraint Slack Summary
+-------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |   Actual (flop to flop)   |                |                
+             SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
+-------------------------------------------------------------------------------------------------------------------------------------------
+                                        |             |             |        |             |             |                |                
+create_clock -name {pll_inst/lscc_pll_i                                                                                                    
+nst/clk} -period 20.8333333333333 [get_                                                                                                    
+nets clk]                               |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTCORE} -source                                                                                                     
+[get_pins {pll_inst/lscc_pll_inst/u_PLL                                                                                                    
+_B/REFERENCECLK}] -multiply_by 67 -divi                                                                                                    
+de_by 128 [get_pins {pll_inst/lscc_pll_                                                                                                    
+inst/u_PLL_B/OUTCORE }]                 |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
+e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
+LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
+vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
+l_inst/u_PLL_B/OUTGLOBAL }]             |    0.000 ns |    3.417 ns |    2   |        ---- |        ---- |       38       |        0       
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.2  Hold Critical Endpoint Summary 
+---------------------------------------
+
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+vga_inst/row_num_27__i6/D                |    3.417 ns 
+vga_inst/row_num_27__i9/D                |    3.417 ns 
+vga_inst/col_num_25__i9/D                |    3.417 ns 
+vga_inst/row_num_27__i1/D                |    3.417 ns 
+vga_inst/row_num_27__i7/D                |    3.417 ns 
+vga_inst/row_num_27__i8/D                |    3.417 ns 
+vga_inst/row_num_27__i2/D                |    3.417 ns 
+vga_inst/row_num_27__i3/D                |    3.417 ns 
+vga_inst/col_num_25__i8/D                |    3.417 ns 
+vga_inst/col_num_25__i7/D                |    3.417 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.4  Unconstrained Report
+===========================
+
+3.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+--------------------------------------------------
+There is no start point satisfying reporting criteria
+
+
+Clocked but unconstrained timing end points
+--------------------------------------------------
+There is no end point satisfying reporting criteria
+
+
+3.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 9 Start or End Points      |           Type           
+-------------------------------------------------------------------
+RGB[5]                                  |                    output
+RGB[4]                                  |                    output
+RGB[3]                                  |                    output
+RGB[2]                                  |                    output
+VSYNC                                   |                    output
+PLL_out                                 |                    output
+RGB[1]                                  |                    output
+RGB[0]                                  |                    output
+HSYNC                                   |                    output
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                         9
+                                        |                          
+-------------------------------------------------------------------
+
+Registers without clock definition
+Define the clock for these registers.
+--------------------------------------------------
+There is no instance satisfying reporting criteria
+
+
+==============================================
+4  DETAILED REPORT
+==============================================
+
+4.1  Setup Detailed Report
+===========================
+4.1.1  Setup path details for constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+Minimum Pulse Width Report
+--------------------------
+MPW Cell         : HFOSC
+MPW Pin          : CLKHF
+MPW Period       : 20.83 ns
+Clock Period     : 20.8333 ns
+Period margin    : 0.00333333 ns  (Passed)
+--------------------------
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.1.2  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.1.3  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+----------------------------------------------------------------------
+38 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i5/SR   vga_inst/row_num_27__i6/SR}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 77.5% (route), 22.5% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 26.979 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            12.291
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.918
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i3/SR   vga_inst/row_num_27__i4/SR}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 77.5% (route), 22.5% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 26.979 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            12.291
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.918
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i1/SR   vga_inst/row_num_27__i2/SR}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 77.5% (route), 22.5% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 26.979 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            12.291
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.918
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : vga_inst/row_num_27__i0/SR
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 77.5% (route), 22.5% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 26.979 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            12.291
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.918
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : vga_inst/row_num_27__i9/SR
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 76.3% (route), 23.7% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 27.575 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            11.695
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.322
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        3.775        22.322  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i7/SR   vga_inst/row_num_27__i8/SR}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 4
+Delay Ratio      : 76.3% (route), 23.7% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 27.575 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.530
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    49.897
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                            11.695
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               22.322
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        2.768        18.097  1       
+vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
+                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
+vga_inst/n387                                             NET DELAY        3.775        22.322  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i5/SP   vga_inst/row_num_27__i6/SP}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 3
+Delay Ratio      : 75.1% (route), 24.9% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 30.303 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.199
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    50.228
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             9.298
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               19.925
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i3/SP   vga_inst/row_num_27__i4/SP}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 3
+Delay Ratio      : 75.1% (route), 24.9% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 30.303 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.199
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    50.228
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             9.298
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               19.925
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : {vga_inst/row_num_27__i1/SP   vga_inst/row_num_27__i2/SP}
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 3
+Delay Ratio      : 75.1% (route), 24.9% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 30.303 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.199
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    50.228
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             9.298
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               19.925
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i6/Q
+Path End         : vga_inst/row_num_27__i0/SP
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 3
+Delay Ratio      : 75.1% (route), 24.9% (logic)
+Clock Skew       : 0.000 ns
+Setup Constraint : 39.800 ns 
+Path Slack       : 30.303 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
++ Master Clock Source Latency                                                       0.000
+- Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
+- Setup Time                                                                        0.199
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    50.228
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             9.298
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               19.925
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
+                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
+vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
+                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
+vga_inst/n185                                             NET DELAY        0.305        14.879  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
+vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2  Hold Detailed Report
+==========================
+4.2.1  Hold path details for constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2.2  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2.3  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+----------------------------------------------------------------------
+38 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i4/Q
+Path End         : vga_inst/col_num_25__i4/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i3/CK   vga_inst/col_num_25__i4/CK}->vga_inst/col_num_25__i4/Q
+                                          SLICE_R17C30C   CLK_TO_Q1_DELAY  1.391        12.018  3       
+vga_inst/col_num[4]                                       NET DELAY        1.576        13.594  1       
+vga_inst/col_num_25_add_4_5/C1->vga_inst/col_num_25_add_4_5/S1
+                                          SLICE_R17C30C   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_61[4]                                    NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i3/Q
+Path End         : vga_inst/col_num_25__i3/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i3/CK   vga_inst/col_num_25__i4/CK}->vga_inst/col_num_25__i3/Q
+                                          SLICE_R17C30C   CLK_TO_Q0_DELAY  1.391        12.018  1       
+vga_inst/n79[3]                                           NET DELAY        1.576        13.594  1       
+vga_inst/col_num_25_add_4_5/C0->vga_inst/col_num_25_add_4_5/S0
+                                          SLICE_R17C30C   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_61[3]                                    NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i2/Q
+Path End         : vga_inst/col_num_25__i2/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i1/CK   vga_inst/col_num_25__i2/CK}->vga_inst/col_num_25__i2/Q
+                                          SLICE_R17C30B   CLK_TO_Q1_DELAY  1.391        12.018  1       
+vga_inst/n79[2]                                           NET DELAY        1.576        13.594  1       
+vga_inst/col_num_25_add_4_3/C1->vga_inst/col_num_25_add_4_3/S1
+                                          SLICE_R17C30B   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_61[2]                                    NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 4  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i1/Q
+Path End         : vga_inst/col_num_25__i1/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/col_num_25__i1/CK   vga_inst/col_num_25__i2/CK}->vga_inst/col_num_25__i1/Q
+                                          SLICE_R17C30B   CLK_TO_Q0_DELAY  1.391        12.018  1       
+vga_inst/n79[1]                                           NET DELAY        1.576        13.594  1       
+vga_inst/col_num_25_add_4_3/C0->vga_inst/col_num_25_add_4_3/S0
+                                          SLICE_R17C30B   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_61[1]                                    NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 5  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/col_num_25__i0/Q
+Path End         : vga_inst/col_num_25__i0/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+vga_inst/col_num_25__i0/CK->vga_inst/col_num_25__i0/Q
+                                          SLICE_R17C30A   CLK_TO_Q1_DELAY  1.391        12.018  1       
+vga_inst/n79[0]                                           NET DELAY        1.576        13.594  1       
+vga_inst/col_num_25_add_4_1/C1->vga_inst/col_num_25_add_4_1/S1
+                                          SLICE_R17C30A   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_61[0]                                    NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 6  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/row_num_27__i9/Q
+Path End         : vga_inst/row_num_27__i9/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+vga_inst/row_num_27__i9/CK->vga_inst/row_num_27__i9/Q
+                                          SLICE_R15C30B   CLK_TO_Q0_DELAY  1.391        12.018  5       
+vga_inst/row_num[9]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_11/C0->vga_inst/row_num_27_add_4_11/S0
+                                          SLICE_R15C30B   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45[9]                                           NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/row_num_27__i8/Q
+Path End         : vga_inst/row_num_27__i8/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/row_num_27__i7/CK   vga_inst/row_num_27__i8/CK}->vga_inst/row_num_27__i8/Q
+                                          SLICE_R15C30A   CLK_TO_Q1_DELAY  1.391        12.018  3       
+vga_inst/row_num[8]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_9/C1->vga_inst/row_num_27_add_4_9/S1
+                                          SLICE_R15C30A   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45[8]                                           NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/row_num_27__i7/Q
+Path End         : vga_inst/row_num_27__i7/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/row_num_27__i7/CK   vga_inst/row_num_27__i8/CK}->vga_inst/row_num_27__i7/Q
+                                          SLICE_R15C30A   CLK_TO_Q0_DELAY  1.391        12.018  3       
+vga_inst/row_num[7]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_9/C0->vga_inst/row_num_27_add_4_9/S0
+                                          SLICE_R15C30A   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45[7]                                           NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/row_num_27__i6/Q
+Path End         : vga_inst/row_num_27__i6/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/row_num_27__i5/CK   vga_inst/row_num_27__i6/CK}->vga_inst/row_num_27__i6/Q
+                                          SLICE_R15C29D   CLK_TO_Q1_DELAY  1.391        12.018  3       
+vga_inst/row_num[6]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_7/C1->vga_inst/row_num_27_add_4_7/S1
+                                          SLICE_R15C29D   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45[6]                                           NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+
+ ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : vga_inst/row_num_27__i5/Q
+Path End         : vga_inst/row_num_27__i5/D
+Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
+Logic Level      : 2
+Delay Ratio      : 46.1% (route), 53.9% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 3.417 ns  (Passed)
+
+  Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)     0.000
++ Master Clock Source Latency                                                       0.000
++ Destination Clock Uncertainty                                                     0.000
++ Destination Clock Path Delay                                                     10.627
++ Hold Time                                                                        -0.000
+-------------------------------------------------------------------------------   -------
+End-of-path required time( ns )                                                    10.627
+
+  Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
++ Master Clock Source Latency                                                 0.000
++ Source Clock Path Delay                                                    10.627
++ Data Path Delay                                                             3.417
+--------------------------------------------------------------------------   ------
+End-of-path arrival time( ns )                                               14.044
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ---------------  -----  ------------  ------  
+{vga_inst/row_num_27__i5/CK   vga_inst/row_num_27__i6/CK}->vga_inst/row_num_27__i5/Q
+                                          SLICE_R15C29D   CLK_TO_Q0_DELAY  1.391        12.018  3       
+vga_inst/row_num[5]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_7/C0->vga_inst/row_num_27_add_4_7/S0
+                                          SLICE_R15C29D   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45[5]                                           NET DELAY        0.000        14.044  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  -----------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HFOSC_HFOSC_R1C32  CLOCK LATENCY  0.000         0.000  1       
+clk                                                          NET DELAY      4.967         4.967  1       
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL
+                                          PLL_PLL_R13C32                    0.000         4.967  12      
+pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK->pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL (TOTAL_ADJUSTMENTS)
+                                          PLL_PLL_R13C32                    0.150         5.117  12      
+clk2                                                         NET DELAY      5.510        10.627  1       
+
+
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

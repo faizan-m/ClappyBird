@@ -1,0 +1,1068 @@
+<top name = "top"  library = "work"  arch = "RTL"  entry = "VHDL">
+
+<clocks>
+    <clockitem name = "clk"  type = "net" />
+    <clockitem name = "PLL_out"  type = "net" />
+    <clockitem name = "clk2"  type = "net" />
+    <clockitem name = "pll_inst/lscc_pll_inst/outcoreb_o"  type = "net" />
+    <clockitem name = "pll_inst/lscc_pll_inst/outglobalb_o"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 5
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "generic">
+
+</library>
+
+<library name = "lsccsp">
+
+</library>
+
+<library name = "lsccspparam">
+
+</library>
+
+<library name = "work">
+
+<unit name = "top">
+
+    <!--
+        Top Level Pins: 9
+    -->
+
+    <pins>
+        <pitem  name = "RGB[5]"  direction = "out"  />
+        <pitem  name = "RGB[4]"  direction = "out"  />
+        <pitem  name = "RGB[3]"  direction = "out"  />
+        <pitem  name = "RGB[2]"  direction = "out"  />
+        <pitem  name = "RGB[1]"  direction = "out"  />
+        <pitem  name = "RGB[0]"  direction = "out"  />
+        <pitem  name = "HSYNC"  direction = "out"  />
+        <pitem  name = "VSYNC"  direction = "out"  />
+        <pitem  name = "PLL_out"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 29
+    -->
+
+    <instance  name = "hsosc_inst"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "CLKHFPU"  direction = "in"  />
+        <pitem  name = "CLKHFEN"  direction = "in"  />
+        <pitem  name = "CLKHF"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pwr"  />
+        <nitem  name = "clk"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_9__I_0_31"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/col_9__N_31"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/add_7"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/col_9__N_21[9]"  />
+        <nitem  name = "vga_inst/col_9__N_21[8]"  />
+        <nitem  name = "vga_inst/col_9__N_21[7]"  />
+        <nitem  name = "vga_inst/col_9__N_21[6]"  />
+        <nitem  name = "vga_inst/col_9__N_21[5]"  />
+        <nitem  name = "vga_inst/col_9__N_21[4]"  />
+        <nitem  name = "vga_inst/col_9__N_21[3]"  />
+        <nitem  name = "vga_inst/col_9__N_21[2]"  />
+        <nitem  name = "vga_inst/col_9__N_21[1]"  />
+        <nitem  name = "vga_inst/col_9__N_21[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/LessThan_8"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/n18"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/add_9"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/n21"  />
+        <nitem  name = "vga_inst/n22"  />
+        <nitem  name = "vga_inst/n23"  />
+        <nitem  name = "vga_inst/n24"  />
+        <nitem  name = "vga_inst/n25"  />
+        <nitem  name = "vga_inst/n26"  />
+        <nitem  name = "vga_inst/n27"  />
+        <nitem  name = "vga_inst/n28"  />
+        <nitem  name = "vga_inst/n29"  />
+        <nitem  name = "vga_inst/n30"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/mux_10"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/n18"  />
+        <nitem  name = "vga_inst/n21"  />
+        <nitem  name = "vga_inst/n22"  />
+        <nitem  name = "vga_inst/n23"  />
+        <nitem  name = "vga_inst/n24"  />
+        <nitem  name = "vga_inst/n25"  />
+        <nitem  name = "vga_inst/n26"  />
+        <nitem  name = "vga_inst/n27"  />
+        <nitem  name = "vga_inst/n28"  />
+        <nitem  name = "vga_inst/n29"  />
+        <nitem  name = "vga_inst/n30"  />
+        <nitem  name = "vga_inst/row_9__N_32[9]"  />
+        <nitem  name = "vga_inst/row_9__N_32[8]"  />
+        <nitem  name = "vga_inst/row_9__N_32[7]"  />
+        <nitem  name = "vga_inst/row_9__N_32[6]"  />
+        <nitem  name = "vga_inst/row_9__N_32[5]"  />
+        <nitem  name = "vga_inst/row_9__N_32[4]"  />
+        <nitem  name = "vga_inst/row_9__N_32[3]"  />
+        <nitem  name = "vga_inst/row_9__N_32[2]"  />
+        <nitem  name = "vga_inst/row_9__N_32[1]"  />
+        <nitem  name = "vga_inst/row_9__N_32[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_9__I_0_30"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/col_9__N_31"  />
+        <nitem  name = "vga_inst/col_9__N_21[9]"  />
+        <nitem  name = "vga_inst/col_9__N_21[8]"  />
+        <nitem  name = "vga_inst/col_9__N_21[7]"  />
+        <nitem  name = "vga_inst/col_9__N_21[6]"  />
+        <nitem  name = "vga_inst/col_9__N_21[5]"  />
+        <nitem  name = "vga_inst/col_9__N_21[4]"  />
+        <nitem  name = "vga_inst/col_9__N_21[3]"  />
+        <nitem  name = "vga_inst/col_9__N_21[2]"  />
+        <nitem  name = "vga_inst/col_9__N_21[1]"  />
+        <nitem  name = "vga_inst/col_9__N_21[0]"  />
+        <nitem  name = "vga_inst/col_9__N_11[9]"  />
+        <nitem  name = "vga_inst/col_9__N_11[8]"  />
+        <nitem  name = "vga_inst/col_9__N_11[7]"  />
+        <nitem  name = "vga_inst/col_9__N_11[6]"  />
+        <nitem  name = "vga_inst/col_9__N_11[5]"  />
+        <nitem  name = "vga_inst/col_9__N_11[4]"  />
+        <nitem  name = "vga_inst/col_9__N_11[3]"  />
+        <nitem  name = "vga_inst/col_9__N_11[2]"  />
+        <nitem  name = "vga_inst/col_9__N_11[1]"  />
+        <nitem  name = "vga_inst/col_9__N_11[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/row_9__I_0_32"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/col_9__N_31"  />
+        <nitem  name = "vga_inst/row_9__N_32[9]"  />
+        <nitem  name = "vga_inst/row_9__N_32[8]"  />
+        <nitem  name = "vga_inst/row_9__N_32[7]"  />
+        <nitem  name = "vga_inst/row_9__N_32[6]"  />
+        <nitem  name = "vga_inst/row_9__N_32[5]"  />
+        <nitem  name = "vga_inst/row_9__N_32[4]"  />
+        <nitem  name = "vga_inst/row_9__N_32[3]"  />
+        <nitem  name = "vga_inst/row_9__N_32[2]"  />
+        <nitem  name = "vga_inst/row_9__N_32[1]"  />
+        <nitem  name = "vga_inst/row_9__N_32[0]"  />
+        <nitem  name = "vga_inst/row_9__N_1[9]"  />
+        <nitem  name = "vga_inst/row_9__N_1[8]"  />
+        <nitem  name = "vga_inst/row_9__N_1[7]"  />
+        <nitem  name = "vga_inst/row_9__N_1[6]"  />
+        <nitem  name = "vga_inst/row_9__N_1[5]"  />
+        <nitem  name = "vga_inst/row_9__N_1[4]"  />
+        <nitem  name = "vga_inst/row_9__N_1[3]"  />
+        <nitem  name = "vga_inst/row_9__N_1[2]"  />
+        <nitem  name = "vga_inst/row_9__N_1[1]"  />
+        <nitem  name = "vga_inst/row_9__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/row_num"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "clk2"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/row_9__N_1[9]"  />
+        <nitem  name = "vga_inst/row_9__N_1[8]"  />
+        <nitem  name = "vga_inst/row_9__N_1[7]"  />
+        <nitem  name = "vga_inst/row_9__N_1[6]"  />
+        <nitem  name = "vga_inst/row_9__N_1[5]"  />
+        <nitem  name = "vga_inst/row_9__N_1[4]"  />
+        <nitem  name = "vga_inst/row_9__N_1[3]"  />
+        <nitem  name = "vga_inst/row_9__N_1[2]"  />
+        <nitem  name = "vga_inst/row_9__N_1[1]"  />
+        <nitem  name = "vga_inst/row_9__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_9__I_0_33"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/HSYNC_N_42"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/HSYNC_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "HSYNC"  />
+        <nitem  name = "vga_inst/HSYNC_N_42"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/row_9__I_0_35"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/VSYNC_N_43"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/VSYNC_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "VSYNC"  />
+        <nitem  name = "vga_inst/VSYNC_N_43"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_9__I_0_34"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/valid_N_47"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/valid_N_48"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/valid_I_3"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/valid_N_47"  />
+        <nitem  name = "vga_inst/valid_N_48"  />
+        <nitem  name = "vga_inst/valid_N_46"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/row_9__I_0_36"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/valid_N_49"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/valid_I_2"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/valid_N_46"  />
+        <nitem  name = "vga_inst/valid_N_49"  />
+        <nitem  name = "vga_inst/valid_N_45"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/row_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "vga_inst/pwr"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "vga_inst/valid_N_50"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/valid_I_1"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/valid_N_45"  />
+        <nitem  name = "vga_inst/valid_N_50"  />
+        <nitem  name = "vga_inst/valid_N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/valid_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "i"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "visible_area"  />
+        <nitem  name = "vga_inst/valid_N_44"  />
+        </nets>
+    </instance>
+
+    <instance  name = "vga_inst/col_num"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "vga_inst/gnd"  />
+        <nitem  name = "clk2"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "vga_inst/col_9__N_11[9]"  />
+        <nitem  name = "vga_inst/col_9__N_11[8]"  />
+        <nitem  name = "vga_inst/col_9__N_11[7]"  />
+        <nitem  name = "vga_inst/col_9__N_11[6]"  />
+        <nitem  name = "vga_inst/col_9__N_11[5]"  />
+        <nitem  name = "vga_inst/col_9__N_11[4]"  />
+        <nitem  name = "vga_inst/col_9__N_11[3]"  />
+        <nitem  name = "vga_inst/col_9__N_11[2]"  />
+        <nitem  name = "vga_inst/col_9__N_11[1]"  />
+        <nitem  name = "vga_inst/col_9__N_11[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/valid_i_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "visible_area"  />
+        <nitem  name = "RGB[5]"  />
+        <nitem  name = "RGB[4]"  />
+        <nitem  name = "RGB[3]"  />
+        <nitem  name = "RGB[2]"  />
+        <nitem  name = "RGB[1]"  />
+        <nitem  name = "RGB[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "pll_inst/lscc_pll_inst/u_PLL_B"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "DYNAMICDELAY4"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY5"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY6"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY7"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY0"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY1"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY2"  direction = "in"  />
+        <pitem  name = "DYNAMICDELAY3"  direction = "in"  />
+        <pitem  name = "REFERENCECLK"  direction = "in"  />
+        <pitem  name = "RESET_N"  direction = "in"  />
+        <pitem  name = "BYPASS"  direction = "in"  />
+        <pitem  name = "LATCH"  direction = "in"  />
+        <pitem  name = "LOCK"  direction = "out"  />
+        <pitem  name = "OUTCORE"  direction = "out"  />
+        <pitem  name = "OUTGLOBAL"  direction = "out"  />
+        <pitem  name = "OUTCOREB"  direction = "out"  />
+        <pitem  name = "OUTGLOBALB"  direction = "out"  />
+        <pitem  name = "SCLK"  direction = "in"  />
+        <pitem  name = "SDI"  direction = "in"  />
+        <pitem  name = "SDO"  direction = "out"  />
+        <pitem  name = "FEEDBACK"  direction = "in"  />
+        <pitem  name = "INTFBOUT"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "pll_inst/lscc_pll_inst/gnd"  />
+        <nitem  name = "clk"  />
+        <nitem  name = "pwr"  />
+        <nitem  name = "pll_inst/gnd"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/lock_o"  />
+        <nitem  name = "PLL_out"  />
+        <nitem  name = "clk2"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/outcoreb_o"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/outglobalb_o"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/sclk_i"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/sdi_i"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/sdo_o"  />
+        <nitem  name = "pll_inst/lscc_pll_inst/feedback_w"  />
+        </nets>
+    </instance>
+
+    <instance  name = "lscc_pll_inst"  />
+    <instance  name = "pll_inst"  />
+    <instance  name = "testpattern_inst"  />
+    <instance  name = "u_PLL_B"  />
+    <instance  name = "vga_inst"  />
+    <!--
+        REG instances in netlist: 2
+    -->
+
+    <regs>
+        <reg  name = "vga_inst/row_num"  />
+        <reg  name = "vga_inst/col_num"  />
+    </regs>
+
+    <!--
+        ROM nets in netlist: 1
+    -->
+
+    <romnets>
+        <romnet  name = "counter"  />
+    </romnets>
+
+    <!--
+        Views in design "top": 4
+    -->
+
+    <views>
+        <view  name = "lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")"  />
+        <view  name = "pll"  />
+        <view  name = "testpattern"  />
+        <view  name = "vga"  />
+    </views>
+
+</unit>
+
+</library>
+
+<library name = "vl">
+
+</library>
+
+</top>
