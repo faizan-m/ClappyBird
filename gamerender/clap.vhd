@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity game_state is
 	port(
 	clap: in std_logic;
-	bird_y_pos: out unsigned (8 downto 0)
+	bird_y_pos: out unsigned (9 downto 0)
 	);
 end;
 

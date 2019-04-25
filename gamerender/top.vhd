@@ -4,6 +4,7 @@ use IEEE.numeric_std.all;
 
 entity top is
   port(
+	  clappy : in std_logic;
 	  RGB : out unsigned(5 downto 0);
 	  HSYNC : out std_logic;
 	  VSYNC : out std_logic;
@@ -49,8 +50,17 @@ component testpattern is
 		valid_i : in std_logic;
 		row_i : in unsigned(9 downto 0);
 		col_i : in unsigned(9 downto 0);
+		clap : in std_logic;
+		y_pos : in unsigned (9 downto 0);
 		-- Output
 		RGB_o : out unsigned(5 downto 0)
+	);
+end component;
+
+component game_state is 
+	port(
+		clap: in std_logic;
+		bird_y_pos: out unsigned (9 downto 0)
 	);
 end component;
 
@@ -60,10 +70,12 @@ signal clk2 : std_logic;
 signal row_num : unsigned(9 downto 0);
 signal col_num : unsigned(9 downto 0);
 signal visible_area : std_logic;
+signal bigbird_y_pos: unsigned (9 downto 0);
 
 begin
 
-hsosc_inst : HSOSC port map(
+hsosc_inst : HSOSC 
+port map(
     -- Inputs
     CLKHFPU => '1',
     CLKHFEN => '1',
@@ -71,7 +83,8 @@ hsosc_inst : HSOSC port map(
     CLKHF => clk
 );
 
-pll_inst : pll port map(
+pll_inst : pll 
+port map(
 	-- Outputs
 	outglobal_o=> clk2, 
 	outcore_o=> PLL_out,
@@ -80,7 +93,8 @@ pll_inst : pll port map(
 	rst_n_i=> '1'
 );
 
-vga_inst : vga port map(
+vga_inst : vga 
+port map(
 	pix_clk_in => clk2,
 	HSYNC => HSYNC,
 	VSYNC => VSYNC,
@@ -89,11 +103,20 @@ vga_inst : vga port map(
 	col => col_num
 );
 
-testpattern_inst : testpattern port map(
+testpattern_inst : testpattern 
+port map(
 	valid_i => visible_area,
 	row_i => row_num,
 	col_i => col_num,
+	clap => clappy,
+	y_pos => bigbird_y_pos,
 	RGB_o => RGB
+);
+
+game_state_inst : game_state 
+port map(
+	clap => clappy,
+	bird_y_pos => bigbird_y_pos
 );
 
 end;

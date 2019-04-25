@@ -3,20 +3,35 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	      44.00        100.0
-                                 IOBUF	          9        100.0
-                                PFUREG	         20        100.0
+                                  LUT4	     113.00        100.0
+                                 IOBUF	         10        100.0
+                                PFUREG	         49        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
+                            game_state	          1        31.0
                                    pll	          1         0.0
-                                   vga	          1        95.5
+                           testpattern	          1        31.9
+                                   vga	          1        35.4
 ---------------------------------------------------
 Report for cell vga
    Instance path: top/vga_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	      42.00        95.5
-                                PFUREG	         20        100.0
+                                  LUT4	      40.00        35.4
+                                PFUREG	         20        40.8
+---------------------------------------------------
+Report for cell game_state
+   Instance path: top/game_state_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      35.00        31.0
+                                PFUREG	         29        59.2
+---------------------------------------------------
+Report for cell testpattern
+   Instance path: top/testpattern_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      36.00        31.9
 ---------------------------------------------------
 Report for cell pll
    Instance path: top/pll_inst

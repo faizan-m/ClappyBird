@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Apr 24 20:04:21 2019
+Thu Apr 25 15:54:43 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f gamerender_impl_1_lattice.synproj -gui -msgset //vs-home/gdiaz01/gamerender/promote.xml 
@@ -127,6 +127,8 @@ VHDL library = work
 VHDL design file = //vs-home/gdiaz01/gamerender/testpattern.vhd
 VHDL library = work
 VHDL design file = //vs-home/gdiaz01/gamerender/vga.vhd
+VHDL library = work
+VHDL design file = //vs-home/gdiaz01/gamerender/clap.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
@@ -154,23 +156,26 @@ Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4): analyzing package components. VHDL-1014
 Analyzing VHDL file //vs-home/gdiaz01/gamerender/top.vhd. VHDL-1481
 INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(5): analyzing entity top. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(14): analyzing architecture synth. VHDL-1010
+INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(15): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file //vs-home/gdiaz01/gamerender/testpattern.vhd. VHDL-1481
 INFO - synthesis: //vs-home/gdiaz01/gamerender/testpattern.vhd(5): analyzing entity testpattern. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/testpattern.vhd(16): analyzing architecture synth. VHDL-1010
+INFO - synthesis: //vs-home/gdiaz01/gamerender/testpattern.vhd(18): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file //vs-home/gdiaz01/gamerender/vga.vhd. VHDL-1481
 INFO - synthesis: //vs-home/gdiaz01/gamerender/vga.vhd(5): analyzing entity vga. VHDL-1012
 INFO - synthesis: //vs-home/gdiaz01/gamerender/vga.vhd(18): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file //vs-home/gdiaz01/gamerender/clap.vhd. VHDL-1481
+INFO - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(5): analyzing entity game_state. VHDL-1012
+INFO - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(12): analyzing architecture synth. VHDL-1010
 INFO - synthesis: The default VHDL library search path is now "//vs-home/gdiaz01/gamerender/impl_1". VHDL-1504
 Top module language type = VHDL.
 unit top is not yet analyzed. VHDL-1485
 //vs-home/gdiaz01/gamerender/top.vhd(5): executing top(synth)
 
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(72): going to verilog side to elaborate module HSOSC. VHDL-1399
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(72): back to VHDL to continue elaboration. VHDL-1400
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(81): going to verilog side to elaborate module pll. VHDL-1399
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(81): back to VHDL to continue elaboration. VHDL-1400
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(12): replacing existing netlist top(synth). VHDL-1205
+INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(84): going to verilog side to elaborate module HSOSC. VHDL-1399
+INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(84): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(94): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(94): back to VHDL to continue elaboration. VHDL-1400
+WARNING - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(13): replacing existing netlist top(synth). VHDL-1205
 Top module name (VHDL, mixed language): top
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
                                                          
@@ -207,6 +212,7 @@ WARNING - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/core/lscc_pll.v(96): n
 
 
 
+WARNING - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(51): Register \game_state_inst/bird_y_pos_i1 is stuck at Zero. VDB-5013
 Applying 1.000000 MHz constraint to all clocks
 
 
@@ -223,16 +229,17 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (top)######################
-Number of register bits => 20 of 5280 (0 % )
-CCU2 => 12
-FD1P3XZ => 20
-HSOSC_CORE => 1
-LUT4 => 18
+Number of register bits => 49 of 5280 (0 % )
+CCU2 => 34
+FD1P3XZ => 49
+HSOSC_CORE => 2
+IB => 1
+LUT4 => 43
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 2
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 4
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -246,26 +253,26 @@ Number of Clocks: 3
 Clock Enable Nets
 Number of Clock Enables: 1
 Top 1 highest fanout Clock Enables:
-  Net : vga_inst/n232, loads : 21
+  Net : vga_inst/n458, loads : 21
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : vga_inst/n232, loads : 21
-  Net : vga_inst/n387, loads : 10
-  Net : vga_inst/row_num[9], loads : 5
-  Net : vga_inst/col_num[5], loads : 5
-  Net : vga_inst/col_num[6], loads : 5
-  Net : vga_inst/col_num[7], loads : 5
-  Net : vga_inst/col_num[9], loads : 4
-  Net : vga_inst/row_num[1], loads : 4
-  Net : vga_inst/col_num[8], loads : 4
-  Net : vga_inst/row_num[5], loads : 3
+  Net : vga_inst/n458, loads : 21
+  Net : game_state_inst/forty_eight_mhz_clock, loads : 20
+  Net : vga_inst/n879, loads : 10
+  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 10
+  Net : game_state_inst/n129, loads : 10
+  Net : vga_inst/row_num[9], loads : 6
+  Net : vga_inst/row_num[1], loads : 6
+  Net : vga_inst/row_num[4], loads : 5
+  Net : vga_inst/row_num[3], loads : 5
+  Net : vga_inst/row_num[2], loads : 5
 ################### End Clock Report ##################
 
-Peak Memory Usage: 135.918  MB
+Peak Memory Usage: 143.160  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 2.828  secs
-Total REAL time for LSE flow : 4.000  secs
+Total CPU time for LSE flow : 3.609  secs
+Total REAL time for LSE flow : 6.000  secs
 --------------------------------------------------------------
 
 

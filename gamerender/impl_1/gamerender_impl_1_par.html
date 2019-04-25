@@ -41,7 +41,7 @@ if (a)
 
 <DIV id="content" onclick="hideTocList()"><PRE>
 <A name="Par"></A>Copyright 2015 Lattice Semiconductor Corporation, All Rights Reserved
-Wed Apr 24 20:12:46 2019
+Thu Apr 25 15:31:48 2019
 
 Command Line: par -w -n 1 -t 1 -s 1 -exp parPathBased=ON \
 	gamerender_impl_1_map.udb gamerender_impl_1.udb 
@@ -51,7 +51,7 @@ Command Line: par -w -n 1 -t 1 -s 1 -exp parPathBased=ON \
 Level/       Number       Worst        Timing       Worst        Timing       Run          Run
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            26.979       0            3.417        0            08           Success
+5_1   *      0            26.157       0            3.417        0            09           Success
 
 * : Design saved.
 
@@ -60,7 +60,7 @@ Total (real) run time for 1-seed: 9 secs
 par done!
 
 Lattice Place and Route Report for Design &quot;gamerender_impl_1_map.udb&quot;
-Wed Apr 24 20:12:46 2019
+Thu Apr 25 15:31:48 2019
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -75,15 +75,23 @@ Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
+WARNING - par: instance clappy does not exist
+
+WARNING - par: the located object is not specified
+
 
 WARNING: udb::Constraint &quot;create_generated_clock -name {u_PLL_B/OUTCORE} -source [get_pins pll_inst.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE]&quot; does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 86
-Number of Connections: 192
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
+Number of Signals: 90
+Number of Connections: 205
 
 <A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
 
-   SLICE (est.)      24/2640         &lt;1% used
-     LUT             44/5280         &lt;1% used
+   SLICE (est.)      27/2640          1% used
+     LUT             48/5280         &lt;1% used
      REG             20/5280         &lt;1% used
    PIO                9/56           16% used
                       9/36           25% bonded
@@ -117,18 +125,18 @@ Starting Placer Phase 1. REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 5620.
+Placer score = 6354.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             24/2640         &lt;1% used
+   SLICE             26/2640         &lt;1% used
 
-Finished Placer Phase 1.  CPU time: 6 secs , REAL time: 7 secs 
+Finished Placer Phase 1.  CPU time: 7 secs , REAL time: 7 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  9016
-Finished Placer Phase 2.  CPU time: 6 secs , REAL time: 7 secs 
+Placer score =  10154
+Finished Placer Phase 2.  CPU time: 7 secs , REAL time: 7 secs 
 
 
 
@@ -157,12 +165,13 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)  | OFF        |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 6 secs , REAL time: 7 secs 
+Total Placer CPU time: 7 secs , REAL time: 7 secs 
 
 Writing design to file gamerender_impl_1_par.dir/5_1.udb ...
 
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
 
-Start NBR router at 20:12:53 04/24/19
+Start NBR router at 15:31:55 04/25/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -182,7 +191,7 @@ Preassignment Summary:
 --------------------------------------------------------------------------------
 41 connections routed with dedicated routing resources
 1 global clock signals routed
-53 connections routed (of 192 total) (27.60%)
+53 connections routed (of 205 total) (25.85%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
@@ -197,26 +206,26 @@ Other clocks:
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 20:12:54 04/24/19
+Start NBR section for initial routing at 15:31:56 04/25/19
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 26.979ns/0.000ns; real time: 0 secs 
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 26.276ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 20:12:54 04/24/19
+Start NBR section for normal routing at 15:31:56 04/25/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: 26.979ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack&lt;setup&gt;: 26.157ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 20:12:54 04/24/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 15:31:56 04/25/19
 
-Start NBR section for re-routing at 20:12:54 04/24/19
+Start NBR section for re-routing at 15:31:56 04/25/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 20:12:54 04/24/19
+Start NBR section for post-routing at 15:31:56 04/25/19
 
 End NBR router with 0 unrouted connection
 
@@ -224,7 +233,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack&lt;setup&gt; : 26.979ns
+  Estimated worst slack&lt;setup&gt; : 26.157ns
   Timing score&lt;setup&gt; : 0
 -----------
 Notes: The timing info is calculated for SETUP only.
@@ -242,9 +251,10 @@ Other clocks:
        Clock   loads: 1     out of     1 routed (100.00%)
 ---------------------------------------------------------
 Total CPU time 1 secs 
-Total REAL time: 0 secs 
+Total REAL time: 2 secs 
 Completely routed.
-End of route.  192 routed (100.00%); 0 unrouted.
+End of route.  205 routed (100.00%); 0 unrouted.
+WARNING - par: Top module port &apos;clappy&apos; does not connect to anything.
 
 Writing design to file gamerender_impl_1_par.dir/5_1.udb ...
 
@@ -254,7 +264,7 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 26.979
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 26.157
 PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 0.000
 PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 3.417
 PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
@@ -262,7 +272,7 @@ PAR_SUMMARY::Number of errors = 0
 
 Total CPU  Time: 8 secs 
 Total REAL Time: 9 secs 
-Peak Memory Usage: 101 MB
+Peak Memory Usage: 102 MB
 
 
 par done!

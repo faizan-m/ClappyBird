@@ -18,7 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>//vs-home/gdiaz01/gamerender/impl_1/gamerender_impl_1.bin</File>
-			<FileTime>04/24/19 20:12:58</FileTime>
+			<FileTime>04/25/19 15:20:46</FileTime>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>
 			<Option>
@@ -46,6 +46,8 @@
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
 						<IOState>HighZ</IOState>
+						<IOVectorData>
+</IOVectorData>
 						<AccessMode>Direct Programming</AccessMode>
 					</Option>
 				</Device>

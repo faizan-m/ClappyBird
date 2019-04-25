@@ -41,6 +41,7 @@
 "//vs-home/gdiaz01/gamerender/testpattern.vhd"
 -ver "//vs-home/gdiaz01/gamerender/pll/rtl/pll.v"
 -lib "work" -vhd "//vs-home/gdiaz01/gamerender/vga.vhd"
+"//vs-home/gdiaz01/gamerender/clap.vhd"
 
 
 -path "//vs-home/gdiaz01/gamerender"

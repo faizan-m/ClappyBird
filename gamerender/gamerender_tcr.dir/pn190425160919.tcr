@@ -1,0 +1,5 @@
+#Start recording tcl command: 4/25/2019 16:04:14
+#Project Location: //vs-home/gdiaz01/gamerender; Project name: gamerender
+prj_open "//vs-home/gdiaz01/gamerender/gamerender.rdf"
+prj_run Export -impl impl_1
+#Stop recording: 4/25/2019 16:09:19

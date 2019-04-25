@@ -43,7 +43,7 @@ if (a)
 <A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.0.350.6
 
-Wed Apr 24 20:12:56 2019
+Thu Apr 25 15:31:58 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -164,7 +164,7 @@ Single Clock Domain
 Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------------
  From pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|             Target |          39.800 ns |         25.126 MHz 
-                                              | Actual (all paths) |          12.821 ns |         77.997 MHz 
+                                              | Actual (all paths) |          13.643 ns |         73.298 MHz 
 -------------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -182,7 +182,7 @@ Clock pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL|   Worst Time Between Edges   |  
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 65.3061%
+Constraint Coverage: 60%
 
 <A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
 
@@ -216,7 +216,7 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
 <A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>e [get_pins {pll_inst/lscc_pll_inst/u_P</A>                                                                                                    
 <A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>LL_B/REFERENCECLK}] -multiply_by 67 -di</A>                                                                                                    
 <A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>vide_by 128 [get_pins {pll_inst/lscc_pl</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>l_inst/u_PLL_B/OUTGLOBAL }] </A>            |   39.800 ns |   26.979 ns |    4   |   12.821 ns |  77.997 MHz |       38       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>l_inst/u_PLL_B/OUTGLOBAL }] </A>            |   39.800 ns |   26.157 ns |    4   |   13.643 ns |  73.298 MHz |       38       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_SetupCriticalEndpointSummary"></A><B><U><big>3.2.2  Setup Critical Endpoint Summary </big></U></B>
@@ -225,22 +225,22 @@ Total Negative Slack: 0.000 ns (setup), 0.000 ns (hold)
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
 {vga_inst/row_num_27__i5/SR   vga_inst/row_num_27__i6/SR}              
-                                         |   26.980 ns 
+                                         |   26.158 ns 
 {vga_inst/row_num_27__i3/SR   vga_inst/row_num_27__i4/SR}              
-                                         |   26.980 ns 
+                                         |   26.158 ns 
 {vga_inst/row_num_27__i1/SR   vga_inst/row_num_27__i2/SR}              
-                                         |   26.980 ns 
-vga_inst/row_num_27__i0/SR               |   26.980 ns 
-vga_inst/row_num_27__i9/SR               |   27.576 ns 
+                                         |   26.158 ns 
+vga_inst/row_num_27__i0/SR               |   26.158 ns 
+vga_inst/row_num_27__i9/SR               |   27.350 ns 
 {vga_inst/row_num_27__i7/SR   vga_inst/row_num_27__i8/SR}              
-                                         |   27.576 ns 
+                                         |   27.350 ns 
 {vga_inst/row_num_27__i5/SP   vga_inst/row_num_27__i6/SP}              
-                                         |   30.304 ns 
+                                         |   30.674 ns 
 {vga_inst/row_num_27__i3/SP   vga_inst/row_num_27__i4/SP}              
-                                         |   30.304 ns 
+                                         |   30.674 ns 
 {vga_inst/row_num_27__i1/SP   vga_inst/row_num_27__i2/SP}              
-                                         |   30.304 ns 
-vga_inst/row_num_27__i0/SP               |   30.304 ns 
+                                         |   30.674 ns 
+vga_inst/row_num_27__i0/SP               |   30.674 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -280,16 +280,16 @@ Setup # of endpoints with negative slack:|           0
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-vga_inst/row_num_27__i6/D                |    3.417 ns 
-vga_inst/row_num_27__i9/D                |    3.417 ns 
-vga_inst/col_num_25__i9/D                |    3.417 ns 
-vga_inst/row_num_27__i1/D                |    3.417 ns 
-vga_inst/row_num_27__i7/D                |    3.417 ns 
-vga_inst/row_num_27__i8/D                |    3.417 ns 
-vga_inst/row_num_27__i2/D                |    3.417 ns 
-vga_inst/row_num_27__i3/D                |    3.417 ns 
 vga_inst/col_num_25__i8/D                |    3.417 ns 
+vga_inst/row_num_27__i2/D                |    3.417 ns 
 vga_inst/col_num_25__i7/D                |    3.417 ns 
+vga_inst/col_num_25__i1/D                |    3.417 ns 
+vga_inst/col_num_25__i2/D                |    3.417 ns 
+vga_inst/col_num_25__i6/D                |    3.417 ns 
+vga_inst/col_num_25__i5/D                |    3.417 ns 
+vga_inst/col_num_25__i4/D                |    3.417 ns 
+vga_inst/row_num_27__i8/D                |    3.417 ns 
+vga_inst/row_num_27__i9/D                |    3.417 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -323,20 +323,21 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 9 Start or End Points      |           Type           
+     Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
+clappy                                  |                     input
 RGB[5]                                  |                    output
 RGB[4]                                  |                    output
 RGB[3]                                  |                    output
-RGB[2]                                  |                    output
 VSYNC                                   |                    output
 PLL_out                                 |                    output
+RGB[2]                                  |                    output
 RGB[1]                                  |                    output
 RGB[0]                                  |                    output
 HSYNC                                   |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         9
+Number of I/O ports without constraint  |                        10
                                         |                          
 -------------------------------------------------------------------
 
@@ -394,10 +395,10 @@ Path End         : {vga_inst/row_num_27__i5/SR   vga_inst/row_num_27__i6/SR}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 77.5% (route), 22.5% (logic)
+Delay Ratio      : 78.9% (route), 21.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 26.979 ns  (Passed)
+Path Slack       : 26.157 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -410,9 +411,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            12.291
++ Data Path Delay                                                            13.113
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.918
+End-of-path arrival time( ns )                                               23.740
 
  
 Source Clock Path
@@ -431,16 +432,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        3.934        23.740  1       
 
 
 Destination Clock Path
@@ -464,10 +465,10 @@ Path End         : {vga_inst/row_num_27__i3/SR   vga_inst/row_num_27__i4/SR}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 77.5% (route), 22.5% (logic)
+Delay Ratio      : 78.9% (route), 21.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 26.979 ns  (Passed)
+Path Slack       : 26.157 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -480,9 +481,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            12.291
++ Data Path Delay                                                            13.113
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.918
+End-of-path arrival time( ns )                                               23.740
 
  
 Source Clock Path
@@ -501,16 +502,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        3.934        23.740  1       
 
 
 Destination Clock Path
@@ -534,10 +535,10 @@ Path End         : {vga_inst/row_num_27__i1/SR   vga_inst/row_num_27__i2/SR}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 77.5% (route), 22.5% (logic)
+Delay Ratio      : 78.9% (route), 21.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 26.979 ns  (Passed)
+Path Slack       : 26.157 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -550,9 +551,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            12.291
++ Data Path Delay                                                            13.113
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.918
+End-of-path arrival time( ns )                                               23.740
 
  
 Source Clock Path
@@ -571,16 +572,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        3.934        23.740  1       
 
 
 Destination Clock Path
@@ -604,10 +605,10 @@ Path End         : vga_inst/row_num_27__i0/SR
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 77.5% (route), 22.5% (logic)
+Delay Ratio      : 78.9% (route), 21.1% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 26.979 ns  (Passed)
+Path Slack       : 26.157 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -620,9 +621,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            12.291
++ Data Path Delay                                                            13.113
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.918
+End-of-path arrival time( ns )                                               23.740
 
  
 Source Clock Path
@@ -641,16 +642,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        4.371        22.918  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        3.934        23.740  1       
 
 
 Destination Clock Path
@@ -674,10 +675,10 @@ Path End         : vga_inst/row_num_27__i9/SR
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 76.3% (route), 23.7% (logic)
+Delay Ratio      : 76.8% (route), 23.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 27.575 ns  (Passed)
+Path Slack       : 27.349 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -690,9 +691,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            11.695
++ Data Path Delay                                                            11.921
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.322
+End-of-path arrival time( ns )                                               22.548
 
  
 Source Clock Path
@@ -711,16 +712,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        3.775        22.322  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        2.742        22.548  1       
 
 
 Destination Clock Path
@@ -744,10 +745,10 @@ Path End         : {vga_inst/row_num_27__i7/SR   vga_inst/row_num_27__i8/SR}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 4
-Delay Ratio      : 76.3% (route), 23.7% (logic)
+Delay Ratio      : 76.8% (route), 23.2% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 27.575 ns  (Passed)
+Path Slack       : 27.349 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -760,9 +761,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                            11.695
++ Data Path Delay                                                            11.921
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               22.322
+End-of-path arrival time( ns )                                               22.548
 
  
 Source Clock Path
@@ -781,16 +782,16 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        2.768        18.097  1       
-vga_inst/i294_4_lut/D->vga_inst/i294_4_lut/Z
-                                          SLICE_R16C29B   D1_TO_F1_DELAY   0.450        18.547  6       
-vga_inst/n387                                             NET DELAY        3.775        22.322  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.748        19.356  1       
+vga_inst/i221_4_lut/A->vga_inst/i221_4_lut/Z
+                                          SLICE_R18C28B   A0_TO_F0_DELAY   0.450        19.806  6       
+vga_inst/n296                                             NET DELAY        2.742        22.548  1       
 
 
 Destination Clock Path
@@ -814,10 +815,10 @@ Path End         : {vga_inst/row_num_27__i5/SP   vga_inst/row_num_27__i6/SP}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 3
-Delay Ratio      : 75.1% (route), 24.9% (logic)
+Delay Ratio      : 74.0% (route), 26.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 30.303 ns  (Passed)
+Path Slack       : 30.673 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -830,9 +831,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                             9.298
++ Data Path Delay                                                             8.928
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               19.925
+End-of-path arrival time( ns )                                               19.555
 
  
 Source Clock Path
@@ -851,13 +852,13 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.947        19.555  1       
 
 
 Destination Clock Path
@@ -881,10 +882,10 @@ Path End         : {vga_inst/row_num_27__i3/SP   vga_inst/row_num_27__i4/SP}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 3
-Delay Ratio      : 75.1% (route), 24.9% (logic)
+Delay Ratio      : 74.0% (route), 26.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 30.303 ns  (Passed)
+Path Slack       : 30.673 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -897,9 +898,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                             9.298
++ Data Path Delay                                                             8.928
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               19.925
+End-of-path arrival time( ns )                                               19.555
 
  
 Source Clock Path
@@ -918,13 +919,13 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.947        19.555  1       
 
 
 Destination Clock Path
@@ -948,10 +949,10 @@ Path End         : {vga_inst/row_num_27__i1/SP   vga_inst/row_num_27__i2/SP}
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 3
-Delay Ratio      : 75.1% (route), 24.9% (logic)
+Delay Ratio      : 74.0% (route), 26.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 30.303 ns  (Passed)
+Path Slack       : 30.673 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -964,9 +965,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                             9.298
++ Data Path Delay                                                             8.928
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               19.925
+End-of-path arrival time( ns )                                               19.555
 
  
 Source Clock Path
@@ -985,13 +986,13 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.947        19.555  1       
 
 
 Destination Clock Path
@@ -1015,10 +1016,10 @@ Path End         : vga_inst/row_num_27__i0/SP
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 3
-Delay Ratio      : 75.1% (route), 24.9% (logic)
+Delay Ratio      : 74.0% (route), 26.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 39.800 ns 
-Path Slack       : 30.303 ns  (Passed)
+Path Slack       : 30.673 ns  (Passed)
 
   Destination Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#2)    39.800
 + Master Clock Source Latency                                                       0.000
@@ -1031,9 +1032,9 @@ End-of-path required time( ns )                                                 
   Source Clock Arrival Time (pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL:R#1)    0.000
 + Master Clock Source Latency                                                 0.000
 + Source Clock Path Delay                                                    10.627
-+ Data Path Delay                                                             9.298
++ Data Path Delay                                                             8.928
 --------------------------------------------------------------------------   ------
-End-of-path arrival time( ns )                                               19.925
+End-of-path arrival time( ns )                                               19.555
 
  
 Source Clock Path
@@ -1052,13 +1053,13 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i5/CK   vga_inst/col_num_25__i6/CK}->vga_inst/col_num_25__i6/Q
-                                          SLICE_R17C30D   CLK_TO_Q1_DELAY  1.391        12.018  5       
-vga_inst/col_num[6]                                       NET DELAY        2.079        14.097  1       
-vga_inst/i114_2_lut/B->vga_inst/i114_2_lut/Z
-                                          SLICE_R17C31C   B0_TO_F0_DELAY   0.477        14.574  1       
-vga_inst/n185                                             NET DELAY        0.305        14.879  1       
-vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C31C   C1_TO_F1_DELAY   0.450        15.329  13      
-vga_inst/n232                                             NET DELAY        4.596        19.925  1       
+                                          SLICE_R17C28D   CLK_TO_Q1_DELAY  1.391        12.018  4       
+col_num[6]                                                NET DELAY        2.358        14.376  1       
+testpattern_inst/i157_2_lut/D->testpattern_inst/i157_2_lut/Z
+                                          SLICE_R17C30C   D0_TO_F0_DELAY   0.477        14.853  2       
+n225                                                      NET DELAY        0.305        15.158  1       
+vga_inst/i2_4_lut/C->vga_inst/i2_4_lut/Z  SLICE_R17C30C   C1_TO_F1_DELAY   0.450        15.608  13      
+vga_inst/n281                                             NET DELAY        3.947        19.555  1       
 
 
 Destination Clock Path
@@ -1153,11 +1154,11 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i3/CK   vga_inst/col_num_25__i4/CK}->vga_inst/col_num_25__i4/Q
-                                          SLICE_R17C30C   CLK_TO_Q1_DELAY  1.391        12.018  3       
-vga_inst/col_num[4]                                       NET DELAY        1.576        13.594  1       
+                                          SLICE_R17C28C   CLK_TO_Q1_DELAY  1.391        12.018  3       
+col_num[4]                                                NET DELAY        1.576        13.594  1       
 vga_inst/col_num_25_add_4_5/C1->vga_inst/col_num_25_add_4_5/S1
-                                          SLICE_R17C30C   C1_TO_F1_DELAY   0.450        14.044  1       
-vga_inst/n45_adj_61[4]                                    NET DELAY        0.000        14.044  1       
+                                          SLICE_R17C28C   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_71[4]                                    NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1218,11 +1219,11 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i3/CK   vga_inst/col_num_25__i4/CK}->vga_inst/col_num_25__i3/Q
-                                          SLICE_R17C30C   CLK_TO_Q0_DELAY  1.391        12.018  1       
-vga_inst/n79[3]                                           NET DELAY        1.576        13.594  1       
+                                          SLICE_R17C28C   CLK_TO_Q0_DELAY  1.391        12.018  3       
+col_num[3]                                                NET DELAY        1.576        13.594  1       
 vga_inst/col_num_25_add_4_5/C0->vga_inst/col_num_25_add_4_5/S0
-                                          SLICE_R17C30C   C0_TO_F0_DELAY   0.450        14.044  1       
-vga_inst/n45_adj_61[3]                                    NET DELAY        0.000        14.044  1       
+                                          SLICE_R17C28C   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_71[3]                                    NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1283,11 +1284,11 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i1/CK   vga_inst/col_num_25__i2/CK}->vga_inst/col_num_25__i2/Q
-                                          SLICE_R17C30B   CLK_TO_Q1_DELAY  1.391        12.018  1       
-vga_inst/n79[2]                                           NET DELAY        1.576        13.594  1       
+                                          SLICE_R17C28B   CLK_TO_Q1_DELAY  1.391        12.018  3       
+col_num[2]                                                NET DELAY        1.576        13.594  1       
 vga_inst/col_num_25_add_4_3/C1->vga_inst/col_num_25_add_4_3/S1
-                                          SLICE_R17C30B   C1_TO_F1_DELAY   0.450        14.044  1       
-vga_inst/n45_adj_61[2]                                    NET DELAY        0.000        14.044  1       
+                                          SLICE_R17C28B   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_71[2]                                    NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1348,11 +1349,11 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 {vga_inst/col_num_25__i1/CK   vga_inst/col_num_25__i2/CK}->vga_inst/col_num_25__i1/Q
-                                          SLICE_R17C30B   CLK_TO_Q0_DELAY  1.391        12.018  1       
-vga_inst/n79[1]                                           NET DELAY        1.576        13.594  1       
+                                          SLICE_R17C28B   CLK_TO_Q0_DELAY  1.391        12.018  2       
+vga_inst/col_num[1]                                       NET DELAY        1.576        13.594  1       
 vga_inst/col_num_25_add_4_3/C0->vga_inst/col_num_25_add_4_3/S0
-                                          SLICE_R17C30B   C0_TO_F0_DELAY   0.450        14.044  1       
-vga_inst/n45_adj_61[1]                                    NET DELAY        0.000        14.044  1       
+                                          SLICE_R17C28B   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_71[1]                                    NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1413,11 +1414,11 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 vga_inst/col_num_25__i0/CK->vga_inst/col_num_25__i0/Q
-                                          SLICE_R17C30A   CLK_TO_Q1_DELAY  1.391        12.018  1       
-vga_inst/n79[0]                                           NET DELAY        1.576        13.594  1       
+                                          SLICE_R17C28A   CLK_TO_Q1_DELAY  1.391        12.018  2       
+vga_inst/col_num[0]                                       NET DELAY        1.576        13.594  1       
 vga_inst/col_num_25_add_4_1/C1->vga_inst/col_num_25_add_4_1/S1
-                                          SLICE_R17C30A   C1_TO_F1_DELAY   0.450        14.044  1       
-vga_inst/n45_adj_61[0]                                    NET DELAY        0.000        14.044  1       
+                                          SLICE_R17C28A   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45_adj_71[0]                                    NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1478,10 +1479,10 @@ Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
 vga_inst/row_num_27__i9/CK->vga_inst/row_num_27__i9/Q
-                                          SLICE_R15C30B   CLK_TO_Q0_DELAY  1.391        12.018  5       
+                                          SLICE_R18C30B   CLK_TO_Q0_DELAY  1.391        12.018  4       
 vga_inst/row_num[9]                                       NET DELAY        1.576        13.594  1       
 vga_inst/row_num_27_add_4_11/C0->vga_inst/row_num_27_add_4_11/S0
-                                          SLICE_R15C30B   C0_TO_F0_DELAY   0.450        14.044  1       
+                                          SLICE_R18C30B   C0_TO_F0_DELAY   0.450        14.044  1       
 vga_inst/n45[9]                                           NET DELAY        0.000        14.044  1       
 
 
@@ -1501,8 +1502,8 @@ clk2                                                         NET DELAY      5.51
 
  ++++Path 7  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_inst/row_num_27__i8/Q
-Path End         : vga_inst/row_num_27__i8/D
+Path Begin       : vga_inst/row_num_27__i4/Q
+Path End         : vga_inst/row_num_27__i4/D
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1542,12 +1543,12 @@ clk2                                                         NET DELAY      5.51
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_inst/row_num_27__i7/CK   vga_inst/row_num_27__i8/CK}->vga_inst/row_num_27__i8/Q
-                                          SLICE_R15C30A   CLK_TO_Q1_DELAY  1.391        12.018  3       
-vga_inst/row_num[8]                                       NET DELAY        1.576        13.594  1       
-vga_inst/row_num_27_add_4_9/C1->vga_inst/row_num_27_add_4_9/S1
-                                          SLICE_R15C30A   C1_TO_F1_DELAY   0.450        14.044  1       
-vga_inst/n45[8]                                           NET DELAY        0.000        14.044  1       
+{vga_inst/row_num_27__i3/CK   vga_inst/row_num_27__i4/CK}->vga_inst/row_num_27__i4/Q
+                                          SLICE_R18C29C   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/row_num[4]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_5/C1->vga_inst/row_num_27_add_4_5/S1
+                                          SLICE_R18C29C   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45[4]                                           NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1566,8 +1567,8 @@ clk2                                                         NET DELAY      5.51
 
  ++++Path 8  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_inst/row_num_27__i7/Q
-Path End         : vga_inst/row_num_27__i7/D
+Path Begin       : vga_inst/row_num_27__i3/Q
+Path End         : vga_inst/row_num_27__i3/D
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1607,12 +1608,12 @@ clk2                                                         NET DELAY      5.51
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_inst/row_num_27__i7/CK   vga_inst/row_num_27__i8/CK}->vga_inst/row_num_27__i7/Q
-                                          SLICE_R15C30A   CLK_TO_Q0_DELAY  1.391        12.018  3       
-vga_inst/row_num[7]                                       NET DELAY        1.576        13.594  1       
-vga_inst/row_num_27_add_4_9/C0->vga_inst/row_num_27_add_4_9/S0
-                                          SLICE_R15C30A   C0_TO_F0_DELAY   0.450        14.044  1       
-vga_inst/n45[7]                                           NET DELAY        0.000        14.044  1       
+{vga_inst/row_num_27__i3/CK   vga_inst/row_num_27__i4/CK}->vga_inst/row_num_27__i3/Q
+                                          SLICE_R18C29C   CLK_TO_Q0_DELAY  1.391        12.018  5       
+vga_inst/row_num[3]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_5/C0->vga_inst/row_num_27_add_4_5/S0
+                                          SLICE_R18C29C   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45[3]                                           NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1631,8 +1632,8 @@ clk2                                                         NET DELAY      5.51
 
  ++++Path 9  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_inst/row_num_27__i6/Q
-Path End         : vga_inst/row_num_27__i6/D
+Path Begin       : vga_inst/row_num_27__i1/Q
+Path End         : vga_inst/row_num_27__i1/D
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1672,12 +1673,12 @@ clk2                                                         NET DELAY      5.51
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_inst/row_num_27__i5/CK   vga_inst/row_num_27__i6/CK}->vga_inst/row_num_27__i6/Q
-                                          SLICE_R15C29D   CLK_TO_Q1_DELAY  1.391        12.018  3       
-vga_inst/row_num[6]                                       NET DELAY        1.576        13.594  1       
-vga_inst/row_num_27_add_4_7/C1->vga_inst/row_num_27_add_4_7/S1
-                                          SLICE_R15C29D   C1_TO_F1_DELAY   0.450        14.044  1       
-vga_inst/n45[6]                                           NET DELAY        0.000        14.044  1       
+{vga_inst/row_num_27__i1/CK   vga_inst/row_num_27__i2/CK}->vga_inst/row_num_27__i1/Q
+                                          SLICE_R18C29B   CLK_TO_Q0_DELAY  1.391        12.018  4       
+vga_inst/row_num[1]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_3/C0->vga_inst/row_num_27_add_4_3/S0
+                                          SLICE_R18C29B   C0_TO_F0_DELAY   0.450        14.044  1       
+vga_inst/n45[1]                                           NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path
@@ -1696,8 +1697,8 @@ clk2                                                         NET DELAY      5.51
 
  ++++Path 10  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : vga_inst/row_num_27__i5/Q
-Path End         : vga_inst/row_num_27__i5/D
+Path Begin       : vga_inst/row_num_27__i2/Q
+Path End         : vga_inst/row_num_27__i2/D
 Source Clock     : pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Destination Clock: pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL
 Logic Level      : 2
@@ -1737,12 +1738,12 @@ clk2                                                         NET DELAY      5.51
 Data path
 Name                                      Cell/Site Name  Delay Name       Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ---------------  -----  ------------  ------  
-{vga_inst/row_num_27__i5/CK   vga_inst/row_num_27__i6/CK}->vga_inst/row_num_27__i5/Q
-                                          SLICE_R15C29D   CLK_TO_Q0_DELAY  1.391        12.018  3       
-vga_inst/row_num[5]                                       NET DELAY        1.576        13.594  1       
-vga_inst/row_num_27_add_4_7/C0->vga_inst/row_num_27_add_4_7/S0
-                                          SLICE_R15C29D   C0_TO_F0_DELAY   0.450        14.044  1       
-vga_inst/n45[5]                                           NET DELAY        0.000        14.044  1       
+{vga_inst/row_num_27__i1/CK   vga_inst/row_num_27__i2/CK}->vga_inst/row_num_27__i2/Q
+                                          SLICE_R18C29B   CLK_TO_Q1_DELAY  1.391        12.018  5       
+vga_inst/row_num[2]                                       NET DELAY        1.576        13.594  1       
+vga_inst/row_num_27_add_4_3/C1->vga_inst/row_num_27_add_4_3/S1
+                                          SLICE_R18C29B   C1_TO_F1_DELAY   0.450        14.044  1       
+vga_inst/n45[2]                                           NET DELAY        0.000        14.044  1       
 
 
 Destination Clock Path

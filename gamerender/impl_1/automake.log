@@ -30,20 +30,20 @@ Optimizing...
 
 
 Design Summary:
-   Number of slice registers:  20 out of  5280 (<1%)
+   Number of slice registers:  49 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            44 out of  5280 (1%)
-      Number of logic LUT4s:              20
-      Number of ripple logic:             12 (24 LUT4s)
-   Number of IO sites used:   9 out of 39 (23%)
-      Number of IO sites used for general PIOs: 9
+   Number of LUT4s:           113 out of  5280 (2%)
+      Number of logic LUT4s:              45
+      Number of ripple logic:             34 (68 LUT4s)
+   Number of IO sites used:   10 out of 39 (26%)
+      Number of IO sites used for general PIOs: 10
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
-      Number of IO sites used for PIOs+I3Cs: 9 out of 36 (25%)
+      Number of IO sites used for PIOs+I3Cs: 10 out of 36 (28%)
       (note: If I3C is not used, its site can be used as general PIO)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  1 out of 1 (100%)
+   Number of High Speed OSCs:  2 out of 1 (200%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -53,26 +53,28 @@ Design Summary:
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             1 out of 1 (100%)
-   Number of Clocks:  2
+   Number of Clocks:  4
       Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net game_state_inst/forty_eight_mhz_clock: 11 loads, 11 rising, 0 falling (Driver: Pin game_state_inst.osc/CLKHF)
+      Net game_state_inst/forty_eight_mhz_counter[19]: 5 loads, 5 rising, 0 falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_58_61__i19/Q)
       Net clk: 1 loads, 1 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
    Number of Clock Enables:  2
-      Net vga_inst/n232: 6 loads, 6 SLICEs
-      Net VCC_net: 1 loads, 0 SLICEs
+      Net vga_inst/n458: 6 loads, 6 SLICEs
+      Net VCC_net: 2 loads, 0 SLICEs
    Number of LSRs:  2
-      Net vga_inst/n232: 6 loads, 6 SLICEs
-      Net vga_inst/n387: 6 loads, 6 SLICEs
+      Net vga_inst/n458: 6 loads, 6 SLICEs
+      Net vga_inst/n879: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net vga_inst/n232: 13 loads
-      Net vga_inst/n387: 6 loads
-      Net VCC_net: 5 loads
-      Net vga_inst/col_num[5]: 5 loads
-      Net vga_inst/col_num[6]: 5 loads
-      Net vga_inst/col_num[7]: 5 loads
-      Net vga_inst/row_num[9]: 5 loads
-      Net vga_inst/col_num[8]: 4 loads
-      Net vga_inst/col_num[9]: 4 loads
-      Net vga_inst/row_num[1]: 4 loads
+      Net vga_inst/n458: 13 loads
+      Net VCC_net: 11 loads
+      Net game_state_inst/n129: 10 loads
+      Net row_num[1]: 7 loads
+      Net row_num[9]: 7 loads
+      Net col_num[5]: 6 loads
+      Net col_num[8]: 6 loads
+      Net col_num[9]: 6 loads
+      Net row_num[2]: 6 loads
+      Net row_num[3]: 6 loads
 
 Running physical design DRC...
 
@@ -80,7 +82,7 @@ Loading udb::Database ...
  
 
    Number of warnings:  0
-   Number of errors:    0
+   Number of errors:    1
 
 
 
@@ -88,299 +90,3 @@ Total CPU Time: 0 secs
 Total REAL Time: 0 secs  
 Peak Memory Usage: 59 MB
 
-
-timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "gamerender_impl_1.tw1" "gamerender_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt gamerender_impl_1.tw1 gamerender_impl_1.udb -gui
-Starting design reading...
-Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Loading udb::Database ...
-Successfully loading udb, 0.03 seconds
-
-
-Starting design annotation....
-
-
-
-Starting full timing analysis...
-WARNING - "The
-STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
-Total REAL Time: 3 secs 
-Peak Memory Usage: 62 MB
-
-
-par -f "gamerender_impl_1.p2t" "gamerender_impl_1_map.udb" "gamerender_impl_1.udb"
-
-Lattice Place and Route Report for Design "gamerender_impl_1_map.udb"
-Wed Apr 24 20:12:46 2019
-
-PAR: Place And Route Radiant (64-bit) 1.0.0.350.6.
-Command Line: par -w -t 1 -exp parPathBased=ON gamerender_impl_1_map.udb \
-	gamerender_impl_1_par.dir/5_1.udb 
-
-Loading gamerender_impl_1_map.udb ...
-Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Design:  top
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-
-WARNING: udb::Constraint "create_generated_clock -name {u_PLL_B/OUTCORE} -source [get_pins pll_inst.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 86
-Number of Connections: 192
-Device utilization summary:
-
-   SLICE (est.)      24/2640         <1% used
-     LUT             44/5280         <1% used
-     REG             20/5280         <1% used
-   PIO                9/56           16% used
-                      9/36           25% bonded
-   IOLOGIC            0/56            0% used
-   DSP                0/8             0% used
-   I2C                0/2             0% used
-   HFOSC              1/1           100% used
-   LFOSC              0/1             0% used
-   LEDDA_IP           0/1             0% used
-   RGBA_DRV           0/1             0% used
-   FILTER             0/2             0% used
-   SRAM               0/4             0% used
-   WARMBOOT           0/1             0% used
-   SPI                0/2             0% used
-   EBR                0/30            0% used
-   PLL                1/1           100% used
-   RGBOUTBUF          0/3             0% used
-   I3C                2/2           100% used
-   OPENDRAIN          0/3             0% used
-
-Pin Constraint Summary:
-   8 out of 9 pins locked (88% locked).
-.
-........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
-
-
-................
-Finished Placer Phase 0 (AP).  CPU time: 0 secs , REAL time: 0 secs 
-
-Starting Placer Phase 1. REAL time: 0 secs 
-..  ..
-....................
-
-Placer score = 5620.
-
-Device SLICE utilization summary after final SLICE packing:
-   SLICE             24/2640         <1% used
-
-Finished Placer Phase 1.  CPU time: 6 secs , REAL time: 7 secs 
-
-Starting Placer Phase 2.
-.
-
-Placer score =  9016
-Finished Placer Phase 2.  CPU time: 6 secs , REAL time: 7 secs 
-
-
------------------- Clock Report ------------------
-
-Global Clocks :
-  PRIMARY "clk2" from OUTGLOBAL on comp "pll_inst.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 12, ce load = 0, sr load = 0
-
-  PRIMARY  : 1 out of 8 (12%)
-
---------------- End of Clock Report ---------------
-
-
-I/O Usage Summary (final):
-   9 out of 56 (16.1%) PIO sites used.
-   9 out of 36 (25.0%) bonded PIO sites used.
-   Number of PIO comps: 9; differential: 0
-   Number of Vref pins used: 0
-
-I/O Bank Usage Summary:
-+----------+---------------+------------+------------+------------+
-| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
-+----------+---------------+------------+------------+------------+
-| 0        | 9 / 14 ( 64%) | 3.3V       |            |            |
-| 1        | 0 / 14 (  0%) | OFF        |            |            |
-| 2        | 0 / 8 (  0%)  | OFF        |            |            |
-+----------+---------------+------------+------------+------------+
-
-Total Placer CPU time: 6 secs , REAL time: 7 secs 
-
-Writing design to file gamerender_impl_1_par.dir/5_1.udb ...
-
-
-Start NBR router at 20:12:53 04/24/19
-
-*****************************************************************
-Info: NBR allows conflicts(one node used by more than one signal)
-      in the earlier iterations. In each iteration, it tries to  
-      solve the conflicts while keeping the critical connections 
-      routed as short as possible. The routing process is said to
-      be completed when no conflicts exist and all connections   
-      are routed.                                                
-Note: NBR uses a different method to calculate timing slacks. The
-      worst slack and total negative slack may not be the same as
-      that in timing report. You should always run the timing    
-      tool to verify your design.                                
-*****************************************************************
-
-Starting routing resource preassignment
-Preassignment Summary:
---------------------------------------------------------------------------------
-41 connections routed with dedicated routing resources
-1 global clock signals routed
-53 connections routed (of 192 total) (27.60%)
----------------------------------------------------------
-Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#7  Signal "clk2"
-       Clock   loads: 12    out of    12 routed (100.00%)
-Other clocks:
-    Signal "clk"
-       Clock   loads: 0     out of     1 routed (  0.00%)
-    Signal "pll_inst/lscc_pll_inst/feedback_w"
-       Clock   loads: 1     out of     1 routed (100.00%)
----------------------------------------------------------
---------------------------------------------------------------------------------
-Completed routing resource preassignment
-    TimerIf::skewscore 0
-
-Start NBR section for initial routing at 20:12:54 04/24/19
-Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 26.979ns/0.000ns; real time: 0 secs 
-
-Info: Initial congestion level at 75% usage is 0
-Info: Initial congestion area  at 75% usage is 0 (0.00%)
-
-Start NBR section for normal routing at 20:12:54 04/24/19
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 26.979ns/0.000ns; real time: 0 secs 
-
-Start NBR section for setup/hold timing optimization with effort level 3 at 20:12:54 04/24/19
-FALSE ARC LibDelays : 731463712, 608, 16, 0
-
-Start NBR section for re-routing at 20:12:54 04/24/19
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
-
-Start NBR section for post-routing at 20:12:54 04/24/19
-
-End NBR router with 0 unrouted connection
-
-NBR Summary
------------
-  Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 26.979ns
-  Timing score<setup> : 0
------------
-Notes: The timing info is calculated for SETUP only.
-
-
-FALSE ARC LibDelays : 729604112, 608, 16, 0
----------------------------------------------------------
-Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#7  Signal "clk2"
-       Clock   loads: 12    out of    12 routed (100.00%)
-Other clocks:
-    Signal "clk"
-       Clock   loads: 1     out of     1 routed (100.00%)
-    Signal "pll_inst/lscc_pll_inst/feedback_w"
-       Clock   loads: 1     out of     1 routed (100.00%)
----------------------------------------------------------
-Total CPU time 1 secs 
-Total REAL time: 0 secs 
-Completely routed.
-End of route.  192 routed (100.00%); 0 unrouted.
-
-Writing design to file gamerender_impl_1_par.dir/5_1.udb ...
-
-
-PAR_SUMMARY::Run status = Success
-PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 26.979
-PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
-PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
-PAR_SUMMARY::Number of errors = 0
-
-Total CPU  Time: 8 secs 
-Total REAL Time: 9 secs 
-Peak Memory Usage: 101 MB
-
-
-par done!
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-
-timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "gamerender_impl_1.twr" "gamerender_impl_1.udb" 
-timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt gamerender_impl_1.twr gamerender_impl_1.udb -gui
-Starting design reading...
-Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Loading udb::Database ...
-Successfully loading udb, 0.05 seconds
-
-
-Starting design annotation....
-
-
-
-Starting full timing analysis...
-WARNING - "The
-STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 87 MB
-
-
-bitgen -w "gamerender_impl_1.udb" -f "gamerender_impl_1.t2b" 
-Loading gamerender_impl_1.udb ...
-Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-
-
-BITGEN: Bitstream Generator Radiant (64-bit) 1.0.0.350.6
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-
-
-Running DRC.
-DRC detected 0 errors and 0 warnings.
-
-Preference Summary:
-+---------------------------------+---------------------------------+
-|  Preference                     |  Current Setting                |
-+---------------------------------+---------------------------------+
- *  Default setting.
- ** The specified setting matches the default setting.
-
-
-Creating bit map...
-Saving bit stream in "\\vs-home\gdiaz01\gamerender\impl_1\gamerender_impl_1.bin".
-
-backanno "gamerender_impl_1.udb" -n Verilog  -o "gamerender_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
-backanno: version Radiant (64-bit) 1.0.0.350.6
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-
-Writing a Verilog netlist based on the gamerender_impl_1 design file.
-
-Device performance grade changed to High-Performance_1.2V.
-Loading gamerender_impl_1.udb ...
-Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Writing Verilog netlist to file gamerender_impl_1_vo.vo
-Writing SDF timing to file gamerender_impl_1_vo.sdf
-Backanno finished with 0 posted error messages.

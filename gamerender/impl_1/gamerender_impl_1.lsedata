@@ -2,15 +2,17 @@
 
 <clocks>
     <clockitem name = "clk"  type = "net" />
-    <clockitem name = "PLL_out"  type = "net" />
     <clockitem name = "clk2"  type = "net" />
+    <clockitem name = "PLL_out"  type = "net" />
+    <clockitem name = "game_state_inst/forty_eight_mhz_clock"  type = "net" />
+    <clockitem name = "game_state_inst/forty_eight_mhz_counter[19]"  type = "net" />
     <clockitem name = "pll_inst/lscc_pll_inst/outcoreb_o"  type = "net" />
     <clockitem name = "pll_inst/lscc_pll_inst/outglobalb_o"  type = "net" />
 </clocks>
 
 <!--
     //=============================================================
-    //  Number of Clocks processed: 5
+    //  Number of Clocks processed: 7
     //
     //  If a clock cannot be found in the top level pins section,
     //  that means it is an internal clock.
@@ -35,10 +37,11 @@
 <unit name = "top">
 
     <!--
-        Top Level Pins: 9
+        Top Level Pins: 10
     -->
 
     <pins>
+        <pitem  name = "clappy"  direction = "in"  />
         <pitem  name = "RGB[5]"  direction = "out"  />
         <pitem  name = "RGB[4]"  direction = "out"  />
         <pitem  name = "RGB[3]"  direction = "out"  />
@@ -51,7 +54,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 29
+        Instances in netlist: 47
     -->
 
     <instance  name = "hsosc_inst"  library = "work"  arch = "RTL"  type = "comb">
@@ -945,7 +948,314 @@
         </nets>
     </instance>
 
+    <instance  name = "testpattern_inst/y_pos_9__I_0_15"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_55"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/y_pos_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[9]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[8]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[7]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[6]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[5]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[4]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[3]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[2]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[1]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/row_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "row_num[9]"  />
+        <nitem  name = "row_num[8]"  />
+        <nitem  name = "row_num[7]"  />
+        <nitem  name = "row_num[6]"  />
+        <nitem  name = "row_num[5]"  />
+        <nitem  name = "row_num[4]"  />
+        <nitem  name = "row_num[3]"  />
+        <nitem  name = "row_num[2]"  />
+        <nitem  name = "row_num[1]"  />
+        <nitem  name = "row_num[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[9]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[8]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[7]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[6]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[5]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[4]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[3]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[2]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[1]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_57[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_56"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/col_i_9__I_0_14"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_67"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/col_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "col_num[9]"  />
+        <nitem  name = "col_num[8]"  />
+        <nitem  name = "col_num[7]"  />
+        <nitem  name = "col_num[6]"  />
+        <nitem  name = "col_num[5]"  />
+        <nitem  name = "col_num[4]"  />
+        <nitem  name = "col_num[3]"  />
+        <nitem  name = "col_num[2]"  />
+        <nitem  name = "col_num[1]"  />
+        <nitem  name = "col_num[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_68"  />
+        </nets>
+    </instance>
+
     <instance  name = "testpattern_inst/valid_i_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "visible_area"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_55"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_54"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/RGB_o_5__I_6"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/RGB_o_5__N_56"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_54"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_53"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/RGB_o_5__I_5"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/RGB_o_5__N_67"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_53"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_52"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/RGB_o_5__I_4"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/RGB_o_5__N_68"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_52"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "testpattern_inst/RGB_o_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d0[5]"  direction = "in"  />
         <pitem  name = "d0[4]"  direction = "in"  />
@@ -959,7 +1269,107 @@
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
         <pitem  name = "cond"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "RGB[5]"  />
+        <nitem  name = "RGB[4]"  />
+        <nitem  name = "RGB[3]"  />
+        <nitem  name = "RGB[2]"  />
+        <nitem  name = "RGB[1]"  />
+        <nitem  name = "RGB[0]"  />
+        <nitem  name = "testpattern_inst/RGB_o_5__N_51"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/osc"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "CLKHFEN"  direction = "in"  />
+        <pitem  name = "CLKHFPU"  direction = "in"  />
+        <pitem  name = "CLKHF"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/pwr"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_clock"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/forty_eight_mhz_counter_22__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[22]"  direction = "in"  />
+        <pitem  name = "b[21]"  direction = "in"  />
+        <pitem  name = "b[20]"  direction = "in"  />
+        <pitem  name = "b[19]"  direction = "in"  />
+        <pitem  name = "b[18]"  direction = "in"  />
+        <pitem  name = "b[17]"  direction = "in"  />
+        <pitem  name = "b[16]"  direction = "in"  />
+        <pitem  name = "b[15]"  direction = "in"  />
+        <pitem  name = "b[14]"  direction = "in"  />
+        <pitem  name = "b[13]"  direction = "in"  />
+        <pitem  name = "b[12]"  direction = "in"  />
+        <pitem  name = "b[11]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[22]"  direction = "in"  />
+        <pitem  name = "a[21]"  direction = "in"  />
+        <pitem  name = "a[20]"  direction = "in"  />
+        <pitem  name = "a[19]"  direction = "in"  />
+        <pitem  name = "a[18]"  direction = "in"  />
+        <pitem  name = "a[17]"  direction = "in"  />
+        <pitem  name = "a[16]"  direction = "in"  />
+        <pitem  name = "a[15]"  direction = "in"  />
+        <pitem  name = "a[14]"  direction = "in"  />
+        <pitem  name = "a[13]"  direction = "in"  />
+        <pitem  name = "a[12]"  direction = "in"  />
+        <pitem  name = "a[11]"  direction = "in"  />
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[22]"  direction = "out"  />
+        <pitem  name = "o[21]"  direction = "out"  />
+        <pitem  name = "o[20]"  direction = "out"  />
+        <pitem  name = "o[19]"  direction = "out"  />
+        <pitem  name = "o[18]"  direction = "out"  />
+        <pitem  name = "o[17]"  direction = "out"  />
+        <pitem  name = "o[16]"  direction = "out"  />
+        <pitem  name = "o[15]"  direction = "out"  />
+        <pitem  name = "o[14]"  direction = "out"  />
+        <pitem  name = "o[13]"  direction = "out"  />
+        <pitem  name = "o[12]"  direction = "out"  />
+        <pitem  name = "o[11]"  direction = "out"  />
+        <pitem  name = "o[10]"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
         <pitem  name = "o[5]"  direction = "out"  />
         <pitem  name = "o[4]"  direction = "out"  />
         <pitem  name = "o[3]"  direction = "out"  />
@@ -969,15 +1379,468 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "visible_area"  />
-        <nitem  name = "RGB[5]"  />
-        <nitem  name = "RGB[4]"  />
-        <nitem  name = "RGB[3]"  />
-        <nitem  name = "RGB[2]"  />
-        <nitem  name = "RGB[1]"  />
-        <nitem  name = "RGB[0]"  />
+        <nitem  name = "game_state_inst/gnd"  />
+        <nitem  name = "game_state_inst/pwr"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/bird_y_pos"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/gnd"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[19]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_12"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/gnd"  />
+        <nitem  name = "game_state_inst/pwr"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_13"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/gnd"  />
+        <nitem  name = "game_state_inst/pwr"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/bird_y_pos_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "clappy"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_102[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_112[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_69[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/forty_eight_mhz_counter"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[22]"  direction = "in"  />
+        <pitem  name = "set[21]"  direction = "in"  />
+        <pitem  name = "set[20]"  direction = "in"  />
+        <pitem  name = "set[19]"  direction = "in"  />
+        <pitem  name = "set[18]"  direction = "in"  />
+        <pitem  name = "set[17]"  direction = "in"  />
+        <pitem  name = "set[16]"  direction = "in"  />
+        <pitem  name = "set[15]"  direction = "in"  />
+        <pitem  name = "set[14]"  direction = "in"  />
+        <pitem  name = "set[13]"  direction = "in"  />
+        <pitem  name = "set[12]"  direction = "in"  />
+        <pitem  name = "set[11]"  direction = "in"  />
+        <pitem  name = "set[10]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[22]"  direction = "in"  />
+        <pitem  name = "reset[21]"  direction = "in"  />
+        <pitem  name = "reset[20]"  direction = "in"  />
+        <pitem  name = "reset[19]"  direction = "in"  />
+        <pitem  name = "reset[18]"  direction = "in"  />
+        <pitem  name = "reset[17]"  direction = "in"  />
+        <pitem  name = "reset[16]"  direction = "in"  />
+        <pitem  name = "reset[15]"  direction = "in"  />
+        <pitem  name = "reset[14]"  direction = "in"  />
+        <pitem  name = "reset[13]"  direction = "in"  />
+        <pitem  name = "reset[12]"  direction = "in"  />
+        <pitem  name = "reset[11]"  direction = "in"  />
+        <pitem  name = "reset[10]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[22]"  direction = "out"  />
+        <pitem  name = "q[21]"  direction = "out"  />
+        <pitem  name = "q[20]"  direction = "out"  />
+        <pitem  name = "q[19]"  direction = "out"  />
+        <pitem  name = "q[18]"  direction = "out"  />
+        <pitem  name = "q[17]"  direction = "out"  />
+        <pitem  name = "q[16]"  direction = "out"  />
+        <pitem  name = "q[15]"  direction = "out"  />
+        <pitem  name = "q[14]"  direction = "out"  />
+        <pitem  name = "q[13]"  direction = "out"  />
+        <pitem  name = "q[12]"  direction = "out"  />
+        <pitem  name = "q[11]"  direction = "out"  />
+        <pitem  name = "q[10]"  direction = "out"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[22]"  direction = "in"  />
+        <pitem  name = "d[21]"  direction = "in"  />
+        <pitem  name = "d[20]"  direction = "in"  />
+        <pitem  name = "d[19]"  direction = "in"  />
+        <pitem  name = "d[18]"  direction = "in"  />
+        <pitem  name = "d[17]"  direction = "in"  />
+        <pitem  name = "d[16]"  direction = "in"  />
+        <pitem  name = "d[15]"  direction = "in"  />
+        <pitem  name = "d[14]"  direction = "in"  />
+        <pitem  name = "d[13]"  direction = "in"  />
+        <pitem  name = "d[12]"  direction = "in"  />
+        <pitem  name = "d[11]"  direction = "in"  />
+        <pitem  name = "d[10]"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/gnd"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_clock"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_79[0]"  />
         </nets>
     </instance>
 
@@ -1024,18 +1887,22 @@
         </nets>
     </instance>
 
+    <instance  name = "game_state_inst"  />
     <instance  name = "lscc_pll_inst"  />
+    <instance  name = "osc"  />
     <instance  name = "pll_inst"  />
     <instance  name = "testpattern_inst"  />
     <instance  name = "u_PLL_B"  />
     <instance  name = "vga_inst"  />
     <!--
-        REG instances in netlist: 2
+        REG instances in netlist: 4
     -->
 
     <regs>
         <reg  name = "vga_inst/row_num"  />
         <reg  name = "vga_inst/col_num"  />
+        <reg  name = "game_state_inst/bird_y_pos"  />
+        <reg  name = "game_state_inst/forty_eight_mhz_counter"  />
     </regs>
 
     <!--
@@ -1047,10 +1914,11 @@
     </romnets>
 
     <!--
-        Views in design "top": 4
+        Views in design "top": 5
     -->
 
     <views>
+        <view  name = "game_state"  />
         <view  name = "lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="48.000000")"  />
         <view  name = "pll"  />
         <view  name = "testpattern"  />
