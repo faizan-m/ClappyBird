@@ -47,20 +47,21 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant (64-bit) 1.0.1.350.6
-Mapped on: Tue Apr 23 16:00:34 2019
+Mapped on: Sat Apr 27 14:25:44 2019
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
 Command line:   map clappyBird_impl_1_syn.udb
-     C:/Users/faiza/my_designs/clappyBird/pins.pdc -o clappyBird_impl_1.udb -gui
+     C:/WorkSpace/gits/ClappyBird/clappyBird/pins.pdc -o clappyBird_impl_1.udb
+     -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers:  28 out of  5280 (1%)
+   Number of slice registers:  60 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            35 out of  5280 (1%)
-      Number of logic LUT4s:               3
-      Number of ripple logic:             16 (32 LUT4s)
+   Number of LUT4s:           143 out of  5280 (3%)
+      Number of logic LUT4s:              63
+      Number of ripple logic:             40 (80 LUT4s)
    Number of IO sites used:   10 out of 39 (26%)
       Number of IO sites used for general PIOs: 10
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
@@ -78,33 +79,39 @@ Command line:   map clappyBird_impl_1_syn.udb
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
-   Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  2
-      Net forty_eight_mhz_clock: 11 loads, 11 rising, 0 falling (Driver: Pin
-     osc/CLKHF)
-      Net forty_eight_mhz_counter[19]: 4 loads, 4 rising, 0 falling (Driver: Pin
-     forty_eight_mhz_counter_46_47__i19/Q)
-   Number of Clock Enables:  1
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  3
+      Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin
+     pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net game_state_inst/forty_eight_mhz_counter[19]: 12 loads, 12 rising, 0
+     falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_93_101__i19/Q)
+      Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
+   Number of Clock Enables:  3
+      Net vga_inst/n602: 6 loads, 6 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
-   Number of LSRs:  0
+      Net game_state_inst/n601: 5 loads, 5 SLICEs
+   Number of LSRs:  4
+      Net vga_inst/n602: 6 loads, 6 SLICEs
+      Net vga_inst/n635: 6 loads, 6 SLICEs
+      Net game_state_inst/n632: 5 loads, 5 SLICEs
+      Net game_state_inst/is_over_N_152: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net n174: 9 loads
-      Net VCC_net: 3 loads
-      Net bird_y_pos_c_1: 2 loads
-      Net bird_y_pos_c_7: 2 loads
-      Net bird_y_pos_c_8: 2 loads
-      Net clap_c: 2 loads
-      Net n276: 2 loads
-      Net n303: 2 loads
-      Net n643: 2 loads
-      Net n688: 2 loads
+      Net vga_inst/n602: 13 loads
+      Net game_over: 11 loads
+      Net VCC_net: 10 loads
+      Net col_num[9]: 7 loads
+
+      Net game_state_inst/bird_y_pos_9__N_145: 7 loads
+      Net row_num[9]: 7 loads
+      Net vga_inst/col_num[8]_2: 7 loads
+      Net row_num[1]: 6 loads
+      Net row_num[2]: 6 loads
+      Net row_num[3]: 6 loads
 
 
 
 
-
-
-   Number of warnings:  3
+   Number of warnings:  0
    Number of errors:    0
 
 
@@ -112,11 +119,7 @@ Command line:   map clappyBird_impl_1_syn.udb
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-WARNING - map: No port matched 'check'.
-WARNING - map: Can't resolve object 'check' in constraint 'ldc_set_location
-     -site {36} [get_ports check]'.
-WARNING - map: Remove invalid constraint 'ldc_set_location -site {36} [get_ports
-     check]'.
+   No errors or warnings present.
 
 
 
@@ -126,36 +129,82 @@ WARNING - map: Remove invalid constraint 'ldc_set_location -site {36} [get_ports
 | IO Name             | Direction | Levelmode |
 |                     |           |  IO_TYPE  |
 +---------------------+-----------+-----------+
-| clap                | INPUT     | LVCMOS33  |
+| clappy              | INPUT     | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[0]       | OUTPUT    | LVCMOS33  |
+| PLL_out             | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[1]       | OUTPUT    | LVCMOS33  |
+| VSYNC               | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[2]       | OUTPUT    | LVCMOS33  |
+| HSYNC               | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[3]       | OUTPUT    | LVCMOS33  |
+| RGB[0]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[4]       | OUTPUT    | LVCMOS33  |
+| RGB[5]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[5]       | OUTPUT    | LVCMOS33  |
+| RGB[4]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[6]       | OUTPUT    | LVCMOS33  |
+| RGB[1]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[8]       | OUTPUT    | LVCMOS33  |
+| RGB[3]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
-| bird_y_pos[7]       | OUTPUT    | LVCMOS33  |
+| RGB[2]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Signal GND_net undriven or does not drive anything - clipped.
+Block i1 was optimized away.
+
+
+
+<A name="mrp_pll"></A><B><U><big>PLL/DLL Summary</big></U></B>
+---------------
+
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            pll_inst.lscc_pll_inst.u_PLL_B
+
+  PLL Type:                                     PLL_B
+  Input Reference Clock:               NODE     clk
+  Output Clock(CoreA):                 PIN      PLL_out_c
+  Output Clock(GlobalA):               NODE     clk2
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE
+       pll_inst/lscc_pll_inst/feedback_w
+  Internal Feedback output:            NODE
+       pll_inst/lscc_pll_inst/feedback_w
+  BYPASS signal:                                GND
+  LATCH signal:                                 GND
+  Lock Signal:                                  NONE
+  Input Clock Frequency (MHz):                  48.0000
+  Reference Divider:                            3
+  Feedback Divider:                             66
+  VCO Divider:                                  5
+  ENABLE_ICEGATE_PORTA:                         0
+  ENABLE_ICEGATE_PORTB:                         0
+  PLLOUT_SELECT_PORTA:                          GENCLK
+  PLLOUT_SELECT_PORTB:                          GENCLK
+  SHIFTREG_DIV_MODE:                            0
+  DELAY_ADJUSTMENT_MODE_RELATIVE:               FIXED
+  FDA_RELATIVE:                                 0
+  FEEDBACK_PATH:                                SIMPLE
+  DELAY_ADJUSTMENT_MODE_FEEDBACK:               FIXED
+  FDA_FEEDBACK:                                 0
+  FILTER_RANGE:                                 1
+  EXTERNAL_DIVIDE_FACTOR:                       NONE
+  TEST Mode:                                    0
 
 OSC Summary
 -----------
 
 OSC 1:                                 Pin/Node Value
-  OSC Instance Name:                            osc
+  OSC Instance Name:                            hsosc_inst
   OSC Type:                                     HSOSC_CORE
   Power UP:                            NODE     VCC_net
   Enable Signal:                       NODE     VCC_net
-  OSC Output:                          NODE     forty_eight_mhz_clock
+  OSC Output:                          NODE     clk
   DIV Setting:                                  0b00
 
 
@@ -163,9 +212,10 @@ OSC 1:                                 Pin/Node Value
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: osc
+Instance Name: pll_inst.lscc_pll_inst.u_PLL_B
+         Type: PLL
+Instance Name: hsosc_inst
          Type: HFOSC
-
 
 
 
@@ -174,58 +224,7 @@ Instance Name: osc
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 59 MB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 62 MB
 
 
 
@@ -300,6 +299,8 @@ Copyright (c) 2002-2018 Lattice Semiconductor
 <LI><A href=#mrp_ds>Design Summary</A></LI>
 <LI><A href=#mrp_dwe>Design Errors/Warnings</A></LI>
 <LI><A href=#mrp_ioa>IO (PIO) Attributes</A></LI>
+<LI><A href=#mrp_rm>Removed logic</A></LI>
+<LI><A href=#mrp_pll>PLL/DLL Summary</A></LI>
 <LI><A href=#mrp_asic>ASIC Components</A></LI>
 <LI><A href=#mrp_runtime>Run Time and Memory Usage</A></LI>
 </UL>

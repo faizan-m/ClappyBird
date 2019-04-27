@@ -9,10 +9,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Apr 23 16:00:31 2019
+Sat Apr 27 14:25:40 2019
 
 
-Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/Users/faiza/my_designs/clappyBird/promote.xml 
+Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml 
 
 INFO - synthesis: Lattice Synthesis Engine Launched.
 Synthesis options:
@@ -42,7 +42,7 @@ The -p option is iCE40UP5K.
 
 
 INFO - User-Selected Strategy SettingsOptimization goal = Area
-Top-level module name = game_state.
+Top-level module name = top.
 Target frequency = 1.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -73,26 +73,38 @@ The -comp option is FALSE.
 The -syn option is FALSE.
 -vh2008
 
--path C:/Users/faiza/my_designs/clappyBird (searchpath added)
--path C:/Users/faiza/my_designs/clappyBird/impl_1 (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/clappyBird (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/clappyBird/impl_1 (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/clappyBird/pll (searchpath added)
 -path C:/lscc/radiant/1.0/ispfpga/ice40tp/data (searchpath added)
 Mixed language design
 Verilog design file = C:/lscc/radiant/1.0/ip/pmi/pmi.v
+Verilog design file = C:/WorkSpace/gits/ClappyBird/clappyBird/pll/rtl/pll.v
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/1.0/ip/pmi/pmi.vhd
 VHDL library = work
-VHDL design file = C:/Users/faiza/my_designs/clappyBird/GameState.vhd
+VHDL design file = C:/WorkSpace/gits/ClappyBird/clappyBird/GameRenderer.vhd
+VHDL library = work
+VHDL design file = C:/WorkSpace/gits/ClappyBird/clappyBird/GameState.vhd
+VHDL library = work
+VHDL design file = C:/WorkSpace/gits/ClappyBird/clappyBird/top.vhd
+VHDL library = work
+VHDL design file = C:/WorkSpace/gits/ClappyBird/clappyBird/vga.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
 Analyzing Verilog file c:/lscc/radiant/1.0/ip/pmi/pmi.v. VERI-1482
-INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(1):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_add.v(50):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(2):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_complex_mult.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(3):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(4):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mac.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(5):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_multaddsub.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(6):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mult.v(51):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(7):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dp.v(47):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(8):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(9):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v(50):analyzing included file . VERI-1328Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
-INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4):analyzing package . VHDL-1014Analyzing VHDL file c:/users/faiza/my_designs/clappybird/gamestate.vhd. VHDL-1481
-INFO - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(5):analyzing entity . VHDL-1012INFO - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(12):analyzing architecture . VHDL-1010INFO - The default VHDL library search path is now "C:/Users/faiza/my_designs/clappyBird/impl_1". VHDL-1504Top module language type = VHDL.
-unit game_state is not yet analyzed. VHDL-1485
-c:/users/faiza/my_designs/clappybird/gamestate.vhd(5): executing game_state(synth)
+INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(1):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_add.v(50):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(2):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_complex_mult.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(3):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(4):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mac.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(5):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_multaddsub.v(52):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(6):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_mult.v(51):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(7):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dp.v(47):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(8):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v(45):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.v(9):analyzing included file . VERI-1328INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v(50):analyzing included file . VERI-1328Analyzing Verilog file c:/workspace/gits/clappybird/clappybird/pll/rtl/pll.v. VERI-1482
+INFO - "c:/workspace/gits/clappybird/clappybird/pll/rtl/pll.v(9):analyzing included file . VERI-1328Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
+INFO - "c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4):analyzing package . VHDL-1014Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd. VHDL-1481
+INFO - "c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd(5):analyzing entity . VHDL-1012INFO - "c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd(19):analyzing architecture . VHDL-1010Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/gamestate.vhd. VHDL-1481
+INFO - "c:/workspace/gits/clappybird/clappybird/gamestate.vhd(5):analyzing entity . VHDL-1012INFO - "c:/workspace/gits/clappybird/clappybird/gamestate.vhd(14):analyzing architecture . VHDL-1010Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/top.vhd. VHDL-1481
+INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(5):analyzing entity . VHDL-1012INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(15):analyzing architecture . VHDL-1010Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/vga.vhd. VHDL-1481
+INFO - "c:/workspace/gits/clappybird/clappybird/vga.vhd(5):analyzing entity . VHDL-1012INFO - "c:/workspace/gits/clappybird/clappybird/vga.vhd(18):analyzing architecture . VHDL-1010INFO - The default VHDL library search path is now "C:/WorkSpace/gits/ClappyBird/clappyBird/impl_1". VHDL-1504Top module language type = VHDL.
+unit top is not yet analyzed. VHDL-1485
+c:/workspace/gits/clappybird/clappybird/top.vhd(5): executing top(synth)
 
-INFO - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(33):going to verilog side to elaborate module . VHDL-1399INFO - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(33):back to VHDL to continue elaboration. VHDL-1400WARNING - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(10):replacing existing netlist (game_state). VHDL-1205Top module name (VHDL, mixed language): game_state
+INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(88):going to verilog side to elaborate module . VHDL-1399INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(88):back to VHDL to continue elaboration. VHDL-1400INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(98):going to verilog side to elaborate module . VHDL-1399INFO - "c:/workspace/gits/clappybird/clappybird/top.vhd(98):back to VHDL to continue elaboration. VHDL-1400WARNING - "c:/workspace/gits/clappybird/clappybird/top.vhd(13):replacing existing netlist (top). VHDL-1205Top module name (VHDL, mixed language): top
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
                                                          
 
@@ -118,64 +130,70 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
                                                          
 
 
+WARNING - Initial value found on net valid will be ignored due to unrecognized driver typeWARNING - "c:/workspace/gits/clappybird/clappybird/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/workspace/gits/clappybird/clappybird/pll/rtl/pll.v(47):input port  is not connected on this instance. VDB-1013WARNING - "c:/workspace/gits/clappybird/clappybird/pll/rtl/core/lscc_pll.v(95):net  does not have a driver. VDB-1002WARNING - "c:/workspace/gits/clappybird/clappybird/pll/rtl/core/lscc_pll.v(96):net  does not have a driver. VDB-1002######## Missing driver on net \pll_inst/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \pll_inst/lscc_pll_inst/sdi_i. Patching with GND.
 
 
 
-WARNING - "c:/users/faiza/my_designs/clappybird/gamestate.vhd(51):Register  is stuck at Zero. VDB-5013Applying 1.000000 MHz constraint to all clocks
+WARNING - "c:/workspace/gits/clappybird/clappybird/gamestate.vhd(46):Register  is stuck at Zero. VDB-5013Applying 1.000000 MHz constraint to all clocks
 
 
 Starting design annotation....
 
 
-
+WARNING - User constraint/setting (may come from constraint file or attribute in HDL) overrides device constraint for port 'OUTGLOBAL' of PLL '\pll_inst/lscc_pll_inst/u_PLL_B'.
 Starting full timing analysis...
 Worst slack in design -1603
-
-################### Begin Area Report (game_state)######################
-Number of register bits => 28 of 5280 (0 % )
-CCU2 => 16
-FD1P3XZ => 28
+WARNING - "TheWARNING - "The
+################### Begin Area Report (top)######################
+Number of register bits => 60 of 5280 (1 % )
+CCU2 => 40
+FD1P3XZ => 60
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 1
+LUT4 => 62
 OB => 9
+PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
-Number of even-length carry chains : 1
+Number of even-length carry chains : 5
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : forty_eight_mhz_clock, loads : 0
-  Net : forty_eight_mhz_counter[19], loads : 1
+Number of Clocks: 3
+  Net : clk, loads : 1
+  Net : pll_inst/lscc_pll_inst/PLL_out_c, loads : 1
+  Net : pll_inst/lscc_pll_inst/clk2, loads : 0
 Clock Enable Nets
-Number of Clock Enables: 0
-Top 0 highest fanout Clock Enables:
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
+  Net : vga_inst/n602, loads : 21
+  Net : game_state_inst/n601, loads : 10
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n174, loads : 9
-  Net : clap_c, loads : 2
-  Net : bird_y_pos_c_8, loads : 2
-  Net : bird_y_pos_c_7, loads : 2
-  Net : bird_y_pos_c_6, loads : 2
-  Net : bird_y_pos_c_5, loads : 2
-  Net : bird_y_pos_c_4, loads : 2
-  Net : bird_y_pos_c_3, loads : 2
-  Net : bird_y_pos_c_2, loads : 2
-  Net : bird_y_pos_c_1, loads : 2
+  Net : vga_inst/n602, loads : 21
+  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 21
+  Net : game_state_inst/game_over, loads : 10
+  Net : vga_inst/n635, loads : 10
+  Net : game_state_inst/n601, loads : 10
+  Net : game_state_inst/is_over_N_152, loads : 10
+  Net : game_state_inst/n632, loads : 9
+  Net : vga_inst/col_num[8], loads : 7
+  Net : game_state_inst/bird_y_pos_9__N_145, loads : 7
+  Net : vga_inst/row_num[9], loads : 6
 ################### End Clock Report ##################
 
-Peak Memory Usage: 132.035  MB
+Peak Memory Usage: 142.898  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 1.953  secs
-Total REAL time for LSE flow : 2.000  secs
+Total CPU time for LSE flow : 2.922  secs
+Total REAL time for LSE flow : 3.000  secs
 --------------------------------------------------------------
 
 
 postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -keeprtl -w -o clappyBird_impl_1.udb clappyBird_impl_1.vm
 POSTSYN: Post Synthesis Process Radiant (64-bit) 1.0.1.350.6
-Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -keeprtl -w -o clappyBird_impl_1.udb -gui -msgset C:/Users/faiza/my_designs/clappyBird/promote.xml clappyBird_impl_1.vm 
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -keeprtl -w -o clappyBird_impl_1.udb -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml clappyBird_impl_1.vm 
    Architecture:     iCE40UP
    Device:           iCE40UP5K
    Package:          SG48
@@ -190,10 +208,10 @@ Writing output file 'clappyBird_impl_1.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 65 MB
+Peak Memory Usage: 70 MB
 
 
-map "clappyBird_impl_1_syn.udb" "C:/Users/faiza/my_designs/clappyBird/pins.pdc" -o "clappyBird_impl_1.udb"     
+map "clappyBird_impl_1_syn.udb" "C:/WorkSpace/gits/ClappyBird/clappyBird/pins.pdc" -o "clappyBird_impl_1.udb"     
 map:  version Radiant (64-bit) 1.0.1.350.6
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -201,7 +219,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-WARNING - No port matched 'check'.WARNING - Can't resolve object 'check' in constraint '"ldc_set_location'.WARNING - Remove invalid constraint '"ldc_set_location'.Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
+Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
    Picdevice="iCE40UP5K"
 
    Pictype="SG48"
@@ -224,11 +242,11 @@ Optimizing...
 
 
 Design Summary:
-   Number of slice registers:  28 out of  5280 (1%)
+   Number of slice registers:  60 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            35 out of  5280 (1%)
-      Number of logic LUT4s:               3
-      Number of ripple logic:             16 (32 LUT4s)
+   Number of LUT4s:           143 out of  5280 (3%)
+      Number of logic LUT4s:              63
+      Number of ripple logic:             40 (80 LUT4s)
    Number of IO sites used:   10 out of 39 (26%)
       Number of IO sites used for general PIOs: 10
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
@@ -246,38 +264,45 @@ Design Summary:
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
-   Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  2
-      Net forty_eight_mhz_clock: 11 loads, 11 rising, 0 falling (Driver: Pin osc/CLKHF)
-      Net forty_eight_mhz_counter[19]: 4 loads, 4 rising, 0 falling (Driver: Pin forty_eight_mhz_counter_46_47__i19/Q)
-   Number of Clock Enables:  1
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  3
+      Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net game_state_inst/forty_eight_mhz_counter[19]: 12 loads, 12 rising, 0 falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_93_101__i19/Q)
+      Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
+   Number of Clock Enables:  3
+      Net vga_inst/n602: 6 loads, 6 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
-   Number of LSRs:  0
+      Net game_state_inst/n601: 5 loads, 5 SLICEs
+   Number of LSRs:  4
+      Net vga_inst/n602: 6 loads, 6 SLICEs
+      Net vga_inst/n635: 6 loads, 6 SLICEs
+      Net game_state_inst/n632: 5 loads, 5 SLICEs
+      Net game_state_inst/is_over_N_152: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net n174: 9 loads
-      Net VCC_net: 3 loads
-      Net bird_y_pos_c_1: 2 loads
-      Net bird_y_pos_c_7: 2 loads
-      Net bird_y_pos_c_8: 2 loads
-      Net clap_c: 2 loads
-      Net n276: 2 loads
-      Net n303: 2 loads
-      Net n643: 2 loads
-      Net n688: 2 loads
+      Net vga_inst/n602: 13 loads
+      Net game_over: 11 loads
+      Net VCC_net: 10 loads
+      Net col_num[9]: 7 loads
+      Net game_state_inst/bird_y_pos_9__N_145: 7 loads
+      Net row_num[9]: 7 loads
+      Net vga_inst/col_num[8]_2: 7 loads
+      Net row_num[1]: 6 loads
+      Net row_num[2]: 6 loads
+      Net row_num[3]: 6 loads
 
 Running physical design DRC...
 
 Loading udb::Database ...
  
 
-   Number of warnings:  3
+   Number of warnings:  0
    Number of errors:    0
 
 
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 59 MB
+Peak Memory Usage: 62 MB
 
 
 timing -sethld -v 10 -u 10 -endpoints 10  -nperend 1 -html -rpt "clappyBird_impl_1.tw1" "clappyBird_impl_1.udb" 
@@ -285,7 +310,7 @@ timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -html -rpt clappyBird_impl_1
 Starting design reading...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
 Loading udb::Database ...
-Successfully loading udb, 0.02 seconds
+Successfully loading udb, 0.03 seconds
 
 
 Starting design annotation....
@@ -293,17 +318,17 @@ Starting design annotation....
 
 
 Starting full timing analysis...
-
+WARNING - "The
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 61 MB
+Peak Memory Usage: 67 MB
 
 
 par -f "clappyBird_impl_1.p2t" "clappyBird_impl_1_map.udb" "clappyBird_impl_1.udb"
 
 Lattice Place and Route Report for Design "clappyBird_impl_1_map.udb"
-Tue Apr 23 16:00:35 2019
+Sat Apr 27 14:25:45 2019
 
 PAR: Place And Route Radiant (64-bit) 1.0.1.350.6.
 Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
@@ -311,20 +336,20 @@ Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
 
 Loading clappyBird_impl_1_map.udb ...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Design:  game_state
+Design:  top
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
 
-WARNING: udb::Constraint "create_clock -name {osc/CLKHF} -period 20.8333 [get_pins osc/CLKHF]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 91
-Number of Connections: 154
+WARNING: udb::Constraint "create_generated_clock -name {u_PLL_B/OUTCORE} -source [get_pins pll_inst.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
+Number of Signals: 270
+Number of Connections: 576
 Device utilization summary:
 
-   SLICE (est.)      19/2640         <1% used
-     LUT             35/5280         <1% used
-     REG             28/5280         <1% used
+   SLICE (est.)      76/2640          2% used
+     LUT            143/5280          2% used
+     REG             60/5280          1% used
    PIO               10/56           17% used
                      10/36           27% bonded
    IOLOGIC            0/56            0% used
@@ -339,14 +364,15 @@ Device utilization summary:
    WARMBOOT           0/1             0% used
    SPI                0/2             0% used
    EBR                0/30            0% used
-   PLL                0/1             0% used
+   PLL                1/1           100% used
    RGBOUTBUF          0/3             0% used
-   I3C                0/2             0% used
+   I3C                2/2           100% used
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   10 out of 10 pins locked (100% locked).
-Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+   9 out of 10 pins locked (90% locked).
+.
+........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
 
 
 ................
@@ -356,26 +382,28 @@ Starting Placer Phase 1. REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 8155.
+Placer score = 25428.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             19/2640         <1% used
+   SLICE             76/2640          2% used
 
-Finished Placer Phase 1.  CPU time: 8 secs , REAL time: 8 secs 
+Finished Placer Phase 1.  CPU time: 8 secs , REAL time: 9 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  9155
-Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 8 secs 
+Placer score =  43398
+Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 9 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "forty_eight_mhz_clock" from comp "osc" on site "HFOSC_R1C32", clk load = 11, ce load = 0, sr load = 0
+  PRIMARY "clk2" from OUTGLOBAL on comp "pll_inst.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 12, ce load = 0, sr load = 0
+  PRIMARY "clk" from comp "hsosc_inst" on site "HFOSC_R1C32", clk load = 12, ce load = 0, sr load = 0
+  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_26" on site "R13C5C", clk load = 12, ce load = 0, sr load = 0
 
-  PRIMARY  : 1 out of 8 (12%)
+  PRIMARY  : 3 out of 8 (37%)
 
 --------------- End of Clock Report ---------------
 
@@ -387,20 +415,20 @@ I/O Usage Summary (final):
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
-+----------+---------------+------------+------------+------------+
-| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
-+----------+---------------+------------+------------+------------+
-| 0        | 1 / 14 (  7%) | 3.3V       |            |            |
-| 1        | 7 / 14 ( 50%) | 3.3V       |            |            |
-| 2        | 2 / 8 ( 25%)  | 3.3V       |            |            |
-+----------+---------------+------------+------------+------------+
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 10 / 14 ( 71%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%)  | OFF        |            |            |
+| 2        | 0 / 8 (  0%)   | OFF        |            |            |
++----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 8 secs , REAL time: 8 secs 
+Total Placer CPU time: 8 secs , REAL time: 9 secs 
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 16:00:44 04/23/19
+Start NBR router at 14:25:54 04/27/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -416,46 +444,51 @@ Note: NBR uses a different method to calculate timing slacks. The
 *****************************************************************
 
 Starting routing resource preassignment
-Preassignment Summary:
+WARNING - Certain loads of primary clock signal clk could not be routed to the primary clock tree with dedicated routing resources. This clock may suffer from excessive skew or delay.WARNING - The driver of primary clock signal game_state_inst/forty_eight_mhz_counter[19] is placed in a location (R13C5C.Q0) that cannot drive the primary clock tree with dedicated routing resources. Some general routing resources may be used and this clock may suffer from excessive skew or delay.Preassignment Summary:
 --------------------------------------------------------------------------------
-55 connections routed with dedicated routing resources
-1 global clock signals routed
-66 connections routed (of 154 total) (42.86%)
+128 connections routed with dedicated routing resources
+3 global clock signals routed
+151 connections routed (of 576 total) (26.22%)
 ---------------------------------------------------------
 Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#4  Signal "forty_eight_mhz_clock"
-       Clock   loads: 11    out of    11 routed (100.00%)
-Other clocks:
-    Signal "forty_eight_mhz_counter[19]"
-       Clock   loads: 0     out of     4 routed (  0.00%)
+Primary clocks (3 used out of 8 available):
+#4  Signal "clk"
+       Clock   loads: 11    out of    12 routed ( 91.67%)
+#5  Signal "game_state_inst/forty_eight_mhz_counter[19]"
+       Clock   loads: 0     out of    12 routed (  0.00%)
        Data    loads: 0     out of     1 routed (  0.00%)
----------------------------------------------------------
+#7  Signal "clk2"
+       Clock   loads: 12    out of    12 routed (100.00%)
+Other clocks:
+    Signal "pll_inst/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+WARNING - The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:"&#xA;---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
     TimerIf::skewscore 0
 
-Start NBR section for initial routing at 16:00:44 04/23/19
+Start NBR section for initial routing at 14:25:55 04/27/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20822.118ns/0.000ns; real time: 0 secs 
+17(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:00:44 04/23/19
+Start NBR section for normal routing at 14:25:55 04/27/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20822.118ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 16:00:44 04/23/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 14:25:55 04/27/19
 FALSE ARC LibDelays : 0, 0, 16, 0
 
-Start NBR section for re-routing at 16:00:44 04/23/19
+Start NBR section for re-routing at 14:25:55 04/27/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 16:00:44 04/23/19
+Start NBR section for post-routing at 14:25:55 04/27/19
 
 End NBR router with 0 unrouted connection
 
@@ -463,7 +496,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : <n/a>
+  Estimated worst slack<setup> : 9.618ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only.
@@ -472,33 +505,38 @@ Notes: The timing info is calculated for SETUP only.
 FALSE ARC LibDelays : 0, 0, 16, 0
 ---------------------------------------------------------
 Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#4  Signal "forty_eight_mhz_clock"
-       Clock   loads: 11    out of    11 routed (100.00%)
-Other clocks:
-    Signal "forty_eight_mhz_counter[19]"
-       Clock   loads: 4     out of     4 routed (100.00%)
+Primary clocks (3 used out of 8 available):
+#4  Signal "clk"
+       Clock   loads: 12    out of    12 routed (100.00%)
+#5  Signal "game_state_inst/forty_eight_mhz_counter[19]"
+       Clock   loads: 12    out of    12 routed (100.00%)
        Data    loads: 1     out of     1 routed (100.00%)
----------------------------------------------------------
+#7  Signal "clk2"
+       Clock   loads: 12    out of    12 routed (100.00%)
+Other clocks:
+    Signal "pll_inst/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+WARNING - The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:"&#xA;---------------------------------------------------------
 Total CPU time 1 secs 
-Total REAL time: 0 secs 
+Total REAL time: 2 secs 
 Completely routed.
-End of route.  154 routed (100.00%); 0 unrouted.
+End of route.  576 routed (100.00%); 0 unrouted.
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 20822.118
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 9.618
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 9 secs 
-Total REAL Time: 10 secs 
-Peak Memory Usage: 104 MB
+Total CPU  Time: 10 secs 
+Total REAL Time: 11 secs 
+Peak Memory Usage: 118 MB
 
 
 par done!
@@ -522,11 +560,11 @@ Starting design annotation....
 
 
 Starting full timing analysis...
-
+WARNING - "The
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 87 MB
+Peak Memory Usage: 93 MB
 
 
 bitgen -w "clappyBird_impl_1.udb" -f "clappyBird_impl_1.t2b" 
@@ -554,7 +592,7 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "C:\Users\faiza\my_designs\clappyBird\impl_1\clappyBird_impl_1.bin".
+Saving bit stream in "C:\WorkSpace\gits\ClappyBird\clappyBird\impl_1\clappyBird_impl_1.bin".
 
 backanno "clappyBird_impl_1.udb" -n Verilog  -o "clappyBird_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
 backanno: version Radiant (64-bit) 1.0.1.350.6

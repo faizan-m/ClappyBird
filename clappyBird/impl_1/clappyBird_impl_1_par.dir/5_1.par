@@ -1,6 +1,6 @@
 
 Lattice Place and Route Report for Design "clappyBird_impl_1_map.udb"
-Tue Apr 23 16:00:35 2019
+Sat Apr 27 14:25:45 2019
 
 PAR: Place And Route Radiant (64-bit) 1.0.1.350.6.
 Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
@@ -8,20 +8,20 @@ Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
 
 Loading clappyBird_impl_1_map.udb ...
 Loading device for application udb from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
-Design:  game_state
+Design:  top
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:   High-Performance_1.2V
 
-WARNING: udb::Constraint "create_clock -name {osc/CLKHF} -period 20.8333 [get_pins osc/CLKHF]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 91
-Number of Connections: 154
+WARNING: udb::Constraint "create_generated_clock -name {u_PLL_B/OUTCORE} -source [get_pins pll_inst.lscc_pll_inst.u_PLL_B/REFERENCECLK] -multiply_by 67 [get_pins pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE]" does not have corresponding tmConstraint. Please check if the resource objects of the constraint are valid carefully!
+Number of Signals: 270
+Number of Connections: 576
 Device utilization summary:
 
-   SLICE (est.)      19/2640         <1% used
-     LUT             35/5280         <1% used
-     REG             28/5280         <1% used
+   SLICE (est.)      76/2640          2% used
+     LUT            143/5280          2% used
+     REG             60/5280          1% used
    PIO               10/56           17% used
                      10/36           27% bonded
    IOLOGIC            0/56            0% used
@@ -36,14 +36,15 @@ Device utilization summary:
    WARMBOOT           0/1             0% used
    SPI                0/2             0% used
    EBR                0/30            0% used
-   PLL                0/1             0% used
+   PLL                1/1           100% used
    RGBOUTBUF          0/3             0% used
-   I3C                0/2             0% used
+   I3C                2/2           100% used
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   10 out of 10 pins locked (100% locked).
-Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+   9 out of 10 pins locked (90% locked).
+.
+........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
 
 
 ................
@@ -53,26 +54,28 @@ Starting Placer Phase 1. REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 8155.
+Placer score = 25428.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             19/2640         <1% used
+   SLICE             76/2640          2% used
 
-Finished Placer Phase 1.  CPU time: 8 secs , REAL time: 8 secs 
+Finished Placer Phase 1.  CPU time: 8 secs , REAL time: 9 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  9155
-Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 8 secs 
+Placer score =  43398
+Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 9 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "forty_eight_mhz_clock" from comp "osc" on site "HFOSC_R1C32", clk load = 11, ce load = 0, sr load = 0
+  PRIMARY "clk2" from OUTGLOBAL on comp "pll_inst.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 12, ce load = 0, sr load = 0
+  PRIMARY "clk" from comp "hsosc_inst" on site "HFOSC_R1C32", clk load = 12, ce load = 0, sr load = 0
+  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_26" on site "R13C5C", clk load = 12, ce load = 0, sr load = 0
 
-  PRIMARY  : 1 out of 8 (12%)
+  PRIMARY  : 3 out of 8 (37%)
 
 --------------- End of Clock Report ---------------
 
@@ -84,20 +87,20 @@ I/O Usage Summary (final):
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
-+----------+---------------+------------+------------+------------+
-| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
-+----------+---------------+------------+------------+------------+
-| 0        | 1 / 14 (  7%) | 3.3V       |            |            |
-| 1        | 7 / 14 ( 50%) | 3.3V       |            |            |
-| 2        | 2 / 8 ( 25%)  | 3.3V       |            |            |
-+----------+---------------+------------+------------+------------+
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 10 / 14 ( 71%) | 3.3V       |            |            |
+| 1        | 0 / 14 (  0%)  | OFF        |            |            |
+| 2        | 0 / 8 (  0%)   | OFF        |            |            |
++----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 8 secs , REAL time: 8 secs 
+Total Placer CPU time: 8 secs , REAL time: 9 secs 
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 16:00:44 04/23/19
+Start NBR router at 14:25:54 04/27/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -113,44 +116,55 @@ Note: NBR uses a different method to calculate timing slacks. The
 *****************************************************************
 
 Starting routing resource preassignment
+WARNING - par: Certain loads of primary clock signal clk could not be routed to the primary clock tree with dedicated routing resources. This clock may suffer from excessive skew or delay.
+WARNING - par: The driver of primary clock signal game_state_inst/forty_eight_mhz_counter[19] is placed in a location (R13C5C.Q0) that cannot drive the primary clock tree with dedicated routing resources. Some general routing resources may be used and this clock may suffer from excessive skew or delay.
 Preassignment Summary:
 --------------------------------------------------------------------------------
-55 connections routed with dedicated routing resources
-1 global clock signals routed
-66 connections routed (of 154 total) (42.86%)
+128 connections routed with dedicated routing resources
+3 global clock signals routed
+151 connections routed (of 576 total) (26.22%)
 ---------------------------------------------------------
 Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#4  Signal "forty_eight_mhz_clock"
-       Clock   loads: 11    out of    11 routed (100.00%)
-Other clocks:
-    Signal "forty_eight_mhz_counter[19]"
-       Clock   loads: 0     out of     4 routed (  0.00%)
+Primary clocks (3 used out of 8 available):
+#4  Signal "clk"
+       Clock   loads: 11    out of    12 routed ( 91.67%)
+#5  Signal "game_state_inst/forty_eight_mhz_counter[19]"
+       Clock   loads: 0     out of    12 routed (  0.00%)
        Data    loads: 0     out of     1 routed (  0.00%)
+#7  Signal "clk2"
+       Clock   loads: 12    out of    12 routed (100.00%)
+Other clocks:
+    Signal "pll_inst/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+WARNING - par: The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:
+   "game_state_inst/forty_eight_mhz_counter[19]" (12 clock loads, 13 total loads)
+   "clk" (12 clock loads, 12 total loads)
+
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 16:00:44 04/23/19
+Start NBR section for initial routing at 14:25:55 04/27/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20822.118ns/0.000ns; real time: 0 secs 
+17(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 16:00:44 04/23/19
+Start NBR section for normal routing at 14:25:55 04/27/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 20822.118ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 16:00:44 04/23/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 14:25:55 04/27/19
 
-Start NBR section for re-routing at 16:00:44 04/23/19
+Start NBR section for re-routing at 14:25:55 04/27/19
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 16:00:44 04/23/19
+Start NBR section for post-routing at 14:25:55 04/27/19
 
 End NBR router with 0 unrouted connection
 
@@ -158,7 +172,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : <n/a>
+  Estimated worst slack<setup> : 9.618ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only.
@@ -166,18 +180,27 @@ Notes: The timing info is calculated for SETUP only.
 
 ---------------------------------------------------------
 Clock routing summary:
-Primary clocks (1 used out of 8 available):
-#4  Signal "forty_eight_mhz_clock"
-       Clock   loads: 11    out of    11 routed (100.00%)
-Other clocks:
-    Signal "forty_eight_mhz_counter[19]"
-       Clock   loads: 4     out of     4 routed (100.00%)
+Primary clocks (3 used out of 8 available):
+#4  Signal "clk"
+       Clock   loads: 12    out of    12 routed (100.00%)
+#5  Signal "game_state_inst/forty_eight_mhz_counter[19]"
+       Clock   loads: 12    out of    12 routed (100.00%)
        Data    loads: 1     out of     1 routed (100.00%)
+#7  Signal "clk2"
+       Clock   loads: 12    out of    12 routed (100.00%)
+Other clocks:
+    Signal "pll_inst/lscc_pll_inst/feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+
+WARNING - par: The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:
+   "game_state_inst/forty_eight_mhz_counter[19]" (12 clock loads, 13 total loads)
+   "clk" (12 clock loads, 12 total loads)
+
 ---------------------------------------------------------
 Total CPU time 1 secs 
-Total REAL time: 0 secs 
+Total REAL time: 2 secs 
 Completely routed.
-End of route.  154 routed (100.00%); 0 unrouted.
+End of route.  576 routed (100.00%); 0 unrouted.
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
@@ -187,15 +210,15 @@ All signals are completely routed.
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 20822.118
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 9.618
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
 PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 9 secs 
-Total REAL Time: 10 secs 
-Peak Memory Usage: 104 MB
+Total CPU  Time: 10 secs 
+Total REAL Time: 11 secs 
+Peak Memory Usage: 118 MB
 
 
 par done!

@@ -1,13 +1,62 @@
 ----------------------------------------------------------------------
-Report for cell game_state.TECH
-Register bits:  28 of 5280 (0.530%)
+Report for cell top.TECH
+Register bits:  60 of 5280 (1.136%)
 I/O cells:      10
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        16          100.0
-                            FD1P3XZ        28          100.0
+                               CCU2        40          100.0
+                            FD1P3XZ        60          100.0
                          HSOSC_CORE         1          100.0
                                  IB         1          100.0
-                               LUT4         1          100.0
+                               LUT4        62          100.0
                                  OB         9          100.0
-                              TOTAL        56
+                              PLL_B         1          100.0
+SUB MODULES
+                      game_renderer         1
+                         game_state         1
+                           lscc_pll         1
+                                pll         1
+                                vga         1
+                              TOTAL       179
+----------------------------------------------------------------------
+Report for cell vga.v1
+Instance Path : vga_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12           30.0
+                            FD1P3XZ        20           33.3
+                               LUT4        25           40.3
+                              TOTAL        57
+----------------------------------------------------------------------
+Report for cell game_state.v1
+Instance Path : game_state_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        23           57.5
+                            FD1P3XZ        40           66.7
+                               LUT4        13           21.0
+                              TOTAL        76
+----------------------------------------------------------------------
+Report for cell game_renderer.v1
+Instance Path : testpattern_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         5           12.5
+                               LUT4        21           33.9
+                              TOTAL        26
+----------------------------------------------------------------------
+Report for cell pll.v1
+Instance Path : pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+                           lscc_pll         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell lscc_pll.v1
+Instance Path : pll_inst.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1

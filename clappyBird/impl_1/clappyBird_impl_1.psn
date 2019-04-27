@@ -1,5 +1,5 @@
 POSTSYN: Post Synthesis Process Radiant (64-bit) 1.0.1.350.6
-Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -keeprtl -w -o clappyBird_impl_1.udb -gui -msgset C:/Users/faiza/my_designs/clappyBird/promote.xml clappyBird_impl_1.vm 
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -keeprtl -w -o clappyBird_impl_1.udb -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml clappyBird_impl_1.vm 
    Architecture:     iCE40UP
    Device:           iCE40UP5K
    Package:          SG48
@@ -14,4 +14,4 @@ Writing output file 'clappyBird_impl_1.udb'.
 POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 65 MB
+Peak Memory Usage: 70 MB

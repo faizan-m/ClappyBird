@@ -33,13 +33,19 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/1.0/ispfpga/ice40tp/data" "C:/Users/faiza/my_designs/clappyBird/impl_1" "C:/Users/faiza/my_designs/clappyBird"
+-path "C:/WorkSpace/gits/ClappyBird/clappyBird/pll"
+-path "C:/lscc/radiant/1.0/ispfpga/ice40tp/data" "C:/WorkSpace/gits/ClappyBird/clappyBird/impl_1" "C:/WorkSpace/gits/ClappyBird/clappyBird"
 -ver "C:/lscc/radiant/1.0/ip/pmi/pmi.v"
 -lib pmi -vhd "C:/lscc/radiant/1.0/ip/pmi/pmi.vhd"
--lib "work" -vhd "C:/Users/faiza/my_designs/clappyBird/GameState.vhd"
+-lib "work" -vhd "C:/WorkSpace/gits/ClappyBird/clappyBird/GameRenderer.vhd"
+"C:/WorkSpace/gits/ClappyBird/clappyBird/GameState.vhd"
+"C:/WorkSpace/gits/ClappyBird/clappyBird/top.vhd"
+"C:/WorkSpace/gits/ClappyBird/clappyBird/vga.vhd"
+-ver "C:/WorkSpace/gits/ClappyBird/clappyBird/pll/rtl/pll.v"
 
 
--top game_state
+-path "C:/WorkSpace/gits/ClappyBird/clappyBird"
+-top top
 -udb "clappyBird_impl_1.udb"
 -output_hdl "clappyBird_impl_1.vm"
 
