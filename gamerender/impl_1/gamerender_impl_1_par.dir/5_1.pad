@@ -6,7 +6,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Thu Apr 25 15:31:55 2019
+Sat Apr 27 14:14:34 2019
 
 Pinout by Port Name:
 +-----------+----------+--------------+-------+--------------------+
@@ -21,6 +21,7 @@ Pinout by Port Name:
 | RGB[4]    | 27/0     | LVCMOS33_OUT | PR19B | DRIVE:8mA PULL:NA  |
 | RGB[5]    | 26/0     | LVCMOS33_OUT | PR19A | DRIVE:8mA PULL:NA  |
 | VSYNC     | 23/0     | LVCMOS33_OUT | PR20A | DRIVE:8mA PULL:NA  |
+| clappy    | 42/0     | LVCMOS33_IN  | PR9A  | PULL:100K          |
 +-----------+----------+--------------+-------+--------------------+
 
 Vccio by Bank:
@@ -66,7 +67,7 @@ Pinout by Pin Number:
 | 39/0     |                     |            |              | PR5A  | RGB0             |
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
-| 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
+| 42/0     | clappy              | LOCATED    | LVCMOS33_IN  | PR9A  |                  |
 | 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
 | 44/2     |     unused, PULL:UP |            |              | PL7B  | PCLKT2_0         |
 | 45/2     |     unused, PULL:UP |            |              | PL8B  |                  |
@@ -104,11 +105,12 @@ ldc_set_location -site {32} [ get_ports {RGB[3]} ]
 ldc_set_location -site {27} [ get_ports {RGB[4]} ]
 ldc_set_location -site {26} [ get_ports {RGB[5]} ]
 ldc_set_location -site {23} [ get_ports {VSYNC} ]
+ldc_set_location -site {42} [ get_ports {clappy} ]
 
 
 
 
 
 Copyright 2015 Lattice Semiconductor Corporation, All Rights Reserved
-Thu Apr 25 15:31:55 2019
+Sat Apr 27 14:14:34 2019
 

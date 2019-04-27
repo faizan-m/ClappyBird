@@ -1,14 +1,14 @@
-synthesis:  version Radiant (64-bit) 1.0.0.350.6
+synthesis:  version Radiant (64-bit) 1.0.1.350.6
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 25 15:54:43 2019
+Sat Apr 27 14:14:19 2019
 
 
-Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f gamerender_impl_1_lattice.synproj -gui -msgset //vs-home/gdiaz01/gamerender/promote.xml 
+Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f gamerender_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/gamerender/promote.xml 
 
 Synthesis options:
 The -a option is iCE40UP.
@@ -69,23 +69,23 @@ The -comp option is FALSE.
 The -syn option is FALSE.
 -vh2008
 
--path //vs-home/gdiaz01/gamerender (searchpath added)
--path //vs-home/gdiaz01/gamerender/impl_1 (searchpath added)
--path //vs-home/gdiaz01/gamerender/pll (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/gamerender (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/gamerender/impl_1 (searchpath added)
+-path C:/WorkSpace/gits/ClappyBird/gamerender/pll (searchpath added)
 -path C:/lscc/radiant/1.0/ispfpga/ice40tp/data (searchpath added)
 Mixed language design
 Verilog design file = C:/lscc/radiant/1.0/ip/pmi/pmi.v
-Verilog design file = //vs-home/gdiaz01/gamerender/pll/rtl/pll.v
+Verilog design file = C:/WorkSpace/gits/ClappyBird/gamerender/pll/rtl/pll.v
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/1.0/ip/pmi/pmi.vhd
 VHDL library = work
-VHDL design file = //vs-home/gdiaz01/gamerender/top.vhd
+VHDL design file = C:/WorkSpace/gits/ClappyBird/gamerender/top.vhd
 VHDL library = work
-VHDL design file = //vs-home/gdiaz01/gamerender/testpattern.vhd
+VHDL design file = C:/WorkSpace/gits/ClappyBird/gamerender/testpattern.vhd
 VHDL library = work
-VHDL design file = //vs-home/gdiaz01/gamerender/vga.vhd
+VHDL design file = C:/WorkSpace/gits/ClappyBird/gamerender/vga.vhd
 VHDL library = work
-VHDL design file = //vs-home/gdiaz01/gamerender/clap.vhd
+VHDL design file = C:/WorkSpace/gits/ClappyBird/gamerender/clap.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 Compile design.
 Compile Design Begin
@@ -107,32 +107,32 @@ INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(8): analyzing included file c
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.v(9): analyzing included file c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v. VERI-1328
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/1.0/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
-Analyzing Verilog file //vs-home/gdiaz01/gamerender/pll/rtl/pll.v. VERI-1482
-INFO - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/pll.v(9): analyzing included file //vs-home/gdiaz01/gamerender/pll/rtl/core/lscc_pll.v. VERI-1328
+Analyzing Verilog file c:/workspace/gits/clappybird/gamerender/pll/rtl/pll.v. VERI-1482
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/pll/rtl/pll.v(9): analyzing included file c:/workspace/gits/clappybird/gamerender/pll/rtl/core/lscc_pll.v. VERI-1328
 Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4): analyzing package components. VHDL-1014
-Analyzing VHDL file //vs-home/gdiaz01/gamerender/top.vhd. VHDL-1481
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(5): analyzing entity top. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(15): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file //vs-home/gdiaz01/gamerender/testpattern.vhd. VHDL-1481
-INFO - synthesis: //vs-home/gdiaz01/gamerender/testpattern.vhd(5): analyzing entity testpattern. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/testpattern.vhd(18): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file //vs-home/gdiaz01/gamerender/vga.vhd. VHDL-1481
-INFO - synthesis: //vs-home/gdiaz01/gamerender/vga.vhd(5): analyzing entity vga. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/vga.vhd(18): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file //vs-home/gdiaz01/gamerender/clap.vhd. VHDL-1481
-INFO - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(5): analyzing entity game_state. VHDL-1012
-INFO - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(12): analyzing architecture synth. VHDL-1010
-INFO - synthesis: The default VHDL library search path is now "//vs-home/gdiaz01/gamerender/impl_1". VHDL-1504
+Analyzing VHDL file c:/workspace/gits/clappybird/gamerender/top.vhd. VHDL-1481
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(5): analyzing entity top. VHDL-1012
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(15): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file c:/workspace/gits/clappybird/gamerender/testpattern.vhd. VHDL-1481
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/testpattern.vhd(5): analyzing entity testpattern. VHDL-1012
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/testpattern.vhd(19): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file c:/workspace/gits/clappybird/gamerender/vga.vhd. VHDL-1481
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/vga.vhd(5): analyzing entity vga. VHDL-1012
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/vga.vhd(18): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file c:/workspace/gits/clappybird/gamerender/clap.vhd. VHDL-1481
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/clap.vhd(5): analyzing entity game_state. VHDL-1012
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/clap.vhd(14): analyzing architecture synth. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "C:/WorkSpace/gits/ClappyBird/gamerender/impl_1". VHDL-1504
 Top module language type = VHDL.
 unit top is not yet analyzed. VHDL-1485
-//vs-home/gdiaz01/gamerender/top.vhd(5): executing top(synth)
+c:/workspace/gits/clappybird/gamerender/top.vhd(5): executing top(synth)
 
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(84): going to verilog side to elaborate module HSOSC. VHDL-1399
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(84): back to VHDL to continue elaboration. VHDL-1400
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(94): going to verilog side to elaborate module pll. VHDL-1399
-INFO - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(94): back to VHDL to continue elaboration. VHDL-1400
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/top.vhd(13): replacing existing netlist top(synth). VHDL-1205
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(88): going to verilog side to elaborate module HSOSC. VHDL-1399
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(88): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(98): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(98): back to VHDL to continue elaboration. VHDL-1400
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/top.vhd(13): replacing existing netlist top(synth). VHDL-1205
 Top module name (VHDL, mixed language): top
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
                                                          
@@ -160,16 +160,16 @@ Loading device for application lse from file 'itpa08.nph' in environment: C:/lsc
 
 
 WARNING - synthesis: Initial value found on net valid will be ignored due to unrecognized driver type
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/pll.v(47): input port sclk_i is not connected on this instance. VDB-1013
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/pll.v(47): input port sdi_i is not connected on this instance. VDB-1013
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/core/lscc_pll.v(95): net \pll_inst/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/pll/rtl/core/lscc_pll.v(96): net \pll_inst/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/pll/rtl/pll.v(47): input port sclk_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/pll/rtl/pll.v(47): input port sdi_i is not connected on this instance. VDB-1013
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/pll/rtl/core/lscc_pll.v(95): net \pll_inst/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/pll/rtl/core/lscc_pll.v(96): net \pll_inst/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \pll_inst/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \pll_inst/lscc_pll_inst/sdi_i. Patching with GND.
 
 
 
-WARNING - synthesis: //vs-home/gdiaz01/gamerender/clap.vhd(51): Register \game_state_inst/bird_y_pos_i1 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/workspace/gits/clappybird/gamerender/clap.vhd(46): Register \game_state_inst/bird_y_pos_i0_i0 is stuck at Zero. VDB-5013
 Applying 1.000000 MHz constraint to all clocks
 
 
@@ -183,17 +183,17 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 49 of 5280 (0 % )
-CCU2 => 34
-FD1P3XZ => 49
-HSOSC_CORE => 2
+Number of register bits => 60 of 5280 (1 % )
+CCU2 => 40
+FD1P3XZ => 60
+HSOSC_CORE => 1
 IB => 1
-LUT4 => 43
+LUT4 => 62
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
-Number of even-length carry chains : 4
+Number of even-length carry chains : 5
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -202,26 +202,27 @@ Number of Clocks: 3
   Net : pll_inst/lscc_pll_inst/PLL_out_c, loads : 1
   Net : pll_inst/lscc_pll_inst/clk2, loads : 0
 Clock Enable Nets
-Number of Clock Enables: 1
-Top 1 highest fanout Clock Enables:
-  Net : vga_inst/n458, loads : 21
+Number of Clock Enables: 2
+Top 2 highest fanout Clock Enables:
+  Net : vga_inst/n602, loads : 21
+  Net : game_state_inst/n601, loads : 10
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : vga_inst/n458, loads : 21
-  Net : game_state_inst/forty_eight_mhz_clock, loads : 20
-  Net : vga_inst/n879, loads : 10
-  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 10
-  Net : game_state_inst/n129, loads : 10
+  Net : vga_inst/n602, loads : 21
+  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 21
+  Net : game_state_inst/game_over, loads : 10
+  Net : vga_inst/n635, loads : 10
+  Net : game_state_inst/n601, loads : 10
+  Net : game_state_inst/is_over_N_152, loads : 10
+  Net : game_state_inst/n632, loads : 9
+  Net : vga_inst/col_num[8], loads : 7
+  Net : game_state_inst/bird_y_pos_9__N_145, loads : 7
   Net : vga_inst/row_num[9], loads : 6
-  Net : vga_inst/row_num[1], loads : 6
-  Net : vga_inst/row_num[4], loads : 5
-  Net : vga_inst/row_num[3], loads : 5
-  Net : vga_inst/row_num[2], loads : 5
 ################### End Clock Report ##################
 
-Peak Memory Usage: 143.160  MB
+Peak Memory Usage: 142.434  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.609  secs
-Total REAL time for LSE flow : 6.000  secs
+Total CPU time for LSE flow : 2.969  secs
+Total REAL time for LSE flow : 3.000  secs
 --------------------------------------------------------------

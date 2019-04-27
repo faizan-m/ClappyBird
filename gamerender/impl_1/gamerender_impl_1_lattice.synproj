@@ -33,18 +33,18 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
--path "//vs-home/gdiaz01/gamerender/pll"
--path "C:/lscc/radiant/1.0/ispfpga/ice40tp/data" "//vs-home/gdiaz01/gamerender/impl_1" "//vs-home/gdiaz01/gamerender"
+-path "C:/WorkSpace/gits/ClappyBird/gamerender/pll"
+-path "C:/lscc/radiant/1.0/ispfpga/ice40tp/data" "C:/WorkSpace/gits/ClappyBird/gamerender/impl_1" "C:/WorkSpace/gits/ClappyBird/gamerender"
 -ver "C:/lscc/radiant/1.0/ip/pmi/pmi.v"
 -lib pmi -vhd "C:/lscc/radiant/1.0/ip/pmi/pmi.vhd"
--lib "work" -vhd "//vs-home/gdiaz01/gamerender/top.vhd"
-"//vs-home/gdiaz01/gamerender/testpattern.vhd"
--ver "//vs-home/gdiaz01/gamerender/pll/rtl/pll.v"
--lib "work" -vhd "//vs-home/gdiaz01/gamerender/vga.vhd"
-"//vs-home/gdiaz01/gamerender/clap.vhd"
+-lib "work" -vhd "C:/WorkSpace/gits/ClappyBird/gamerender/top.vhd"
+"C:/WorkSpace/gits/ClappyBird/gamerender/testpattern.vhd"
+-ver "C:/WorkSpace/gits/ClappyBird/gamerender/pll/rtl/pll.v"
+-lib "work" -vhd "C:/WorkSpace/gits/ClappyBird/gamerender/vga.vhd"
+"C:/WorkSpace/gits/ClappyBird/gamerender/clap.vhd"
 
 
--path "//vs-home/gdiaz01/gamerender"
+-path "C:/WorkSpace/gits/ClappyBird/gamerender"
 -top top
 -udb "gamerender_impl_1.udb"
 -output_hdl "gamerender_impl_1.vm"

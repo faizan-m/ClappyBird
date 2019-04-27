@@ -52,6 +52,7 @@ component testpattern is
 		col_i : in unsigned(9 downto 0);
 		clap : in std_logic;
 		y_pos : in unsigned (9 downto 0);
+		is_over : in std_logic;
 		-- Output
 		RGB_o : out unsigned(5 downto 0)
 	);
@@ -60,7 +61,9 @@ end component;
 component game_state is 
 	port(
 		clap: in std_logic;
-		bird_y_pos: out unsigned (9 downto 0)
+		bird_y_pos: out unsigned (9 downto 0);
+		forty_eight_mhz_clock : in std_logic;
+		is_over: out std_logic
 	);
 end component;
 
@@ -71,6 +74,7 @@ signal row_num : unsigned(9 downto 0);
 signal col_num : unsigned(9 downto 0);
 signal visible_area : std_logic;
 signal bigbird_y_pos: unsigned (9 downto 0);
+signal game_over : std_logic;
 
 begin
 
@@ -110,13 +114,16 @@ port map(
 	col_i => col_num,
 	clap => clappy,
 	y_pos => bigbird_y_pos,
-	RGB_o => RGB
+	RGB_o => RGB,
+	is_over => game_over
 );
 
 game_state_inst : game_state 
 port map(
 	clap => clappy,
-	bird_y_pos => bigbird_y_pos
+	bird_y_pos => bigbird_y_pos,
+	forty_eight_mhz_clock => clk,
+	is_over => game_over
 );
 
 end;

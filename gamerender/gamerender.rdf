@@ -18,10 +18,10 @@
         <Source name="clap.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>
-        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+        <Source name="pins.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
-        <Source name="C:/Users/gdiaz01/my_designs/GameRender.pdc" type="Physical Constraints File" type_short="PDC">
+        <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
     </Implementation>

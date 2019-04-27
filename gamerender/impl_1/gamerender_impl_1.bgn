@@ -1,4 +1,4 @@
-BITGEN: Bitstream Generator Radiant (64-bit) 1.0.0.350.6
+BITGEN: Bitstream Generator Radiant (64-bit) 1.0.1.350.6
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -19,4 +19,4 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "\\vs-home\gdiaz01\gamerender\impl_1\gamerender_impl_1.bin".
+Saving bit stream in "C:\WorkSpace\gits\ClappyBird\gamerender\impl_1\gamerender_impl_1.bin".

@@ -1,14 +1,14 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  49 of 5280 (0.928%)
+Register bits:  60 of 5280 (1.136%)
 I/O cells:      10
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2        34          100.0
-                            FD1P3XZ        49          100.0
-                         HSOSC_CORE         2          100.0
+                               CCU2        40          100.0
+                            FD1P3XZ        60          100.0
+                         HSOSC_CORE         1          100.0
                                  IB         1          100.0
-                               LUT4        43          100.0
+                               LUT4        62          100.0
                                  OB         9          100.0
                               PLL_B         1          100.0
 SUB MODULES
@@ -17,34 +17,33 @@ SUB MODULES
                                 pll         1
                         testpattern         1
                                 vga         1
-                              TOTAL       144
+                              TOTAL       179
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : vga_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        12           35.3
-                            FD1P3XZ        20           40.8
-                               LUT4        16           37.2
-                              TOTAL        48
+                                FA2        12           30.0
+                            FD1P3XZ        20           33.3
+                               LUT4        25           40.3
+                              TOTAL        57
 ----------------------------------------------------------------------
 Report for cell game_state.v1
 Instance Path : game_state_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        17           50.0
-                            FD1P3XZ        29           59.2
-                         HSOSC_CORE         1           50.0
-                               LUT4         1            2.3
-                              TOTAL        48
+                                FA2        23           57.5
+                            FD1P3XZ        40           66.7
+                               LUT4        13           21.0
+                              TOTAL        76
 ----------------------------------------------------------------------
 Report for cell testpattern.v1
 Instance Path : testpattern_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         5           14.7
-                               LUT4        26           60.5
-                              TOTAL        31
+                                FA2         5           12.5
+                               LUT4        21           33.9
+                              TOTAL        26
 ----------------------------------------------------------------------
 Report for cell pll.v1
 Instance Path : pll_inst

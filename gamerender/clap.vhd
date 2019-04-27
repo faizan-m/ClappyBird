@@ -5,21 +5,14 @@ use IEEE.numeric_std.all;
 entity game_state is
 	port(
 	clap: in std_logic;
-	bird_y_pos: out unsigned (9 downto 0)
+	bird_y_pos: out unsigned (9 downto 0);
+	forty_eight_mhz_clock : in std_logic;
+	is_over: out std_logic
 	);
 end;
 
 architecture synth of game_state is
-	component HSOSC is
-	generic (
-		CLKHF_DIV : String := "0b00"); -- Divide 48MHz clock by 2ˆN (0-3)
-	port(
-		CLKHFPU : in std_logic := 'X'; -- Set to 1 to power up
-		CLKHFEN : in std_logic := 'X'; -- Set to 1 to enable output
-		CLKHF : out std_logic := 'X'); -- Clock output
-	end component;
 
-	signal forty_eight_mhz_clock : std_logic;
 	signal forty_eight_mhz_counter  : unsigned(22 downto 0);
 	signal cl_pu : std_logic;
 	signal cl_en : std_logic;
@@ -29,12 +22,9 @@ architecture synth of game_state is
 	signal move_up: std_logic;
 	signal reset: std_logic;
 		
+	signal wait_counter: unsigned (9 downto 0);
 begin
-	osc: HSOSC port map(cl_pu, cl_en, forty_eight_mhz_clock);
 
-	cl_pu <= '1';
-	cl_en <= '1';
-	
 	process(forty_eight_mhz_clock) is
 	begin
 		if rising_edge(forty_eight_mhz_clock) then
@@ -47,9 +37,24 @@ begin
 	process(game_clock) is
 	begin
 		if rising_edge(game_clock) then
-			bird_y_pos <= bird_y_pos + 2 when clap = '1' else bird_y_pos - 2; 
+			bird_y_pos <= bird_y_pos - 30 when clap = '1' and reset = '0' and is_over = '0'
+					 else bird_y_pos + 10 when reset = '0' and is_over = '0'
+					 else to_unsigned(300,10) when reset = '1'; 
+					 
+			is_over <= '0' when reset = '1' 
+				  else '1' when bird_y_pos > 450 or bird_y_pos < 50;
+		end if;
+		
+	end process;
+	
+	process(game_clock) is
+	begin
+		if rising_edge(game_clock) then 
+			wait_counter <= "0000000000" when is_over = '0' else
+					wait_counter + 1 when is_over = '1';
 		end if;
 	end process;
 	
+	reset <= '1' when is_over = '1' and clap = '1' and wait_counter > 50 else '0';
 	
 end;
