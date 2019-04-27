@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Apr 27 14:25:40 2019
+Sat Apr 27 15:29:02 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml 
@@ -156,10 +156,10 @@ Analyzing VHDL file c:/lscc/radiant/1.0/ip/pmi/pmi.vhd. VHDL-1481
 INFO - synthesis: c:/lscc/radiant/1.0/ip/pmi/pmi.vhd(4): analyzing package components. VHDL-1014
 Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd. VHDL-1481
 INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd(5): analyzing entity game_renderer. VHDL-1012
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd(19): analyzing architecture synth. VHDL-1010
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd(22): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/gamestate.vhd. VHDL-1481
 INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamestate.vhd(5): analyzing entity game_state. VHDL-1012
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamestate.vhd(14): analyzing architecture synth. VHDL-1010
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/gamestate.vhd(17): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file c:/workspace/gits/clappybird/clappybird/top.vhd. VHDL-1481
 INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(5): analyzing entity top. VHDL-1012
 INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(15): analyzing architecture synth. VHDL-1010
@@ -171,10 +171,10 @@ Top module language type = VHDL.
 unit top is not yet analyzed. VHDL-1485
 c:/workspace/gits/clappybird/clappybird/top.vhd(5): executing top(synth)
 
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(88): going to verilog side to elaborate module HSOSC. VHDL-1399
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(88): back to VHDL to continue elaboration. VHDL-1400
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(98): going to verilog side to elaborate module pll. VHDL-1399
-INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(98): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(97): going to verilog side to elaborate module HSOSC. VHDL-1399
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(97): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(107): going to verilog side to elaborate module pll. VHDL-1399
+INFO - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(107): back to VHDL to continue elaboration. VHDL-1400
 WARNING - synthesis: c:/workspace/gits/clappybird/clappybird/top.vhd(13): replacing existing netlist top(synth). VHDL-1205
 Top module name (VHDL, mixed language): top
 Loading device for application lse from file 'itpa08.nph' in environment: C:/lscc/radiant/1.0/ispfpga.
@@ -212,7 +212,7 @@ WARNING - synthesis: c:/workspace/gits/clappybird/clappybird/pll/rtl/core/lscc_p
 
 
 
-WARNING - synthesis: c:/workspace/gits/clappybird/clappybird/gamestate.vhd(46): Register \game_state_inst/bird_y_pos_i0_i0 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/workspace/gits/clappybird/clappybird/gamestate.vhd(49): Register \game_state_inst/bird_y_pos_i0_i0 is stuck at Zero. VDB-5013
 Applying 1.000000 MHz constraint to all clocks
 
 
@@ -230,16 +230,16 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 
 ################### Begin Area Report (top)######################
 Number of register bits => 60 of 5280 (1 % )
-CCU2 => 40
+CCU2 => 55
 FD1P3XZ => 60
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 62
+LUT4 => 149
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
-Number of even-length carry chains : 5
+Number of odd-length carry chains : 3
+Number of even-length carry chains : 6
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -253,26 +253,26 @@ Number of Clocks: 3
 Clock Enable Nets
 Number of Clock Enables: 2
 Top 2 highest fanout Clock Enables:
-  Net : vga_inst/n602, loads : 21
-  Net : game_state_inst/n601, loads : 10
+  Net : vga_inst/n968, loads : 21
+  Net : game_state_inst/n969, loads : 9
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : vga_inst/n602, loads : 21
+  Net : vga_inst/n968, loads : 21
   Net : game_state_inst/forty_eight_mhz_counter[19], loads : 21
-  Net : game_state_inst/game_over, loads : 10
-  Net : vga_inst/n635, loads : 10
-  Net : game_state_inst/n601, loads : 10
-  Net : game_state_inst/is_over_N_152, loads : 10
-  Net : game_state_inst/n632, loads : 9
-  Net : vga_inst/col_num[8], loads : 7
-  Net : game_state_inst/bird_y_pos_9__N_145, loads : 7
-  Net : vga_inst/row_num[9], loads : 6
+  Net : vga_inst/row_num[9], loads : 13
+  Net : vga_inst/row_num[8], loads : 11
+  Net : vga_inst/row_num[1], loads : 11
+  Net : vga_inst/col_num[5], loads : 11
+  Net : vga_inst/col_num[4], loads : 11
+  Net : vga_inst/row_num[7], loads : 10
+  Net : vga_inst/row_num[6], loads : 10
+  Net : vga_inst/row_num[5], loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 142.898  MB
+Peak Memory Usage: 147.445  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 2.922  secs
+Total CPU time for LSE flow : 3.328  secs
 Total REAL time for LSE flow : 3.000  secs
 --------------------------------------------------------------
 

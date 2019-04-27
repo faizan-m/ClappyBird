@@ -7,7 +7,10 @@ entity game_state is
 	clap: in std_logic;
 	bird_y_pos: out unsigned (9 downto 0);
 	forty_eight_mhz_clock : in std_logic;
-	is_over: out std_logic
+	is_over: out std_logic;
+	pipe_height: out unsigned (9 downto 0);
+	pipe_x_start: out unsigned (9 downto 0);
+	pipe_width: out unsigned (9 downto 0)
 	);
 end;
 
@@ -56,5 +59,9 @@ begin
 	end process;
 	
 	reset <= '1' when is_over = '1' and clap = '1' and wait_counter > 50 else '0';
+	
+	pipe_height <= to_unsigned(200 ,10);
+	pipe_x_start <= to_unsigned(300, 10);
+	pipe_width <= to_unsigned(50, 10);
 	
 end;

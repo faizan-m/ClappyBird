@@ -47,7 +47,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant (64-bit) 1.0.1.350.6
-Mapped on: Sat Apr 27 14:25:44 2019
+Mapped on: Sat Apr 27 15:29:06 2019
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -59,9 +59,9 @@ Command line:   map clappyBird_impl_1_syn.udb
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
    Number of slice registers:  60 out of  5280 (1%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           143 out of  5280 (3%)
-      Number of logic LUT4s:              63
-      Number of ripple logic:             40 (80 LUT4s)
+   Number of LUT4s:           260 out of  5280 (5%)
+      Number of logic LUT4s:             150
+      Number of ripple logic:             55 (110 LUT4s)
    Number of IO sites used:   10 out of 39 (26%)
       Number of IO sites used for general PIOs: 10
       Number of IO sites used for I3Cs: 0 out of 2 (0%)
@@ -84,29 +84,30 @@ Command line:   map clappyBird_impl_1_syn.udb
       Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin
      pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net game_state_inst/forty_eight_mhz_counter[19]: 12 loads, 12 rising, 0
-     falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_93_101__i19/Q)
+     falling (Driver: Pin
+     game_state_inst.forty_eight_mhz_counter_140_152__i19/Q)
       Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
    Number of Clock Enables:  3
-      Net vga_inst/n602: 6 loads, 6 SLICEs
+      Net vga_inst/n968: 6 loads, 6 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
-      Net game_state_inst/n601: 5 loads, 5 SLICEs
+      Net game_state_inst/n969: 5 loads, 5 SLICEs
    Number of LSRs:  4
-      Net vga_inst/n602: 6 loads, 6 SLICEs
-      Net vga_inst/n635: 6 loads, 6 SLICEs
-      Net game_state_inst/n632: 5 loads, 5 SLICEs
+      Net vga_inst/n968: 6 loads, 6 SLICEs
+      Net vga_inst/n1590: 6 loads, 6 SLICEs
       Net game_state_inst/is_over_N_152: 6 loads, 6 SLICEs
+      Net game_state_inst/n988: 5 loads, 5 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net vga_inst/n602: 13 loads
-      Net game_over: 11 loads
-      Net VCC_net: 10 loads
-      Net col_num[9]: 7 loads
+      Net VCC_net: 19 loads
+      Net row_num[9]: 14 loads
+      Net row_num[8]: 13 loads
 
-      Net game_state_inst/bird_y_pos_9__N_145: 7 loads
-      Net row_num[9]: 7 loads
-      Net vga_inst/col_num[8]_2: 7 loads
-      Net row_num[1]: 6 loads
-      Net row_num[2]: 6 loads
-      Net row_num[3]: 6 loads
+      Net vga_inst/n968: 13 loads
+      Net col_num[4]: 12 loads
+      Net col_num[5]: 12 loads
+      Net col_num[9]: 12 loads
+      Net row_num[1]: 12 loads
+      Net vga_inst/col_num[8]_2: 12 loads
+      Net row_num[3]: 11 loads
 
 
 
@@ -139,11 +140,11 @@ Command line:   map clappyBird_impl_1_syn.udb
 +---------------------+-----------+-----------+
 | RGB[0]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
+| RGB[1]              | OUTPUT    | LVCMOS33  |
++---------------------+-----------+-----------+
 | RGB[5]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
 | RGB[4]              | OUTPUT    | LVCMOS33  |
-+---------------------+-----------+-----------+
-| RGB[1]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
 | RGB[3]              | OUTPUT    | LVCMOS33  |
 +---------------------+-----------+-----------+
@@ -163,8 +164,8 @@ Block i1 was optimized away.
 ---------------
 
 PLL 1:                                 Pin/Node Value
-  PLL Instance Name:                            pll_inst.lscc_pll_inst.u_PLL_B
 
+  PLL Instance Name:                            pll_inst.lscc_pll_inst.u_PLL_B
   PLL Type:                                     PLL_B
   Input Reference Clock:               NODE     clk
   Output Clock(CoreA):                 PIN      PLL_out_c
@@ -212,10 +213,10 @@ OSC 1:                                 Pin/Node Value
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: pll_inst.lscc_pll_inst.u_PLL_B
-         Type: PLL
 Instance Name: hsosc_inst
          Type: HFOSC
+Instance Name: pll_inst.lscc_pll_inst.u_PLL_B
+         Type: PLL
 
 
 
@@ -224,8 +225,7 @@ Instance Name: hsosc_inst
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 62 MB
-
+   Peak Memory Usage: 64 MB
 
 
 

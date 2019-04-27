@@ -1,0 +1,50 @@
+#Start recording tcl command: 4/27/2019 14:18:12
+#Project Location: C:/WorkSpace/gits/ClappyBird/clappyBird; Project name: clappyBird
+prj_open "C:/WorkSpace/gits/ClappyBird/clappyBird/clappyBird.rdf"
+prj_remove_source "C:/WorkSpace/gits/ClappyBird/clappyBird/GameState.vhd"
+prj_add_source "C:/WorkSpace/gits/ClappyBird/clappyBird/GameRenderer.vhd" "C:/WorkSpace/gits/ClappyBird/clappyBird/GameState.vhd" "C:/WorkSpace/gits/ClappyBird/clappyBird/top.vhd" "C:/WorkSpace/gits/ClappyBird/clappyBird/vga.vhd"
+prj_run Export -impl impl_1
+prj_add_source "C:/WorkSpace/gits/ClappyBird/clappyBird/pll/pll.ipx"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_remove_source "C:/WorkSpace/gits/ClappyBird/clappyBird/source/impl_1.xcf"
+launch_programmer_prj "C:/lscc/radiant/1.0"
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/1.0"
+#Stop recording: 4/27/2019 15:31:08
