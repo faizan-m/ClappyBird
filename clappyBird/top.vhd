@@ -52,6 +52,7 @@ component game_renderer is
 		col_i : in unsigned(9 downto 0);
 		clap : in std_logic;
 		y_pos : in unsigned (9 downto 0);
+		x_pos: in unsigned (9 downto 0);
 		is_over : in std_logic;
 		pipe_height: out unsigned (9 downto 0);
 		pipe_x_start: out unsigned (9 downto 0);
@@ -64,7 +65,8 @@ end component;
 component game_state is 
 	port(
 		clap: in std_logic;
-		bird_y_pos: out unsigned (9 downto 0);
+		bird_y_pos: out unsigned (9 downto 0);		
+		bird_x_pos: out unsigned (9 downto 0);
 		forty_eight_mhz_clock : in std_logic;
 		is_over: out std_logic;
 		pipe_height: out unsigned (9 downto 0);
@@ -80,6 +82,7 @@ signal row_num : unsigned(9 downto 0);
 signal col_num : unsigned(9 downto 0);
 signal visible_area : std_logic;
 signal bigbird_y_pos: unsigned (9 downto 0);
+signal bigbird_x_pos: unsigned (9 downto 0);
 signal game_over : std_logic;
 signal p_height: unsigned (9 downto 0);
 signal p_x_str: unsigned (9 downto 0);
@@ -123,6 +126,7 @@ port map(
 	col_i => col_num,
 	clap => clappy,
 	y_pos => bigbird_y_pos,
+	x_pos => bigbird_x_pos,
 	RGB_o => RGB,
 	is_over => game_over,
 	pipe_height => p_height,
@@ -134,6 +138,7 @@ game_state_inst : game_state
 port map(
 	clap => clappy,
 	bird_y_pos => bigbird_y_pos,
+	bird_x_pos => bigbird_x_pos,
 	forty_eight_mhz_clock => clk,
 	is_over => game_over,
 	pipe_height => p_height,

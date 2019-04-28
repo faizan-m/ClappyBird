@@ -3,35 +3,35 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	     260.00        100.0
+                                  LUT4	     279.00        100.0
                                  IOBUF	         10        100.0
-                                PFUREG	         60        100.0
+                                PFUREG	         61        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                         game_renderer	          1        49.2
-                            game_state	          1        22.7
+                         game_renderer	          1        50.9
+                            game_state	          1        21.5
                                    pll	          1         0.0
-                                   vga	          1        26.2
+                                   vga	          1        24.4
 ---------------------------------------------------
 Report for cell vga
    Instance path: top/vga_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	      68.00        26.2
-                                PFUREG	         20        33.3
+                                  LUT4	      68.00        24.4
+                                PFUREG	         20        32.8
 ---------------------------------------------------
 Report for cell game_state
    Instance path: top/game_state_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	      59.00        22.7
-                                PFUREG	         40        66.7
+                                  LUT4	      60.00        21.5
+                                PFUREG	         41        67.2
 ---------------------------------------------------
 Report for cell game_renderer
    Instance path: top/testpattern_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	     128.00        49.2
+                                  LUT4	     142.00        50.9
 ---------------------------------------------------
 Report for cell pll
    Instance path: top/pll_inst

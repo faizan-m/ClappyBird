@@ -43,7 +43,7 @@ if (a)
 <A name="timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.1.350.6
 
-Sat Apr 27 15:29:05 2019
+Sat Apr 27 19:33:57 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -88,13 +88,13 @@ Performance:     High-Performance_1.2V
 <LI>            <A href=#Timing_rpt_StartEndPointsWithoutTimingConstraints>3.4.2  Start/End Points Without Timing Constraints</A></LI>
 <LI>    <A href=#Timing_rpt_DetailedReport>4  DETAILED REPORT</A></LI>
 <LI>        <A href=#Timing_rpt_SetupDetailedReport>4.1  Setup Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_1>4.1.1  Setup Path Details For Constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A></LI>
 <LI>            <A href=#Timing_rpt_SetupDetailedConstraint_2>4.1.2  Setup Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets clk2]</A></LI>
-<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_3>4.1.3  Setup Path Details For Constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A></LI>
+<LI>            <A href=#Timing_rpt_SetupDetailedConstraint_3>4.1.3  Setup Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
 <LI>        <A href=#Timing_rpt_HoldDetailedReport>4.2  Hold Detailed Report</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_1>4.2.1  Hold Path Details For Constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A></LI>
 <LI>            <A href=#Timing_rpt_HoldDetailedConstraint_2>4.2.2  Hold Path Details For Constraint: create_clock -name {clk0} -period 1000 [get_nets clk2]</A></LI>
-<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_3>4.2.3  Hold Path Details For Constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A></LI>
+<LI>            <A href=#Timing_rpt_HoldDetailedConstraint_3>4.2.3  Hold Path Details For Constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A></LI>
 
 =====================================================================
                     End of Table of Contents
@@ -123,7 +123,7 @@ Single Clock Domain
                Clock clk0               |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From clk0                              |             Target |        1000.000 ns |          1.000 MHz 
-                                        | Actual (all paths) |          12.792 ns |         78.174 MHz 
+                                        | Actual (all paths) |          12.856 ns |         77.785 MHz 
 -------------------------------------------------------------------------------------------------------
 
 Clock Domain Crossing
@@ -181,7 +181,7 @@ Clock \pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE|   Worst Time Between Edges   |   
 
 <A name="Timing_rpt_ConstraintCoverage"></A><B><U><big>3.1.1  Constraint Coverage</big></U></B>
 
-Constraint Coverage: 21.3603%
+Constraint Coverage: 20.1807%
 
 <A name="Timing_rpt_Errors"></A><B><U><big>3.1.2  Timing Errors</big></U></B>
 
@@ -199,18 +199,18 @@ Total Negative Slack: 2.191 ns (setup), 0.000 ns (hold)
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1><FONT COLOR=red>create_clock -name {clk} -period 20.833</FONT></A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1><FONT COLOR=red>3333333333 [get_nets clk]</FONT></A>               |   <FONT COLOR=red>20.833 ns </FONT>|   <FONT COLOR=red>-1.603 ns </FONT>|   <FONT COLOR=red>21</FONT>   |   <FONT COLOR=red>22.437 ns </FONT>|  <FONT COLOR=red>44.569 MHz </FONT>|       <FONT COLOR=red>20</FONT>       |        <FONT COLOR=red>2</FONT>       
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>create_generated_clock -name {\pll_inst</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>/lscc_pll_inst/u_PLL_B/OUTCORE} -source</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1> [get_pins {\pll_inst/lscc_pll_inst/u_P</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>LL_B/REFERENCECLK}] -multiply_by 67 -di</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>vide_by 128 [get_pins {\pll_inst/lscc_p</A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_1"></A><A href=#Timing_rpt_SetupDetailedConstraint_1>ll_inst/u_PLL_B/OUTCORE }] </A>             |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
                                         |             |             |        |             |             |                |                
 <A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>create_clock -name {clk0} -period 1000 </A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>[get_nets clk2]</A>                         | 1000.000 ns |  987.208 ns |   11   |   12.792 ns |  78.174 MHz |       50       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_2"></A><A href=#Timing_rpt_SetupDetailedConstraint_2>[get_nets clk2]</A>                         | 1000.000 ns |  987.144 ns |   11   |   12.856 ns |  77.785 MHz |       50       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>create_generated_clock -name {\pll_inst</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>/lscc_pll_inst/u_PLL_B/OUTCORE} -source</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3> [get_pins {\pll_inst/lscc_pll_inst/u_P</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>LL_B/REFERENCECLK}] -multiply_by 67 -di</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>vide_by 128 [get_pins {\pll_inst/lscc_p</A>                                                                                                    
-<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3>ll_inst/u_PLL_B/OUTCORE }] </A>             |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3><FONT COLOR=red>create_clock -name {clk} -period 20.833</FONT></A>                                                                                                    
+<A name="Timing_rpt_SetupSummaryConstraint_3"></A><A href=#Timing_rpt_SetupDetailedConstraint_3><FONT COLOR=red>3333333333 [get_nets clk]</FONT></A>               |   <FONT COLOR=red>20.833 ns </FONT>|   <FONT COLOR=red>-1.603 ns </FONT>|   <FONT COLOR=red>21</FONT>   |   <FONT COLOR=red>22.437 ns </FONT>|  <FONT COLOR=red>44.569 MHz </FONT>|       <FONT COLOR=red>20</FONT>       |        <FONT COLOR=red>2</FONT>       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_SetupCriticalEndpointSummary"></A><B><U><big>3.2.2  Setup Critical Endpoint Summary </big></U></B>
@@ -218,25 +218,25 @@ Total Negative Slack: 2.191 ns (setup), 0.000 ns (hold)
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-\game_state_inst/forty_eight_mhz_counter_140_152__i19/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i19/D              
                                          |   -1.604 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i18/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i18/D              
                                          |   -0.588 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i17/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i17/D              
                                          |    0.428 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i16/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i16/D              
                                          |    1.444 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i15/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i15/D              
                                          |    2.460 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i14/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i14/D              
                                          |    3.476 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i13/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i13/D              
                                          |    4.492 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i12/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i12/D              
                                          |    5.508 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i11/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i11/D              
                                          |    6.524 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i10/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i10/D              
                                          |    7.540 ns 
 -------------------------------------------------------
                                          |             
@@ -253,18 +253,18 @@ Setup # of endpoints with negative slack:|           2
              SDC Constraint             |   Target    |    Slack    | Levels |   Period    |  Frequency  |  Items Scored  |  Timing Error  
 -------------------------------------------------------------------------------------------------------------------------------------------
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_clock -name {clk} -period 20.833</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>3333333333 [get_nets clk]</A>               |    0.000 ns |    2.841 ns |    2   |        ---- |        ---- |       20       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>create_generated_clock -name {\pll_inst</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>/lscc_pll_inst/u_PLL_B/OUTCORE} -source</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1> [get_pins {\pll_inst/lscc_pll_inst/u_P</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>LL_B/REFERENCECLK}] -multiply_by 67 -di</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>vide_by 128 [get_pins {\pll_inst/lscc_p</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_1"></A><A href=#Timing_rpt_HoldDetailedConstraint_1>ll_inst/u_PLL_B/OUTCORE }] </A>             |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
                                         |             |             |        |             |             |                |                
 <A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>create_clock -name {clk0} -period 1000 </A>                                                                                                    
 <A name="Timing_rpt_HoldSummaryConstraint_2"></A><A href=#Timing_rpt_HoldDetailedConstraint_2>[get_nets clk2]</A>                         |    0.000 ns |    3.262 ns |    2   |        ---- |        ---- |       50       |        0       
                                         |             |             |        |             |             |                |                
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>create_generated_clock -name {\pll_inst</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>/lscc_pll_inst/u_PLL_B/OUTCORE} -source</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3> [get_pins {\pll_inst/lscc_pll_inst/u_P</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>LL_B/REFERENCECLK}] -multiply_by 67 -di</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>vide_by 128 [get_pins {\pll_inst/lscc_p</A>                                                                                                    
-<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>ll_inst/u_PLL_B/OUTCORE }] </A>             |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>create_clock -name {clk} -period 20.833</A>                                                                                                    
+<A name="Timing_rpt_HoldSummaryConstraint_3"></A><A href=#Timing_rpt_HoldDetailedConstraint_3>3333333333 [get_nets clk]</A>               |    0.000 ns |    2.841 ns |    2   |        ---- |        ---- |       20       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 <A name="Timing_rpt_HoldCriticalEndpointSummary"></A><B><U><big>3.3.2  Hold Critical Endpoint Summary </big></U></B>
@@ -272,25 +272,25 @@ Setup # of endpoints with negative slack:|           2
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-\game_state_inst/forty_eight_mhz_counter_140_152__i0/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i0/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i1/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i1/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i2/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i2/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i3/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i3/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i4/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i4/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i5/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i5/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i6/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i6/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i7/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i7/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i8/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i8/D              
                                          |    2.841 ns 
-\game_state_inst/forty_eight_mhz_counter_140_152__i9/D              
+\game_state_inst/forty_eight_mhz_counter_146_154__i9/D              
                                          |    2.841 ns 
 -------------------------------------------------------
                                          |             
@@ -306,20 +306,20 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
-\game_state_inst/wait_counter_141__i3/Q |    No arrival or required
-\game_state_inst/wait_counter_141__i4/Q |    No arrival or required
-\game_state_inst/is_over_45/Q           |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i5/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i6/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i3/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i4/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i1/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i2/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i7/Q     |    No arrival or required
+\game_state_inst/bird_y_pos_145__i3/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i5/Q   |    No arrival or required
+\game_state_inst/wait_counter_147__i5/Q |    No arrival or required
+\game_state_inst/wait_counter_147__i6/Q |    No arrival or required
+\game_state_inst/bird_y_pos_145__i7/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i8/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i9/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i0/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i1/Q   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i2/Q   |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
-ints                                    |                        20
+ints                                    |                        21
                                         |                          
 -------------------------------------------------------------------
 
@@ -327,20 +327,20 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-\game_state_inst/wait_counter_141__i3/D |    No arrival or required
-\game_state_inst/wait_counter_141__i4/D |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i1/D     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i1/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i9/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i8/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i7/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i4/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i5/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i6/SP    |    No arrival or required
+\game_state_inst/wait_counter_147__i5/D |    No arrival or required
+\game_state_inst/wait_counter_147__i6/D |    No arrival or required
+\game_state_inst/bird_y_pos_145__i3/D   |    No arrival or required
+\game_state_inst/bird_y_pos_145__i3/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i2/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i1/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i4/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i0/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i9/SP  |    No arrival or required
+\game_state_inst/bird_y_pos_145__i8/SP  |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        48
+ts                                      |                        51
                                         |                          
 -------------------------------------------------------------------
 
@@ -383,372 +383,36 @@ There is no instance satisfying reporting criteria
 
 <A name="Timing_rpt_DetailedReport"></A><B><U><big>4  DETAILED REPORT</big></U></B>
 <A name="Timing_rpt_SetupDetailedReport"></A><B><U><big>4.1  Setup Detailed Report</big></U></B>
-<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
+<A name="Timing_rpt_SetupDetailedConstraint_1"></A><A href=#Timing_rpt_SetupSummaryConstraint_1>4.1.1  Setup path details for constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A>
 ----------------------------------------------------------------------
-20 endpoints scored, 2 timing errors detected.
+0 endpoints scored, 0 timing errors detected.
 
-Minimum Pulse Width Report
---------------------------
-MPW Cell         : HSOSC_CORE
-MPW Pin          : CLKHF
-MPW Period       : 20.83 ns
-Clock Period     : 20.8333 ns
-Period margin    : 0.00333333 ns  (Passed)
---------------------------
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
- ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i19/D
-Source Clock     : clk
-Destination Clock: clk
-Logic Level      : 21
-Delay Ratio      : 67.6% (route), 32.4% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 20.833 ns 
-Path Slack       : -1.603 ns  (Failed)
-
-  Destination Clock Arrival Time (clk:R#2)    20.833
-+ Destination Clock Source Latency             0.000
-- Destination Clock Uncertainty                0.000
-+ Destination Clock Path Delay                 1.108
-- Setup Time                                   0.199
-------------------------------------------   -------
-End-of-path required time( ns )               21.742
-
-  Source Clock Arrival Time (clk:R#1)    0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.108
-+ Data Path Delay                       22.238
--------------------------------------   ------
-End-of-path arrival time( ns )          23.346
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i0/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
-\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
-\game_state_inst/n5730                                    NET DELAY         0.738         4.081  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
-\game_state_inst/n7646                                    NET DELAY         0.738         5.097  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
-\game_state_inst/n5732                                    NET DELAY         0.738         6.113  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
-\game_state_inst/n7649                                    NET DELAY         0.738         7.129  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
-\game_state_inst/n5734                                    NET DELAY         0.738         8.145  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
-\game_state_inst/n7652                                    NET DELAY         0.738         9.161  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
-\game_state_inst/n5736                                    NET DELAY         0.738        10.177  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
-\game_state_inst/n7655                                    NET DELAY         0.738        11.193  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
-\game_state_inst/n5738                                    NET DELAY         0.738        12.209  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
-\game_state_inst/n7658                                    NET DELAY         0.738        13.225  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
-\game_state_inst/n5740                                    NET DELAY         0.738        14.241  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
-\game_state_inst/n7661                                    NET DELAY         0.738        15.257  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
-\game_state_inst/n5742                                    NET DELAY         0.738        16.273  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
-\game_state_inst/n7664                                    NET DELAY         0.738        17.289  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
-\game_state_inst/n5744                                    NET DELAY         0.738        18.305  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
-\game_state_inst/n7667                                    NET DELAY         0.738        19.321  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
-\game_state_inst/n5746                                    NET DELAY         0.738        20.337  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        20.615  2       
-\game_state_inst/n7670                                    NET DELAY         0.738        21.353  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        21.631  2       
-\game_state_inst/n5748                                    NET DELAY         0.738        22.369  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_21/D0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_21/S0
-                                          FA2             D0_TO_S0_DELAY    0.477        22.846  1       
-\game_state_inst/n86                                      NET DELAY         0.500        23.346  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-
-
- ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i18/D
-Source Clock     : clk
-Destination Clock: clk
-Logic Level      : 20
-Delay Ratio      : 67.3% (route), 32.7% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 20.833 ns 
-Path Slack       : -0.587 ns  (Failed)
-
-  Destination Clock Arrival Time (clk:R#2)    20.833
-+ Destination Clock Source Latency             0.000
-- Destination Clock Uncertainty                0.000
-+ Destination Clock Path Delay                 1.108
-- Setup Time                                   0.199
-------------------------------------------   -------
-End-of-path required time( ns )               21.742
-
-  Source Clock Arrival Time (clk:R#1)    0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.108
-+ Data Path Delay                       21.222
--------------------------------------   ------
-End-of-path arrival time( ns )          22.330
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i0/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
-\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
-\game_state_inst/n5730                                    NET DELAY         0.738         4.081  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
-\game_state_inst/n7646                                    NET DELAY         0.738         5.097  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
-\game_state_inst/n5732                                    NET DELAY         0.738         6.113  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
-\game_state_inst/n7649                                    NET DELAY         0.738         7.129  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
-\game_state_inst/n5734                                    NET DELAY         0.738         8.145  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
-\game_state_inst/n7652                                    NET DELAY         0.738         9.161  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
-\game_state_inst/n5736                                    NET DELAY         0.738        10.177  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
-\game_state_inst/n7655                                    NET DELAY         0.738        11.193  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
-\game_state_inst/n5738                                    NET DELAY         0.738        12.209  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
-\game_state_inst/n7658                                    NET DELAY         0.738        13.225  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
-\game_state_inst/n5740                                    NET DELAY         0.738        14.241  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
-\game_state_inst/n7661                                    NET DELAY         0.738        15.257  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
-\game_state_inst/n5742                                    NET DELAY         0.738        16.273  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
-\game_state_inst/n7664                                    NET DELAY         0.738        17.289  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
-\game_state_inst/n5744                                    NET DELAY         0.738        18.305  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
-\game_state_inst/n7667                                    NET DELAY         0.738        19.321  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
-\game_state_inst/n5746                                    NET DELAY         0.738        20.337  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        20.615  2       
-\game_state_inst/n7670                                    NET DELAY         0.738        21.353  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/D1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/S1
-                                          FA2             D1_TO_S1_DELAY    0.477        21.830  1       
-\game_state_inst/n87                                      NET DELAY         0.500        22.330  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-
-
- ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i17/D
-Source Clock     : clk
-Destination Clock: clk
-Logic Level      : 19
-Delay Ratio      : 67.0% (route), 33.0% (logic)
-Clock Skew       : 0.000 ns
-Setup Constraint : 20.833 ns 
-Path Slack       : 0.428 ns  (Passed)
-
-  Destination Clock Arrival Time (clk:R#2)    20.833
-+ Destination Clock Source Latency             0.000
-- Destination Clock Uncertainty                0.000
-+ Destination Clock Path Delay                 1.108
-- Setup Time                                   0.199
-------------------------------------------   -------
-End-of-path required time( ns )               21.742
-
-  Source Clock Arrival Time (clk:R#1)    0.000
-+ Source Clock Source Latency            0.000
-+ Source Clock Path Delay                1.108
-+ Data Path Delay                       20.206
--------------------------------------   ------
-End-of-path arrival time( ns )          21.314
-
- 
-Source Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-Data path
-Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i0/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
-\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
-\game_state_inst/n5730                                    NET DELAY         0.738         4.081  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
-\game_state_inst/n7646                                    NET DELAY         0.738         5.097  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
-\game_state_inst/n5732                                    NET DELAY         0.738         6.113  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
-\game_state_inst/n7649                                    NET DELAY         0.738         7.129  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
-\game_state_inst/n5734                                    NET DELAY         0.738         8.145  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
-\game_state_inst/n7652                                    NET DELAY         0.738         9.161  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
-\game_state_inst/n5736                                    NET DELAY         0.738        10.177  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
-\game_state_inst/n7655                                    NET DELAY         0.738        11.193  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
-\game_state_inst/n5738                                    NET DELAY         0.738        12.209  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
-\game_state_inst/n7658                                    NET DELAY         0.738        13.225  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_11/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
-\game_state_inst/n5740                                    NET DELAY         0.738        14.241  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
-\game_state_inst/n7661                                    NET DELAY         0.738        15.257  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_13/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
-\game_state_inst/n5742                                    NET DELAY         0.738        16.273  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
-\game_state_inst/n7664                                    NET DELAY         0.738        17.289  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_15/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
-\game_state_inst/n5744                                    NET DELAY         0.738        18.305  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
-\game_state_inst/n7667                                    NET DELAY         0.738        19.321  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
-\game_state_inst/n5746                                    NET DELAY         0.738        20.337  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/D0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/S0
-                                          FA2             D0_TO_S0_DELAY    0.477        20.814  1       
-\game_state_inst/n88                                      NET DELAY         0.500        21.314  1       
-
-
-Destination Clock Path
-Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  -------------  -----  ------------  ------  
-hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
-clk                                                       NET DELAY      1.108         1.108  1       
-
-
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 <A name="Timing_rpt_SetupDetailedConstraint_2"></A><A href=#Timing_rpt_SetupSummaryConstraint_2>4.1.2  Setup path details for constraint: create_clock -name {clk0} -period 1000 [get_nets clk2]</A>
 ----------------------------------------------------------------------
 50 endpoints scored, 0 timing errors detected.
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                     Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
- ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : \vga_inst/row_num_139__i0/Q
-Path End         : \vga_inst/row_num_139__i9/D
+Path Begin       : \vga_inst/row_num_144__i0/Q
+Path End         : \vga_inst/row_num_144__i9/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 11
-Delay Ratio      : 64.8% (route), 35.2% (logic)
+Delay Ratio      : 65.0% (route), 35.0% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 1000.000 ns 
-Path Slack       : 987.208 ns  (Passed)
+Path Slack       : 987.144 ns  (Passed)
 
   Destination Clock Arrival Time (clk0:R#2)   1000.000
 + Destination Clock Source Latency               0.000
@@ -761,9 +425,9 @@ End-of-path required time( ns )               1000.900
   Source Clock Arrival Time (clk0:R#1)    0.000
 + Source Clock Source Latency             0.000
 + Source Clock Path Delay                 1.099
-+ Data Path Delay                        12.593
++ Data Path Delay                        12.657
 --------------------------------------   ------
-End-of-path arrival time( ns )           13.692
+End-of-path arrival time( ns )           13.756
 
  
 Source Clock Path
@@ -777,39 +441,39 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\vga_inst/row_num_139__i0/CK->\vga_inst/row_num_139__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.490  8       
-row_num[0]                                                NET DELAY         1.015         3.505  1       
-\vga_inst/row_num_139_add_4_1/C1->\vga_inst/row_num_139_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         3.849  2       
-\vga_inst/n5719                                           NET DELAY         0.738         4.587  1       
-\vga_inst/row_num_139_add_4_3/CI0->\vga_inst/row_num_139_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         4.865  2       
-\vga_inst/n7574                                           NET DELAY         0.738         5.603  1       
-\vga_inst/row_num_139_add_4_3/CI1->\vga_inst/row_num_139_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         5.881  2       
-\vga_inst/n5721                                           NET DELAY         0.738         6.619  1       
-\vga_inst/row_num_139_add_4_5/CI0->\vga_inst/row_num_139_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         6.897  2       
-\vga_inst/n7580                                           NET DELAY         0.738         7.635  1       
-\vga_inst/row_num_139_add_4_5/CI1->\vga_inst/row_num_139_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         7.913  2       
-\vga_inst/n5723                                           NET DELAY         0.738         8.651  1       
-\vga_inst/row_num_139_add_4_7/CI0->\vga_inst/row_num_139_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         8.929  2       
-\vga_inst/n7583                                           NET DELAY         0.738         9.667  1       
-\vga_inst/row_num_139_add_4_7/CI1->\vga_inst/row_num_139_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         9.945  2       
-\vga_inst/n5725                                           NET DELAY         0.738        10.683  1       
-\vga_inst/row_num_139_add_4_9/CI0->\vga_inst/row_num_139_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        10.961  2       
-\vga_inst/n7586                                           NET DELAY         0.738        11.699  1       
-\vga_inst/row_num_139_add_4_9/CI1->\vga_inst/row_num_139_add_4_9/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278        11.977  2       
-\vga_inst/n5727                                           NET DELAY         0.738        12.715  1       
-\vga_inst/row_num_139_add_4_11/D0->\vga_inst/row_num_139_add_4_11/S0
-                                          FA2             D0_TO_S0_DELAY    0.477        13.192  1       
-\vga_inst/n46                                             NET DELAY         0.500        13.692  1       
+\vga_inst/row_num_144__i0/CK->\vga_inst/row_num_144__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.490  11      
+row_num[0]                                                NET DELAY         1.079         3.569  1       
+\vga_inst/row_num_144_add_4_1/C1->\vga_inst/row_num_144_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         3.913  2       
+\vga_inst/n10292                                          NET DELAY         0.738         4.651  1       
+\vga_inst/row_num_144_add_4_3/CI0->\vga_inst/row_num_144_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         4.929  2       
+\vga_inst/n12464                                          NET DELAY         0.738         5.667  1       
+\vga_inst/row_num_144_add_4_3/CI1->\vga_inst/row_num_144_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         5.945  2       
+\vga_inst/n10294                                          NET DELAY         0.738         6.683  1       
+\vga_inst/row_num_144_add_4_5/CI0->\vga_inst/row_num_144_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         6.961  2       
+\vga_inst/n12467                                          NET DELAY         0.738         7.699  1       
+\vga_inst/row_num_144_add_4_5/CI1->\vga_inst/row_num_144_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         7.977  2       
+\vga_inst/n10296                                          NET DELAY         0.738         8.715  1       
+\vga_inst/row_num_144_add_4_7/CI0->\vga_inst/row_num_144_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         8.993  2       
+\vga_inst/n12470                                          NET DELAY         0.738         9.731  1       
+\vga_inst/row_num_144_add_4_7/CI1->\vga_inst/row_num_144_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        10.009  2       
+\vga_inst/n10298                                          NET DELAY         0.738        10.747  1       
+\vga_inst/row_num_144_add_4_9/CI0->\vga_inst/row_num_144_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.025  2       
+\vga_inst/n12491                                          NET DELAY         0.738        11.763  1       
+\vga_inst/row_num_144_add_4_9/CI1->\vga_inst/row_num_144_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        12.041  2       
+\vga_inst/n10300                                          NET DELAY         0.738        12.779  1       
+\vga_inst/row_num_144_add_4_11/D0->\vga_inst/row_num_144_add_4_11/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        13.256  1       
+\vga_inst/n46                                             NET DELAY         0.500        13.756  1       
 
 
 Destination Clock Path
@@ -824,8 +488,8 @@ clk2                                                      NET DELAY      1.099  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \vga_inst/col_num_137__i0/Q
-Path End         : \vga_inst/col_num_137__i9/D
+Path Begin       : \vga_inst/col_num_142__i0/Q
+Path End         : \vga_inst/col_num_142__i9/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 11
@@ -861,39 +525,39 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\vga_inst/col_num_137__i0/CK->\vga_inst/col_num_137__i0/Q
+\vga_inst/col_num_142__i0/CK->\vga_inst/col_num_142__i0/Q
                                           FD1P3XZ         CK_TO_Q_DELAY     1.391         2.490  5       
-col_num[0]                                                NET DELAY         0.921         3.411  1       
-\vga_inst/col_num_137_add_4_1/C1->\vga_inst/col_num_137_add_4_1/CO1
+\vga_inst/col_num[0]                                      NET DELAY         0.921         3.411  1       
+\vga_inst/col_num_142_add_4_1/C1->\vga_inst/col_num_142_add_4_1/CO1
                                           FA2             C1_TO_CO1_DELAY   0.344         3.755  2       
-\vga_inst/n5762                                           NET DELAY         0.738         4.493  1       
-\vga_inst/col_num_137_add_4_3/CI0->\vga_inst/col_num_137_add_4_3/CO0
+\vga_inst/n10356                                          NET DELAY         0.738         4.493  1       
+\vga_inst/col_num_142_add_4_3/CI0->\vga_inst/col_num_142_add_4_3/CO0
                                           FA2             CI0_TO_CO0_DELAY  0.278         4.771  2       
-\vga_inst/n7616                                           NET DELAY         0.738         5.509  1       
-\vga_inst/col_num_137_add_4_3/CI1->\vga_inst/col_num_137_add_4_3/CO1
+\vga_inst/n12494                                          NET DELAY         0.738         5.509  1       
+\vga_inst/col_num_142_add_4_3/CI1->\vga_inst/col_num_142_add_4_3/CO1
                                           FA2             CI1_TO_CO1_DELAY  0.278         5.787  2       
-\vga_inst/n5764                                           NET DELAY         0.738         6.525  1       
-\vga_inst/col_num_137_add_4_5/CI0->\vga_inst/col_num_137_add_4_5/CO0
+\vga_inst/n10358                                          NET DELAY         0.738         6.525  1       
+\vga_inst/col_num_142_add_4_5/CI0->\vga_inst/col_num_142_add_4_5/CO0
                                           FA2             CI0_TO_CO0_DELAY  0.278         6.803  2       
-\vga_inst/n7619                                           NET DELAY         0.738         7.541  1       
-\vga_inst/col_num_137_add_4_5/CI1->\vga_inst/col_num_137_add_4_5/CO1
+\vga_inst/n12497                                          NET DELAY         0.738         7.541  1       
+\vga_inst/col_num_142_add_4_5/CI1->\vga_inst/col_num_142_add_4_5/CO1
                                           FA2             CI1_TO_CO1_DELAY  0.278         7.819  2       
-\vga_inst/n5766                                           NET DELAY         0.738         8.557  1       
-\vga_inst/col_num_137_add_4_7/CI0->\vga_inst/col_num_137_add_4_7/CO0
+\vga_inst/n10360                                          NET DELAY         0.738         8.557  1       
+\vga_inst/col_num_142_add_4_7/CI0->\vga_inst/col_num_142_add_4_7/CO0
                                           FA2             CI0_TO_CO0_DELAY  0.278         8.835  2       
-\vga_inst/n7622                                           NET DELAY         0.738         9.573  1       
-\vga_inst/col_num_137_add_4_7/CI1->\vga_inst/col_num_137_add_4_7/CO1
+\vga_inst/n12500                                          NET DELAY         0.738         9.573  1       
+\vga_inst/col_num_142_add_4_7/CI1->\vga_inst/col_num_142_add_4_7/CO1
                                           FA2             CI1_TO_CO1_DELAY  0.278         9.851  2       
-\vga_inst/n5768                                           NET DELAY         0.738        10.589  1       
-\vga_inst/col_num_137_add_4_9/CI0->\vga_inst/col_num_137_add_4_9/CO0
+\vga_inst/n10362                                          NET DELAY         0.738        10.589  1       
+\vga_inst/col_num_142_add_4_9/CI0->\vga_inst/col_num_142_add_4_9/CO0
                                           FA2             CI0_TO_CO0_DELAY  0.278        10.867  2       
-\vga_inst/n7625                                           NET DELAY         0.738        11.605  1       
-\vga_inst/col_num_137_add_4_9/CI1->\vga_inst/col_num_137_add_4_9/CO1
+\vga_inst/n12503                                          NET DELAY         0.738        11.605  1       
+\vga_inst/col_num_142_add_4_9/CI1->\vga_inst/col_num_142_add_4_9/CO1
                                           FA2             CI1_TO_CO1_DELAY  0.278        11.883  2       
-\vga_inst/n5770                                           NET DELAY         0.738        12.621  1       
-\vga_inst/col_num_137_add_4_11/D0->\vga_inst/col_num_137_add_4_11/S0
+\vga_inst/n10364                                          NET DELAY         0.738        12.621  1       
+\vga_inst/col_num_142_add_4_11/D0->\vga_inst/col_num_142_add_4_11/S0
                                           FA2             D0_TO_S0_DELAY    0.477        13.098  1       
-\vga_inst/n46_adj_247                                     NET DELAY         0.500        13.598  1       
+\vga_inst/n46_adj_368                                     NET DELAY         0.500        13.598  1       
 
 
 Destination Clock Path
@@ -908,15 +572,15 @@ clk2                                                      NET DELAY      1.099  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \vga_inst/row_num_139__i0/Q
-Path End         : \vga_inst/row_num_139__i8/D
+Path Begin       : \vga_inst/row_num_144__i0/Q
+Path End         : \vga_inst/row_num_144__i8/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 10
-Delay Ratio      : 64.1% (route), 35.9% (logic)
+Delay Ratio      : 64.3% (route), 35.7% (logic)
 Clock Skew       : 0.000 ns
 Setup Constraint : 1000.000 ns 
-Path Slack       : 988.224 ns  (Passed)
+Path Slack       : 988.160 ns  (Passed)
 
   Destination Clock Arrival Time (clk0:R#2)   1000.000
 + Destination Clock Source Latency               0.000
@@ -929,9 +593,9 @@ End-of-path required time( ns )               1000.900
   Source Clock Arrival Time (clk0:R#1)    0.000
 + Source Clock Source Latency             0.000
 + Source Clock Path Delay                 1.099
-+ Data Path Delay                        11.577
++ Data Path Delay                        11.641
 --------------------------------------   ------
-End-of-path arrival time( ns )           12.676
+End-of-path arrival time( ns )           12.740
 
  
 Source Clock Path
@@ -945,36 +609,36 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  ----------------  -----  ------------  ------  
-\vga_inst/row_num_139__i0/CK->\vga_inst/row_num_139__i0/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.490  8       
-row_num[0]                                                NET DELAY         1.015         3.505  1       
-\vga_inst/row_num_139_add_4_1/C1->\vga_inst/row_num_139_add_4_1/CO1
-                                          FA2             C1_TO_CO1_DELAY   0.344         3.849  2       
-\vga_inst/n5719                                           NET DELAY         0.738         4.587  1       
-\vga_inst/row_num_139_add_4_3/CI0->\vga_inst/row_num_139_add_4_3/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         4.865  2       
-\vga_inst/n7574                                           NET DELAY         0.738         5.603  1       
-\vga_inst/row_num_139_add_4_3/CI1->\vga_inst/row_num_139_add_4_3/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         5.881  2       
-\vga_inst/n5721                                           NET DELAY         0.738         6.619  1       
-\vga_inst/row_num_139_add_4_5/CI0->\vga_inst/row_num_139_add_4_5/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         6.897  2       
-\vga_inst/n7580                                           NET DELAY         0.738         7.635  1       
-\vga_inst/row_num_139_add_4_5/CI1->\vga_inst/row_num_139_add_4_5/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         7.913  2       
-\vga_inst/n5723                                           NET DELAY         0.738         8.651  1       
-\vga_inst/row_num_139_add_4_7/CI0->\vga_inst/row_num_139_add_4_7/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278         8.929  2       
-\vga_inst/n7583                                           NET DELAY         0.738         9.667  1       
-\vga_inst/row_num_139_add_4_7/CI1->\vga_inst/row_num_139_add_4_7/CO1
-                                          FA2             CI1_TO_CO1_DELAY  0.278         9.945  2       
-\vga_inst/n5725                                           NET DELAY         0.738        10.683  1       
-\vga_inst/row_num_139_add_4_9/CI0->\vga_inst/row_num_139_add_4_9/CO0
-                                          FA2             CI0_TO_CO0_DELAY  0.278        10.961  2       
-\vga_inst/n7586                                           NET DELAY         0.738        11.699  1       
-\vga_inst/row_num_139_add_4_9/D1->\vga_inst/row_num_139_add_4_9/S1
-                                          FA2             D1_TO_S1_DELAY    0.477        12.176  1       
-\vga_inst/n47                                             NET DELAY         0.500        12.676  1       
+\vga_inst/row_num_144__i0/CK->\vga_inst/row_num_144__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.490  11      
+row_num[0]                                                NET DELAY         1.079         3.569  1       
+\vga_inst/row_num_144_add_4_1/C1->\vga_inst/row_num_144_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         3.913  2       
+\vga_inst/n10292                                          NET DELAY         0.738         4.651  1       
+\vga_inst/row_num_144_add_4_3/CI0->\vga_inst/row_num_144_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         4.929  2       
+\vga_inst/n12464                                          NET DELAY         0.738         5.667  1       
+\vga_inst/row_num_144_add_4_3/CI1->\vga_inst/row_num_144_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         5.945  2       
+\vga_inst/n10294                                          NET DELAY         0.738         6.683  1       
+\vga_inst/row_num_144_add_4_5/CI0->\vga_inst/row_num_144_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         6.961  2       
+\vga_inst/n12467                                          NET DELAY         0.738         7.699  1       
+\vga_inst/row_num_144_add_4_5/CI1->\vga_inst/row_num_144_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         7.977  2       
+\vga_inst/n10296                                          NET DELAY         0.738         8.715  1       
+\vga_inst/row_num_144_add_4_7/CI0->\vga_inst/row_num_144_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         8.993  2       
+\vga_inst/n12470                                          NET DELAY         0.738         9.731  1       
+\vga_inst/row_num_144_add_4_7/CI1->\vga_inst/row_num_144_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        10.009  2       
+\vga_inst/n10298                                          NET DELAY         0.738        10.747  1       
+\vga_inst/row_num_144_add_4_9/CI0->\vga_inst/row_num_144_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        11.025  2       
+\vga_inst/n12491                                          NET DELAY         0.738        11.763  1       
+\vga_inst/row_num_144_add_4_9/D1->\vga_inst/row_num_144_add_4_9/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        12.240  1       
+\vga_inst/n47                                             NET DELAY         0.500        12.740  1       
 
 
 Destination Clock Path
@@ -990,21 +654,18 @@ clk2                                                      NET DELAY      1.099  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_SetupDetailedConstraint_3"></A><A href=#Timing_rpt_SetupSummaryConstraint_3>4.1.3  Setup path details for constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A>
+<A name="Timing_rpt_SetupDetailedConstraint_3"></A><A href=#Timing_rpt_SetupSummaryConstraint_3>4.1.3  Setup path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
 ----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
+20 endpoints scored, 2 timing errors detected.
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-<A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
-<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
-----------------------------------------------------------------------
-20 endpoints scored, 0 timing errors detected.
+Minimum Pulse Width Report
+--------------------------
+MPW Cell         : HSOSC_CORE
+MPW Pin          : CLKHF
+MPW Period       : 20.83 ns
+Clock Period     : 20.8333 ns
+Period margin    : 0.00333333 ns  (Passed)
+--------------------------
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
@@ -1012,30 +673,30 @@ clk2                                                      NET DELAY      1.099  
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i18/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i18/D
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i19/D
 Source Clock     : clk
 Destination Clock: clk
-Logic Level      : 2
-Delay Ratio      : 35.2% (route), 64.8% (logic)
+Logic Level      : 21
+Delay Ratio      : 67.6% (route), 32.4% (logic)
 Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 2.841 ns  (Passed)
+Setup Constraint : 20.833 ns 
+Path Slack       : -1.603 ns  (Failed)
 
-  Destination Clock Arrival Time (clk:R#1)     0.000
+  Destination Clock Arrival Time (clk:R#2)    20.833
 + Destination Clock Source Latency             0.000
-+ Destination Clock Uncertainty                0.000
+- Destination Clock Uncertainty                0.000
 + Destination Clock Path Delay                 1.108
-+ Hold Time                                   -0.000
+- Setup Time                                   0.199
 ------------------------------------------   -------
-End-of-path required time( ns )                1.108
+End-of-path required time( ns )               21.742
 
-  Source Clock Arrival Time (clk:R#1)   0.000
-+ Source Clock Source Latency           0.000
-+ Source Clock Path Delay               1.108
-+ Data Path Delay                       2.841
--------------------------------------   -----
-End-of-path arrival time( ns )          3.949
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                1.108
++ Data Path Delay                       22.238
+-------------------------------------   ------
+End-of-path arrival time( ns )          23.346
 
  
 Source Clock Path
@@ -1046,14 +707,71 @@ clk                                                       NET DELAY      1.108  
 
 
 Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i18/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i18/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
-\game_state_inst/n2                                       NET DELAY       0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/C1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/S1
-                                          FA2             C1_TO_S1_DELAY  0.450         3.449  1       
-\game_state_inst/n87                                      NET DELAY       0.500         3.949  1       
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i0/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
+\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
+\game_state_inst/n10314                                   NET DELAY         0.738         4.081  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
+\game_state_inst/n12527                                   NET DELAY         0.738         5.097  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
+\game_state_inst/n10316                                   NET DELAY         0.738         6.113  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
+\game_state_inst/n12530                                   NET DELAY         0.738         7.129  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
+\game_state_inst/n10318                                   NET DELAY         0.738         8.145  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
+\game_state_inst/n12533                                   NET DELAY         0.738         9.161  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
+\game_state_inst/n10320                                   NET DELAY         0.738        10.177  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
+\game_state_inst/n12536                                   NET DELAY         0.738        11.193  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
+\game_state_inst/n10322                                   NET DELAY         0.738        12.209  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
+\game_state_inst/n12539                                   NET DELAY         0.738        13.225  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
+\game_state_inst/n10324                                   NET DELAY         0.738        14.241  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
+\game_state_inst/n12542                                   NET DELAY         0.738        15.257  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
+\game_state_inst/n10326                                   NET DELAY         0.738        16.273  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
+\game_state_inst/n12545                                   NET DELAY         0.738        17.289  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
+\game_state_inst/n10328                                   NET DELAY         0.738        18.305  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
+\game_state_inst/n12548                                   NET DELAY         0.738        19.321  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
+\game_state_inst/n10330                                   NET DELAY         0.738        20.337  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        20.615  2       
+\game_state_inst/n12551                                   NET DELAY         0.738        21.353  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        21.631  2       
+\game_state_inst/n10332                                   NET DELAY         0.738        22.369  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_21/D0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_21/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        22.846  1       
+\game_state_inst/n86                                      NET DELAY         0.500        23.346  1       
 
 
 Destination Clock Path
@@ -1067,30 +785,30 @@ clk                                                       NET DELAY      1.108  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i17/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i17/D
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i18/D
 Source Clock     : clk
 Destination Clock: clk
-Logic Level      : 2
-Delay Ratio      : 35.2% (route), 64.8% (logic)
+Logic Level      : 20
+Delay Ratio      : 67.3% (route), 32.7% (logic)
 Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 2.841 ns  (Passed)
+Setup Constraint : 20.833 ns 
+Path Slack       : -0.587 ns  (Failed)
 
-  Destination Clock Arrival Time (clk:R#1)     0.000
+  Destination Clock Arrival Time (clk:R#2)    20.833
 + Destination Clock Source Latency             0.000
-+ Destination Clock Uncertainty                0.000
+- Destination Clock Uncertainty                0.000
 + Destination Clock Path Delay                 1.108
-+ Hold Time                                   -0.000
+- Setup Time                                   0.199
 ------------------------------------------   -------
-End-of-path required time( ns )                1.108
+End-of-path required time( ns )               21.742
 
-  Source Clock Arrival Time (clk:R#1)   0.000
-+ Source Clock Source Latency           0.000
-+ Source Clock Path Delay               1.108
-+ Data Path Delay                       2.841
--------------------------------------   -----
-End-of-path arrival time( ns )          3.949
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                1.108
++ Data Path Delay                       21.222
+-------------------------------------   ------
+End-of-path arrival time( ns )          22.330
 
  
 Source Clock Path
@@ -1101,14 +819,68 @@ clk                                                       NET DELAY      1.108  
 
 
 Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i17/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i17/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
-\game_state_inst/n3                                       NET DELAY       0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/C0->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_19/S0
-                                          FA2             C0_TO_S0_DELAY  0.450         3.449  1       
-\game_state_inst/n88                                      NET DELAY       0.500         3.949  1       
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i0/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
+\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
+\game_state_inst/n10314                                   NET DELAY         0.738         4.081  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
+\game_state_inst/n12527                                   NET DELAY         0.738         5.097  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
+\game_state_inst/n10316                                   NET DELAY         0.738         6.113  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
+\game_state_inst/n12530                                   NET DELAY         0.738         7.129  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
+\game_state_inst/n10318                                   NET DELAY         0.738         8.145  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
+\game_state_inst/n12533                                   NET DELAY         0.738         9.161  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
+\game_state_inst/n10320                                   NET DELAY         0.738        10.177  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
+\game_state_inst/n12536                                   NET DELAY         0.738        11.193  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
+\game_state_inst/n10322                                   NET DELAY         0.738        12.209  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
+\game_state_inst/n12539                                   NET DELAY         0.738        13.225  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
+\game_state_inst/n10324                                   NET DELAY         0.738        14.241  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
+\game_state_inst/n12542                                   NET DELAY         0.738        15.257  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
+\game_state_inst/n10326                                   NET DELAY         0.738        16.273  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
+\game_state_inst/n12545                                   NET DELAY         0.738        17.289  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
+\game_state_inst/n10328                                   NET DELAY         0.738        18.305  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
+\game_state_inst/n12548                                   NET DELAY         0.738        19.321  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
+\game_state_inst/n10330                                   NET DELAY         0.738        20.337  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        20.615  2       
+\game_state_inst/n12551                                   NET DELAY         0.738        21.353  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/D1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/S1
+                                          FA2             D1_TO_S1_DELAY    0.477        21.830  1       
+\game_state_inst/n87                                      NET DELAY         0.500        22.330  1       
 
 
 Destination Clock Path
@@ -1122,30 +894,30 @@ clk                                                       NET DELAY      1.108  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \game_state_inst/forty_eight_mhz_counter_140_152__i16/Q
-Path End         : \game_state_inst/forty_eight_mhz_counter_140_152__i16/D
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i17/D
 Source Clock     : clk
 Destination Clock: clk
-Logic Level      : 2
-Delay Ratio      : 35.2% (route), 64.8% (logic)
+Logic Level      : 19
+Delay Ratio      : 67.0% (route), 33.0% (logic)
 Clock Skew       : 0.000 ns
-Hold Constraint  : 0.000 ns 
-Path Slack       : 2.841 ns  (Passed)
+Setup Constraint : 20.833 ns 
+Path Slack       : 0.428 ns  (Passed)
 
-  Destination Clock Arrival Time (clk:R#1)     0.000
+  Destination Clock Arrival Time (clk:R#2)    20.833
 + Destination Clock Source Latency             0.000
-+ Destination Clock Uncertainty                0.000
+- Destination Clock Uncertainty                0.000
 + Destination Clock Path Delay                 1.108
-+ Hold Time                                   -0.000
+- Setup Time                                   0.199
 ------------------------------------------   -------
-End-of-path required time( ns )                1.108
+End-of-path required time( ns )               21.742
 
-  Source Clock Arrival Time (clk:R#1)   0.000
-+ Source Clock Source Latency           0.000
-+ Source Clock Path Delay               1.108
-+ Data Path Delay                       2.841
--------------------------------------   -----
-End-of-path arrival time( ns )          3.949
+  Source Clock Arrival Time (clk:R#1)    0.000
++ Source Clock Source Latency            0.000
++ Source Clock Path Delay                1.108
++ Data Path Delay                       20.206
+-------------------------------------   ------
+End-of-path arrival time( ns )          21.314
 
  
 Source Clock Path
@@ -1156,14 +928,65 @@ clk                                                       NET DELAY      1.108  
 
 
 Data path
-Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
-----------------------------------------  --------------  --------------  -----  ------------  ------  
-\game_state_inst/forty_eight_mhz_counter_140_152__i16/CK->\game_state_inst/forty_eight_mhz_counter_140_152__i16/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
-\game_state_inst/n4                                       NET DELAY       0.500         2.999  1       
-\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/C1->\game_state_inst/forty_eight_mhz_counter_140_152_add_4_17/S1
-                                          FA2             C1_TO_S1_DELAY  0.450         3.449  1       
-\game_state_inst/n89                                      NET DELAY       0.500         3.949  1       
+Name                                      Cell/Site Name  Delay Name        Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  ----------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i0/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i0/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY     1.391         2.499  1       
+\game_state_inst/n20                                      NET DELAY         0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/C1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_1/CO1
+                                          FA2             C1_TO_CO1_DELAY   0.344         3.343  2       
+\game_state_inst/n10314                                   NET DELAY         0.738         4.081  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         4.359  2       
+\game_state_inst/n12527                                   NET DELAY         0.738         5.097  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_3/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         5.375  2       
+\game_state_inst/n10316                                   NET DELAY         0.738         6.113  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         6.391  2       
+\game_state_inst/n12530                                   NET DELAY         0.738         7.129  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_5/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         7.407  2       
+\game_state_inst/n10318                                   NET DELAY         0.738         8.145  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278         8.423  2       
+\game_state_inst/n12533                                   NET DELAY         0.738         9.161  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_7/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278         9.439  2       
+\game_state_inst/n10320                                   NET DELAY         0.738        10.177  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        10.455  2       
+\game_state_inst/n12536                                   NET DELAY         0.738        11.193  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_9/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        11.471  2       
+\game_state_inst/n10322                                   NET DELAY         0.738        12.209  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        12.487  2       
+\game_state_inst/n12539                                   NET DELAY         0.738        13.225  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_11/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        13.503  2       
+\game_state_inst/n10324                                   NET DELAY         0.738        14.241  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        14.519  2       
+\game_state_inst/n12542                                   NET DELAY         0.738        15.257  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_13/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        15.535  2       
+\game_state_inst/n10326                                   NET DELAY         0.738        16.273  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        16.551  2       
+\game_state_inst/n12545                                   NET DELAY         0.738        17.289  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_15/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        17.567  2       
+\game_state_inst/n10328                                   NET DELAY         0.738        18.305  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO0
+                                          FA2             CI0_TO_CO0_DELAY  0.278        18.583  2       
+\game_state_inst/n12548                                   NET DELAY         0.738        19.321  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CI1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/CO1
+                                          FA2             CI1_TO_CO1_DELAY  0.278        19.599  2       
+\game_state_inst/n10330                                   NET DELAY         0.738        20.337  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/D0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/S0
+                                          FA2             D0_TO_S0_DELAY    0.477        20.814  1       
+\game_state_inst/n88                                      NET DELAY         0.500        21.314  1       
 
 
 Destination Clock Path
@@ -1174,6 +997,18 @@ clk                                                       NET DELAY      1.108  
 
 
 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+<A name="Timing_rpt_HoldDetailedReport"></A><B><U><big>4.2  Hold Detailed Report</big></U></B>
+<A name="Timing_rpt_HoldDetailedConstraint_1"></A><A href=#Timing_rpt_HoldSummaryConstraint_1>4.2.1  Hold path details for constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A>
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1188,8 +1023,8 @@ clk                                                       NET DELAY      1.108  
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \vga_inst/col_num_137__i0/Q
-Path End         : \vga_inst/col_num_137__i0/D
+Path Begin       : \vga_inst/col_num_142__i0/Q
+Path End         : \vga_inst/col_num_142__i0/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 2
@@ -1225,10 +1060,10 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-\vga_inst/col_num_137__i0/CK->\vga_inst/col_num_137__i0/Q
+\vga_inst/col_num_142__i0/CK->\vga_inst/col_num_142__i0/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         2.490  5       
-col_num[0]                                                NET DELAY       0.921         3.411  1       
-\vga_inst/col_num_137_add_4_1/C1->\vga_inst/col_num_137_add_4_1/S1
+\vga_inst/col_num[0]                                      NET DELAY       0.921         3.411  1       
+\vga_inst/col_num_142_add_4_1/C1->\vga_inst/col_num_142_add_4_1/S1
                                           FA2             C1_TO_S1_DELAY  0.450         3.861  1       
 \vga_inst/n55                                             NET DELAY       0.500         4.361  1       
 
@@ -1245,15 +1080,15 @@ clk2                                                      NET DELAY      1.099  
 
  ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \vga_inst/col_num_137__i2/Q
-Path End         : \vga_inst/col_num_137__i2/D
+Path Begin       : \vga_inst/col_num_142__i1/Q
+Path End         : \vga_inst/col_num_142__i1/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 2
-Delay Ratio      : 44.7% (route), 55.3% (logic)
+Delay Ratio      : 44.2% (route), 55.8% (logic)
 Clock Skew       : 0.000 ns
 Hold Constraint  : 0.000 ns 
-Path Slack       : 3.330 ns  (Passed)
+Path Slack       : 3.299 ns  (Passed)
 
   Destination Clock Arrival Time (clk0:R#1)     0.000
 + Destination Clock Source Latency              0.000
@@ -1266,9 +1101,9 @@ End-of-path required time( ns )                 1.099
   Source Clock Arrival Time (clk0:R#1)   0.000
 + Source Clock Source Latency            0.000
 + Source Clock Path Delay                1.099
-+ Data Path Delay                        3.330
++ Data Path Delay                        3.299
 --------------------------------------   -----
-End-of-path arrival time( ns )           4.429
+End-of-path arrival time( ns )           4.398
 
  
 Source Clock Path
@@ -1282,12 +1117,12 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-\vga_inst/col_num_137__i2/CK->\vga_inst/col_num_137__i2/Q
-                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.490  7       
-col_num[2]                                                NET DELAY       0.989         3.479  1       
-\vga_inst/col_num_137_add_4_3/C1->\vga_inst/col_num_137_add_4_3/S1
-                                          FA2             C1_TO_S1_DELAY  0.450         3.929  1       
-\vga_inst/n53_adj_255                                     NET DELAY       0.500         4.429  1       
+\vga_inst/col_num_142__i1/CK->\vga_inst/col_num_142__i1/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.490  6       
+\vga_inst/col_num[1]                                      NET DELAY       0.958         3.448  1       
+\vga_inst/col_num_142_add_4_3/C0->\vga_inst/col_num_142_add_4_3/S0
+                                          FA2             C0_TO_S0_DELAY  0.450         3.898  1       
+\vga_inst/n54_adj_376                                     NET DELAY       0.500         4.398  1       
 
 
 Destination Clock Path
@@ -1302,8 +1137,8 @@ clk2                                                      NET DELAY      1.099  
 
  ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : \vga_inst/col_num_137__i1/Q
-Path End         : \vga_inst/col_num_137__i1/D
+Path Begin       : \vga_inst/col_num_142__i3/Q
+Path End         : \vga_inst/col_num_142__i3/D
 Source Clock     : clk0
 Destination Clock: clk0
 Logic Level      : 2
@@ -1339,12 +1174,12 @@ clk2                                                      NET DELAY      1.099  
 Data path
 Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
-\vga_inst/col_num_137__i1/CK->\vga_inst/col_num_137__i1/Q
+\vga_inst/col_num_142__i3/CK->\vga_inst/col_num_142__i3/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         2.490  7       
-col_num[1]                                                NET DELAY       0.989         3.479  1       
-\vga_inst/col_num_137_add_4_3/C0->\vga_inst/col_num_137_add_4_3/S0
+\vga_inst/col_num[3]                                      NET DELAY       0.989         3.479  1       
+\vga_inst/col_num_142_add_4_5/C0->\vga_inst/col_num_142_add_4_5/S0
                                           FA2             C0_TO_S0_DELAY  0.450         3.929  1       
-\vga_inst/n54_adj_256                                     NET DELAY       0.500         4.429  1       
+\vga_inst/n52_adj_373                                     NET DELAY       0.500         4.429  1       
 
 
 Destination Clock Path
@@ -1360,13 +1195,178 @@ clk2                                                      NET DELAY      1.099  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-<A name="Timing_rpt_HoldDetailedConstraint_3"></A><A href=#Timing_rpt_HoldSummaryConstraint_3>4.2.3  Hold path details for constraint: create_generated_clock -name {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE} -source [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {\pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] </A>
+<A name="Timing_rpt_HoldDetailedConstraint_3"></A><A href=#Timing_rpt_HoldSummaryConstraint_3>4.2.3  Hold path details for constraint: create_clock -name {clk} -period 20.8333333333333 [get_nets clk]</A>
 ----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
+20 endpoints scored, 0 timing errors detected.
 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i18/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i18/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 2
+Delay Ratio      : 35.2% (route), 64.8% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.841 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Destination Clock Source Latency             0.000
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 1.108
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                1.108
+
+  Source Clock Arrival Time (clk:R#1)   0.000
++ Source Clock Source Latency           0.000
++ Source Clock Path Delay               1.108
++ Data Path Delay                       2.841
+-------------------------------------   -----
+End-of-path arrival time( ns )          3.949
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i18/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i18/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
+\game_state_inst/n2                                       NET DELAY       0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/C1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/S1
+                                          FA2             C1_TO_S1_DELAY  0.450         3.449  1       
+\game_state_inst/n87                                      NET DELAY       0.500         3.949  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+
+
+ ++++Path 2  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i17/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i17/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 2
+Delay Ratio      : 35.2% (route), 64.8% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.841 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Destination Clock Source Latency             0.000
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 1.108
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                1.108
+
+  Source Clock Arrival Time (clk:R#1)   0.000
++ Source Clock Source Latency           0.000
++ Source Clock Path Delay               1.108
++ Data Path Delay                       2.841
+-------------------------------------   -----
+End-of-path arrival time( ns )          3.949
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i17/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i17/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
+\game_state_inst/n3                                       NET DELAY       0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/C0->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_19/S0
+                                          FA2             C0_TO_S0_DELAY  0.450         3.449  1       
+\game_state_inst/n88                                      NET DELAY       0.500         3.949  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+
+
+ ++++Path 3  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : \game_state_inst/forty_eight_mhz_counter_146_154__i16/Q
+Path End         : \game_state_inst/forty_eight_mhz_counter_146_154__i16/D
+Source Clock     : clk
+Destination Clock: clk
+Logic Level      : 2
+Delay Ratio      : 35.2% (route), 64.8% (logic)
+Clock Skew       : 0.000 ns
+Hold Constraint  : 0.000 ns 
+Path Slack       : 2.841 ns  (Passed)
+
+  Destination Clock Arrival Time (clk:R#1)     0.000
++ Destination Clock Source Latency             0.000
++ Destination Clock Uncertainty                0.000
++ Destination Clock Path Delay                 1.108
++ Hold Time                                   -0.000
+------------------------------------------   -------
+End-of-path required time( ns )                1.108
+
+  Source Clock Arrival Time (clk:R#1)   0.000
++ Source Clock Source Latency           0.000
++ Source Clock Path Delay               1.108
++ Data Path Delay                       2.841
+-------------------------------------   -----
+End-of-path arrival time( ns )          3.949
+
+ 
+Source Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+Data path
+Name                                      Cell/Site Name  Delay Name      Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  --------------  -----  ------------  ------  
+\game_state_inst/forty_eight_mhz_counter_146_154__i16/CK->\game_state_inst/forty_eight_mhz_counter_146_154__i16/Q
+                                          FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
+\game_state_inst/n4                                       NET DELAY       0.500         2.999  1       
+\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/C1->\game_state_inst/forty_eight_mhz_counter_146_154_add_4_17/S1
+                                          FA2             C1_TO_S1_DELAY  0.450         3.449  1       
+\game_state_inst/n89                                      NET DELAY       0.500         3.949  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name     Delay  Arrival Time  Fanout  
+----------------------------------------  --------------  -------------  -----  ------------  ------  
+hsosc_inst/CLKHF                          HSOSC_CORE      CLOCK LATENCY  0.000         0.000  21      
+clk                                                       NET DELAY      1.108         1.108  1       
+
+
+
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
