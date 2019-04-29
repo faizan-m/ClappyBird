@@ -5,8 +5,8 @@
     <clockitem name = "clk"  type = "net" />
     <clockitem name = "PLL_out"  type = "net" />
     <clockitem name = "game_state_inst/forty_eight_mhz_counter[19]"  type = "net" />
-    <clockitem name = "pll_inst/lscc_pll_inst/outcoreb_o"  type = "net" />
     <clockitem name = "pll_inst/lscc_pll_inst/outglobalb_o"  type = "net" />
+    <clockitem name = "pll_inst/lscc_pll_inst/outcoreb_o"  type = "net" />
 </clocks>
 
 <!--
@@ -53,7 +53,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 139
+        Instances in netlist: 160
     -->
 
     <instance  name = "hsosc_inst"  library = "work"  arch = "RTL"  type = "comb">
@@ -985,8 +985,16 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
         <nitem  name = "testpattern_inst/RGB_o_5__N_61"  />
         </nets>
     </instance>
@@ -1028,6 +1036,16 @@
 
         <nets>
         <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
         <nitem  name = "testpattern_inst/RGB_o_5__N_63[9]"  />
@@ -3189,12 +3207,12 @@
 
     <instance  name = "testpattern_inst/RGB_o_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "o[5]"  direction = "out"  />
         <pitem  name = "o[4]"  direction = "out"  />
         <pitem  name = "o[3]"  direction = "out"  />
@@ -3229,19 +3247,20 @@
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/bird_y_pos_9__I_0_75"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/screen_colliding_I_19"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
@@ -3252,39 +3271,38 @@
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "bigbird_y_pos[9]"  />
-        <nitem  name = "bigbird_y_pos[8]"  />
-        <nitem  name = "bigbird_y_pos[7]"  />
-        <nitem  name = "bigbird_y_pos[6]"  />
-        <nitem  name = "bigbird_y_pos[5]"  />
-        <nitem  name = "bigbird_y_pos[4]"  />
-        <nitem  name = "bigbird_y_pos[3]"  />
-        <nitem  name = "bigbird_y_pos[2]"  />
-        <nitem  name = "bigbird_y_pos[1]"  />
-        <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/screen_colliding_N_205"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_236"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/bird_y_pos_9__I_0_76"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_5"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3295,63 +3313,6 @@
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "bigbird_y_pos[9]"  />
-        <nitem  name = "bigbird_y_pos[8]"  />
-        <nitem  name = "bigbird_y_pos[7]"  />
-        <nitem  name = "bigbird_y_pos[6]"  />
-        <nitem  name = "bigbird_y_pos[5]"  />
-        <nitem  name = "bigbird_y_pos[4]"  />
-        <nitem  name = "bigbird_y_pos[3]"  />
-        <nitem  name = "bigbird_y_pos[2]"  />
-        <nitem  name = "bigbird_y_pos[1]"  />
-        <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/screen_colliding_N_206"  />
-        </nets>
-    </instance>
-
-    <instance  name = "game_state_inst/screen_colliding_I_17"  library = "work"  arch = "RTL"  type = "comb">
-        <pins>
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "game_state_inst/screen_colliding"  />
-        <nitem  name = "game_state_inst/screen_colliding_N_205"  />
-        <nitem  name = "game_state_inst/screen_colliding_N_206"  />
-        </nets>
-    </instance>
-
-    <instance  name = "game_state_inst/add_6"  library = "work"  arch = "RTL"  type = "comb">
-        <pins>
-        <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "o[9]"  direction = "out"  />
         <pitem  name = "o[8]"  direction = "out"  />
         <pitem  name = "o[7]"  direction = "out"  />
@@ -3367,59 +3328,83 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[0]"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/beak_colliding_I_19"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/screen_colliding_I_20"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_209[0]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_208"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[0]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_247"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/screen_colliding_I_18"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/screen_colliding"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_236"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_247"  />
         </nets>
     </instance>
 
@@ -3429,6 +3414,109 @@
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/pipe_x_start_9__I_0_105"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_260[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_259"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_10"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
@@ -3471,32 +3559,32 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/beak_colliding_I_20"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/beak_colliding_I_22"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3513,28 +3601,30 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_220[0]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_219"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_271[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_270"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_10"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_12"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
@@ -3545,8 +3635,6 @@
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3565,32 +3653,32 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/beak_colliding_I_21"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_13"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3601,27 +3689,97 @@
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
         </pins>
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[0]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_230"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/beak_colliding_I_18"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/beak_colliding_I_23"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_281"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/beak_colliding_I_21"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3629,9 +3787,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/beak_colliding_N_208"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_219"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_207"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_259"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_270"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_258"  />
         </nets>
     </instance>
 
@@ -3644,24 +3802,24 @@
 
         <nets>
         <nitem  name = "game_state_inst/beak_colliding"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_230"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_207"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_281"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_258"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/beak_colliding_N_231_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/pipe_x_start_9__I_0_107"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
@@ -3677,18 +3835,27 @@
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[9]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[8]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[7]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[6]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[5]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[4]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[3]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[2]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[1]"  />
-        <nitem  name = "game_state_inst/beak_colliding_N_231[0]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_242"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_282[0]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_303"  />
         </nets>
     </instance>
 
@@ -3697,14 +3864,14 @@
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3731,11 +3898,11 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_243"  />
+        <nitem  name = "game_state_inst/head_colliding_N_304"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_17"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_20"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -3744,7 +3911,9 @@
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
@@ -3753,8 +3922,6 @@
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3773,32 +3940,32 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[9]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[8]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[7]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[6]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[5]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[4]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[3]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[2]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[1]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[0]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[9]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[8]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[7]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[6]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[5]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[4]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[3]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[2]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[1]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/head_colliding_I_23"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/head_colliding_I_25"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3814,22 +3981,31 @@
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[9]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[8]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[7]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[6]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[5]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[4]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[3]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[2]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[1]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_245[0]"  />
-        <nitem  name = "game_state_inst/head_colliding_N_244"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[0]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[9]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[8]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[7]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[6]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[5]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[4]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[3]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[2]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[1]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_306[0]"  />
+        <nitem  name = "game_state_inst/head_colliding_N_305"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/head_colliding_I_22"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/head_colliding_I_24"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3837,9 +4013,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/head_colliding_N_242"  />
-        <nitem  name = "game_state_inst/head_colliding_N_243"  />
-        <nitem  name = "game_state_inst/head_colliding_N_241"  />
+        <nitem  name = "game_state_inst/head_colliding_N_303"  />
+        <nitem  name = "game_state_inst/head_colliding_N_304"  />
+        <nitem  name = "game_state_inst/head_colliding_N_302"  />
         </nets>
     </instance>
 
@@ -3852,33 +4028,33 @@
 
         <nets>
         <nitem  name = "game_state_inst/head_colliding"  />
-        <nitem  name = "game_state_inst/head_colliding_N_244"  />
-        <nitem  name = "game_state_inst/head_colliding_N_241"  />
+        <nitem  name = "game_state_inst/head_colliding_N_305"  />
+        <nitem  name = "game_state_inst/head_colliding_N_302"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_21"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_25"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
-        <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
         <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "o[9]"  direction = "out"  />
         <pitem  name = "o[8]"  direction = "out"  />
@@ -3895,32 +4071,32 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[9]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[8]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[6]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[5]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[4]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[3]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[2]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[1]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[9]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[8]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[7]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[6]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[5]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[4]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[3]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[2]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[1]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/body_colliding_I_24"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/pipe_x_start_9__I_0_108"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
@@ -3936,22 +4112,205 @@
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[9]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[8]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[6]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[5]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[4]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[3]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[2]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[1]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_256[0]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_255"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[9]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[8]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[7]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[6]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[5]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[4]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[3]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[2]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[1]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_318[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_317"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_23"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/screen_colliding_N_248_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_248[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_328"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_29"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[9]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[8]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[7]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[6]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[5]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[4]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[3]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[2]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[1]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/body_colliding_I_27"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[9]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[8]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[7]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[6]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[5]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[4]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[3]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[2]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[1]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_330[0]"  />
+        <nitem  name = "game_state_inst/body_colliding_N_329"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/body_colliding_I_26"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/body_colliding_N_317"  />
+        <nitem  name = "game_state_inst/body_colliding_N_328"  />
+        <nitem  name = "game_state_inst/body_colliding_N_316"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/body_colliding_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/body_colliding"  />
+        <nitem  name = "game_state_inst/body_colliding_N_329"  />
+        <nitem  name = "game_state_inst/body_colliding_N_316"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_34"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -3961,9 +4320,112 @@
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[9]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[8]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[7]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[6]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[5]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[4]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[3]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[2]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[1]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/pipe_x_start_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[9]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[8]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[7]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[6]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[5]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[4]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[3]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[2]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[1]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_342[0]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_341"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_36"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -3999,32 +4461,32 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[9]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[8]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[6]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[5]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[4]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[3]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[2]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[1]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[0]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[9]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[8]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[7]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[6]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[5]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[4]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[3]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[2]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[1]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/body_colliding_I_25"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/tail_colliding_I_29"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[8]"  direction = "in"  />
-        <pitem  name = "b[9]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -4041,31 +4503,88 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[9]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[8]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[7]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[6]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[5]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[4]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[3]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[2]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[1]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_267[0]"  />
-        <nitem  name = "game_state_inst/body_colliding_N_266"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[9]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[8]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[7]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[6]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[5]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[4]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[3]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[2]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[1]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_353[0]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_352"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/body_colliding_I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/beak_colliding_N_292_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/body_colliding"  />
-        <nitem  name = "game_state_inst/body_colliding_N_255"  />
-        <nitem  name = "game_state_inst/body_colliding_N_266"  />
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[9]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[8]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[7]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[6]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[5]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[4]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[3]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[2]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[1]"  />
+        <nitem  name = "game_state_inst/beak_colliding_N_292[0]"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_363"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/tail_colliding_I_28"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/tail_colliding_N_341"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_352"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_340"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/tail_colliding_I_0"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/tail_colliding"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_363"  />
+        <nitem  name = "game_state_inst/tail_colliding_N_340"  />
         </nets>
     </instance>
 
@@ -4169,29 +4688,29 @@
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[2]"  />
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[1]"  />
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[0]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[22]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[21]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[20]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[19]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[18]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[17]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[16]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[15]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[14]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[13]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[12]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[11]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[10]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[9]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[8]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[7]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[6]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[5]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[4]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[3]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[2]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[1]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[0]"  />
         </nets>
     </instance>
 
@@ -4275,8 +4794,8 @@
 
         <nets>
         <nitem  name = "clappy"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_183"  />
-        <nitem  name = "game_state_inst/reset_N_185"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_193"  />
+        <nitem  name = "game_state_inst/reset_N_195"  />
         </nets>
     </instance>
 
@@ -4288,9 +4807,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_183"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_182"  />
-        <nitem  name = "game_state_inst/is_over_N_189"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_193"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_192"  />
+        <nitem  name = "game_state_inst/is_over_N_199"  />
         </nets>
     </instance>
 
@@ -4302,7 +4821,7 @@
 
         <nets>
         <nitem  name = "game_state_inst/reset"  />
-        <nitem  name = "game_state_inst/reset_N_185"  />
+        <nitem  name = "game_state_inst/reset_N_195"  />
         </nets>
     </instance>
 
@@ -4314,11 +4833,11 @@
 
         <nets>
         <nitem  name = "game_over"  />
-        <nitem  name = "game_state_inst/is_over_N_189"  />
+        <nitem  name = "game_state_inst/is_over_N_199"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/i41"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/i57"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -4326,23 +4845,141 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/reset_N_185"  />
-        <nitem  name = "game_state_inst/is_over_N_189"  />
-        <nitem  name = "game_state_inst/n163"  />
+        <nitem  name = "game_state_inst/reset_N_195"  />
+        <nitem  name = "game_state_inst/is_over_N_199"  />
+        <nitem  name = "game_state_inst/n278"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/mux_41"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_57"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/LessThan_58"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[9]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[8]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[7]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[6]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[5]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[4]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[3]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[2]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[1]"  />
+        <nitem  name = "game_state_inst/screen_colliding_N_237[0]"  />
+        <nitem  name = "game_state_inst/n291"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/i60"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_over"  />
+        <nitem  name = "game_state_inst/n291"  />
+        <nitem  name = "game_state_inst/n292"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/mux_60"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
         <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d0[9]"  direction = "in"  />
         <pitem  name = "d0[8]"  direction = "in"  />
@@ -4381,20 +5018,151 @@
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
         <nitem  name = "game_state_inst/reset"  />
-        <nitem  name = "game_state_inst/n165"  />
-        <nitem  name = "game_state_inst/n166"  />
-        <nitem  name = "game_state_inst/n167"  />
-        <nitem  name = "game_state_inst/n168"  />
-        <nitem  name = "game_state_inst/n169"  />
-        <nitem  name = "game_state_inst/n170"  />
-        <nitem  name = "game_state_inst/n171"  />
-        <nitem  name = "game_state_inst/n172"  />
-        <nitem  name = "game_state_inst/n173"  />
-        <nitem  name = "game_state_inst/n174"  />
+        <nitem  name = "game_state_inst/n294"  />
+        <nitem  name = "game_state_inst/n295"  />
+        <nitem  name = "game_state_inst/n296"  />
+        <nitem  name = "game_state_inst/n297"  />
+        <nitem  name = "game_state_inst/n298"  />
+        <nitem  name = "game_state_inst/n299"  />
+        <nitem  name = "game_state_inst/n300"  />
+        <nitem  name = "game_state_inst/n301"  />
+        <nitem  name = "game_state_inst/n302"  />
+        <nitem  name = "game_state_inst/n303"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_42"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_61"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cin"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[9]"  />
+        <nitem  name = "bigbird_y_pos[8]"  />
+        <nitem  name = "bigbird_y_pos[7]"  />
+        <nitem  name = "bigbird_y_pos[6]"  />
+        <nitem  name = "bigbird_y_pos[5]"  />
+        <nitem  name = "bigbird_y_pos[4]"  />
+        <nitem  name = "bigbird_y_pos[3]"  />
+        <nitem  name = "bigbird_y_pos[2]"  />
+        <nitem  name = "bigbird_y_pos[1]"  />
+        <nitem  name = "bigbird_y_pos[0]"  />
+        <nitem  name = "game_state_inst/n306"  />
+        <nitem  name = "game_state_inst/n307"  />
+        <nitem  name = "game_state_inst/n308"  />
+        <nitem  name = "game_state_inst/n309"  />
+        <nitem  name = "game_state_inst/n310"  />
+        <nitem  name = "game_state_inst/n311"  />
+        <nitem  name = "game_state_inst/n312"  />
+        <nitem  name = "game_state_inst/n313"  />
+        <nitem  name = "game_state_inst/n314"  />
+        <nitem  name = "game_state_inst/n315"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/mux_62"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/n292"  />
+        <nitem  name = "game_state_inst/n294"  />
+        <nitem  name = "game_state_inst/n295"  />
+        <nitem  name = "game_state_inst/n296"  />
+        <nitem  name = "game_state_inst/n297"  />
+        <nitem  name = "game_state_inst/n298"  />
+        <nitem  name = "game_state_inst/n299"  />
+        <nitem  name = "game_state_inst/n300"  />
+        <nitem  name = "game_state_inst/n301"  />
+        <nitem  name = "game_state_inst/n302"  />
+        <nitem  name = "game_state_inst/n303"  />
+        <nitem  name = "game_state_inst/n306"  />
+        <nitem  name = "game_state_inst/n307"  />
+        <nitem  name = "game_state_inst/n308"  />
+        <nitem  name = "game_state_inst/n309"  />
+        <nitem  name = "game_state_inst/n310"  />
+        <nitem  name = "game_state_inst/n311"  />
+        <nitem  name = "game_state_inst/n312"  />
+        <nitem  name = "game_state_inst/n313"  />
+        <nitem  name = "game_state_inst/n314"  />
+        <nitem  name = "game_state_inst/n315"  />
+        <nitem  name = "game_state_inst/n317"  />
+        <nitem  name = "game_state_inst/n318"  />
+        <nitem  name = "game_state_inst/n319"  />
+        <nitem  name = "game_state_inst/n320"  />
+        <nitem  name = "game_state_inst/n321"  />
+        <nitem  name = "game_state_inst/n322"  />
+        <nitem  name = "game_state_inst/n323"  />
+        <nitem  name = "game_state_inst/n324"  />
+        <nitem  name = "game_state_inst/n325"  />
+        <nitem  name = "game_state_inst/n326"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/add_63"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -4404,8 +5172,8 @@
         <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
@@ -4442,20 +5210,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/n177"  />
-        <nitem  name = "game_state_inst/n178"  />
-        <nitem  name = "game_state_inst/n179"  />
-        <nitem  name = "game_state_inst/n180"  />
-        <nitem  name = "game_state_inst/n181"  />
-        <nitem  name = "game_state_inst/n182"  />
-        <nitem  name = "game_state_inst/n183"  />
-        <nitem  name = "game_state_inst/n184"  />
-        <nitem  name = "game_state_inst/n185"  />
-        <nitem  name = "game_state_inst/n186"  />
+        <nitem  name = "game_state_inst/n329"  />
+        <nitem  name = "game_state_inst/n330"  />
+        <nitem  name = "game_state_inst/n331"  />
+        <nitem  name = "game_state_inst/n332"  />
+        <nitem  name = "game_state_inst/n333"  />
+        <nitem  name = "game_state_inst/n334"  />
+        <nitem  name = "game_state_inst/n335"  />
+        <nitem  name = "game_state_inst/n336"  />
+        <nitem  name = "game_state_inst/n337"  />
+        <nitem  name = "game_state_inst/n338"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/mux_43"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/mux_64"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[9]"  direction = "in"  />
@@ -4491,45 +5259,45 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/n163"  />
-        <nitem  name = "game_state_inst/n165"  />
-        <nitem  name = "game_state_inst/n166"  />
-        <nitem  name = "game_state_inst/n167"  />
-        <nitem  name = "game_state_inst/n168"  />
-        <nitem  name = "game_state_inst/n169"  />
-        <nitem  name = "game_state_inst/n170"  />
-        <nitem  name = "game_state_inst/n171"  />
-        <nitem  name = "game_state_inst/n172"  />
-        <nitem  name = "game_state_inst/n173"  />
-        <nitem  name = "game_state_inst/n174"  />
-        <nitem  name = "game_state_inst/n177"  />
-        <nitem  name = "game_state_inst/n178"  />
-        <nitem  name = "game_state_inst/n179"  />
-        <nitem  name = "game_state_inst/n180"  />
-        <nitem  name = "game_state_inst/n181"  />
-        <nitem  name = "game_state_inst/n182"  />
-        <nitem  name = "game_state_inst/n183"  />
-        <nitem  name = "game_state_inst/n184"  />
-        <nitem  name = "game_state_inst/n185"  />
-        <nitem  name = "game_state_inst/n186"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[9]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[8]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[7]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[6]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[5]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[4]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[3]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[2]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[1]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[0]"  />
+        <nitem  name = "game_state_inst/n278"  />
+        <nitem  name = "game_state_inst/n317"  />
+        <nitem  name = "game_state_inst/n318"  />
+        <nitem  name = "game_state_inst/n319"  />
+        <nitem  name = "game_state_inst/n320"  />
+        <nitem  name = "game_state_inst/n321"  />
+        <nitem  name = "game_state_inst/n322"  />
+        <nitem  name = "game_state_inst/n323"  />
+        <nitem  name = "game_state_inst/n324"  />
+        <nitem  name = "game_state_inst/n325"  />
+        <nitem  name = "game_state_inst/n326"  />
+        <nitem  name = "game_state_inst/n329"  />
+        <nitem  name = "game_state_inst/n330"  />
+        <nitem  name = "game_state_inst/n331"  />
+        <nitem  name = "game_state_inst/n332"  />
+        <nitem  name = "game_state_inst/n333"  />
+        <nitem  name = "game_state_inst/n334"  />
+        <nitem  name = "game_state_inst/n335"  />
+        <nitem  name = "game_state_inst/n336"  />
+        <nitem  name = "game_state_inst/n337"  />
+        <nitem  name = "game_state_inst/n338"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_45"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_66"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[10]"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -4538,8 +5306,8 @@
         <pitem  name = "b[6]"  direction = "in"  />
         <pitem  name = "b[5]"  direction = "in"  />
         <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
         <pitem  name = "a[8]"  direction = "in"  />
         <pitem  name = "a[7]"  direction = "in"  />
@@ -4575,20 +5343,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[9]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[8]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[7]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[6]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[5]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[4]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[3]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[2]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[1]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_172[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/bird_y_pos_9__I_0_74"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/bird_y_pos_9__I_0_106"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[9]"  direction = "in"  />
@@ -4624,17 +5392,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_182"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[9]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[8]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[7]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[6]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[5]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[4]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[3]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[2]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[1]"  />
-        <nitem  name = "game_state_inst/bird_y_pos_9__N_162[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_192"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[9]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[8]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[7]"  />
@@ -4645,6 +5403,16 @@
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[2]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[1]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_172[0]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[9]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[8]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[7]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[6]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[5]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[4]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[3]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[2]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[1]"  />
+        <nitem  name = "game_state_inst/bird_y_pos_9__N_182[0]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_119[9]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_119[8]"  />
         <nitem  name = "game_state_inst/bird_y_pos_9__N_119[7]"  />
@@ -4668,7 +5436,21 @@
         <nets>
         <nitem  name = "game_state_inst/screen_colliding"  />
         <nitem  name = "game_state_inst/beak_colliding"  />
-        <nitem  name = "game_state_inst/is_over_N_194"  />
+        <nitem  name = "game_state_inst/is_over_N_205"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/is_over_I_16"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/head_colliding"  />
+        <nitem  name = "game_state_inst/is_over_N_205"  />
+        <nitem  name = "game_state_inst/is_over_N_204"  />
         </nets>
     </instance>
 
@@ -4680,9 +5462,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/head_colliding"  />
-        <nitem  name = "game_state_inst/is_over_N_194"  />
-        <nitem  name = "game_state_inst/is_over_N_193"  />
+        <nitem  name = "game_state_inst/body_colliding"  />
+        <nitem  name = "game_state_inst/is_over_N_204"  />
+        <nitem  name = "game_state_inst/is_over_N_203"  />
         </nets>
     </instance>
 
@@ -4694,13 +5476,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "game_state_inst/body_colliding"  />
-        <nitem  name = "game_state_inst/is_over_N_193"  />
-        <nitem  name = "game_state_inst/is_over_N_192"  />
+        <nitem  name = "game_state_inst/tail_colliding"  />
+        <nitem  name = "game_state_inst/is_over_N_203"  />
+        <nitem  name = "game_state_inst/is_over_N_202"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/is_over_I_0_73"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/is_over_I_0_103"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -4711,8 +5493,8 @@
         <nets>
         <nitem  name = "bigbird_x_pos[7]"  />
         <nitem  name = "game_over"  />
-        <nitem  name = "game_state_inst/is_over_N_192"  />
-        <nitem  name = "game_state_inst/is_over_N_191"  />
+        <nitem  name = "game_state_inst/is_over_N_202"  />
+        <nitem  name = "game_state_inst/is_over_N_201"  />
         </nets>
     </instance>
 
@@ -4727,12 +5509,12 @@
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "game_state_inst/reset"  />
-        <nitem  name = "game_state_inst/is_over_N_191"  />
-        <nitem  name = "game_state_inst/is_over_N_190"  />
+        <nitem  name = "game_state_inst/is_over_N_201"  />
+        <nitem  name = "game_state_inst/is_over_N_200"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/is_over_69"  library = "work"  arch = "RTL"  type = "reg">
+    <instance  name = "game_state_inst/is_over_98"  library = "work"  arch = "RTL"  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
         <pitem  name = "s"  direction = "in"  />
@@ -4745,11 +5527,11 @@
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "game_over"  />
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[19]"  />
-        <nitem  name = "game_state_inst/is_over_N_190"  />
+        <nitem  name = "game_state_inst/is_over_N_200"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/wait_counter"  library = "work"  arch = "RTL"  type = "reg">
+    <instance  name = "game_state_inst/pipe_x_start"  library = "work"  arch = "RTL"  type = "reg">
         <pins>
         <pitem  name = "reset[8]"  direction = "in"  />
         <pitem  name = "reset[9]"  direction = "in"  />
@@ -4763,6 +5545,271 @@
         <pitem  name = "set[7]"  direction = "in"  />
         <pitem  name = "set[8]"  direction = "in"  />
         <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "reset[7]"  direction = "in"  />
+        <pitem  name = "reset[6]"  direction = "in"  />
+        <pitem  name = "reset[5]"  direction = "in"  />
+        <pitem  name = "reset[4]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "q[9]"  direction = "out"  />
+        <pitem  name = "q[8]"  direction = "out"  />
+        <pitem  name = "q[7]"  direction = "out"  />
+        <pitem  name = "q[6]"  direction = "out"  />
+        <pitem  name = "q[5]"  direction = "out"  />
+        <pitem  name = "q[4]"  direction = "out"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[9]"  direction = "in"  />
+        <pitem  name = "d[8]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter[19]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/mux_80"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "game_over"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/sub_81"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "a[10]"  direction = "in"  />
+        <pitem  name = "b[10]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[8]"  direction = "in"  />
+        <pitem  name = "b[9]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[9]"  direction = "in"  />
+        <pitem  name = "a[8]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "bigbird_x_pos[9]"  />
+        <nitem  name = "bigbird_x_pos[7]"  />
+        <nitem  name = "p_x_str[9]"  />
+        <nitem  name = "p_x_str[8]"  />
+        <nitem  name = "p_x_str[7]"  />
+        <nitem  name = "p_x_str[6]"  />
+        <nitem  name = "p_x_str[5]"  />
+        <nitem  name = "p_x_str[4]"  />
+        <nitem  name = "p_x_str[3]"  />
+        <nitem  name = "p_x_str[2]"  />
+        <nitem  name = "p_x_str[1]"  />
+        <nitem  name = "p_x_str[0]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/pipe_x_start_9__I_0_104"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d0[9]"  direction = "in"  />
+        <pitem  name = "d0[8]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[9]"  direction = "in"  />
+        <pitem  name = "d1[8]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[9]"  direction = "out"  />
+        <pitem  name = "o[8]"  direction = "out"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "game_state_inst/is_over_N_199"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_206[0]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_216[0]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[9]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[8]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[7]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[6]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[5]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[4]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[3]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[2]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[1]"  />
+        <nitem  name = "game_state_inst/pipe_x_start_9__N_129[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "game_state_inst/wait_counter"  library = "work"  arch = "RTL"  type = "reg">
+        <pins>
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[8]"  direction = "in"  />
+        <pitem  name = "set[9]"  direction = "in"  />
+        <pitem  name = "reset[9]"  direction = "in"  />
+        <pitem  name = "reset[8]"  direction = "in"  />
         <pitem  name = "reset[7]"  direction = "in"  />
         <pitem  name = "reset[6]"  direction = "in"  />
         <pitem  name = "reset[5]"  direction = "in"  />
@@ -4807,20 +5854,20 @@
         <nitem  name = "game_state_inst/wait_counter[2]"  />
         <nitem  name = "game_state_inst/wait_counter[1]"  />
         <nitem  name = "game_state_inst/wait_counter[0]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[9]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[8]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[7]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[6]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[5]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[4]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[3]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[2]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[1]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[0]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[9]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[8]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[7]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[6]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[5]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[4]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[3]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[2]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[1]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/add_59"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/add_88"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -4868,20 +5915,20 @@
         <nitem  name = "game_state_inst/wait_counter[2]"  />
         <nitem  name = "game_state_inst/wait_counter[1]"  />
         <nitem  name = "game_state_inst/wait_counter[0]"  />
-        <nitem  name = "game_state_inst/n247"  />
-        <nitem  name = "game_state_inst/n248"  />
-        <nitem  name = "game_state_inst/n249"  />
-        <nitem  name = "game_state_inst/n250"  />
-        <nitem  name = "game_state_inst/n251"  />
-        <nitem  name = "game_state_inst/n252"  />
-        <nitem  name = "game_state_inst/n253"  />
-        <nitem  name = "game_state_inst/n254"  />
-        <nitem  name = "game_state_inst/n255"  />
-        <nitem  name = "game_state_inst/n256"  />
+        <nitem  name = "game_state_inst/n448"  />
+        <nitem  name = "game_state_inst/n449"  />
+        <nitem  name = "game_state_inst/n450"  />
+        <nitem  name = "game_state_inst/n451"  />
+        <nitem  name = "game_state_inst/n452"  />
+        <nitem  name = "game_state_inst/n453"  />
+        <nitem  name = "game_state_inst/n454"  />
+        <nitem  name = "game_state_inst/n455"  />
+        <nitem  name = "game_state_inst/n456"  />
+        <nitem  name = "game_state_inst/n457"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/mux_60"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/mux_89"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[9]"  direction = "in"  />
@@ -4928,30 +5975,30 @@
         <nitem  name = "game_state_inst/wait_counter[2]"  />
         <nitem  name = "game_state_inst/wait_counter[1]"  />
         <nitem  name = "game_state_inst/wait_counter[0]"  />
-        <nitem  name = "game_state_inst/n247"  />
-        <nitem  name = "game_state_inst/n248"  />
-        <nitem  name = "game_state_inst/n249"  />
-        <nitem  name = "game_state_inst/n250"  />
-        <nitem  name = "game_state_inst/n251"  />
-        <nitem  name = "game_state_inst/n252"  />
-        <nitem  name = "game_state_inst/n253"  />
-        <nitem  name = "game_state_inst/n254"  />
-        <nitem  name = "game_state_inst/n255"  />
-        <nitem  name = "game_state_inst/n256"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[9]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[8]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[7]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[6]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[5]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[4]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[3]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[2]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[1]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[0]"  />
+        <nitem  name = "game_state_inst/n448"  />
+        <nitem  name = "game_state_inst/n449"  />
+        <nitem  name = "game_state_inst/n450"  />
+        <nitem  name = "game_state_inst/n451"  />
+        <nitem  name = "game_state_inst/n452"  />
+        <nitem  name = "game_state_inst/n453"  />
+        <nitem  name = "game_state_inst/n454"  />
+        <nitem  name = "game_state_inst/n455"  />
+        <nitem  name = "game_state_inst/n456"  />
+        <nitem  name = "game_state_inst/n457"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[9]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[8]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[7]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[6]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[5]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[4]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[3]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[2]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[1]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/wait_counter_9__I_16"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/wait_counter_9__I_17"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[9]"  direction = "in"  />
         <pitem  name = "d1[8]"  direction = "in"  />
@@ -4988,27 +6035,27 @@
 
         <nets>
         <nitem  name = "bigbird_x_pos[9]"  />
-        <nitem  name = "game_state_inst/is_over_N_189"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[9]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[8]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[7]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[6]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[5]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[4]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[3]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[2]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[1]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_195[0]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[9]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[8]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[7]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[6]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[5]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[4]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[3]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[2]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[1]"  />
-        <nitem  name = "game_state_inst/wait_counter_9__N_152[0]"  />
+        <nitem  name = "game_state_inst/is_over_N_199"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[9]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[8]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[7]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[6]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[5]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[4]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[3]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[2]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[1]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_226[0]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[9]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[8]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[7]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[6]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[5]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[4]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[3]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[2]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[1]"  />
+        <nitem  name = "game_state_inst/wait_counter_9__N_162[0]"  />
         </nets>
     </instance>
 
@@ -5051,11 +6098,11 @@
         <nitem  name = "game_state_inst/wait_counter[2]"  />
         <nitem  name = "game_state_inst/wait_counter[1]"  />
         <nitem  name = "game_state_inst/wait_counter[0]"  />
-        <nitem  name = "game_state_inst/reset_N_187"  />
+        <nitem  name = "game_state_inst/reset_N_197"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/is_over_I_0_72"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/is_over_I_0_102"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -5065,11 +6112,11 @@
         <nets>
         <nitem  name = "clappy"  />
         <nitem  name = "game_over"  />
-        <nitem  name = "game_state_inst/reset_N_186"  />
+        <nitem  name = "game_state_inst/reset_N_196"  />
         </nets>
     </instance>
 
-    <instance  name = "game_state_inst/reset_I_0_71"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "game_state_inst/reset_I_0_101"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "o"  direction = "out"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -5078,8 +6125,8 @@
 
         <nets>
         <nitem  name = "game_state_inst/reset"  />
-        <nitem  name = "game_state_inst/reset_N_187"  />
-        <nitem  name = "game_state_inst/reset_N_186"  />
+        <nitem  name = "game_state_inst/reset_N_197"  />
+        <nitem  name = "game_state_inst/reset_N_196"  />
         </nets>
     </instance>
 
@@ -5206,29 +6253,29 @@
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[2]"  />
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[1]"  />
         <nitem  name = "game_state_inst/forty_eight_mhz_counter[0]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[22]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[21]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[20]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[19]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[18]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[17]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[16]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[15]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[14]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[13]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[12]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[11]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[10]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[9]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[8]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[7]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[6]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[5]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[4]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[3]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[2]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[1]"  />
-        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_129[0]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[22]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[21]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[20]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[19]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[18]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[17]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[16]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[15]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[14]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[13]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[12]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[11]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[10]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[9]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[8]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[7]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[6]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[5]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[4]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[3]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[2]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[1]"  />
+        <nitem  name = "game_state_inst/forty_eight_mhz_counter_22__N_139[0]"  />
         </nets>
     </instance>
 
@@ -5282,14 +6329,15 @@
     <instance  name = "u_PLL_B"  />
     <instance  name = "vga_inst"  />
     <!--
-        REG instances in netlist: 6
+        REG instances in netlist: 7
     -->
 
     <regs>
         <reg  name = "vga_inst/row_num"  />
         <reg  name = "vga_inst/col_num"  />
         <reg  name = "game_state_inst/bird_y_pos"  />
-        <reg  name = "game_state_inst/is_over_69"  />
+        <reg  name = "game_state_inst/is_over_98"  />
+        <reg  name = "game_state_inst/pipe_x_start"  />
         <reg  name = "game_state_inst/wait_counter"  />
         <reg  name = "game_state_inst/forty_eight_mhz_counter"  />
     </regs>

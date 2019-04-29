@@ -17,13 +17,14 @@ end vga;
 
 architecture synth of vga is
 
-constant hoizontal_visible_area : unsigned := to_unsigned(1024,10);
+
+constant hoizontal_visible_area : unsigned := to_unsigned(640,10);
 constant hoizontal_front_porch : unsigned := to_unsigned(16, 10);
 constant hoizontal_sync_pulse : unsigned := to_unsigned(96, 10);
 constant hoizontal_back_porch : unsigned := to_unsigned(48, 10);
 constant hoizontal_whole_line : unsigned := to_unsigned(800,10);
 
-constant vertical_visible_area : unsigned := to_unsigned(512,10);
+constant vertical_visible_area : unsigned := to_unsigned(480,10);
 constant vertical_front_porch : unsigned := to_unsigned(10, 10);
 constant vertical_sync_pulse : unsigned := to_unsigned(2,  10);
 constant vertical_back_porch : unsigned := to_unsigned(33, 10);

@@ -30,7 +30,7 @@ begin
 	-- Set the three least significant bits to true so that these wires will be in
 	-- charge of the display pattern (based on which is hooked up to each port in the VGA)
 	
-	RGB_o <= "110011" when valid_i = '1' and (col_i > pipe_x_start  and col_i < pipe_x_start + pipe_width) and (row_i > 0 and row_i < pipe_height) -- pipe
+	RGB_o <= "101110" when valid_i = '1' and (col_i > pipe_x_start  and col_i < pipe_x_start + pipe_width) and (row_i > 0 and row_i < pipe_height) -- pipe
 		
 		else "001111" when valid_i = '1' and (col_i > x_pos + 45 and col_i < x_pos + 95) and (row_i > y_pos and row_i < (y_pos + 50))  --head
 		else "001111" when valid_i = '1' and (col_i > x_pos and col_i < x_pos + 50) and (row_i > y_pos + 55 and row_i < y_pos + 65) -- wing

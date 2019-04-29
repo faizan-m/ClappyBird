@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Apr 27 19:33:54 2019
+Sun Apr 28 22:32:01 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml 
@@ -169,6 +169,7 @@ WARNING - synthesis: c:/workspace/gits/clappybird/clappybird/pll/rtl/core/lscc_p
 
 
 
+WARNING - synthesis: Register \game_state_inst/pipe_x_start_182__i0 is stuck at Zero. VDB-5013
 Applying 1.000000 MHz constraint to all clocks
 
 
@@ -182,16 +183,16 @@ WARNING - synthesis: The preferred point for defining clocks is top level ports 
 WARNING - synthesis: The preferred point for defining clocks is top level ports and driver pins. Pad delays will not be taken into consideration if clocks are defined on nets.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 61 of 5280 (1 % )
-CCU2 => 64
-FD1P3XZ => 61
+Number of register bits => 70 of 5280 (1 % )
+CCU2 => 74
+FD1P3XZ => 70
 HSOSC_CORE => 1
 IB => 1
-LUT4 => 150
+LUT4 => 192
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
+Number of odd-length carry chains : 3
 Number of even-length carry chains : 9
 
 ################### Begin Clock Report ######################
@@ -203,25 +204,25 @@ Number of Clocks: 3
 Clock Enable Nets
 Number of Clock Enables: 2
 Top 2 highest fanout Clock Enables:
-  Net : vga_inst/n897, loads : 21
-  Net : game_state_inst/n896, loads : 10
+  Net : vga_inst/n1079, loads : 21
+  Net : game_state_inst/n1078, loads : 10
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 22
-  Net : vga_inst/n897, loads : 21
-  Net : vga_inst/row_num[9], loads : 15
-  Net : vga_inst/col_num[5], loads : 13
-  Net : vga_inst/row_num[3], loads : 11
+  Net : game_state_inst/forty_eight_mhz_counter[19], loads : 31
+  Net : vga_inst/n1079, loads : 21
+  Net : game_state_inst/game_over, loads : 19
+  Net : vga_inst/row_num[9], loads : 12
+  Net : vga_inst/row_num[5], loads : 12
+  Net : is_over_N_199, loads : 12
   Net : vga_inst/row_num[1], loads : 11
-  Net : vga_inst/col_num[4], loads : 11
+  Net : vga_inst/col_num[5], loads : 11
   Net : vga_inst/row_num[8], loads : 10
   Net : vga_inst/row_num[7], loads : 10
-  Net : vga_inst/row_num[6], loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 150.027  MB
+Peak Memory Usage: 151.051  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.391  secs
-Total REAL time for LSE flow : 4.000  secs
+Total CPU time for LSE flow : 3.531  secs
+Total REAL time for LSE flow : 3.000  secs
 --------------------------------------------------------------
