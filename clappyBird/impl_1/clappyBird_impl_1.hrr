@@ -20,15 +20,8 @@ Report for cell vga
                                   LUT4	      41.00        12.1
                                 PFUREG	         20        28.6
 ---------------------------------------------------
-Report for cell game_state
-   Instance path: top/game_state_inst
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	      87.00        25.6
-                                PFUREG	         50        71.4
----------------------------------------------------
 Report for cell game_renderer
-   Instance path: top/testpattern_inst
+   Instance path: top/gamerenderer_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   LUT4	     188.00        55.3
@@ -45,3 +38,10 @@ Report for cell lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SEL
    Instance path: top/pll_inst/lscc_pll_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell game_state
+   Instance path: top/game_state_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	      87.00        25.6
+                                PFUREG	         50        71.4

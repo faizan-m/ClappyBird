@@ -9,7 +9,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 28 22:32:01 2019
+Wed May 01 11:16:54 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml 
@@ -183,11 +183,11 @@ Top 10 highest fanout non-clock nets:
   Net : vga_inst/row_num[7], loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 151.051  MB
+Peak Memory Usage: 151.785  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.531  secs
-Total REAL time for LSE flow : 3.000  secs
+Total CPU time for LSE flow : 3.813  secs
+Total REAL time for LSE flow : 5.000  secs
 --------------------------------------------------------------
 
 
@@ -267,8 +267,8 @@ Design Summary:
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  3
       Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
-      Net game_state_inst/forty_eight_mhz_counter[19]: 18 loads, 18 rising, 0 falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_181_190__i19/Q)
       Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
+      Net game_state_inst/forty_eight_mhz_counter[19]: 18 loads, 18 rising, 0 falling (Driver: Pin game_state_inst.forty_eight_mhz_counter_181_190__i19/Q)
    Number of Clock Enables:  3
       Net vga_inst/n1079: 6 loads, 6 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
@@ -277,8 +277,8 @@ Design Summary:
       Net game_over: 5 loads, 5 SLICEs
       Net vga_inst/n1079: 6 loads, 6 SLICEs
       Net vga_inst/n2000: 6 loads, 6 SLICEs
-      Net game_state_inst/n1095: 6 loads, 6 SLICEs
       Net is_over_N_199: 6 loads, 6 SLICEs
+      Net game_state_inst/n1095: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
       Net VCC_net: 35 loads
       Net game_over: 17 loads
@@ -321,7 +321,7 @@ Starting design annotation....
 Starting full timing analysis...
 WARNING - "The
 STA Runtime and Peak Memory Usage :
-Total CPU Time: 0 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 0 secs 
 Peak Memory Usage: 74 MB
 
@@ -329,7 +329,7 @@ Peak Memory Usage: 74 MB
 par -f "clappyBird_impl_1.p2t" "clappyBird_impl_1_map.udb" "clappyBird_impl_1.udb"
 
 Lattice Place and Route Report for Design "clappyBird_impl_1_map.udb"
-Sun Apr 28 22:32:07 2019
+Wed May 01 11:17:02 2019
 
 PAR: Place And Route Radiant (64-bit) 1.0.1.350.6.
 Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
@@ -373,28 +373,28 @@ Device utilization summary:
 Pin Constraint Summary:
    9 out of 10 pins locked (90% locked).
 .
-...........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+...........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 2 secs 
 
 
 ................
-Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 2 secs 
 
-Starting Placer Phase 1. REAL time: 0 secs 
+Starting Placer Phase 1. REAL time: 2 secs 
 ..  ..
 ....................
 
-Placer score = 61140.
+Placer score = 59053.
 
 Device SLICE utilization summary after final SLICE packing:
    SLICE            178/2640          6% used
 
-Finished Placer Phase 1.  CPU time: 13 secs , REAL time: 13 secs 
+Finished Placer Phase 1.  CPU time: 14 secs , REAL time: 15 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  88503
-Finished Placer Phase 2.  CPU time: 13 secs , REAL time: 13 secs 
+Placer score =  87498
+Finished Placer Phase 2.  CPU time: 14 secs , REAL time: 15 secs 
 
 
 ------------------ Clock Report ------------------
@@ -402,7 +402,7 @@ Finished Placer Phase 2.  CPU time: 13 secs , REAL time: 13 secs
 Global Clocks :
   PRIMARY "clk" from comp "hsosc_inst" on site "HFOSC_R1C32", clk load = 12, ce load = 0, sr load = 0
   PRIMARY "clk2" from OUTGLOBAL on comp "pll_inst.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 12, ce load = 0, sr load = 0
-  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_18" on site "R13C5C", clk load = 18, ce load = 0, sr load = 0
+  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_52" on site "R13C5C", clk load = 18, ce load = 0, sr load = 0
 
   PRIMARY  : 3 out of 8 (37%)
 
@@ -424,12 +424,12 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)   | OFF        |            |            |
 +----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 13 secs , REAL time: 13 secs 
+Total Placer CPU time: 14 secs , REAL time: 15 secs 
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 22:32:21 04/28/19
+Start NBR router at 11:17:16 05/01/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -469,27 +469,30 @@ WARNING - The following clock signals are routed with generic routing resources 
 Completed routing resource preassignment
     TimerIf::skewscore 0
 
-Start NBR section for initial routing at 22:32:22 04/28/19
+Start NBR section for initial routing at 11:17:17 05/01/19
 Level 4, iteration 1
-43(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
+45(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 22:32:22 04/28/19
+Start NBR section for normal routing at 11:17:18 05/01/19
 Level 4, iteration 1
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
+Level 4, iteration 2
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 22:32:22 04/28/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:17:18 05/01/19
 FALSE ARC LibDelays : 0, 0, 16, 0
 
-Start NBR section for re-routing at 22:32:23 04/28/19
+Start NBR section for re-routing at 11:17:19 05/01/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for post-routing at 22:32:23 04/28/19
+Start NBR section for post-routing at 11:17:19 05/01/19
 
 End NBR router with 0 unrouted connection
 
@@ -520,7 +523,7 @@ Other clocks:
 
 WARNING - The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:"&#xA;---------------------------------------------------------
 Total CPU time 4 secs 
-Total REAL time: 4 secs 
+Total REAL time: 5 secs 
 Completely routed.
 End of route.  1246 routed (100.00%); 0 unrouted.
 
@@ -535,9 +538,9 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 18 secs 
-Total REAL Time: 19 secs 
-Peak Memory Usage: 143 MB
+Total CPU  Time: 19 secs 
+Total REAL Time: 20 secs 
+Peak Memory Usage: 141 MB
 
 
 par done!
@@ -564,7 +567,7 @@ Starting full timing analysis...
 WARNING - "The
 STA Runtime and Peak Memory Usage :
 Total CPU Time: 1 secs 
-Total REAL Time: 0 secs 
+Total REAL Time: 2 secs 
 Peak Memory Usage: 101 MB
 
 

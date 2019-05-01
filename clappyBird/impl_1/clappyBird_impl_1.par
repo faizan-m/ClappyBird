@@ -1,5 +1,5 @@
 Copyright 2015 Lattice Semiconductor Corporation, All Rights Reserved
-Sun Apr 28 22:32:07 2019
+Wed May 01 11:17:01 2019
 
 Command Line: par -w -n 1 -t 1 -s 1 -exp parPathBased=ON \
 	clappyBird_impl_1_map.udb clappyBird_impl_1.udb 
@@ -8,7 +8,7 @@ Command Line: par -w -n 1 -t 1 -s 1 -exp parPathBased=ON \
 Level/       Number       Worst        Timing       Worst        Timing       Run          Run
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            9.618        0            3.417        0            18           Success
+5_1   *      0            9.618        0            3.417        0            20           Success
 
 * : Design saved.
 
@@ -17,7 +17,7 @@ Total (real) run time for 1-seed: 19 secs
 par done!
 
 Lattice Place and Route Report for Design "clappyBird_impl_1_map.udb"
-Sun Apr 28 22:32:07 2019
+Wed May 01 11:17:02 2019
 
 PAR: Place And Route Radiant (64-bit) 1.0.1.350.6.
 Command Line: par -w -t 1 -exp parPathBased=ON clappyBird_impl_1_map.udb \
@@ -61,28 +61,28 @@ Device utilization summary:
 Pin Constraint Summary:
    9 out of 10 pins locked (90% locked).
 .
-...........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 0 secs 
+...........Finished Placer Phase 0 (HIER).  CPU time: 0 secs , REAL time: 2 secs 
 
 
 ................
-Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 2 secs 
 
-Starting Placer Phase 1. REAL time: 0 secs 
+Starting Placer Phase 1. REAL time: 2 secs 
 ..  ..
 ....................
 
-Placer score = 61140.
+Placer score = 59053.
 
 Device SLICE utilization summary after final SLICE packing:
    SLICE            178/2640          6% used
 
-Finished Placer Phase 1.  CPU time: 13 secs , REAL time: 13 secs 
+Finished Placer Phase 1.  CPU time: 14 secs , REAL time: 15 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  88503
-Finished Placer Phase 2.  CPU time: 13 secs , REAL time: 13 secs 
+Placer score =  87498
+Finished Placer Phase 2.  CPU time: 14 secs , REAL time: 15 secs 
 
 
 ------------------ Clock Report ------------------
@@ -90,7 +90,7 @@ Finished Placer Phase 2.  CPU time: 13 secs , REAL time: 13 secs
 Global Clocks :
   PRIMARY "clk" from comp "hsosc_inst" on site "HFOSC_R1C32", clk load = 12, ce load = 0, sr load = 0
   PRIMARY "clk2" from OUTGLOBAL on comp "pll_inst.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 12, ce load = 0, sr load = 0
-  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_18" on site "R13C5C", clk load = 18, ce load = 0, sr load = 0
+  PRIMARY "game_state_inst/forty_eight_mhz_counter[19]" from Q0 on comp "SLICE_52" on site "R13C5C", clk load = 18, ce load = 0, sr load = 0
 
   PRIMARY  : 3 out of 8 (37%)
 
@@ -112,12 +112,12 @@ I/O Bank Usage Summary:
 | 2        | 0 / 8 (  0%)   | OFF        |            |            |
 +----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 13 secs , REAL time: 13 secs 
+Total Placer CPU time: 14 secs , REAL time: 15 secs 
 
 Writing design to file clappyBird_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 22:32:21 04/28/19
+Start NBR router at 11:17:16 05/01/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -155,33 +155,36 @@ Other clocks:
        Clock   loads: 1     out of     1 routed (100.00%)
 
 WARNING - par: The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:
-   "game_state_inst/forty_eight_mhz_counter[19]" (18 clock loads, 19 total loads)
    "clk" (12 clock loads, 12 total loads)
+   "game_state_inst/forty_eight_mhz_counter[19]" (18 clock loads, 19 total loads)
 
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 22:32:22 04/28/19
+Start NBR section for initial routing at 11:17:17 05/01/19
 Level 4, iteration 1
-43(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
+45(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 22:32:22 04/28/19
+Start NBR section for normal routing at 11:17:18 05/01/19
 Level 4, iteration 1
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
+Level 4, iteration 2
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 0 secs 
+Estimated worst slack/total negative slack<setup>: 9.618ns/0.000ns; real time: 2 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 22:32:22 04/28/19
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:17:18 05/01/19
 
-Start NBR section for re-routing at 22:32:23 04/28/19
+Start NBR section for re-routing at 11:17:19 05/01/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 3 secs 
 
-Start NBR section for post-routing at 22:32:23 04/28/19
+Start NBR section for post-routing at 11:17:19 05/01/19
 
 End NBR router with 0 unrouted connection
 
@@ -210,12 +213,12 @@ Other clocks:
        Clock   loads: 1     out of     1 routed (100.00%)
 
 WARNING - par: The following clock signals are routed with generic routing resources and may suffer from excessive delay and/or skew:
-   "game_state_inst/forty_eight_mhz_counter[19]" (18 clock loads, 19 total loads)
    "clk" (12 clock loads, 12 total loads)
+   "game_state_inst/forty_eight_mhz_counter[19]" (18 clock loads, 19 total loads)
 
 ---------------------------------------------------------
 Total CPU time 4 secs 
-Total REAL time: 4 secs 
+Total REAL time: 5 secs 
 Completely routed.
 End of route.  1246 routed (100.00%); 0 unrouted.
 
@@ -233,9 +236,9 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = 3.417
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 18 secs 
-Total REAL Time: 19 secs 
-Peak Memory Usage: 143 MB
+Total CPU  Time: 19 secs 
+Total REAL Time: 20 secs 
+Peak Memory Usage: 141 MB
 
 
 par done!

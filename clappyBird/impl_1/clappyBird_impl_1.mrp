@@ -5,7 +5,7 @@ Target Device:        iCE40UP5KSG48
 Target Performance:   High-Performance_1.2V
 
 Mapper:    version Radiant (64-bit) 1.0.1.350.6
-Mapped on: Sun Apr 28 22:32:05 2019
+Mapped on: Wed May 01 11:17:00 2019
 
 Design Information
 ------------------
@@ -43,10 +43,10 @@ Design Summary
    Number of Clocks:  3
       Net clk2: 12 loads, 12 rising, 0 falling (Driver: Pin
      pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
       Net game_state_inst/forty_eight_mhz_counter[19]: 18 loads, 18 rising, 0
      falling (Driver: Pin
      game_state_inst.forty_eight_mhz_counter_181_190__i19/Q)
-      Net clk: 12 loads, 12 rising, 0 falling (Driver: Pin hsosc_inst/CLKHF)
    Number of Clock Enables:  3
       Net vga_inst/n1079: 6 loads, 6 SLICEs
       Net VCC_net: 1 loads, 0 SLICEs
@@ -55,8 +55,8 @@ Design Summary
       Net game_over: 5 loads, 5 SLICEs
       Net vga_inst/n1079: 6 loads, 6 SLICEs
       Net vga_inst/n2000: 6 loads, 6 SLICEs
-      Net game_state_inst/n1095: 6 loads, 6 SLICEs
       Net is_over_N_199: 6 loads, 6 SLICEs
+      Net game_state_inst/n1095: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
       Net VCC_net: 35 loads
       Net game_over: 17 loads

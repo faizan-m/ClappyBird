@@ -28,17 +28,8 @@ Instance Path : vga_inst
                                LUT4        17            8.9
                               TOTAL        49
 ----------------------------------------------------------------------
-Report for cell game_state.v1
-Instance Path : game_state_inst
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        28           37.8
-                            FD1P3XZ        50           71.4
-                               LUT4        31           16.1
-                              TOTAL       109
-----------------------------------------------------------------------
 Report for cell game_renderer.v1
-Instance Path : testpattern_inst
+Instance Path : gamerenderer_inst
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2        34           45.9
@@ -60,3 +51,12 @@ Instance Path : pll_inst.lscc_pll_inst
                                cell     count   Res Usage(%)
                               PLL_B         1          100.0
                               TOTAL         1
+----------------------------------------------------------------------
+Report for cell game_state.v1
+Instance Path : game_state_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        28           37.8
+                            FD1P3XZ        50           71.4
+                               LUT4        31           16.1
+                              TOTAL       109

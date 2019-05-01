@@ -1,12 +1,12 @@
 <top name = "top"  library = "work"  arch = "RTL"  entry = "VHDL">
 
 <clocks>
-    <clockitem name = "clk2"  type = "net" />
-    <clockitem name = "clk"  type = "net" />
     <clockitem name = "PLL_out"  type = "net" />
-    <clockitem name = "game_state_inst/forty_eight_mhz_counter[19]"  type = "net" />
-    <clockitem name = "pll_inst/lscc_pll_inst/outglobalb_o"  type = "net" />
+    <clockitem name = "clk"  type = "net" />
+    <clockitem name = "clk2"  type = "net" />
     <clockitem name = "pll_inst/lscc_pll_inst/outcoreb_o"  type = "net" />
+    <clockitem name = "pll_inst/lscc_pll_inst/outglobalb_o"  type = "net" />
+    <clockitem name = "game_state_inst/forty_eight_mhz_counter[19]"  type = "net" />
 </clocks>
 
 <!--
@@ -947,7 +947,7 @@
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/pipe_x_start_9__I_0_72"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/pipe_x_start_9__I_0_72"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -974,7 +974,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -995,11 +995,11 @@
         <nitem  name = "p_x_str[2]"  />
         <nitem  name = "p_x_str[1]"  />
         <nitem  name = "p_x_str[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_61"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_61"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/pipe_x_start_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/pipe_x_start_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1035,7 +1035,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "p_x_str[9]"  />
         <nitem  name = "p_x_str[8]"  />
         <nitem  name = "p_x_str[7]"  />
@@ -1048,20 +1048,20 @@
         <nitem  name = "p_x_str[0]"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/col_i_9__I_0_74"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/col_i_9__I_0_74"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1088,7 +1088,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -1099,21 +1099,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_63[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_62"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_63[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_62"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/row_i_9__I_0_71"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/row_i_9__I_0_71"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1140,7 +1140,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -1151,11 +1151,11 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_73"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_73"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/row_i_9__I_0_75"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/row_i_9__I_0_75"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1182,7 +1182,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -1195,11 +1195,11 @@
         <nitem  name = "row_num[0]"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_74"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_74"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/valid_i_I_0_73"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/valid_i_I_0_73"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1208,12 +1208,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_61"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_60"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_61"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_60"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_6"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_6"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1221,13 +1221,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_62"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_60"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_59"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_62"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_60"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_59"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_5"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_5"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1235,13 +1235,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_73"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_59"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_58"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_73"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_59"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_58"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_4"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_4"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1249,13 +1249,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_74"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_58"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_57"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_74"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_58"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_57"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_12"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_12"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1291,24 +1291,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_11"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_11"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1335,7 +1335,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -1346,21 +1346,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_86[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_85"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_86[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_85"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/col_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/col_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1387,7 +1387,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -1398,21 +1398,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_96"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_96"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/y_pos_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/y_pos_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1439,7 +1439,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -1460,11 +1460,11 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_107"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_107"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/valid_i_I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/valid_i_I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1473,12 +1473,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_85"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_84"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_85"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_84"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_10"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_10"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1486,13 +1486,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_96"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_84"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_83"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_96"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_84"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_83"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_9"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_9"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1500,13 +1500,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_107"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_83"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_82"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_107"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_83"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_82"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_8"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_8"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -1514,13 +1514,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_82"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_81"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_108"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_82"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_81"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_108"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_23"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_23"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1547,7 +1547,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -1560,11 +1560,11 @@
         <nitem  name = "col_num[0]"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/n66"  />
+        <nitem  name = "gamerenderer_inst/n66"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_24"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_24"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1600,24 +1600,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/n69"  />
-        <nitem  name = "testpattern_inst/n70"  />
-        <nitem  name = "testpattern_inst/n71"  />
-        <nitem  name = "testpattern_inst/n72"  />
-        <nitem  name = "testpattern_inst/n73"  />
-        <nitem  name = "testpattern_inst/n74"  />
-        <nitem  name = "testpattern_inst/n75"  />
-        <nitem  name = "testpattern_inst/n76"  />
-        <nitem  name = "testpattern_inst/n77"  />
-        <nitem  name = "testpattern_inst/n78"  />
+        <nitem  name = "gamerenderer_inst/n69"  />
+        <nitem  name = "gamerenderer_inst/n70"  />
+        <nitem  name = "gamerenderer_inst/n71"  />
+        <nitem  name = "gamerenderer_inst/n72"  />
+        <nitem  name = "gamerenderer_inst/n73"  />
+        <nitem  name = "gamerenderer_inst/n74"  />
+        <nitem  name = "gamerenderer_inst/n75"  />
+        <nitem  name = "gamerenderer_inst/n76"  />
+        <nitem  name = "gamerenderer_inst/n77"  />
+        <nitem  name = "gamerenderer_inst/n78"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_25"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_25"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1644,7 +1644,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -1655,21 +1655,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/n69"  />
-        <nitem  name = "testpattern_inst/n70"  />
-        <nitem  name = "testpattern_inst/n71"  />
-        <nitem  name = "testpattern_inst/n72"  />
-        <nitem  name = "testpattern_inst/n73"  />
-        <nitem  name = "testpattern_inst/n74"  />
-        <nitem  name = "testpattern_inst/n75"  />
-        <nitem  name = "testpattern_inst/n76"  />
-        <nitem  name = "testpattern_inst/n77"  />
-        <nitem  name = "testpattern_inst/n78"  />
-        <nitem  name = "testpattern_inst/n79"  />
+        <nitem  name = "gamerenderer_inst/n69"  />
+        <nitem  name = "gamerenderer_inst/n70"  />
+        <nitem  name = "gamerenderer_inst/n71"  />
+        <nitem  name = "gamerenderer_inst/n72"  />
+        <nitem  name = "gamerenderer_inst/n73"  />
+        <nitem  name = "gamerenderer_inst/n74"  />
+        <nitem  name = "gamerenderer_inst/n75"  />
+        <nitem  name = "gamerenderer_inst/n76"  />
+        <nitem  name = "gamerenderer_inst/n77"  />
+        <nitem  name = "gamerenderer_inst/n78"  />
+        <nitem  name = "gamerenderer_inst/n79"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_26"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_26"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1705,8 +1705,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_y_pos[9]"  />
         <nitem  name = "bigbird_y_pos[8]"  />
         <nitem  name = "bigbird_y_pos[7]"  />
@@ -1717,20 +1717,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/n82"  />
-        <nitem  name = "testpattern_inst/n83"  />
-        <nitem  name = "testpattern_inst/n84"  />
-        <nitem  name = "testpattern_inst/n85"  />
-        <nitem  name = "testpattern_inst/n86"  />
-        <nitem  name = "testpattern_inst/n87"  />
-        <nitem  name = "testpattern_inst/n88"  />
-        <nitem  name = "testpattern_inst/n89"  />
-        <nitem  name = "testpattern_inst/n90"  />
-        <nitem  name = "testpattern_inst/n91"  />
+        <nitem  name = "gamerenderer_inst/n82"  />
+        <nitem  name = "gamerenderer_inst/n83"  />
+        <nitem  name = "gamerenderer_inst/n84"  />
+        <nitem  name = "gamerenderer_inst/n85"  />
+        <nitem  name = "gamerenderer_inst/n86"  />
+        <nitem  name = "gamerenderer_inst/n87"  />
+        <nitem  name = "gamerenderer_inst/n88"  />
+        <nitem  name = "gamerenderer_inst/n89"  />
+        <nitem  name = "gamerenderer_inst/n90"  />
+        <nitem  name = "gamerenderer_inst/n91"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_27"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_27"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1757,7 +1757,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -1768,21 +1768,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n82"  />
-        <nitem  name = "testpattern_inst/n83"  />
-        <nitem  name = "testpattern_inst/n84"  />
-        <nitem  name = "testpattern_inst/n85"  />
-        <nitem  name = "testpattern_inst/n86"  />
-        <nitem  name = "testpattern_inst/n87"  />
-        <nitem  name = "testpattern_inst/n88"  />
-        <nitem  name = "testpattern_inst/n89"  />
-        <nitem  name = "testpattern_inst/n90"  />
-        <nitem  name = "testpattern_inst/n91"  />
-        <nitem  name = "testpattern_inst/n92"  />
+        <nitem  name = "gamerenderer_inst/n82"  />
+        <nitem  name = "gamerenderer_inst/n83"  />
+        <nitem  name = "gamerenderer_inst/n84"  />
+        <nitem  name = "gamerenderer_inst/n85"  />
+        <nitem  name = "gamerenderer_inst/n86"  />
+        <nitem  name = "gamerenderer_inst/n87"  />
+        <nitem  name = "gamerenderer_inst/n88"  />
+        <nitem  name = "gamerenderer_inst/n89"  />
+        <nitem  name = "gamerenderer_inst/n90"  />
+        <nitem  name = "gamerenderer_inst/n91"  />
+        <nitem  name = "gamerenderer_inst/n92"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_28"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_28"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1818,8 +1818,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_y_pos[9]"  />
         <nitem  name = "bigbird_y_pos[8]"  />
         <nitem  name = "bigbird_y_pos[7]"  />
@@ -1830,20 +1830,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/n95"  />
-        <nitem  name = "testpattern_inst/n96"  />
-        <nitem  name = "testpattern_inst/n97"  />
-        <nitem  name = "testpattern_inst/n98"  />
-        <nitem  name = "testpattern_inst/n99"  />
-        <nitem  name = "testpattern_inst/n100"  />
-        <nitem  name = "testpattern_inst/n101"  />
-        <nitem  name = "testpattern_inst/n102"  />
-        <nitem  name = "testpattern_inst/n103"  />
-        <nitem  name = "testpattern_inst/n104"  />
+        <nitem  name = "gamerenderer_inst/n95"  />
+        <nitem  name = "gamerenderer_inst/n96"  />
+        <nitem  name = "gamerenderer_inst/n97"  />
+        <nitem  name = "gamerenderer_inst/n98"  />
+        <nitem  name = "gamerenderer_inst/n99"  />
+        <nitem  name = "gamerenderer_inst/n100"  />
+        <nitem  name = "gamerenderer_inst/n101"  />
+        <nitem  name = "gamerenderer_inst/n102"  />
+        <nitem  name = "gamerenderer_inst/n103"  />
+        <nitem  name = "gamerenderer_inst/n104"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_29"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_29"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -1870,7 +1870,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -1881,21 +1881,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n95"  />
-        <nitem  name = "testpattern_inst/n96"  />
-        <nitem  name = "testpattern_inst/n97"  />
-        <nitem  name = "testpattern_inst/n98"  />
-        <nitem  name = "testpattern_inst/n99"  />
-        <nitem  name = "testpattern_inst/n100"  />
-        <nitem  name = "testpattern_inst/n101"  />
-        <nitem  name = "testpattern_inst/n102"  />
-        <nitem  name = "testpattern_inst/n103"  />
-        <nitem  name = "testpattern_inst/n104"  />
-        <nitem  name = "testpattern_inst/n105"  />
+        <nitem  name = "gamerenderer_inst/n95"  />
+        <nitem  name = "gamerenderer_inst/n96"  />
+        <nitem  name = "gamerenderer_inst/n97"  />
+        <nitem  name = "gamerenderer_inst/n98"  />
+        <nitem  name = "gamerenderer_inst/n99"  />
+        <nitem  name = "gamerenderer_inst/n100"  />
+        <nitem  name = "gamerenderer_inst/n101"  />
+        <nitem  name = "gamerenderer_inst/n102"  />
+        <nitem  name = "gamerenderer_inst/n103"  />
+        <nitem  name = "gamerenderer_inst/n104"  />
+        <nitem  name = "gamerenderer_inst/n105"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i31"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i31"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1904,12 +1904,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/n66"  />
-        <nitem  name = "testpattern_inst/n106"  />
+        <nitem  name = "gamerenderer_inst/n66"  />
+        <nitem  name = "gamerenderer_inst/n106"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i32"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i32"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1917,13 +1917,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n79"  />
-        <nitem  name = "testpattern_inst/n106"  />
-        <nitem  name = "testpattern_inst/n107"  />
+        <nitem  name = "gamerenderer_inst/n79"  />
+        <nitem  name = "gamerenderer_inst/n106"  />
+        <nitem  name = "gamerenderer_inst/n107"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i33"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i33"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1931,13 +1931,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n92"  />
-        <nitem  name = "testpattern_inst/n107"  />
-        <nitem  name = "testpattern_inst/n108"  />
+        <nitem  name = "gamerenderer_inst/n92"  />
+        <nitem  name = "gamerenderer_inst/n107"  />
+        <nitem  name = "gamerenderer_inst/n108"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i34"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i34"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1945,13 +1945,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n105"  />
-        <nitem  name = "testpattern_inst/n108"  />
-        <nitem  name = "testpattern_inst/n109"  />
+        <nitem  name = "gamerenderer_inst/n105"  />
+        <nitem  name = "gamerenderer_inst/n108"  />
+        <nitem  name = "gamerenderer_inst/n109"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_34"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_34"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -1987,24 +1987,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/n112"  />
-        <nitem  name = "testpattern_inst/n113"  />
-        <nitem  name = "testpattern_inst/n114"  />
-        <nitem  name = "testpattern_inst/n115"  />
-        <nitem  name = "testpattern_inst/n116"  />
-        <nitem  name = "testpattern_inst/n117"  />
-        <nitem  name = "testpattern_inst/n118"  />
-        <nitem  name = "testpattern_inst/n119"  />
-        <nitem  name = "testpattern_inst/n120"  />
-        <nitem  name = "testpattern_inst/n121"  />
+        <nitem  name = "gamerenderer_inst/n112"  />
+        <nitem  name = "gamerenderer_inst/n113"  />
+        <nitem  name = "gamerenderer_inst/n114"  />
+        <nitem  name = "gamerenderer_inst/n115"  />
+        <nitem  name = "gamerenderer_inst/n116"  />
+        <nitem  name = "gamerenderer_inst/n117"  />
+        <nitem  name = "gamerenderer_inst/n118"  />
+        <nitem  name = "gamerenderer_inst/n119"  />
+        <nitem  name = "gamerenderer_inst/n120"  />
+        <nitem  name = "gamerenderer_inst/n121"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_35"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_35"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -2031,7 +2031,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -2042,21 +2042,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/n112"  />
-        <nitem  name = "testpattern_inst/n113"  />
-        <nitem  name = "testpattern_inst/n114"  />
-        <nitem  name = "testpattern_inst/n115"  />
-        <nitem  name = "testpattern_inst/n116"  />
-        <nitem  name = "testpattern_inst/n117"  />
-        <nitem  name = "testpattern_inst/n118"  />
-        <nitem  name = "testpattern_inst/n119"  />
-        <nitem  name = "testpattern_inst/n120"  />
-        <nitem  name = "testpattern_inst/n121"  />
-        <nitem  name = "testpattern_inst/n122"  />
+        <nitem  name = "gamerenderer_inst/n112"  />
+        <nitem  name = "gamerenderer_inst/n113"  />
+        <nitem  name = "gamerenderer_inst/n114"  />
+        <nitem  name = "gamerenderer_inst/n115"  />
+        <nitem  name = "gamerenderer_inst/n116"  />
+        <nitem  name = "gamerenderer_inst/n117"  />
+        <nitem  name = "gamerenderer_inst/n118"  />
+        <nitem  name = "gamerenderer_inst/n119"  />
+        <nitem  name = "gamerenderer_inst/n120"  />
+        <nitem  name = "gamerenderer_inst/n121"  />
+        <nitem  name = "gamerenderer_inst/n122"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_36"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_36"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2092,24 +2092,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/n125"  />
-        <nitem  name = "testpattern_inst/n126"  />
-        <nitem  name = "testpattern_inst/n127"  />
-        <nitem  name = "testpattern_inst/n128"  />
-        <nitem  name = "testpattern_inst/n129"  />
-        <nitem  name = "testpattern_inst/n130"  />
-        <nitem  name = "testpattern_inst/n131"  />
-        <nitem  name = "testpattern_inst/n132"  />
-        <nitem  name = "testpattern_inst/n133"  />
-        <nitem  name = "testpattern_inst/n134"  />
+        <nitem  name = "gamerenderer_inst/n125"  />
+        <nitem  name = "gamerenderer_inst/n126"  />
+        <nitem  name = "gamerenderer_inst/n127"  />
+        <nitem  name = "gamerenderer_inst/n128"  />
+        <nitem  name = "gamerenderer_inst/n129"  />
+        <nitem  name = "gamerenderer_inst/n130"  />
+        <nitem  name = "gamerenderer_inst/n131"  />
+        <nitem  name = "gamerenderer_inst/n132"  />
+        <nitem  name = "gamerenderer_inst/n133"  />
+        <nitem  name = "gamerenderer_inst/n134"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_37"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_37"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2136,7 +2136,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -2147,21 +2147,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/n125"  />
-        <nitem  name = "testpattern_inst/n126"  />
-        <nitem  name = "testpattern_inst/n127"  />
-        <nitem  name = "testpattern_inst/n128"  />
-        <nitem  name = "testpattern_inst/n129"  />
-        <nitem  name = "testpattern_inst/n130"  />
-        <nitem  name = "testpattern_inst/n131"  />
-        <nitem  name = "testpattern_inst/n132"  />
-        <nitem  name = "testpattern_inst/n133"  />
-        <nitem  name = "testpattern_inst/n134"  />
-        <nitem  name = "testpattern_inst/n135"  />
+        <nitem  name = "gamerenderer_inst/n125"  />
+        <nitem  name = "gamerenderer_inst/n126"  />
+        <nitem  name = "gamerenderer_inst/n127"  />
+        <nitem  name = "gamerenderer_inst/n128"  />
+        <nitem  name = "gamerenderer_inst/n129"  />
+        <nitem  name = "gamerenderer_inst/n130"  />
+        <nitem  name = "gamerenderer_inst/n131"  />
+        <nitem  name = "gamerenderer_inst/n132"  />
+        <nitem  name = "gamerenderer_inst/n133"  />
+        <nitem  name = "gamerenderer_inst/n134"  />
+        <nitem  name = "gamerenderer_inst/n135"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_39"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_39"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2188,7 +2188,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -2199,21 +2199,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n148"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[0]"  />
+        <nitem  name = "gamerenderer_inst/n148"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_40"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_40"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2249,8 +2249,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_y_pos[9]"  />
         <nitem  name = "bigbird_y_pos[8]"  />
         <nitem  name = "bigbird_y_pos[7]"  />
@@ -2261,20 +2261,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/n151"  />
-        <nitem  name = "testpattern_inst/n152"  />
-        <nitem  name = "testpattern_inst/n153"  />
-        <nitem  name = "testpattern_inst/n154"  />
-        <nitem  name = "testpattern_inst/n155"  />
-        <nitem  name = "testpattern_inst/n156"  />
-        <nitem  name = "testpattern_inst/n157"  />
-        <nitem  name = "testpattern_inst/n158"  />
-        <nitem  name = "testpattern_inst/n159"  />
-        <nitem  name = "testpattern_inst/n160"  />
+        <nitem  name = "gamerenderer_inst/n151"  />
+        <nitem  name = "gamerenderer_inst/n152"  />
+        <nitem  name = "gamerenderer_inst/n153"  />
+        <nitem  name = "gamerenderer_inst/n154"  />
+        <nitem  name = "gamerenderer_inst/n155"  />
+        <nitem  name = "gamerenderer_inst/n156"  />
+        <nitem  name = "gamerenderer_inst/n157"  />
+        <nitem  name = "gamerenderer_inst/n158"  />
+        <nitem  name = "gamerenderer_inst/n159"  />
+        <nitem  name = "gamerenderer_inst/n160"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_41"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_41"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -2301,7 +2301,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -2312,21 +2312,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n151"  />
-        <nitem  name = "testpattern_inst/n152"  />
-        <nitem  name = "testpattern_inst/n153"  />
-        <nitem  name = "testpattern_inst/n154"  />
-        <nitem  name = "testpattern_inst/n155"  />
-        <nitem  name = "testpattern_inst/n156"  />
-        <nitem  name = "testpattern_inst/n157"  />
-        <nitem  name = "testpattern_inst/n158"  />
-        <nitem  name = "testpattern_inst/n159"  />
-        <nitem  name = "testpattern_inst/n160"  />
-        <nitem  name = "testpattern_inst/n161"  />
+        <nitem  name = "gamerenderer_inst/n151"  />
+        <nitem  name = "gamerenderer_inst/n152"  />
+        <nitem  name = "gamerenderer_inst/n153"  />
+        <nitem  name = "gamerenderer_inst/n154"  />
+        <nitem  name = "gamerenderer_inst/n155"  />
+        <nitem  name = "gamerenderer_inst/n156"  />
+        <nitem  name = "gamerenderer_inst/n157"  />
+        <nitem  name = "gamerenderer_inst/n158"  />
+        <nitem  name = "gamerenderer_inst/n159"  />
+        <nitem  name = "gamerenderer_inst/n160"  />
+        <nitem  name = "gamerenderer_inst/n161"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i43"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i43"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2335,12 +2335,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/n122"  />
-        <nitem  name = "testpattern_inst/n162"  />
+        <nitem  name = "gamerenderer_inst/n122"  />
+        <nitem  name = "gamerenderer_inst/n162"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i44"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i44"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2348,13 +2348,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n135"  />
-        <nitem  name = "testpattern_inst/n162"  />
-        <nitem  name = "testpattern_inst/n163"  />
+        <nitem  name = "gamerenderer_inst/n135"  />
+        <nitem  name = "gamerenderer_inst/n162"  />
+        <nitem  name = "gamerenderer_inst/n163"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i45"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i45"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2362,13 +2362,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n148"  />
-        <nitem  name = "testpattern_inst/n163"  />
-        <nitem  name = "testpattern_inst/n164"  />
+        <nitem  name = "gamerenderer_inst/n148"  />
+        <nitem  name = "gamerenderer_inst/n163"  />
+        <nitem  name = "gamerenderer_inst/n164"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i46"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i46"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2376,13 +2376,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n161"  />
-        <nitem  name = "testpattern_inst/n164"  />
-        <nitem  name = "testpattern_inst/n165"  />
+        <nitem  name = "gamerenderer_inst/n161"  />
+        <nitem  name = "gamerenderer_inst/n164"  />
+        <nitem  name = "gamerenderer_inst/n165"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_46"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_46"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2418,24 +2418,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_47"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_47"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2462,7 +2462,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -2473,21 +2473,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_97[0]"  />
-        <nitem  name = "testpattern_inst/n178"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_97[0]"  />
+        <nitem  name = "gamerenderer_inst/n178"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_48"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_48"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2523,24 +2523,24 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_x_pos[9]"  />
         <nitem  name = "bigbird_x_pos[7]"  />
-        <nitem  name = "testpattern_inst/n181"  />
-        <nitem  name = "testpattern_inst/n182"  />
-        <nitem  name = "testpattern_inst/n183"  />
-        <nitem  name = "testpattern_inst/n184"  />
-        <nitem  name = "testpattern_inst/n185"  />
-        <nitem  name = "testpattern_inst/n186"  />
-        <nitem  name = "testpattern_inst/n187"  />
-        <nitem  name = "testpattern_inst/n188"  />
-        <nitem  name = "testpattern_inst/n189"  />
-        <nitem  name = "testpattern_inst/n190"  />
+        <nitem  name = "gamerenderer_inst/n181"  />
+        <nitem  name = "gamerenderer_inst/n182"  />
+        <nitem  name = "gamerenderer_inst/n183"  />
+        <nitem  name = "gamerenderer_inst/n184"  />
+        <nitem  name = "gamerenderer_inst/n185"  />
+        <nitem  name = "gamerenderer_inst/n186"  />
+        <nitem  name = "gamerenderer_inst/n187"  />
+        <nitem  name = "gamerenderer_inst/n188"  />
+        <nitem  name = "gamerenderer_inst/n189"  />
+        <nitem  name = "gamerenderer_inst/n190"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_49"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_49"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -2567,7 +2567,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "col_num[9]"  />
         <nitem  name = "col_num[8]"  />
         <nitem  name = "col_num[7]"  />
@@ -2578,21 +2578,21 @@
         <nitem  name = "col_num[2]"  />
         <nitem  name = "col_num[1]"  />
         <nitem  name = "col_num[0]"  />
-        <nitem  name = "testpattern_inst/n181"  />
-        <nitem  name = "testpattern_inst/n182"  />
-        <nitem  name = "testpattern_inst/n183"  />
-        <nitem  name = "testpattern_inst/n184"  />
-        <nitem  name = "testpattern_inst/n185"  />
-        <nitem  name = "testpattern_inst/n186"  />
-        <nitem  name = "testpattern_inst/n187"  />
-        <nitem  name = "testpattern_inst/n188"  />
-        <nitem  name = "testpattern_inst/n189"  />
-        <nitem  name = "testpattern_inst/n190"  />
-        <nitem  name = "testpattern_inst/n191"  />
+        <nitem  name = "gamerenderer_inst/n181"  />
+        <nitem  name = "gamerenderer_inst/n182"  />
+        <nitem  name = "gamerenderer_inst/n183"  />
+        <nitem  name = "gamerenderer_inst/n184"  />
+        <nitem  name = "gamerenderer_inst/n185"  />
+        <nitem  name = "gamerenderer_inst/n186"  />
+        <nitem  name = "gamerenderer_inst/n187"  />
+        <nitem  name = "gamerenderer_inst/n188"  />
+        <nitem  name = "gamerenderer_inst/n189"  />
+        <nitem  name = "gamerenderer_inst/n190"  />
+        <nitem  name = "gamerenderer_inst/n191"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_50"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_50"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2628,8 +2628,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_y_pos[9]"  />
         <nitem  name = "bigbird_y_pos[8]"  />
         <nitem  name = "bigbird_y_pos[7]"  />
@@ -2640,20 +2640,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/n194"  />
-        <nitem  name = "testpattern_inst/n195"  />
-        <nitem  name = "testpattern_inst/n196"  />
-        <nitem  name = "testpattern_inst/n197"  />
-        <nitem  name = "testpattern_inst/n198"  />
-        <nitem  name = "testpattern_inst/n199"  />
-        <nitem  name = "testpattern_inst/n200"  />
-        <nitem  name = "testpattern_inst/n201"  />
-        <nitem  name = "testpattern_inst/n202"  />
-        <nitem  name = "testpattern_inst/n203"  />
+        <nitem  name = "gamerenderer_inst/n194"  />
+        <nitem  name = "gamerenderer_inst/n195"  />
+        <nitem  name = "gamerenderer_inst/n196"  />
+        <nitem  name = "gamerenderer_inst/n197"  />
+        <nitem  name = "gamerenderer_inst/n198"  />
+        <nitem  name = "gamerenderer_inst/n199"  />
+        <nitem  name = "gamerenderer_inst/n200"  />
+        <nitem  name = "gamerenderer_inst/n201"  />
+        <nitem  name = "gamerenderer_inst/n202"  />
+        <nitem  name = "gamerenderer_inst/n203"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_51"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_51"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2680,7 +2680,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -2691,21 +2691,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n194"  />
-        <nitem  name = "testpattern_inst/n195"  />
-        <nitem  name = "testpattern_inst/n196"  />
-        <nitem  name = "testpattern_inst/n197"  />
-        <nitem  name = "testpattern_inst/n198"  />
-        <nitem  name = "testpattern_inst/n199"  />
-        <nitem  name = "testpattern_inst/n200"  />
-        <nitem  name = "testpattern_inst/n201"  />
-        <nitem  name = "testpattern_inst/n202"  />
-        <nitem  name = "testpattern_inst/n203"  />
-        <nitem  name = "testpattern_inst/n204"  />
+        <nitem  name = "gamerenderer_inst/n194"  />
+        <nitem  name = "gamerenderer_inst/n195"  />
+        <nitem  name = "gamerenderer_inst/n196"  />
+        <nitem  name = "gamerenderer_inst/n197"  />
+        <nitem  name = "gamerenderer_inst/n198"  />
+        <nitem  name = "gamerenderer_inst/n199"  />
+        <nitem  name = "gamerenderer_inst/n200"  />
+        <nitem  name = "gamerenderer_inst/n201"  />
+        <nitem  name = "gamerenderer_inst/n202"  />
+        <nitem  name = "gamerenderer_inst/n203"  />
+        <nitem  name = "gamerenderer_inst/n204"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/add_52"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/add_52"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[9]"  direction = "in"  />
@@ -2741,8 +2741,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "bigbird_y_pos[9]"  />
         <nitem  name = "bigbird_y_pos[8]"  />
         <nitem  name = "bigbird_y_pos[7]"  />
@@ -2753,20 +2753,20 @@
         <nitem  name = "bigbird_y_pos[2]"  />
         <nitem  name = "bigbird_y_pos[1]"  />
         <nitem  name = "bigbird_y_pos[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/row_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/row_i_9__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "a[9]"  direction = "in"  />
@@ -2793,7 +2793,7 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -2804,21 +2804,21 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[9]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[8]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[7]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[6]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_109[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_108"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[9]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[8]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[7]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[6]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_109[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_108"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i55"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i55"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2827,12 +2827,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/n178"  />
-        <nitem  name = "testpattern_inst/n218"  />
+        <nitem  name = "gamerenderer_inst/n178"  />
+        <nitem  name = "gamerenderer_inst/n218"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i56"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i56"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2840,13 +2840,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n191"  />
-        <nitem  name = "testpattern_inst/n218"  />
-        <nitem  name = "testpattern_inst/n219"  />
+        <nitem  name = "gamerenderer_inst/n191"  />
+        <nitem  name = "gamerenderer_inst/n218"  />
+        <nitem  name = "gamerenderer_inst/n219"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i57"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i57"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2854,13 +2854,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n204"  />
-        <nitem  name = "testpattern_inst/n219"  />
-        <nitem  name = "testpattern_inst/n220"  />
+        <nitem  name = "gamerenderer_inst/n204"  />
+        <nitem  name = "gamerenderer_inst/n219"  />
+        <nitem  name = "gamerenderer_inst/n220"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i58"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i58"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -2868,13 +2868,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/RGB_o_5__N_108"  />
-        <nitem  name = "testpattern_inst/n220"  />
-        <nitem  name = "testpattern_inst/n221"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_108"  />
+        <nitem  name = "gamerenderer_inst/n220"  />
+        <nitem  name = "gamerenderer_inst/n221"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i60"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i60"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2884,11 +2884,11 @@
         <nets>
         <nitem  name = "visible_area"  />
         <nitem  name = "game_over"  />
-        <nitem  name = "testpattern_inst/n223"  />
+        <nitem  name = "gamerenderer_inst/n223"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i61"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i61"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -2896,13 +2896,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/n223"  />
-        <nitem  name = "testpattern_inst/n224"  />
-        <nitem  name = "testpattern_inst/n225"  />
+        <nitem  name = "gamerenderer_inst/n223"  />
+        <nitem  name = "gamerenderer_inst/n224"  />
+        <nitem  name = "gamerenderer_inst/n225"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/LessThan_61"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/LessThan_61"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "cin"  direction = "in"  />
         <pitem  name = "b[8]"  direction = "in"  />
@@ -2929,8 +2929,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "row_num[9]"  />
         <nitem  name = "row_num[8]"  />
         <nitem  name = "row_num[7]"  />
@@ -2941,11 +2941,11 @@
         <nitem  name = "row_num[2]"  />
         <nitem  name = "row_num[1]"  />
         <nitem  name = "row_num[0]"  />
-        <nitem  name = "testpattern_inst/n225"  />
+        <nitem  name = "gamerenderer_inst/n225"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/i63"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/i63"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2954,12 +2954,12 @@
 
         <nets>
         <nitem  name = "visible_area"  />
-        <nitem  name = "testpattern_inst/n225"  />
-        <nitem  name = "testpattern_inst/n226"  />
+        <nitem  name = "gamerenderer_inst/n225"  />
+        <nitem  name = "gamerenderer_inst/n226"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/mux_63"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/mux_63"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d0[5]"  direction = "in"  />
         <pitem  name = "d0[4]"  direction = "in"  />
@@ -2983,19 +2983,19 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/n226"  />
-        <nitem  name = "testpattern_inst/n228"  />
-        <nitem  name = "testpattern_inst/n229"  />
-        <nitem  name = "testpattern_inst/n230"  />
-        <nitem  name = "testpattern_inst/n231"  />
-        <nitem  name = "testpattern_inst/n232"  />
-        <nitem  name = "testpattern_inst/n233"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/n226"  />
+        <nitem  name = "gamerenderer_inst/n228"  />
+        <nitem  name = "gamerenderer_inst/n229"  />
+        <nitem  name = "gamerenderer_inst/n230"  />
+        <nitem  name = "gamerenderer_inst/n231"  />
+        <nitem  name = "gamerenderer_inst/n232"  />
+        <nitem  name = "gamerenderer_inst/n233"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/mux_64"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/mux_64"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[4]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
@@ -3019,25 +3019,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/n224"  />
-        <nitem  name = "testpattern_inst/n228"  />
-        <nitem  name = "testpattern_inst/n229"  />
-        <nitem  name = "testpattern_inst/n230"  />
-        <nitem  name = "testpattern_inst/n231"  />
-        <nitem  name = "testpattern_inst/n232"  />
-        <nitem  name = "testpattern_inst/n233"  />
-        <nitem  name = "testpattern_inst/n235"  />
-        <nitem  name = "testpattern_inst/n236"  />
-        <nitem  name = "testpattern_inst/n237"  />
-        <nitem  name = "testpattern_inst/n238"  />
-        <nitem  name = "testpattern_inst/n239"  />
-        <nitem  name = "testpattern_inst/n240"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/n224"  />
+        <nitem  name = "gamerenderer_inst/n228"  />
+        <nitem  name = "gamerenderer_inst/n229"  />
+        <nitem  name = "gamerenderer_inst/n230"  />
+        <nitem  name = "gamerenderer_inst/n231"  />
+        <nitem  name = "gamerenderer_inst/n232"  />
+        <nitem  name = "gamerenderer_inst/n233"  />
+        <nitem  name = "gamerenderer_inst/n235"  />
+        <nitem  name = "gamerenderer_inst/n236"  />
+        <nitem  name = "gamerenderer_inst/n237"  />
+        <nitem  name = "gamerenderer_inst/n238"  />
+        <nitem  name = "gamerenderer_inst/n239"  />
+        <nitem  name = "gamerenderer_inst/n240"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/mux_65"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/mux_65"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
@@ -3061,25 +3061,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/n221"  />
-        <nitem  name = "testpattern_inst/n235"  />
-        <nitem  name = "testpattern_inst/n236"  />
-        <nitem  name = "testpattern_inst/n237"  />
-        <nitem  name = "testpattern_inst/n238"  />
-        <nitem  name = "testpattern_inst/n239"  />
-        <nitem  name = "testpattern_inst/n240"  />
-        <nitem  name = "testpattern_inst/n242"  />
-        <nitem  name = "testpattern_inst/n243"  />
-        <nitem  name = "testpattern_inst/n244"  />
-        <nitem  name = "testpattern_inst/n245"  />
-        <nitem  name = "testpattern_inst/n246"  />
-        <nitem  name = "testpattern_inst/n247"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/n221"  />
+        <nitem  name = "gamerenderer_inst/n235"  />
+        <nitem  name = "gamerenderer_inst/n236"  />
+        <nitem  name = "gamerenderer_inst/n237"  />
+        <nitem  name = "gamerenderer_inst/n238"  />
+        <nitem  name = "gamerenderer_inst/n239"  />
+        <nitem  name = "gamerenderer_inst/n240"  />
+        <nitem  name = "gamerenderer_inst/n242"  />
+        <nitem  name = "gamerenderer_inst/n243"  />
+        <nitem  name = "gamerenderer_inst/n244"  />
+        <nitem  name = "gamerenderer_inst/n245"  />
+        <nitem  name = "gamerenderer_inst/n246"  />
+        <nitem  name = "gamerenderer_inst/n247"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/mux_66"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/mux_66"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
@@ -3103,25 +3103,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/n165"  />
-        <nitem  name = "testpattern_inst/n242"  />
-        <nitem  name = "testpattern_inst/n243"  />
-        <nitem  name = "testpattern_inst/n244"  />
-        <nitem  name = "testpattern_inst/n245"  />
-        <nitem  name = "testpattern_inst/n246"  />
-        <nitem  name = "testpattern_inst/n247"  />
-        <nitem  name = "testpattern_inst/n249"  />
-        <nitem  name = "testpattern_inst/n250"  />
-        <nitem  name = "testpattern_inst/n251"  />
-        <nitem  name = "testpattern_inst/n252"  />
-        <nitem  name = "testpattern_inst/n253"  />
-        <nitem  name = "testpattern_inst/n254"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/n165"  />
+        <nitem  name = "gamerenderer_inst/n242"  />
+        <nitem  name = "gamerenderer_inst/n243"  />
+        <nitem  name = "gamerenderer_inst/n244"  />
+        <nitem  name = "gamerenderer_inst/n245"  />
+        <nitem  name = "gamerenderer_inst/n246"  />
+        <nitem  name = "gamerenderer_inst/n247"  />
+        <nitem  name = "gamerenderer_inst/n249"  />
+        <nitem  name = "gamerenderer_inst/n250"  />
+        <nitem  name = "gamerenderer_inst/n251"  />
+        <nitem  name = "gamerenderer_inst/n252"  />
+        <nitem  name = "gamerenderer_inst/n253"  />
+        <nitem  name = "gamerenderer_inst/n254"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/mux_67"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/mux_67"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
@@ -3145,25 +3145,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/n109"  />
-        <nitem  name = "testpattern_inst/n249"  />
-        <nitem  name = "testpattern_inst/n250"  />
-        <nitem  name = "testpattern_inst/n251"  />
-        <nitem  name = "testpattern_inst/n252"  />
-        <nitem  name = "testpattern_inst/n253"  />
-        <nitem  name = "testpattern_inst/n254"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[0]"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/n109"  />
+        <nitem  name = "gamerenderer_inst/n249"  />
+        <nitem  name = "gamerenderer_inst/n250"  />
+        <nitem  name = "gamerenderer_inst/n251"  />
+        <nitem  name = "gamerenderer_inst/n252"  />
+        <nitem  name = "gamerenderer_inst/n253"  />
+        <nitem  name = "gamerenderer_inst/n254"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_7"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_7"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
@@ -3187,25 +3187,25 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_81"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_75[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[0]"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_81"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_75[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "testpattern_inst/RGB_o_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
+    <instance  name = "gamerenderer_inst/RGB_o_5__I_0"  library = "work"  arch = "RTL"  type = "comb">
         <pins>
         <pitem  name = "d1[4]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
@@ -3229,21 +3229,21 @@
         </pins>
 
         <nets>
-        <nitem  name = "testpattern_inst/gnd"  />
-        <nitem  name = "testpattern_inst/pwr"  />
+        <nitem  name = "gamerenderer_inst/gnd"  />
+        <nitem  name = "gamerenderer_inst/pwr"  />
         <nitem  name = "RGB[5]"  />
         <nitem  name = "RGB[4]"  />
         <nitem  name = "RGB[3]"  />
         <nitem  name = "RGB[2]"  />
         <nitem  name = "RGB[1]"  />
         <nitem  name = "RGB[0]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_57"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[5]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[4]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[3]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[2]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[1]"  />
-        <nitem  name = "testpattern_inst/RGB_o_5__N_51[0]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_57"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[5]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[4]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[3]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[2]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[1]"  />
+        <nitem  name = "gamerenderer_inst/RGB_o_5__N_51[0]"  />
         </nets>
     </instance>
 
@@ -6323,9 +6323,9 @@
     </instance>
 
     <instance  name = "game_state_inst"  />
+    <instance  name = "gamerenderer_inst"  />
     <instance  name = "lscc_pll_inst"  />
     <instance  name = "pll_inst"  />
-    <instance  name = "testpattern_inst"  />
     <instance  name = "u_PLL_B"  />
     <instance  name = "vga_inst"  />
     <!--

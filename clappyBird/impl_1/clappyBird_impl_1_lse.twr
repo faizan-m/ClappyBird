@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.1.350.6
 
-Sun Apr 28 22:32:04 2019
+Wed May 01 11:16:58 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -277,16 +277,16 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
-\game_state_inst/bird_y_pos_i0_i7/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i6/Q     |    No arrival or required
-\game_state_inst/is_over_98/Q           |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i8/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i9/Q     |    No arrival or required
+\game_state_inst/pipe_x_start_182__i1/Q |    No arrival or required
 \game_state_inst/pipe_x_start_182__i8/Q |    No arrival or required
 \game_state_inst/pipe_x_start_182__i6/Q |    No arrival or required
 \game_state_inst/pipe_x_start_182__i7/Q |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i1/Q     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i2/Q     |    No arrival or required
+\game_state_inst/wait_counter_183__i7/Q |    No arrival or required
+\game_state_inst/wait_counter_183__i8/Q |    No arrival or required
+\game_state_inst/is_over_98/Q           |    No arrival or required
+\game_state_inst/wait_counter_183__i9/Q |    No arrival or required
+\game_state_inst/pipe_x_start_182__i2/Q |    No arrival or required
+\game_state_inst/pipe_x_start_182__i3/Q |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
@@ -298,16 +298,16 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-\game_state_inst/bird_y_pos_i0_i7/D     |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i7/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i5/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i9/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i2/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i1/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i3/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i0/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i8/SP    |    No arrival or required
-\game_state_inst/bird_y_pos_i0_i4/SP    |    No arrival or required
+\game_state_inst/wait_counter_183__i7/D |    No arrival or required
+\game_state_inst/wait_counter_183__i8/D |    No arrival or required
+\game_state_inst/pipe_x_start_182__i1/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i2/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i3/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i4/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i5/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i6/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i7/SR|    No arrival or required
+\game_state_inst/pipe_x_start_182__i8/SR|    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
@@ -1137,7 +1137,7 @@ Name                                      Cell/Site Name  Delay Name      Delay 
 ----------------------------------------  --------------  --------------  -----  ------------  ------  
 \game_state_inst/forty_eight_mhz_counter_181_190__i16/CK->\game_state_inst/forty_eight_mhz_counter_181_190__i16/Q
                                           FD1P3XZ         CK_TO_Q_DELAY   1.391         2.499  1       
-\game_state_inst/n4_adj_450                               NET DELAY       0.500         2.999  1       
+\game_state_inst/n4_adj_376                               NET DELAY       0.500         2.999  1       
 \game_state_inst/forty_eight_mhz_counter_181_190_add_4_17/C1->\game_state_inst/forty_eight_mhz_counter_181_190_add_4_17/S1
                                           FA2             C1_TO_S1_DELAY  0.450         3.449  1       
 \game_state_inst/n89                                      NET DELAY       0.500         3.949  1       

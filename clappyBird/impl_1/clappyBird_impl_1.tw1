@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant (64-bit) 1.0.1.350.6
 
-Sun Apr 28 22:32:06 2019
+Wed May 01 11:17:01 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -46,12 +46,12 @@ Performance:     High-Performance_1.2V
     4  DETAILED REPORT
         4.1  Setup Detailed Report
             4.1.1  Setup Path Details For Constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
-            4.1.2  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
-            4.1.3  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.1.2  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.1.3  Setup Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
         4.2  Hold Detailed Report
             4.2.1  Hold Path Details For Constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
-            4.2.2  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
-            4.2.3  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.2.2  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+            4.2.3  Hold Path Details For Constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 
 =====================================================================
                     End of Table of Contents
@@ -64,8 +64,8 @@ Performance:     High-Performance_1.2V
 1.1  SDC Constraints
 =====================
 create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
-create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 
 1.2  Combinational Loop
 ========================
@@ -172,18 +172,18 @@ nst/clk} -period 20.8333333333333 [get_
 nets clk]                               |   20.833 ns |    0.003 ns |    0   |   20.830 ns |  48.008 MHz |       20       |        0       
                                         |             |             |        |             |             |                |                
 create_generated_clock -name {pll_inst.                                                                                                    
-lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
-e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
-LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
-vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
-l_inst/u_PLL_B/OUTGLOBAL }]             |   39.800 ns |   27.944 ns |   11   |   11.856 ns |  84.345 MHz |       38       |        0       
-                                        |             |             |        |             |             |                |                
-create_generated_clock -name {pll_inst.                                                                                                    
 lscc_pll_inst.u_PLL_B/OUTCORE} -source                                                                                                     
 [get_pins {pll_inst/lscc_pll_inst/u_PLL                                                                                                    
 _B/REFERENCECLK}] -multiply_by 67 -divi                                                                                                    
 de_by 128 [get_pins {pll_inst/lscc_pll_                                                                                                    
 inst/u_PLL_B/OUTCORE }]                 |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
+e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
+LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
+vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
+l_inst/u_PLL_B/OUTGLOBAL }]             |   39.800 ns |   27.944 ns |   11   |   11.856 ns |  84.345 MHz |       38       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.2.2  Setup Critical Endpoint Summary 
@@ -232,18 +232,18 @@ nst/clk} -period 20.8333333333333 [get_
 nets clk]                               |    0.000 ns |    2.841 ns |    2   |        ---- |        ---- |       20       |        0       
                                         |             |             |        |             |             |                |                
 create_generated_clock -name {pll_inst.                                                                                                    
-lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
-e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
-LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
-vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
-l_inst/u_PLL_B/OUTGLOBAL }]             |    0.000 ns |    3.118 ns |    2   |        ---- |        ---- |       38       |        0       
-                                        |             |             |        |             |             |                |                
-create_generated_clock -name {pll_inst.                                                                                                    
 lscc_pll_inst.u_PLL_B/OUTCORE} -source                                                                                                     
 [get_pins {pll_inst/lscc_pll_inst/u_PLL                                                                                                    
 _B/REFERENCECLK}] -multiply_by 67 -divi                                                                                                    
 de_by 128 [get_pins {pll_inst/lscc_pll_                                                                                                    
 inst/u_PLL_B/OUTCORE }]                 |    -----    |    -----    |   ---- |        ---- |        ---- |        0       |        0       
+                                        |             |             |        |             |             |                |                
+create_generated_clock -name {pll_inst.                                                                                                    
+lscc_pll_inst.u_PLL_B/OUTGLOBAL} -sourc                                                                                                    
+e [get_pins {pll_inst/lscc_pll_inst/u_P                                                                                                    
+LL_B/REFERENCECLK}] -multiply_by 67 -di                                                                                                    
+vide_by 128 [get_pins {pll_inst/lscc_pl                                                                                                    
+l_inst/u_PLL_B/OUTGLOBAL }]             |    0.000 ns |    3.118 ns |    2   |        ---- |        ---- |       38       |        0       
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 3.3.2  Hold Critical Endpoint Summary 
@@ -289,14 +289,14 @@ Clocked but unconstrained timing start points
         Listing 10 Start Points         |           Type           
 -------------------------------------------------------------------
 game_state_inst/is_over_98/Q            |    No arrival or required
-game_state_inst/bird_y_pos_i0_i0/Q      |    No arrival or required
+game_state_inst/bird_y_pos_i0_i4/Q      |    No arrival or required
 game_state_inst/bird_y_pos_i0_i3/Q      |    No arrival or required
-game_state_inst/bird_y_pos_i0_i1/Q      |    No arrival or required
 game_state_inst/bird_y_pos_i0_i2/Q      |    No arrival or required
+game_state_inst/bird_y_pos_i0_i0/Q      |    No arrival or required
+game_state_inst/pipe_x_start_182__i2/Q  |    No arrival or required
+game_state_inst/pipe_x_start_182__i3/Q  |    No arrival or required
 game_state_inst/pipe_x_start_182__i9/Q  |    No arrival or required
 game_state_inst/pipe_x_start_182__i8/Q  |    No arrival or required
-game_state_inst/wait_counter_183__i9/Q  |    No arrival or required
-game_state_inst/wait_counter_183__i7/Q  |    No arrival or required
 game_state_inst/pipe_x_start_182__i7/Q  |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
@@ -318,14 +318,14 @@ Clocked but unconstrained timing end points
 {game_state_inst/pipe_x_start_182__i2/SR   game_state_inst/pipe_x_start_182__i3/SR}                           
                                         |    No arrival or required
 game_state_inst/pipe_x_start_182__i1/SR |    No arrival or required
-game_state_inst/bird_y_pos_i0_i0/D      |    No arrival or required
-game_state_inst/bird_y_pos_i0_i9/SP     |    No arrival or required
-{game_state_inst/bird_y_pos_i0_i7/SP   game_state_inst/bird_y_pos_i0_i8/SP}                           
+game_state_inst/is_over_98/D            |    No arrival or required
+{game_state_inst/wait_counter_183__i5/SR   game_state_inst/wait_counter_183__i6/SR}                           
                                         |    No arrival or required
-{game_state_inst/bird_y_pos_i0_i5/SP   game_state_inst/bird_y_pos_i0_i6/SP}                           
+{game_state_inst/wait_counter_183__i3/SR   game_state_inst/wait_counter_183__i4/SR}                           
                                         |    No arrival or required
-{game_state_inst/bird_y_pos_i0_i3/SP   game_state_inst/bird_y_pos_i0_i4/SP}                           
+{game_state_inst/wait_counter_183__i1/SR   game_state_inst/wait_counter_183__i2/SR}                           
                                         |    No arrival or required
+game_state_inst/wait_counter_183__i0/SR |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
@@ -1382,7 +1382,18 @@ clk                                                       NET DELAY      0.996  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-4.1.2  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+4.1.2  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.1.3  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
 38 endpoints scored, 0 timing errors detected.
 
@@ -2253,17 +2264,6 @@ clk2                                                      NET DELAY      0.996  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-4.1.3  Setup path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 4.2  Hold Detailed Report
 ==========================
 4.2.1  Hold path details for constraint: create_clock -name {pll_inst/lscc_pll_inst/clk} -period 20.8333333333333 [get_nets clk]
@@ -2827,7 +2827,18 @@ clk                                                       NET DELAY      0.996  
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-4.2.2  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
+4.2.2  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
+----------------------------------------------------------------------
+0 endpoints scored, 0 timing errors detected.
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    End of Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+4.2.3  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTGLOBAL} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] 
 ----------------------------------------------------------------------
 38 endpoints scored, 0 timing errors detected.
 
@@ -3484,17 +3495,6 @@ clk2                                                      NET DELAY      0.996  
 
 
 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    End of Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-4.2.3  Hold path details for constraint: create_generated_clock -name {pll_inst.lscc_pll_inst.u_PLL_B/OUTCORE} -source [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 128 [get_pins {pll_inst/lscc_pll_inst/u_PLL_B/OUTCORE }] 
-----------------------------------------------------------------------
-0 endpoints scored, 0 timing errors detected.
-
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-                    Detailed Report for timing paths 
- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
                     End of Detailed Report for timing paths 
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

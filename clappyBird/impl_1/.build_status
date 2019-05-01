@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1556505148">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1556505148"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1556505149"/>
+        <Milestone name="Export" build_result="2" build_time="1556723844">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1556723844"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1556723845"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1556505126">
-            <Task name="Map" build_result="2" update_result="0" update_time="1556505126"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1556505127"/>
+        <Milestone name="Map" build_result="2" build_time="1556723820">
+            <Task name="Map" build_result="2" update_result="0" update_time="1556723820"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1556723821"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1556505146">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1556505146"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1556505147"/>
+        <Milestone name="PAR" build_result="2" build_time="1556723841">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1556723841"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1556723843"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="1556389095"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1556505125">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1556505125"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1556505149"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1556723819">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1556723819"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1556723845"/>
         </Milestone>
-        <Report name="clappyBird_impl_1.bgn" last_build_time="1556505148" last_build_size="912"/>
-        <Report name="clappyBird_impl_1.bin" last_build_time="1556505148" last_build_size="104156"/>
-        <Report name="clappyBird_impl_1.lsedata" last_build_time="1556505123" last_build_size="304361"/>
-        <Report name="clappyBird_impl_1.tw1.html" last_build_time="1556505127" last_build_size="261633"/>
-        <Report name="clappyBird_impl_1.twr.html" last_build_time="1556505147" last_build_size="246577"/>
-        <Report name="clappyBird_impl_1.udb::log" last_build_time="1556505125" last_build_size="360756"/>
-        <Report name="clappyBird_impl_1.udb::phy_par" last_build_time="1556505146" last_build_size="580696"/>
-        <Report name="clappyBird_impl_1.udb::rtl" last_build_time="1556505123" last_build_size="582628"/>
-        <Report name="clappyBird_impl_1_map.udb" last_build_time="1556505126" last_build_size="541204"/>
-        <Report name="clappyBird_impl_1_vo.sdf" last_build_time="1556505149" last_build_size="195676"/>
-        <Report name="clappyBird_impl_1_vo.vo" last_build_time="1556505149" last_build_size="223925"/>
+        <Report name="clappyBird_impl_1.bgn" last_build_time="1556723843" last_build_size="912"/>
+        <Report name="clappyBird_impl_1.bin" last_build_time="1556723844" last_build_size="104156"/>
+        <Report name="clappyBird_impl_1.lsedata" last_build_time="1556723817" last_build_size="304902"/>
+        <Report name="clappyBird_impl_1.tw1.html" last_build_time="1556723821" last_build_size="261657"/>
+        <Report name="clappyBird_impl_1.twr.html" last_build_time="1556723843" last_build_size="246678"/>
+        <Report name="clappyBird_impl_1.udb::log" last_build_time="1556723819" last_build_size="361150"/>
+        <Report name="clappyBird_impl_1.udb::phy_par" last_build_time="1556723841" last_build_size="581547"/>
+        <Report name="clappyBird_impl_1.udb::rtl" last_build_time="1556723817" last_build_size="583479"/>
+        <Report name="clappyBird_impl_1_map.udb" last_build_time="1556723820" last_build_size="542329"/>
+        <Report name="clappyBird_impl_1_vo.sdf" last_build_time="1556723845" last_build_size="195697"/>
+        <Report name="clappyBird_impl_1_vo.vo" last_build_time="1556723845" last_build_size="224581"/>
     </Strategy>
 </BuildStatus>

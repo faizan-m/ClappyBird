@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant (64-bit) 1.0.1.350.6
-// Netlist written on Sun Apr 28 22:32:04 2019
+// Netlist written on Wed May 01 11:16:59 2019
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/workspace/gits/clappybird/clappybird/gamerenderer.vhd"
@@ -102,33 +102,38 @@ module top (input clappy, output [5:0]RGB, output HSYNC, output VSYNC,
         .VSYNC_N_43(VSYNC_N_43), .n877(n877), .n7775(n7775), .n4(n4_adj_472), 
         .n993(n993), .n7492(n7492), .n7470(n7470));   /* synthesis lineinfo="@3(112[12],112[15])"*/
     OB \RGB_pad[4]  (.I(RGB_c_4), .O(RGB[4]));   /* synthesis lineinfo="@3(8[4],8[7])"*/
-    game_state game_state_inst (.clappy_c(clappy_c), .game_over(game_over), 
-            .\bigbird_y_pos[8] (bigbird_y_pos[8]), .\RGB_o_5__N_109[0] (RGB_o_5__N_109[0]), 
-            .screen_colliding_N_237({screen_colliding_N_237}), .\bigbird_y_pos[3] (bigbird_y_pos[3]), 
-            .\bigbird_y_pos[1] (bigbird_y_pos[1]), .\bigbird_y_pos[2] (bigbird_y_pos[2]), 
-            .\p_x_str[9] (p_x_str[9]), .\p_x_str[8] (p_x_str[8]), .\p_x_str[7] (p_x_str[7]), 
+    game_renderer gamerenderer_inst (.\RGB_o_5__N_63[5] (RGB_o_5__N_63[5]), 
+            .col_num({col_num}), .row_num({row_num}), .\bigbird_y_pos[4] (bigbird_y_pos[4]), 
+            .\bigbird_y_pos[3] (bigbird_y_pos[3]), .game_over(game_over), 
+            .RGB_c_4(RGB_c_4), .\RGB_o_5__N_63[4] (RGB_o_5__N_63[4]), .\RGB_o_5__N_63[3] (RGB_o_5__N_63[3]), 
+            .\bigbird_y_pos[2] (bigbird_y_pos[2]), .\RGB_o_5__N_63[2] (RGB_o_5__N_63[2]), 
+            .\RGB_o_5__N_63[1] (RGB_o_5__N_63[1]), .\RGB_o_5__N_109[4] (RGB_o_5__N_109[4]), 
+            .\RGB_o_5__N_109[3] (RGB_o_5__N_109[3]), .\RGB_o_5__N_109[2] (RGB_o_5__N_109[2]), 
+            .n7492(n7492), .n1058(n1058), .\tail_colliding_N_353[9] (tail_colliding_N_353[9]), 
+            .\tail_colliding_N_353[8] (tail_colliding_N_353[8]), .\tail_colliding_N_353[7] (tail_colliding_N_353[7]), 
+            .\tail_colliding_N_353[6] (tail_colliding_N_353[6]), .\tail_colliding_N_353[5] (tail_colliding_N_353[5]), 
+            .\tail_colliding_N_353[4] (tail_colliding_N_353[4]), .\tail_colliding_N_353[3] (tail_colliding_N_353[3]), 
+            .\tail_colliding_N_353[2] (tail_colliding_N_353[2]), .\RGB_o_5__N_109[0] (RGB_o_5__N_109[0]), 
+            .valid_N_44(valid_N_44), .GND_net(GND_net), .\p_x_str[2] (p_x_str[2]), 
+            .\p_x_str[3] (p_x_str[3]), .\RGB_o_5__N_109[9] (RGB_o_5__N_109[9]), 
+            .\RGB_o_5__N_109[8] (RGB_o_5__N_109[8]), .\RGB_o_5__N_109[7] (RGB_o_5__N_109[7]), 
+            .\RGB_o_5__N_109[6] (RGB_o_5__N_109[6]), .\RGB_o_5__N_109[5] (RGB_o_5__N_109[5]), 
+            .\p_x_str[9] (p_x_str[9]), .\RGB_o_5__N_63[9] (RGB_o_5__N_63[9]), 
+            .n1023(n1023), .\p_x_str[8] (p_x_str[8]), .\p_x_str[7] (p_x_str[7]), 
             .\p_x_str[6] (p_x_str[6]), .\p_x_str[5] (p_x_str[5]), .\p_x_str[4] (p_x_str[4]), 
-            .\p_x_str[3] (p_x_str[3]), .\p_x_str[2] (p_x_str[2]), .\p_x_str[1] (p_x_str[1]), 
-            .\bigbird_y_pos[9] (bigbird_y_pos[9]), .is_over_N_199(is_over_N_199), 
-            .reset(reset), .n7088(n7088), .GND_net(GND_net), .\bigbird_y_pos[5] (bigbird_y_pos[5]), 
-            .clk(clk), .\beak_colliding_N_271[7] (beak_colliding_N_271[7]), 
-            .\beak_colliding_N_271[8] (beak_colliding_N_271[8]), .\beak_colliding_N_271[6] (beak_colliding_N_271[6]), 
-            .n2030(n2030), .\RGB_o_5__N_63[7] (RGB_o_5__N_63[7]), .\RGB_o_5__N_63[9] (RGB_o_5__N_63[9]), 
-            .\RGB_o_5__N_63[8] (RGB_o_5__N_63[8]), .beak_colliding_N_281(beak_colliding_N_281), 
-            .n2006(n2006), .\beak_colliding_N_271[2] (beak_colliding_N_271[2]), 
+            .\p_x_str[1] (p_x_str[1]), .\RGB_o_5__N_63[8] (RGB_o_5__N_63[8]), 
+            .\RGB_o_5__N_63[7] (RGB_o_5__N_63[7]), .\RGB_o_5__N_63[6] (RGB_o_5__N_63[6]), 
+            .n877(n877), .\bigbird_y_pos[1] (bigbird_y_pos[1]), .\beak_colliding_N_271[9] (beak_colliding_N_271[9]), 
+            .\beak_colliding_N_271[8] (beak_colliding_N_271[8]), .\beak_colliding_N_271[7] (beak_colliding_N_271[7]), 
+            .\beak_colliding_N_271[6] (beak_colliding_N_271[6]), .\bigbird_y_pos[8] (bigbird_y_pos[8]), 
+            .\bigbird_y_pos[9] (bigbird_y_pos[9]), .\bigbird_y_pos[6] (bigbird_y_pos[6]), 
+            .\bigbird_y_pos[7] (bigbird_y_pos[7]), .\bigbird_y_pos[5] (bigbird_y_pos[5]), 
             .\beak_colliding_N_271[5] (beak_colliding_N_271[5]), .\beak_colliding_N_271[4] (beak_colliding_N_271[4]), 
-            .\beak_colliding_N_271[3] (beak_colliding_N_271[3]), .n6931(n6931), 
-            .\bigbird_y_pos[7] (bigbird_y_pos[7]), .\RGB_o_5__N_109[4] (RGB_o_5__N_109[4]), 
-            .\RGB_o_5__N_109[2] (RGB_o_5__N_109[2]), .\RGB_o_5__N_109[3] (RGB_o_5__N_109[3]), 
-            .n6925(n6925), .\bigbird_y_pos[6] (bigbird_y_pos[6]), .\bigbird_y_pos[4] (bigbird_y_pos[4]), 
-            .head_colliding_N_305(head_colliding_N_305), .\tail_colliding_N_353[2] (tail_colliding_N_353[2]), 
-            .\tail_colliding_N_353[5] (tail_colliding_N_353[5]), .\tail_colliding_N_353[4] (tail_colliding_N_353[4]), 
-            .\tail_colliding_N_353[3] (tail_colliding_N_353[3]), .n2042(n2042), 
-            .\RGB_o_5__N_63[5] (RGB_o_5__N_63[5]), .\RGB_o_5__N_63[4] (RGB_o_5__N_63[4]), 
-            .n1048(n1048), .\RGB_o_5__N_63[1] (RGB_o_5__N_63[1]), .\RGB_o_5__N_63[3] (RGB_o_5__N_63[3]), 
-            .\RGB_o_5__N_63[2] (RGB_o_5__N_63[2]), .n2026(n2026), .n6915(n6915), 
-            .\RGB_o_5__N_109[5] (RGB_o_5__N_109[5]), .n1966(n1966), .n1049(n1049), 
-            .\RGB_o_5__N_63[6] (RGB_o_5__N_63[6]), .n1924(n1924), .n376(n376));   /* synthesis lineinfo="@3(137[19],137[29])"*/
+            .\beak_colliding_N_271[3] (beak_colliding_N_271[3]), .\beak_colliding_N_271[2] (beak_colliding_N_271[2]), 
+            .screen_colliding_N_237({screen_colliding_N_237}), .n7470(n7470), 
+            .RGB_c_5(RGB_c_5), .n7508(n7508), .n993(n993), .n7514(n7514), 
+            .RGB_c_0(RGB_c_0), .n4(n4_adj_472), .n1053(n1053), .n7775(n7775), 
+            .RGB_c_2(RGB_c_2), .RGB_c_1(RGB_c_1), .RGB_c_3(RGB_c_3));   /* synthesis lineinfo="@3(122[21],122[34])"*/
     (* lut_function="(!(A+!(B+(C+(D)))))" *) LUT4 i1_4_lut (.A(reset), .B(game_over), 
             .C(n20), .D(n4), .Z(n7088));   /* synthesis lineinfo="@1(65[3],73[10])"*/
     defparam i1_4_lut.INIT = "0x5554";
@@ -201,40 +206,35 @@ module top (input clappy, output [5:0]RGB, output HSYNC, output VSYNC,
     (* lut_function="(!(A))" *) LUT4 i1243_2_lut_3_lut_2_lut (.A(game_over), 
             .Z(is_over_N_199));
     defparam i1243_2_lut_3_lut_2_lut.INIT = "0x5555";
-    game_renderer testpattern_inst (.\RGB_o_5__N_63[5] (RGB_o_5__N_63[5]), 
-            .col_num({col_num}), .row_num({row_num}), .\bigbird_y_pos[4] (bigbird_y_pos[4]), 
-            .\bigbird_y_pos[3] (bigbird_y_pos[3]), .game_over(game_over), 
-            .RGB_c_4(RGB_c_4), .\RGB_o_5__N_63[4] (RGB_o_5__N_63[4]), .\RGB_o_5__N_63[3] (RGB_o_5__N_63[3]), 
-            .\bigbird_y_pos[2] (bigbird_y_pos[2]), .\RGB_o_5__N_63[2] (RGB_o_5__N_63[2]), 
-            .\RGB_o_5__N_63[1] (RGB_o_5__N_63[1]), .\RGB_o_5__N_109[4] (RGB_o_5__N_109[4]), 
-            .\RGB_o_5__N_109[3] (RGB_o_5__N_109[3]), .\RGB_o_5__N_109[2] (RGB_o_5__N_109[2]), 
-            .n7492(n7492), .n1058(n1058), .\tail_colliding_N_353[9] (tail_colliding_N_353[9]), 
-            .\tail_colliding_N_353[8] (tail_colliding_N_353[8]), .\tail_colliding_N_353[7] (tail_colliding_N_353[7]), 
-            .\tail_colliding_N_353[6] (tail_colliding_N_353[6]), .\tail_colliding_N_353[5] (tail_colliding_N_353[5]), 
-            .\tail_colliding_N_353[4] (tail_colliding_N_353[4]), .\tail_colliding_N_353[3] (tail_colliding_N_353[3]), 
-            .\tail_colliding_N_353[2] (tail_colliding_N_353[2]), .\RGB_o_5__N_109[0] (RGB_o_5__N_109[0]), 
-            .valid_N_44(valid_N_44), .GND_net(GND_net), .\p_x_str[2] (p_x_str[2]), 
-            .\p_x_str[3] (p_x_str[3]), .\RGB_o_5__N_109[9] (RGB_o_5__N_109[9]), 
-            .\RGB_o_5__N_109[8] (RGB_o_5__N_109[8]), .\RGB_o_5__N_109[7] (RGB_o_5__N_109[7]), 
-            .\RGB_o_5__N_109[6] (RGB_o_5__N_109[6]), .\RGB_o_5__N_109[5] (RGB_o_5__N_109[5]), 
-            .\p_x_str[9] (p_x_str[9]), .\RGB_o_5__N_63[9] (RGB_o_5__N_63[9]), 
-            .n1023(n1023), .\p_x_str[8] (p_x_str[8]), .\p_x_str[7] (p_x_str[7]), 
-            .\p_x_str[6] (p_x_str[6]), .\p_x_str[5] (p_x_str[5]), .\p_x_str[4] (p_x_str[4]), 
-            .\p_x_str[1] (p_x_str[1]), .\RGB_o_5__N_63[8] (RGB_o_5__N_63[8]), 
-            .\RGB_o_5__N_63[7] (RGB_o_5__N_63[7]), .\RGB_o_5__N_63[6] (RGB_o_5__N_63[6]), 
-            .n877(n877), .\bigbird_y_pos[1] (bigbird_y_pos[1]), .\beak_colliding_N_271[9] (beak_colliding_N_271[9]), 
-            .\beak_colliding_N_271[8] (beak_colliding_N_271[8]), .\beak_colliding_N_271[7] (beak_colliding_N_271[7]), 
-            .\beak_colliding_N_271[6] (beak_colliding_N_271[6]), .\bigbird_y_pos[8] (bigbird_y_pos[8]), 
-            .\bigbird_y_pos[9] (bigbird_y_pos[9]), .\bigbird_y_pos[6] (bigbird_y_pos[6]), 
-            .\bigbird_y_pos[7] (bigbird_y_pos[7]), .\bigbird_y_pos[5] (bigbird_y_pos[5]), 
-            .\beak_colliding_N_271[5] (beak_colliding_N_271[5]), .\beak_colliding_N_271[4] (beak_colliding_N_271[4]), 
-            .\beak_colliding_N_271[3] (beak_colliding_N_271[3]), .\beak_colliding_N_271[2] (beak_colliding_N_271[2]), 
-            .screen_colliding_N_237({screen_colliding_N_237}), .n7470(n7470), 
-            .RGB_c_5(RGB_c_5), .n7508(n7508), .n993(n993), .n7514(n7514), 
-            .RGB_c_0(RGB_c_0), .n4(n4_adj_472), .n1053(n1053), .n7775(n7775), 
-            .RGB_c_2(RGB_c_2), .RGB_c_1(RGB_c_1), .RGB_c_3(RGB_c_3));   /* synthesis lineinfo="@3(122[20],122[33])"*/
     pll pll_inst (.GND_net(GND_net), .clk(clk), .PLL_out_c(PLL_out_c), 
         .clk2(clk2));   /* synthesis lineinfo="@3(102[12],102[15])"*/
+    game_state game_state_inst (.clappy_c(clappy_c), .game_over(game_over), 
+            .\bigbird_y_pos[8] (bigbird_y_pos[8]), .\RGB_o_5__N_109[0] (RGB_o_5__N_109[0]), 
+            .screen_colliding_N_237({screen_colliding_N_237}), .\bigbird_y_pos[3] (bigbird_y_pos[3]), 
+            .\bigbird_y_pos[1] (bigbird_y_pos[1]), .\bigbird_y_pos[2] (bigbird_y_pos[2]), 
+            .\p_x_str[9] (p_x_str[9]), .\p_x_str[8] (p_x_str[8]), .\p_x_str[7] (p_x_str[7]), 
+            .\p_x_str[6] (p_x_str[6]), .\p_x_str[5] (p_x_str[5]), .\p_x_str[4] (p_x_str[4]), 
+            .\p_x_str[3] (p_x_str[3]), .\p_x_str[2] (p_x_str[2]), .\p_x_str[1] (p_x_str[1]), 
+            .\bigbird_y_pos[9] (bigbird_y_pos[9]), .is_over_N_199(is_over_N_199), 
+            .reset(reset), .n7088(n7088), .GND_net(GND_net), .\bigbird_y_pos[5] (bigbird_y_pos[5]), 
+            .clk(clk), .\beak_colliding_N_271[7] (beak_colliding_N_271[7]), 
+            .\beak_colliding_N_271[8] (beak_colliding_N_271[8]), .\beak_colliding_N_271[6] (beak_colliding_N_271[6]), 
+            .n2030(n2030), .\RGB_o_5__N_63[7] (RGB_o_5__N_63[7]), .\RGB_o_5__N_63[9] (RGB_o_5__N_63[9]), 
+            .\RGB_o_5__N_63[8] (RGB_o_5__N_63[8]), .beak_colliding_N_281(beak_colliding_N_281), 
+            .n2006(n2006), .\beak_colliding_N_271[2] (beak_colliding_N_271[2]), 
+            .\beak_colliding_N_271[5] (beak_colliding_N_271[5]), .\beak_colliding_N_271[4] (beak_colliding_N_271[4]), 
+            .\beak_colliding_N_271[3] (beak_colliding_N_271[3]), .n6931(n6931), 
+            .\bigbird_y_pos[7] (bigbird_y_pos[7]), .\RGB_o_5__N_109[4] (RGB_o_5__N_109[4]), 
+            .\RGB_o_5__N_109[2] (RGB_o_5__N_109[2]), .\RGB_o_5__N_109[3] (RGB_o_5__N_109[3]), 
+            .n6925(n6925), .\bigbird_y_pos[6] (bigbird_y_pos[6]), .\bigbird_y_pos[4] (bigbird_y_pos[4]), 
+            .head_colliding_N_305(head_colliding_N_305), .\tail_colliding_N_353[2] (tail_colliding_N_353[2]), 
+            .\tail_colliding_N_353[5] (tail_colliding_N_353[5]), .\tail_colliding_N_353[4] (tail_colliding_N_353[4]), 
+            .\tail_colliding_N_353[3] (tail_colliding_N_353[3]), .n2042(n2042), 
+            .\RGB_o_5__N_63[5] (RGB_o_5__N_63[5]), .\RGB_o_5__N_63[4] (RGB_o_5__N_63[4]), 
+            .n1048(n1048), .\RGB_o_5__N_63[1] (RGB_o_5__N_63[1]), .\RGB_o_5__N_63[3] (RGB_o_5__N_63[3]), 
+            .\RGB_o_5__N_63[2] (RGB_o_5__N_63[2]), .n2026(n2026), .n6915(n6915), 
+            .\RGB_o_5__N_109[5] (RGB_o_5__N_109[5]), .n1966(n1966), .n1049(n1049), 
+            .\RGB_o_5__N_63[6] (RGB_o_5__N_63[6]), .n1924(n1924), .n376(n376));   /* synthesis lineinfo="@3(137[19],137[29])"*/
     VHI i7802 (.Z(VCC_net));
     
 endmodule
@@ -463,532 +463,6 @@ module vga (output [9:0]row_num, input clk2, output [9:0]col_num, output n1053,
 endmodule
 
 //
-// Verilog Description of module game_state
-//
-
-module game_state (input clappy_c, output game_over, output \bigbird_y_pos[8] , 
-            output \RGB_o_5__N_109[0] , input [9:0]screen_colliding_N_237, 
-            output \bigbird_y_pos[3] , output \bigbird_y_pos[1] , output \bigbird_y_pos[2] , 
-            output \p_x_str[9] , output \p_x_str[8] , output \p_x_str[7] , 
-            output \p_x_str[6] , output \p_x_str[5] , output \p_x_str[4] , 
-            output \p_x_str[3] , output \p_x_str[2] , output \p_x_str[1] , 
-            output \bigbird_y_pos[9] , input is_over_N_199, output reset, 
-            input n7088, input GND_net, output \bigbird_y_pos[5] , input clk, 
-            input \beak_colliding_N_271[7] , input \beak_colliding_N_271[8] , 
-            input \beak_colliding_N_271[6] , output n2030, input \RGB_o_5__N_63[7] , 
-            input \RGB_o_5__N_63[9] , input \RGB_o_5__N_63[8] , output beak_colliding_N_281, 
-            output n2006, input \beak_colliding_N_271[2] , input \beak_colliding_N_271[5] , 
-            input \beak_colliding_N_271[4] , input \beak_colliding_N_271[3] , 
-            output n6931, output \bigbird_y_pos[7] , input \RGB_o_5__N_109[4] , 
-            input \RGB_o_5__N_109[2] , input \RGB_o_5__N_109[3] , output n6925, 
-            output \bigbird_y_pos[6] , output \bigbird_y_pos[4] , output head_colliding_N_305, 
-            input \tail_colliding_N_353[2] , input \tail_colliding_N_353[5] , 
-            input \tail_colliding_N_353[4] , input \tail_colliding_N_353[3] , 
-            output n2042, input \RGB_o_5__N_63[5] , input \RGB_o_5__N_63[4] , 
-            output n1048, input \RGB_o_5__N_63[1] , input \RGB_o_5__N_63[3] , 
-            input \RGB_o_5__N_63[2] , output n2026, output n6915, input \RGB_o_5__N_109[5] , 
-            output n1966, output n1049, input \RGB_o_5__N_63[6] , output n1924, 
-            input n376);
-    
-    (* is_clock=1 *) wire [22:0]forty_eight_mhz_counter;   /* synthesis lineinfo="@1(20[9],20[32])"*/
-    (* is_clock=1 *) wire clk;   /* synthesis lineinfo="@3(79[8],79[11])"*/
-    
-    wire bird_y_pos_9__N_192;
-    wire [10:0]n62;
-    
-    wire n1078, n1095, reset_N_197;
-    wire [9:0]n45;
-    wire [9:0]wait_counter;   /* synthesis lineinfo="@1(29[9],29[21])"*/
-    
-    wire n6894, n6, n4;
-    wire [9:0]n45_adj_459;
-    
-    wire VCC_net, n6390, n8944, n6392, n6388, n8941;
-    wire [19:0]n85;
-    wire [19:0]n149;
-    
-    wire n1970, n4_adj_452, n1920, n15_adj_453, n14_adj_454, n5_adj_455, 
-        n6_adj_456, n1046, n8_adj_457, n6386, n8938, n6355, n8974, 
-        n6357, n8971, n8935, n6373, n9001, n6_adj_458, n6371, 
-        n8998, n6369, n8995, n6367, n8992, n6365, n8989, n6363, 
-        n8986, n6361, n8983, n6359, n8980, n8977, n6437, n8932, 
-        n6435, n8893, n6433, n8890, n6431, n8887, n6429, n8884, 
-        n8881, n6425, n8929, n6423, n8926, n6421, n8923, n6419, 
-        n8920, n8917, n6394, n8950, n8947, GND_net_c;
-    
-    (* lut_function="(!((B)+!A))" *) LUT4 i108_2_lut (.A(clappy_c), .B(game_over), 
-            .Z(bird_y_pos_9__N_192));   /* synthesis lineinfo="@3(7[4],7[10])"*/
-    defparam i108_2_lut.INIT = "0x2222";
-    FD1P3XZ bird_y_pos_i0_i0 (.D(n62[1]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\RGB_o_5__N_109[0] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i0.REGSET = "RESET";
-    defparam bird_y_pos_i0_i0.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i3 (.D(n62[4]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[3] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i3.REGSET = "RESET";
-    defparam bird_y_pos_i0_i3.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B (C (D))))" *) LUT4 i3_4_lut (.A(game_over), .B(reset_N_197), 
-            .C(clappy_c), .D(screen_colliding_N_237[9]), .Z(n1095));
-    defparam i3_4_lut.INIT = "0x8000";
-    FD1P3XZ bird_y_pos_i0_i1 (.D(n62[2]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[1] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i1.REGSET = "RESET";
-    defparam bird_y_pos_i0_i1.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i2 (.D(n62[3]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[2] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i2.REGSET = "SET";
-    defparam bird_y_pos_i0_i2.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i9 (.D(n45[9]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[9] ));
-    defparam pipe_x_start_182__i9.REGSET = "SET";
-    defparam pipe_x_start_182__i9.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i8 (.D(n45[8]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[8] ));
-    defparam pipe_x_start_182__i8.REGSET = "SET";
-    defparam pipe_x_start_182__i8.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i4_4_lut (.A(wait_counter[9]), 
-            .B(n6894), .C(wait_counter[7]), .D(n6), .Z(reset_N_197));
-    defparam i4_4_lut.INIT = "0xfffe";
-    FD1P3XZ pipe_x_start_182__i7 (.D(n45[7]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[7] ));
-    defparam pipe_x_start_182__i7.REGSET = "SET";
-    defparam pipe_x_start_182__i7.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i6 (.D(n45[6]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[6] ));
-    defparam pipe_x_start_182__i6.REGSET = "SET";
-    defparam pipe_x_start_182__i6.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i5 (.D(n45[5]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[5] ));
-    defparam pipe_x_start_182__i5.REGSET = "SET";
-    defparam pipe_x_start_182__i5.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i4 (.D(n45[4]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[4] ));
-    defparam pipe_x_start_182__i4.REGSET = "RESET";
-    defparam pipe_x_start_182__i4.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i3 (.D(n45[3]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[3] ));
-    defparam pipe_x_start_182__i3.REGSET = "SET";
-    defparam pipe_x_start_182__i3.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ pipe_x_start_182__i2 (.D(n45[2]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[2] ));
-    defparam pipe_x_start_182__i2.REGSET = "RESET";
-    defparam pipe_x_start_182__i2.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B (C+(D))))" *) LUT4 i2_4_lut (.A(wait_counter[5]), 
-            .B(wait_counter[4]), .C(wait_counter[3]), .D(n4), .Z(n6894));
-    defparam i2_4_lut.INIT = "0x8880";
-    FD1P3XZ pipe_x_start_182__i1 (.D(n45[1]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(game_over), .Q(\p_x_str[1] ));
-    defparam pipe_x_start_182__i1.REGSET = "RESET";
-    defparam pipe_x_start_182__i1.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i9 (.D(n62[10]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[9] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i9.REGSET = "RESET";
-    defparam bird_y_pos_i0_i9.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i0 (.D(n45_adj_459[0]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[0]));
-    defparam wait_counter_183__i0.REGSET = "RESET";
-    defparam wait_counter_183__i0.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i9 (.D(n45_adj_459[9]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[9]));
-    defparam wait_counter_183__i9.REGSET = "RESET";
-    defparam wait_counter_183__i9.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(wait_counter[6]), .B(wait_counter[8]), 
-            .Z(n6));
-    defparam i1_2_lut.INIT = "0xeeee";
-    FD1P3XZ wait_counter_183__i8 (.D(n45_adj_459[8]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[8]));
-    defparam wait_counter_183__i8.REGSET = "RESET";
-    defparam wait_counter_183__i8.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i7 (.D(n45_adj_459[7]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[7]));
-    defparam wait_counter_183__i7.REGSET = "RESET";
-    defparam wait_counter_183__i7.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A+(B (C)))" *) LUT4 i1_3_lut (.A(wait_counter[2]), .B(wait_counter[0]), 
-            .C(wait_counter[1]), .Z(n4));
-    defparam i1_3_lut.INIT = "0xeaea";
-    FD1P3XZ wait_counter_183__i6 (.D(n45_adj_459[6]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[6]));
-    defparam wait_counter_183__i6.REGSET = "RESET";
-    defparam wait_counter_183__i6.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i5 (.D(n45_adj_459[5]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[5]));
-    defparam wait_counter_183__i5.REGSET = "RESET";
-    defparam wait_counter_183__i5.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i4 (.D(n45_adj_459[4]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[4]));
-    defparam wait_counter_183__i4.REGSET = "RESET";
-    defparam wait_counter_183__i4.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i3 (.D(n45_adj_459[3]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[3]));
-    defparam wait_counter_183__i3.REGSET = "RESET";
-    defparam wait_counter_183__i3.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i2 (.D(n45_adj_459[2]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[2]));
-    defparam wait_counter_183__i2.REGSET = "RESET";
-    defparam wait_counter_183__i2.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ wait_counter_183__i1 (.D(n45_adj_459[1]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(is_over_N_199), .Q(wait_counter[1]));
-    defparam wait_counter_183__i1.REGSET = "RESET";
-    defparam wait_counter_183__i1.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ is_over_98 (.D(n7088), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
-            .SR(GND_net_c), .Q(game_over));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam is_over_98.REGSET = "RESET";
-    defparam is_over_98.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B (C)))" *) LUT4 reset_I_0_101_3_lut (.A(game_over), 
-            .B(reset_N_197), .C(clappy_c), .Z(reset));   /* synthesis lineinfo="@1(92[20],92[70])"*/
-    defparam reset_I_0_101_3_lut.INIT = "0x8080";
-    FD1P3XZ bird_y_pos_i0_i5 (.D(n62[6]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[5] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i5.REGSET = "SET";
-    defparam bird_y_pos_i0_i5.SRMODE = "CE_OVER_LSR";
-    FA2 wait_counter_183_add_4_7 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[5]), 
-        .D0(n6390), .CI0(n6390), .A1(GND_net), .B1(GND_net), .C1(wait_counter[6]), 
-        .D1(n8944), .CI1(n8944), .CO0(n8944), .CO1(n6392), .S0(n45_adj_459[5]), 
-        .S1(n45_adj_459[6]));
-    defparam wait_counter_183_add_4_7.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_7.INIT1 = "0xc33c";
-    FA2 wait_counter_183_add_4_5 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[3]), 
-        .D0(n6388), .CI0(n6388), .A1(GND_net), .B1(GND_net), .C1(wait_counter[4]), 
-        .D1(n8941), .CI1(n8941), .CO0(n8941), .CO1(n6390), .S0(n45_adj_459[3]), 
-        .S1(n45_adj_459[4]));
-    defparam wait_counter_183_add_4_5.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_5.INIT1 = "0xc33c";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i19 (.D(n85[19]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(forty_eight_mhz_counter[19]));
-    defparam forty_eight_mhz_counter_181_190__i19.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i19.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i18 (.D(n85[18]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[18]));
-    defparam forty_eight_mhz_counter_181_190__i18.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i18.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i17 (.D(n85[17]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[17]));
-    defparam forty_eight_mhz_counter_181_190__i17.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i17.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i16 (.D(n85[16]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[16]));
-    defparam forty_eight_mhz_counter_181_190__i16.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i16.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i15 (.D(n85[15]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[15]));
-    defparam forty_eight_mhz_counter_181_190__i15.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i15.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i14 (.D(n85[14]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[14]));
-    defparam forty_eight_mhz_counter_181_190__i14.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i14.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i13 (.D(n85[13]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[13]));
-    defparam forty_eight_mhz_counter_181_190__i13.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i13.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i12 (.D(n85[12]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[12]));
-    defparam forty_eight_mhz_counter_181_190__i12.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i12.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1589_4_lut (.A(\beak_colliding_N_271[7] ), 
-            .B(\beak_colliding_N_271[8] ), .C(n1970), .D(\beak_colliding_N_271[6] ), 
-            .Z(n2030));
-    defparam i1589_4_lut.INIT = "0xccc8";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i11 (.D(n85[11]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[11]));
-    defparam forty_eight_mhz_counter_181_190__i11.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i11.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i10 (.D(n85[10]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[10]));
-    defparam forty_eight_mhz_counter_181_190__i10.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i10.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B+(C))+!A (B+(C (D))))" *) LUT4 i280_4_lut (.A(\RGB_o_5__N_63[7] ), 
-            .B(\RGB_o_5__N_63[9] ), .C(\RGB_o_5__N_63[8] ), .D(n4_adj_452), 
-            .Z(beak_colliding_N_281));
-    defparam i280_4_lut.INIT = "0xfcec";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i9 (.D(n85[9]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[9]));
-    defparam forty_eight_mhz_counter_181_190__i9.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i9.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i8 (.D(n85[8]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[8]));
-    defparam forty_eight_mhz_counter_181_190__i8.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i8.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i7 (.D(n85[7]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[7]));
-    defparam forty_eight_mhz_counter_181_190__i7.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i7.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i6 (.D(n85[6]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[6]));
-    defparam forty_eight_mhz_counter_181_190__i6.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i6.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i5 (.D(n85[5]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[5]));
-    defparam forty_eight_mhz_counter_181_190__i5.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i5.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i4 (.D(n85[4]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[4]));
-    defparam forty_eight_mhz_counter_181_190__i4.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i4.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1565_4_lut (.A(n1920), 
-            .B(\p_x_str[8] ), .C(\p_x_str[6] ), .D(\p_x_str[7] ), .Z(n2006));
-    defparam i1565_4_lut.INIT = "0xccc8";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1529_4_lut (.A(\beak_colliding_N_271[2] ), 
-            .B(\beak_colliding_N_271[5] ), .C(\beak_colliding_N_271[4] ), 
-            .D(\beak_colliding_N_271[3] ), .Z(n1970));
-    defparam i1529_4_lut.INIT = "0xc8c0";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i3 (.D(n85[3]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[3]));
-    defparam forty_eight_mhz_counter_181_190__i3.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i3.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i2 (.D(n85[2]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[2]));
-    defparam forty_eight_mhz_counter_181_190__i2.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i2.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i8_4_lut (.A(n15_adj_453), .B(screen_colliding_N_237[4]), 
-            .C(n14_adj_454), .D(screen_colliding_N_237[0]), .Z(n6931));
-    defparam i8_4_lut.INIT = "0xfffe";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i1 (.D(n85[1]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[1]));
-    defparam forty_eight_mhz_counter_181_190__i1.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i1.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i7 (.D(n62[8]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[7] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i7.REGSET = "RESET";
-    defparam bird_y_pos_i0_i7.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i6 (.D(n62[7]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[6] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i6.REGSET = "SET";
-    defparam bird_y_pos_i0_i6.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(\RGB_o_5__N_109[4] ), 
-            .B(\RGB_o_5__N_109[2] ), .C(\RGB_o_5__N_109[3] ), .Z(n6925));
-    defparam i2_3_lut.INIT = "0xfefe";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i6_4_lut (.A(screen_colliding_N_237[5]), 
-            .B(screen_colliding_N_237[1]), .C(screen_colliding_N_237[6]), 
-            .D(screen_colliding_N_237[2]), .Z(n15_adj_453));
-    defparam i6_4_lut.INIT = "0xfffe";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i5_3_lut (.A(screen_colliding_N_237[8]), 
-            .B(screen_colliding_N_237[7]), .C(screen_colliding_N_237[3]), 
-            .Z(n14_adj_454));
-    defparam i5_3_lut.INIT = "0xfefe";
-    FD1P3XZ forty_eight_mhz_counter_181_190__i0 (.D(n85[0]), .SP(VCC_net), 
-            .CK(clk), .SR(GND_net_c), .Q(n149[0]));
-    defparam forty_eight_mhz_counter_181_190__i0.REGSET = "RESET";
-    defparam forty_eight_mhz_counter_181_190__i0.SRMODE = "CE_OVER_LSR";
-    FD1P3XZ bird_y_pos_i0_i4 (.D(n62[5]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[4] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i4.REGSET = "RESET";
-    defparam bird_y_pos_i0_i4.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(A (B+(C+(D)))+!A (B+(D)))" *) LUT4 i1_4_lut (.A(n5_adj_455), 
-            .B(\RGB_o_5__N_63[9] ), .C(n6_adj_456), .D(\RGB_o_5__N_63[8] ), 
-            .Z(head_colliding_N_305));
-    defparam i1_4_lut.INIT = "0xffec";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1601_4_lut (.A(\tail_colliding_N_353[2] ), 
-            .B(\tail_colliding_N_353[5] ), .C(\tail_colliding_N_353[4] ), 
-            .D(\tail_colliding_N_353[3] ), .Z(n2042));
-    defparam i1601_4_lut.INIT = "0xc8c0";
-    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1_4_lut_adj_53 (.A(\RGB_o_5__N_63[5] ), 
-            .B(n1046), .C(\RGB_o_5__N_63[4] ), .D(n8_adj_457), .Z(n1048));
-    defparam i1_4_lut_adj_53.INIT = "0xccc8";
-    FA2 wait_counter_183_add_4_3 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[1]), 
-        .D0(n6386), .CI0(n6386), .A1(GND_net), .B1(GND_net), .C1(wait_counter[2]), 
-        .D1(n8938), .CI1(n8938), .CO0(n8938), .CO1(n6388), .S0(n45_adj_459[1]), 
-        .S1(n45_adj_459[2]));
-    defparam wait_counter_183_add_4_3.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_3.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_3 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[1]), .D0(n6355), .CI0(n6355), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[2]), .D1(n8974), .CI1(n8974), .CO0(n8974), .CO1(n6357), 
-        .S0(n85[1]), .S1(n85[2]));
-    defparam forty_eight_mhz_counter_181_190_add_4_3.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_3.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_1 (.A0(GND_net), .B0(GND_net), 
-        .C0(GND_net), .A1(GND_net), .B1(VCC_net), .C1(n149[0]), .D1(n8971), 
-        .CI1(n8971), .CO0(n8971), .CO1(n6355), .S1(n85[0]));
-    defparam forty_eight_mhz_counter_181_190_add_4_1.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_1.INIT1 = "0xc33c";
-    FA2 wait_counter_183_add_4_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
-        .A1(GND_net), .B1(VCC_net), .C1(wait_counter[0]), .D1(n8935), 
-        .CI1(n8935), .CO0(n8935), .CO1(n6386), .S1(n45_adj_459[0]));
-    defparam wait_counter_183_add_4_1.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_1.INIT1 = "0xc33c";
-    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i350_3_lut (.A(\RGB_o_5__N_63[1] ), 
-            .B(\RGB_o_5__N_63[3] ), .C(\RGB_o_5__N_63[2] ), .Z(n8_adj_457));
-    defparam i350_3_lut.INIT = "0xc8c8";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1585_4_lut (.A(\bigbird_y_pos[2] ), 
-            .B(\bigbird_y_pos[5] ), .C(\bigbird_y_pos[4] ), .D(\bigbird_y_pos[3] ), 
-            .Z(n2026));
-    defparam i1585_4_lut.INIT = "0xc8c0";
-    FA2 forty_eight_mhz_counter_181_190_add_4_21 (.A0(GND_net), .B0(GND_net), 
-        .C0(forty_eight_mhz_counter[19]), .D0(n6373), .CI0(n6373), .A1(GND_net), 
-        .B1(GND_net), .C1(GND_net), .D1(n9001), .CI1(n9001), .CO0(n9001), 
-        .S0(n85[19]));
-    defparam forty_eight_mhz_counter_181_190_add_4_21.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_21.INIT1 = "0xc33c";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i4_4_lut_adj_54 (.A(\p_x_str[6] ), 
-            .B(\p_x_str[5] ), .C(\p_x_str[7] ), .D(n6_adj_458), .Z(n6915));
-    defparam i4_4_lut_adj_54.INIT = "0xfffe";
-    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i1_4_lut_adj_55 (.A(\p_x_str[3] ), 
-            .B(\p_x_str[4] ), .C(\p_x_str[1] ), .D(\p_x_str[2] ), .Z(n6_adj_458));
-    defparam i1_4_lut_adj_55.INIT = "0xeccc";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1525_4_lut (.A(\RGB_o_5__N_109[2] ), 
-            .B(\RGB_o_5__N_109[5] ), .C(\RGB_o_5__N_109[4] ), .D(\RGB_o_5__N_109[3] ), 
-            .Z(n1966));
-    defparam i1525_4_lut.INIT = "0xc8c0";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_56 (.A(\RGB_o_5__N_63[3] ), 
-            .B(n1046), .C(\RGB_o_5__N_63[5] ), .D(\RGB_o_5__N_63[4] ), 
-            .Z(n1049));
-    defparam i1_4_lut_adj_56.INIT = "0xc8c0";
-    (* lut_function="(A+(B (C)+!B (C (D))))" *) LUT4 i1_4_lut_adj_57 (.A(\RGB_o_5__N_63[6] ), 
-            .B(\RGB_o_5__N_63[3] ), .C(\RGB_o_5__N_63[5] ), .D(\RGB_o_5__N_63[4] ), 
-            .Z(n4_adj_452));
-    defparam i1_4_lut_adj_57.INIT = "0xfaea";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1479_4_lut (.A(\p_x_str[2] ), 
-            .B(\p_x_str[5] ), .C(\p_x_str[4] ), .D(\p_x_str[3] ), .Z(n1920));
-    defparam i1479_4_lut.INIT = "0xc8c0";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_58 (.A(\RGB_o_5__N_63[1] ), 
-            .B(\RGB_o_5__N_63[4] ), .C(\RGB_o_5__N_63[3] ), .D(\RGB_o_5__N_63[2] ), 
-            .Z(n5_adj_455));
-    defparam i1_4_lut_adj_58.INIT = "0xc8c0";
-    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i1483_3_lut (.A(\p_x_str[3] ), 
-            .B(\p_x_str[5] ), .C(\p_x_str[4] ), .Z(n1924));
-    defparam i1483_3_lut.INIT = "0xc8c8";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_59 (.A(\RGB_o_5__N_63[6] ), 
-            .B(\RGB_o_5__N_63[7] ), .Z(n1046));
-    defparam i1_2_lut_adj_59.INIT = "0x8888";
-    FA2 forty_eight_mhz_counter_181_190_add_4_19 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[17]), .D0(n6371), .CI0(n6371), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[18]), .D1(n8998), .CI1(n8998), .CO0(n8998), .CO1(n6373), 
-        .S0(n85[17]), .S1(n85[18]));
-    defparam forty_eight_mhz_counter_181_190_add_4_19.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_19.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_17 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[15]), .D0(n6369), .CI0(n6369), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[16]), .D1(n8995), .CI1(n8995), .CO0(n8995), .CO1(n6371), 
-        .S0(n85[15]), .S1(n85[16]));
-    defparam forty_eight_mhz_counter_181_190_add_4_17.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_17.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_15 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[13]), .D0(n6367), .CI0(n6367), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[14]), .D1(n8992), .CI1(n8992), .CO0(n8992), .CO1(n6369), 
-        .S0(n85[13]), .S1(n85[14]));
-    defparam forty_eight_mhz_counter_181_190_add_4_15.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_15.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_13 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[11]), .D0(n6365), .CI0(n6365), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[12]), .D1(n8989), .CI1(n8989), .CO0(n8989), .CO1(n6367), 
-        .S0(n85[11]), .S1(n85[12]));
-    defparam forty_eight_mhz_counter_181_190_add_4_13.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_13.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_11 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[9]), .D0(n6363), .CI0(n6363), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[10]), .D1(n8986), .CI1(n8986), .CO0(n8986), .CO1(n6365), 
-        .S0(n85[9]), .S1(n85[10]));
-    defparam forty_eight_mhz_counter_181_190_add_4_11.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_11.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_9 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[7]), .D0(n6361), .CI0(n6361), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[8]), .D1(n8983), .CI1(n8983), .CO0(n8983), .CO1(n6363), 
-        .S0(n85[7]), .S1(n85[8]));
-    defparam forty_eight_mhz_counter_181_190_add_4_9.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_9.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_7 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[5]), .D0(n6359), .CI0(n6359), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[6]), .D1(n8980), .CI1(n8980), .CO0(n8980), .CO1(n6361), 
-        .S0(n85[5]), .S1(n85[6]));
-    defparam forty_eight_mhz_counter_181_190_add_4_7.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_7.INIT1 = "0xc33c";
-    FA2 forty_eight_mhz_counter_181_190_add_4_5 (.A0(GND_net), .B0(GND_net), 
-        .C0(n149[3]), .D0(n6357), .CI0(n6357), .A1(GND_net), .B1(GND_net), 
-        .C1(n149[4]), .D1(n8977), .CI1(n8977), .CO0(n8977), .CO1(n6359), 
-        .S0(n85[3]), .S1(n85[4]));
-    defparam forty_eight_mhz_counter_181_190_add_4_5.INIT0 = "0xc33c";
-    defparam forty_eight_mhz_counter_181_190_add_4_5.INIT1 = "0xc33c";
-    FA2 add_5852_11 (.A0(GND_net), .B0(\bigbird_y_pos[9] ), .C0(bird_y_pos_9__N_192), 
-        .D0(n6437), .CI0(n6437), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
-        .D1(n8932), .CI1(n8932), .CO0(n8932), .S0(n62[10]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_11.INIT0 = "0xc33c";
-    defparam add_5852_11.INIT1 = "0xc33c";
-    FA2 add_5852_9 (.A0(GND_net), .B0(\bigbird_y_pos[7] ), .C0(bird_y_pos_9__N_192), 
-        .D0(n6435), .CI0(n6435), .A1(GND_net), .B1(\bigbird_y_pos[8] ), 
-        .C1(bird_y_pos_9__N_192), .D1(n8893), .CI1(n8893), .CO0(n8893), 
-        .CO1(n6437), .S0(n62[8]), .S1(n62[9]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_9.INIT0 = "0xc33c";
-    defparam add_5852_9.INIT1 = "0xc33c";
-    FA2 add_5852_7 (.A0(GND_net), .B0(\bigbird_y_pos[5] ), .C0(bird_y_pos_9__N_192), 
-        .D0(n6433), .CI0(n6433), .A1(GND_net), .B1(\bigbird_y_pos[6] ), 
-        .C1(bird_y_pos_9__N_192), .D1(n8890), .CI1(n8890), .CO0(n8890), 
-        .CO1(n6435), .S0(n62[6]), .S1(n62[7]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_7.INIT0 = "0xc33c";
-    defparam add_5852_7.INIT1 = "0xc33c";
-    FA2 add_5852_5 (.A0(GND_net), .B0(\bigbird_y_pos[3] ), .C0(n376), 
-        .D0(n6431), .CI0(n6431), .A1(GND_net), .B1(\bigbird_y_pos[4] ), 
-        .C1(bird_y_pos_9__N_192), .D1(n8887), .CI1(n8887), .CO0(n8887), 
-        .CO1(n6433), .S0(n62[4]), .S1(n62[5]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_5.INIT0 = "0xc33c";
-    defparam add_5852_5.INIT1 = "0xc33c";
-    FA2 add_5852_3 (.A0(GND_net), .B0(\bigbird_y_pos[1] ), .C0(n376), 
-        .D0(n6429), .CI0(n6429), .A1(GND_net), .B1(\bigbird_y_pos[2] ), 
-        .C1(is_over_N_199), .D1(n8884), .CI1(n8884), .CO0(n8884), .CO1(n6431), 
-        .S0(n62[2]), .S1(n62[3]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_3.INIT0 = "0xc33c";
-    defparam add_5852_3.INIT1 = "0xc33c";
-    FA2 add_5852_1 (.A0(GND_net), .B0(bird_y_pos_9__N_192), .C0(GND_net), 
-        .A1(GND_net), .B1(\RGB_o_5__N_109[0] ), .C1(is_over_N_199), .D1(n8881), 
-        .CI1(n8881), .CO0(n8881), .CO1(n6429), .S1(n62[1]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
-    defparam add_5852_1.INIT0 = "0xc33c";
-    defparam add_5852_1.INIT1 = "0xc33c";
-    FA2 add_379_9 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[8] ), .D0(n6425), 
-        .CI0(n6425), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[9] ), 
-        .D1(n8929), .CI1(n8929), .CO0(n8929), .S0(n45[8]), .S1(n45[9]));
-    defparam add_379_9.INIT0 = "0xc33c";
-    defparam add_379_9.INIT1 = "0xc33c";
-    FA2 add_379_7 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[6] ), .D0(n6423), 
-        .CI0(n6423), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[7] ), 
-        .D1(n8926), .CI1(n8926), .CO0(n8926), .CO1(n6425), .S0(n45[6]), 
-        .S1(n45[7]));
-    defparam add_379_7.INIT0 = "0xc33c";
-    defparam add_379_7.INIT1 = "0xc33c";
-    FA2 add_379_5 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[4] ), .D0(n6421), 
-        .CI0(n6421), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[5] ), 
-        .D1(n8923), .CI1(n8923), .CO0(n8923), .CO1(n6423), .S0(n45[4]), 
-        .S1(n45[5]));
-    defparam add_379_5.INIT0 = "0xc33c";
-    defparam add_379_5.INIT1 = "0xc33c";
-    FA2 add_379_3 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[2] ), .D0(n6419), 
-        .CI0(n6419), .A1(GND_net), .B1(GND_net), .C1(\p_x_str[3] ), 
-        .D1(n8920), .CI1(n8920), .CO0(n8920), .CO1(n6421), .S0(n45[2]), 
-        .S1(n45[3]));
-    defparam add_379_3.INIT0 = "0xc33c";
-    defparam add_379_3.INIT1 = "0xc33c";
-    FA2 add_379_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .A1(GND_net), 
-        .B1(VCC_net), .C1(\p_x_str[1] ), .D1(n8917), .CI1(n8917), .CO0(n8917), 
-        .CO1(n6419), .S1(n45[1]));
-    defparam add_379_1.INIT0 = "0xc33c";
-    defparam add_379_1.INIT1 = "0xc33c";
-    FA2 wait_counter_183_add_4_11 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[9]), 
-        .D0(n6394), .CI0(n6394), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
-        .D1(n8950), .CI1(n8950), .CO0(n8950), .S0(n45_adj_459[9]));
-    defparam wait_counter_183_add_4_11.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_11.INIT1 = "0xc33c";
-    FA2 wait_counter_183_add_4_9 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[7]), 
-        .D0(n6392), .CI0(n6392), .A1(GND_net), .B1(GND_net), .C1(wait_counter[8]), 
-        .D1(n8947), .CI1(n8947), .CO0(n8947), .CO1(n6394), .S0(n45_adj_459[7]), 
-        .S1(n45_adj_459[8]));
-    defparam wait_counter_183_add_4_9.INIT0 = "0xc33c";
-    defparam wait_counter_183_add_4_9.INIT1 = "0xc33c";
-    (* lut_function="(A (B (C)))" *) LUT4 i2_2_lut_3_lut (.A(\RGB_o_5__N_63[5] ), 
-            .B(\RGB_o_5__N_63[6] ), .C(\RGB_o_5__N_63[7] ), .Z(n6_adj_456));
-    defparam i2_2_lut_3_lut.INIT = "0x8080";
-    (* lut_function="((B (C+!(D))+!B !(D))+!A)" *) LUT4 i7341_4_lut_4_lut (.A(game_over), 
-            .B(reset_N_197), .C(clappy_c), .D(screen_colliding_N_237[9]), 
-            .Z(n1078));
-    defparam i7341_4_lut_4_lut.INIT = "0xd5ff";
-    VLO i27 (.Z(GND_net_c));
-    FD1P3XZ bird_y_pos_i0_i8 (.D(n62[9]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
-            .SR(n1095), .Q(\bigbird_y_pos[8] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
-    defparam bird_y_pos_i0_i8.REGSET = "RESET";
-    defparam bird_y_pos_i0_i8.SRMODE = "CE_OVER_LSR";
-    VHI i1 (.Z(VCC_net));
-    
-endmodule
-
-//
 // Verilog Description of module game_renderer
 //
 
@@ -1025,50 +499,50 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
             output RGB_c_1, output RGB_c_3);
     
     
-    wire n10, n12, n8, n10_adj_364, n6, n1665, n951, n258, n8_adj_365, 
-        n6_adj_366, n7488, RGB_o_5__N_57, n4_c, n8_adj_367, n10_adj_368, 
-        n1042, n8_adj_369, n10_adj_370, n875, n6_adj_371, n7500, 
-        n105, n6_adj_372, n7476, n6_adj_373, n7499, n6_adj_374, 
-        n4_adj_375, n4_adj_376, n18;
+    wire n10, n12, n8, n10_adj_386, n6, n1665, n951, n258, n8_adj_387, 
+        n6_adj_388, n7488, RGB_o_5__N_57, n4_c, n8_adj_389, n10_adj_390, 
+        n1042, n8_adj_391, n10_adj_392, n875, n6_adj_393, n7500, 
+        n105, n6_adj_394, n7476, n6_adj_395, n7499, n6_adj_396, 
+        n4_adj_397, n4_adj_398, n18;
     wire [9:0]n57;
     
-    wire n18_adj_377, n1044, n262;
+    wire n18_adj_399, n1044, n262;
     wire [9:0]RGB_o_5__N_109;
     
-    wire n7480, n7505, n6301, n8833, n6303, n16, n6914, n6_adj_378, 
-        RGB_o_5__N_62, n1986, n18_adj_379, n6_adj_380, n18_adj_381, 
-        n1039, n16_adj_382, n16_adj_383, n14, n14_adj_384, n12_adj_385, 
-        n12_adj_386, n14_adj_387, n1942, n12_adj_388, RGB_o_5__N_73, 
-        n18_adj_389, n10_adj_390, n18_adj_391, n8_adj_392, n6_adj_393, 
-        n16_adj_394, n14_adj_395, n12_adj_396, n4_adj_397, n10_adj_398, 
-        n8_adj_399, n6_adj_400, n4_adj_401, n16_adj_402, n14_adj_403, 
-        n16_adj_404, n6913, n1063, n14_adj_405, n7490, n4_adj_406, 
-        n7482, n12_adj_407, n10_adj_408, n8_adj_409, n6_adj_410, n4_adj_411;
+    wire n7480, n7505, n6301, n8833, n6303, n16, n6914, n6_adj_400, 
+        RGB_o_5__N_62, n1986, n18_adj_401, n6_adj_402, n18_adj_403, 
+        n1039, n16_adj_404, n16_adj_405, n14, n14_adj_406, n12_adj_407, 
+        n12_adj_408, n14_adj_409, n1942, n12_adj_410, RGB_o_5__N_73, 
+        n18_adj_411, n10_adj_412, n18_adj_413, n8_adj_414, n6_adj_415, 
+        n16_adj_416, n14_adj_417, n12_adj_418, n4_adj_419, n10_adj_420, 
+        n8_adj_421, n6_adj_422, n4_adj_423, n16_adj_424, n14_adj_425, 
+        n16_adj_426, n6913, n1063, n14_adj_427, n7490, n4_adj_428, 
+        n7482, n12_adj_429, n10_adj_430, n8_adj_431, n6_adj_432, n4_adj_433;
     wire [9:0]tail_colliding_N_353;
     
-    wire n18_adj_412, n18_adj_413, n16_adj_414, n14_adj_415, n8845, 
+    wire n18_adj_434, n18_adj_435, n16_adj_436, n14_adj_437, n8845, 
         VCC_net, n6333;
     wire [9:0]beak_colliding_N_271;
     
-    wire n12_adj_416, n6382, n8827, n6380, n8824, n6378, n8821, 
-        n6376, n8818, n8815, n10_adj_417, n8_adj_418, n6_adj_419, 
-        n4_adj_420, n6_adj_421, n7507, n7478, n161, n1045, n18_adj_422, 
-        n6_adj_423, n16_adj_424, n8_adj_425, n14_adj_426, n12_adj_427, 
-        n10_adj_428, n8_adj_429, n6305, n8839, n6307, n8830, n6330, 
-        n8812, n6328, n8809, n8836, n6326, n8806, n6_adj_430, 
+    wire n12_adj_438, n6382, n8827, n6380, n8824, n6378, n8821, 
+        n6376, n8818, n8815, n10_adj_439, n8_adj_440, n6_adj_441, 
+        n4_adj_442, n6_adj_443, n7507, n7478, n161, n1045, n18_adj_444, 
+        n6_adj_445, n16_adj_446, n8_adj_447, n14_adj_448, n12_adj_449, 
+        n10_adj_450, n8_adj_451, n6305, n8839, n6307, n8830, n6330, 
+        n8812, n6328, n8809, n8836, n6326, n8806, n6_adj_452, 
         n6324, n8803, n6322, n8800, n8842, n8797, n6341, n8860, 
         n6339, n8857, n6337, n8854, n6335, n8851, n8848, n6416, 
         n8878, n6414, n8875, n6412, n8872, n6410, n8869, n6408, 
         n8866, n8863, n6405, n8794, n6403, n8791, n6401, n8788, 
-        n6399, n8785, n6397, n8782, n8779, n4_adj_431, n1934, 
-        n4_adj_432, RGB_o_5__N_85, n18_adj_434, n5, n16_adj_435, n14_adj_436, 
-        n12_adj_437, n7779;
+        n6399, n8785, n6397, n8782, n8779, n4_adj_453, n1934, 
+        n4_adj_454, RGB_o_5__N_85, n18_adj_456, n5, n16_adj_457, n14_adj_458, 
+        n12_adj_459, n7779;
     
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i12_3_lut (.A(n10), 
             .B(\RGB_o_5__N_63[5] ), .C(col_num[5]), .Z(n12));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i12_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i10_3_lut (.A(n8), 
-            .B(row_num[4]), .C(\bigbird_y_pos[4] ), .Z(n10_adj_364));   /* synthesis lineinfo="@0(35[89],35[102])"*/
+            .B(row_num[4]), .C(\bigbird_y_pos[4] ), .Z(n10_adj_386));   /* synthesis lineinfo="@0(35[89],35[102])"*/
     defparam y_pos_9__I_0_i10_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i8_3_lut (.A(n6), 
             .B(row_num[3]), .C(\bigbird_y_pos[3] ), .Z(n8));   /* synthesis lineinfo="@0(35[89],35[102])"*/
@@ -1076,11 +550,11 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
     (* lut_function="(!(A (B+!(C))+!A (B+!(C+!(D)))))" *) LUT4 i1410_4_lut (.A(n1665), 
             .B(n951), .C(n258), .D(game_over), .Z(RGB_c_4));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i1410_4_lut.INIT = "0x3031";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i10_3_lut (.A(n8_adj_365), 
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i10_3_lut (.A(n8_adj_387), 
             .B(\RGB_o_5__N_63[4] ), .C(col_num[4]), .Z(n10));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i8_3_lut (.A(n6_adj_366), 
-            .B(\RGB_o_5__N_63[3] ), .C(col_num[3]), .Z(n8_adj_365));   /* synthesis lineinfo="@0(33[70],33[103])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i8_3_lut (.A(n6_adj_388), 
+            .B(\RGB_o_5__N_63[3] ), .C(col_num[3]), .Z(n8_adj_387));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i8_3_lut.INIT = "0x8e8e";
     (* lut_function="(!((B)+!A))" *) LUT4 i1_2_lut (.A(n7488), .B(n1665), 
             .Z(RGB_o_5__N_57));
@@ -1090,61 +564,61 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
     defparam y_pos_9__I_0_i6_3_lut.INIT = "0x8e8e";
     (* lut_function="(!(A ((C)+!B)+!A !(B ((D)+!C)+!B !(C+!(D)))))" *) LUT4 col_i_9__I_0_74_i6_4_lut (.A(col_num[1]), 
             .B(\RGB_o_5__N_63[2] ), .C(col_num[2]), .D(\RGB_o_5__N_63[1] ), 
-            .Z(n6_adj_366));   /* synthesis lineinfo="@0(33[70],33[103])"*/
+            .Z(n6_adj_388));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i6_4_lut.INIT = "0x4d0c";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i10_3_lut_3_lut (.A(row_num[4]), 
-            .B(\RGB_o_5__N_109[4] ), .C(n8_adj_367), .Z(n10_adj_368));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[4] ), .C(n8_adj_389), .Z(n10_adj_390));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i10_3_lut_3_lut.INIT = "0xb2b2";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_30 (.A(col_num[6]), .B(col_num[7]), 
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_37 (.A(col_num[6]), .B(col_num[7]), 
             .Z(n1042));
-    defparam i1_2_lut_adj_30.INIT = "0x8888";
+    defparam i1_2_lut_adj_37.INIT = "0x8888";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i10_3_lut_3_lut (.A(row_num[4]), 
-            .B(\RGB_o_5__N_109[4] ), .C(n8_adj_369), .Z(n10_adj_370));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[4] ), .C(n8_adj_391), .Z(n10_adj_392));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i10_3_lut_3_lut.INIT = "0xd4d4";
     (* lut_function="(A+(B))" *) LUT4 i438_2_lut (.A(col_num[3]), .B(col_num[4]), 
             .Z(n875));   /* synthesis lineinfo="@0(35[64],35[82])"*/
     defparam i438_2_lut.INIT = "0xeeee";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i8_3_lut_3_lut (.A(row_num[3]), 
-            .B(\RGB_o_5__N_109[3] ), .C(n6_adj_371), .Z(n8_adj_367));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[3] ), .C(n6_adj_393), .Z(n8_adj_389));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i8_3_lut_3_lut.INIT = "0xb2b2";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_31 (.A(col_num[8]), .B(col_num[9]), 
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_38 (.A(col_num[8]), .B(col_num[9]), 
             .Z(n7492));
-    defparam i1_2_lut_adj_31.INIT = "0x8888";
+    defparam i1_2_lut_adj_38.INIT = "0x8888";
     (* lut_function="(!(A+(B+!(C (D)))))" *) LUT4 i4_4_lut (.A(n7500), .B(n1058), 
-            .C(n105), .D(n6_adj_372), .Z(n7476));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+            .C(n105), .D(n6_adj_394), .Z(n7476));   /* synthesis lineinfo="@0(35[3],36[126])"*/
     defparam i4_4_lut.INIT = "0x1000";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i8_3_lut_3_lut (.A(row_num[3]), 
-            .B(\RGB_o_5__N_109[3] ), .C(n6_adj_373), .Z(n8_adj_369));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[3] ), .C(n6_adj_395), .Z(n8_adj_391));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i8_3_lut_3_lut.INIT = "0xd4d4";
-    (* lut_function="(A (B (C (D))))" *) LUT4 i4_4_lut_adj_32 (.A(col_num[3]), 
-            .B(n7499), .C(col_num[7]), .D(n6_adj_374), .Z(n7500));
-    defparam i4_4_lut_adj_32.INIT = "0x8000";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i4_4_lut_adj_39 (.A(col_num[3]), 
+            .B(n7499), .C(col_num[7]), .D(n6_adj_396), .Z(n7500));
+    defparam i4_4_lut_adj_39.INIT = "0x8000";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i6_3_lut_3_lut (.A(row_num[2]), 
-            .B(\RGB_o_5__N_109[2] ), .C(n4_adj_375), .Z(n6_adj_371));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[2] ), .C(n4_adj_397), .Z(n6_adj_393));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i6_3_lut_3_lut.INIT = "0xb2b2";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i6_3_lut_3_lut (.A(row_num[2]), 
-            .B(\RGB_o_5__N_109[2] ), .C(n4_adj_376), .Z(n6_adj_373));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[2] ), .C(n4_adj_398), .Z(n6_adj_395));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i6_3_lut_3_lut.INIT = "0xd4d4";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i20_3_lut (.A(n18), 
             .B(n57[9]), .C(row_num[9]), .Z(n105));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i20_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B (C+!(D)))+!A !(((D)+!C)+!B))" *) LUT4 i1_4_lut (.A(n18_adj_377), 
+    (* lut_function="(A (B (C+!(D)))+!A !(((D)+!C)+!B))" *) LUT4 i1_4_lut (.A(n18_adj_399), 
             .B(n1044), .C(row_num[9]), .D(\tail_colliding_N_353[9] ), 
-            .Z(n6_adj_372));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+            .Z(n6_adj_394));   /* synthesis lineinfo="@0(35[3],36[126])"*/
     defparam i1_4_lut.INIT = "0x80c8";
     (* lut_function="(A+!((C)+!B))" *) LUT4 i514_2_lut_3_lut (.A(n262), .B(n7488), 
             .C(n1665), .Z(n951));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i514_2_lut_3_lut.INIT = "0xaeae";
     (* lut_function="(!(A (((D)+!C)+!B)+!A !(B+!((D)+!C))))" *) LUT4 row_i_9__I_0_i4_4_lut_4_lut (.A(row_num[1]), 
             .B(RGB_o_5__N_109[1]), .C(\RGB_o_5__N_109[0] ), .D(row_num[0]), 
-            .Z(n4_adj_376));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .Z(n4_adj_398));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i4_4_lut_4_lut.INIT = "0x44d4";
     (* lut_function="(A (B (D))+!A (B (C+(D))+!B (C)))" *) LUT4 i81_4_lut (.A(valid_N_44), 
             .B(n7480), .C(n7476), .D(n7505), .Z(n262));   /* synthesis lineinfo="@0(35[3],35[128])"*/
     defparam i81_4_lut.INIT = "0xdc50";
     (* lut_function="(!(A (B (C+!(D))+!B !((D)+!C))+!A (C+!(D))))" *) LUT4 LessThan_39_i4_3_lut_3_lut_4_lut (.A(row_num[0]), 
             .B(\RGB_o_5__N_109[0] ), .C(RGB_o_5__N_109[1]), .D(row_num[1]), 
-            .Z(n4_adj_375));   /* synthesis lineinfo="@0(37[89],37[107])"*/
+            .Z(n4_adj_397));   /* synthesis lineinfo="@0(37[89],37[107])"*/
     defparam LessThan_39_i4_3_lut_3_lut_4_lut.INIT = "0x2f02";
     FA2 add_174_add_4_3 (.A0(GND_net), .B0(\p_x_str[2] ), .C0(GND_net), 
         .D0(n6301), .CI0(n6301), .A1(GND_net), .B1(\p_x_str[3] ), .C1(GND_net), 
@@ -1153,143 +627,143 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
     defparam add_174_add_4_3.INIT0 = "0xc33c";
     defparam add_174_add_4_3.INIT1 = "0xc33c";
     (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i1_3_lut (.A(col_num[1]), 
-            .B(col_num[6]), .C(col_num[2]), .Z(n6_adj_374));
+            .B(col_num[6]), .C(col_num[2]), .Z(n6_adj_396));
     defparam i1_3_lut.INIT = "0xc8c8";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i18_3_lut (.A(n16), 
             .B(n57[8]), .C(row_num[8]), .Z(n18));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i18_3_lut.INIT = "0x8e8e";
     (* lut_function="(!(A (((D)+!C)+!B)+!A !(B (C))))" *) LUT4 i3_4_lut (.A(n6914), 
-            .B(n6_adj_378), .C(RGB_o_5__N_62), .D(row_num[8]), .Z(n7488));
+            .B(n6_adj_400), .C(RGB_o_5__N_62), .D(row_num[8]), .Z(n7488));
     defparam i3_4_lut.INIT = "0x40c0";
     (* lut_function="(!(A (B (C+!(D))+!B (C))+!A (B+(C+!(D)))))" *) LUT4 i2_4_lut_4_lut (.A(row_num[9]), 
-            .B(\RGB_o_5__N_109[9] ), .C(n1986), .D(n18_adj_379), .Z(n6_adj_380));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[9] ), .C(n1986), .D(n18_adj_401), .Z(n6_adj_402));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam i2_4_lut_4_lut.INIT = "0x0b02";
     (* lut_function="(!(A (((D)+!C)+!B)+!A (B (D)+!B ((D)+!C))))" *) LUT4 i1_4_lut_4_lut (.A(row_num[9]), 
-            .B(\RGB_o_5__N_109[9] ), .C(n18_adj_381), .D(valid_N_44), 
+            .B(\RGB_o_5__N_109[9] ), .C(n18_adj_403), .D(valid_N_44), 
             .Z(n1039));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam i1_4_lut_4_lut.INIT = "0x00d4";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i18_3_lut_3_lut (.A(row_num[8]), 
-            .B(\RGB_o_5__N_109[8] ), .C(n16_adj_382), .Z(n18_adj_379));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[8] ), .C(n16_adj_404), .Z(n18_adj_401));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i18_3_lut_3_lut.INIT = "0xb2b2";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i18_3_lut_3_lut (.A(row_num[8]), 
-            .B(\RGB_o_5__N_109[8] ), .C(n16_adj_383), .Z(n18_adj_381));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[8] ), .C(n16_adj_405), .Z(n18_adj_403));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i18_3_lut_3_lut.INIT = "0xd4d4";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i16_3_lut_3_lut (.A(row_num[7]), 
-            .B(\RGB_o_5__N_109[7] ), .C(n14), .Z(n16_adj_382));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[7] ), .C(n14), .Z(n16_adj_404));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i16_3_lut_3_lut.INIT = "0xb2b2";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i16_3_lut_3_lut (.A(row_num[7]), 
-            .B(\RGB_o_5__N_109[7] ), .C(n14_adj_384), .Z(n16_adj_383));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[7] ), .C(n14_adj_406), .Z(n16_adj_405));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i16_3_lut_3_lut.INIT = "0xd4d4";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i14_3_lut_3_lut (.A(row_num[6]), 
-            .B(\RGB_o_5__N_109[6] ), .C(n12_adj_385), .Z(n14));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[6] ), .C(n12_adj_407), .Z(n14));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i14_3_lut_3_lut.INIT = "0xb2b2";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i14_3_lut_3_lut (.A(row_num[6]), 
-            .B(\RGB_o_5__N_109[6] ), .C(n12_adj_386), .Z(n14_adj_384));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[6] ), .C(n12_adj_408), .Z(n14_adj_406));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i14_3_lut_3_lut.INIT = "0xd4d4";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i16_3_lut (.A(n14_adj_387), 
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i16_3_lut (.A(n14_adj_409), 
             .B(n57[7]), .C(row_num[7]), .Z(n16));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i16_3_lut.INIT = "0x8e8e";
     (* lut_function="(A+(B (C+(D))+!B (C)))" *) LUT4 i2_4_lut (.A(row_num[7]), 
             .B(n1942), .C(row_num[6]), .D(row_num[5]), .Z(n6914));
     defparam i2_4_lut.INIT = "0xfefa";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i14_3_lut (.A(n12_adj_388), 
-            .B(n57[6]), .C(row_num[6]), .Z(n14_adj_387));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i14_3_lut (.A(n12_adj_410), 
+            .B(n57[6]), .C(row_num[6]), .Z(n14_adj_409));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i14_3_lut.INIT = "0x8e8e";
     (* lut_function="(A ((C)+!B)+!A !(B+!(C)))" *) LUT4 LessThan_39_i12_3_lut_3_lut (.A(row_num[5]), 
-            .B(\RGB_o_5__N_109[5] ), .C(n10_adj_368), .Z(n12_adj_385));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[5] ), .C(n10_adj_390), .Z(n12_adj_407));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam LessThan_39_i12_3_lut_3_lut.INIT = "0xb2b2";
-    (* lut_function="(A (B (C+!(D))+!B !((D)+!C)))" *) LUT4 i2_4_lut_adj_33 (.A(RGB_o_5__N_73), 
-            .B(n18_adj_389), .C(col_num[9]), .D(\p_x_str[9] ), .Z(n6_adj_378));
-    defparam i2_4_lut_adj_33.INIT = "0x80a8";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i12_3_lut (.A(n10_adj_390), 
-            .B(n57[5]), .C(row_num[5]), .Z(n12_adj_388));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+    (* lut_function="(A (B (C+!(D))+!B !((D)+!C)))" *) LUT4 i2_4_lut_adj_40 (.A(RGB_o_5__N_73), 
+            .B(n18_adj_411), .C(col_num[9]), .D(\p_x_str[9] ), .Z(n6_adj_400));
+    defparam i2_4_lut_adj_40.INIT = "0x80a8";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i12_3_lut (.A(n10_adj_412), 
+            .B(n57[5]), .C(row_num[5]), .Z(n12_adj_410));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i20_3_lut (.A(n18_adj_391), 
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i20_3_lut (.A(n18_adj_413), 
             .B(\RGB_o_5__N_63[9] ), .C(col_num[9]), .Z(RGB_o_5__N_62));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i20_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+(C))+!A (B))" *) LUT4 i1501_3_lut (.A(row_num[2]), 
             .B(row_num[4]), .C(row_num[3]), .Z(n1942));
     defparam i1501_3_lut.INIT = "0xecec";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i10_3_lut (.A(n8_adj_392), 
-            .B(n57[4]), .C(row_num[4]), .Z(n10_adj_390));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i10_3_lut (.A(n8_adj_414), 
+            .B(n57[4]), .C(row_num[4]), .Z(n10_adj_412));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i8_3_lut (.A(n6_adj_393), 
-            .B(n57[3]), .C(row_num[3]), .Z(n8_adj_392));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i8_3_lut (.A(n6_adj_415), 
+            .B(n57[3]), .C(row_num[3]), .Z(n8_adj_414));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i8_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B (C))+!A (B+(C)))" *) LUT4 row_i_9__I_0_i12_3_lut_3_lut (.A(row_num[5]), 
-            .B(\RGB_o_5__N_109[5] ), .C(n10_adj_370), .Z(n12_adj_386));   /* synthesis lineinfo="@0(38[113],38[131])"*/
+            .B(\RGB_o_5__N_109[5] ), .C(n10_adj_392), .Z(n12_adj_408));   /* synthesis lineinfo="@0(38[113],38[131])"*/
     defparam row_i_9__I_0_i12_3_lut_3_lut.INIT = "0xd4d4";
     (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(row_num[1]), .B(n1023), 
             .C(row_num[0]), .Z(RGB_o_5__N_73));
     defparam i2_3_lut.INIT = "0xfefe";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i18_3_lut (.A(n16_adj_394), 
-            .B(col_num[8]), .C(\p_x_str[8] ), .Z(n18_adj_389));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i18_3_lut (.A(n16_adj_416), 
+            .B(col_num[8]), .C(\p_x_str[8] ), .Z(n18_adj_411));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i18_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i16_3_lut (.A(n14_adj_395), 
-            .B(col_num[7]), .C(\p_x_str[7] ), .Z(n16_adj_394));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i16_3_lut (.A(n14_adj_417), 
+            .B(col_num[7]), .C(\p_x_str[7] ), .Z(n16_adj_416));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i16_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i14_3_lut (.A(n12_adj_396), 
-            .B(col_num[6]), .C(\p_x_str[6] ), .Z(n14_adj_395));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i14_3_lut (.A(n12_adj_418), 
+            .B(col_num[6]), .C(\p_x_str[6] ), .Z(n14_adj_417));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i14_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i6_3_lut (.A(n4_adj_397), 
-            .B(n57[2]), .C(row_num[2]), .Z(n6_adj_393));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_29_i6_3_lut (.A(n4_adj_419), 
+            .B(n57[2]), .C(row_num[2]), .Z(n6_adj_415));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i6_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i12_3_lut (.A(n10_adj_398), 
-            .B(col_num[5]), .C(\p_x_str[5] ), .Z(n12_adj_396));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i12_3_lut (.A(n10_adj_420), 
+            .B(col_num[5]), .C(\p_x_str[5] ), .Z(n12_adj_418));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i10_3_lut (.A(n8_adj_399), 
-            .B(col_num[4]), .C(\p_x_str[4] ), .Z(n10_adj_398));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i10_3_lut (.A(n8_adj_421), 
+            .B(col_num[4]), .C(\p_x_str[4] ), .Z(n10_adj_420));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i8_3_lut (.A(n6_adj_400), 
-            .B(col_num[3]), .C(\p_x_str[3] ), .Z(n8_adj_399));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i8_3_lut (.A(n6_adj_422), 
+            .B(col_num[3]), .C(\p_x_str[3] ), .Z(n8_adj_421));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i8_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i6_3_lut (.A(n4_adj_401), 
-            .B(col_num[2]), .C(\p_x_str[2] ), .Z(n6_adj_400));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i6_3_lut (.A(n4_adj_423), 
+            .B(col_num[2]), .C(\p_x_str[2] ), .Z(n6_adj_422));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i6_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 pipe_x_start_9__I_0_72_i4_3_lut (.A(col_num[0]), 
-            .B(col_num[1]), .C(\p_x_str[1] ), .Z(n4_adj_401));   /* synthesis lineinfo="@0(33[44],33[64])"*/
+            .B(col_num[1]), .C(\p_x_str[1] ), .Z(n4_adj_423));   /* synthesis lineinfo="@0(33[44],33[64])"*/
     defparam pipe_x_start_9__I_0_72_i4_3_lut.INIT = "0x8e8e";
     (* lut_function="(!(A (B (C (D))+!B (C+(D)))+!A ((C)+!B)))" *) LUT4 LessThan_29_i4_4_lut (.A(n57[0]), 
-            .B(n57[1]), .C(row_num[1]), .D(row_num[0]), .Z(n4_adj_397));   /* synthesis lineinfo="@0(36[107],36[125])"*/
+            .B(n57[1]), .C(row_num[1]), .D(row_num[0]), .Z(n4_adj_419));   /* synthesis lineinfo="@0(36[107],36[125])"*/
     defparam LessThan_29_i4_4_lut.INIT = "0x0c8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i18_3_lut (.A(n16_adj_402), 
-            .B(\RGB_o_5__N_63[8] ), .C(col_num[8]), .Z(n18_adj_391));   /* synthesis lineinfo="@0(33[70],33[103])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i18_3_lut (.A(n16_adj_424), 
+            .B(\RGB_o_5__N_63[8] ), .C(col_num[8]), .Z(n18_adj_413));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i18_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i16_3_lut (.A(n14_adj_403), 
-            .B(\RGB_o_5__N_63[7] ), .C(col_num[7]), .Z(n16_adj_402));   /* synthesis lineinfo="@0(33[70],33[103])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i16_3_lut (.A(n14_adj_425), 
+            .B(\RGB_o_5__N_63[7] ), .C(col_num[7]), .Z(n16_adj_424));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i16_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 col_i_9__I_0_74_i14_3_lut (.A(n12), 
-            .B(\RGB_o_5__N_63[6] ), .C(col_num[6]), .Z(n14_adj_403));   /* synthesis lineinfo="@0(33[70],33[103])"*/
+            .B(\RGB_o_5__N_63[6] ), .C(col_num[6]), .Z(n14_adj_425));   /* synthesis lineinfo="@0(33[70],33[103])"*/
     defparam col_i_9__I_0_74_i14_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i18_3_lut (.A(n16_adj_404), 
-            .B(row_num[8]), .C(\tail_colliding_N_353[8] ), .Z(n18_adj_377));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i18_3_lut (.A(n16_adj_426), 
+            .B(row_num[8]), .C(\tail_colliding_N_353[8] ), .Z(n18_adj_399));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i18_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_34 (.A(n6913), 
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_41 (.A(n6913), 
             .B(n1042), .C(n1063), .D(col_num[3]), .Z(n1044));
-    defparam i1_4_lut_adj_34.INIT = "0xc8c0";
-    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut_adj_35 (.A(col_num[2]), 
+    defparam i1_4_lut_adj_41.INIT = "0xc8c0";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut_adj_42 (.A(col_num[2]), 
             .B(col_num[1]), .C(col_num[0]), .Z(n6913));
-    defparam i2_3_lut_adj_35.INIT = "0xfefe";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i16_3_lut (.A(n14_adj_405), 
-            .B(row_num[7]), .C(\tail_colliding_N_353[7] ), .Z(n16_adj_404));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    defparam i2_3_lut_adj_42.INIT = "0xfefe";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i16_3_lut (.A(n14_adj_427), 
+            .B(row_num[7]), .C(\tail_colliding_N_353[7] ), .Z(n16_adj_426));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i16_3_lut.INIT = "0x8e8e";
-    (* lut_function="(!(A ((C)+!B)+!A ((C (D))+!B)))" *) LUT4 i2_4_lut_adj_36 (.A(n7490), 
-            .B(n4_adj_406), .C(col_num[8]), .D(n877), .Z(n7482));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i2_4_lut_adj_36.INIT = "0x0c4c";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i14_3_lut (.A(n12_adj_407), 
-            .B(row_num[6]), .C(\tail_colliding_N_353[6] ), .Z(n14_adj_405));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(!(A ((C)+!B)+!A ((C (D))+!B)))" *) LUT4 i2_4_lut_adj_43 (.A(n7490), 
+            .B(n4_adj_428), .C(col_num[8]), .D(n877), .Z(n7482));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i2_4_lut_adj_43.INIT = "0x0c4c";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i14_3_lut (.A(n12_adj_429), 
+            .B(row_num[6]), .C(\tail_colliding_N_353[6] ), .Z(n14_adj_427));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i14_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i12_3_lut (.A(n10_adj_408), 
-            .B(row_num[5]), .C(\tail_colliding_N_353[5] ), .Z(n12_adj_407));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i12_3_lut (.A(n10_adj_430), 
+            .B(row_num[5]), .C(\tail_colliding_N_353[5] ), .Z(n12_adj_429));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i10_3_lut (.A(n8_adj_409), 
-            .B(row_num[4]), .C(\tail_colliding_N_353[4] ), .Z(n10_adj_408));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i10_3_lut (.A(n8_adj_431), 
+            .B(row_num[4]), .C(\tail_colliding_N_353[4] ), .Z(n10_adj_430));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i8_3_lut (.A(n6_adj_410), 
-            .B(row_num[3]), .C(\tail_colliding_N_353[3] ), .Z(n8_adj_409));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i8_3_lut (.A(n6_adj_432), 
+            .B(row_num[3]), .C(\tail_colliding_N_353[3] ), .Z(n8_adj_431));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i8_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i6_3_lut (.A(n4_adj_411), 
-            .B(row_num[2]), .C(\tail_colliding_N_353[2] ), .Z(n6_adj_410));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_27_i6_3_lut (.A(n4_adj_433), 
+            .B(row_num[2]), .C(\tail_colliding_N_353[2] ), .Z(n6_adj_432));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i6_3_lut.INIT = "0x8e8e";
     (* lut_function="(!(A (B (C+!(D))+!B !((D)+!C))+!A (C+!(D))))" *) LUT4 y_pos_9__I_0_i4_3_lut_4_lut (.A(row_num[0]), 
             .B(\RGB_o_5__N_109[0] ), .C(\bigbird_y_pos[1] ), .D(row_num[1]), 
@@ -1297,31 +771,31 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
     defparam y_pos_9__I_0_i4_3_lut_4_lut.INIT = "0x2f02";
     (* lut_function="(!(A ((C)+!B)+!A !(B ((D)+!C)+!B !(C+!(D)))))" *) LUT4 LessThan_27_i4_4_lut (.A(tail_colliding_N_353[0]), 
             .B(row_num[1]), .C(tail_colliding_N_353[1]), .D(row_num[0]), 
-            .Z(n4_adj_411));   /* synthesis lineinfo="@0(36[84],36[102])"*/
+            .Z(n4_adj_433));   /* synthesis lineinfo="@0(36[84],36[102])"*/
     defparam LessThan_27_i4_4_lut.INIT = "0x4d0c";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_37 (.A(col_num[5]), .B(col_num[4]), 
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_44 (.A(col_num[5]), .B(col_num[4]), 
             .Z(n1063));
-    defparam i1_2_lut_adj_37.INIT = "0xeeee";
-    (* lut_function="(A (B (C+!(D)))+!A !(((D)+!C)+!B))" *) LUT4 i1_4_lut_adj_38 (.A(n18_adj_412), 
-            .B(n18_adj_413), .C(row_num[9]), .D(\beak_colliding_N_271[9] ), 
-            .Z(n4_adj_406));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i1_4_lut_adj_38.INIT = "0x80c8";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i18_3_lut (.A(n16_adj_414), 
-            .B(row_num[8]), .C(\beak_colliding_N_271[8] ), .Z(n18_adj_412));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    defparam i1_2_lut_adj_44.INIT = "0xeeee";
+    (* lut_function="(A (B (C+!(D)))+!A !(((D)+!C)+!B))" *) LUT4 i1_4_lut_adj_45 (.A(n18_adj_434), 
+            .B(n18_adj_435), .C(row_num[9]), .D(\beak_colliding_N_271[9] ), 
+            .Z(n4_adj_428));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i1_4_lut_adj_45.INIT = "0x80c8";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i18_3_lut (.A(n16_adj_436), 
+            .B(row_num[8]), .C(\beak_colliding_N_271[8] ), .Z(n18_adj_434));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i18_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i253_4_lut (.A(n875), 
-            .B(col_num[8]), .C(n877), .D(col_num[5]), .Z(n18_adj_413));
+            .B(col_num[8]), .C(n877), .D(col_num[5]), .Z(n18_adj_435));
     defparam i253_4_lut.INIT = "0xc8c0";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i16_3_lut (.A(n14_adj_415), 
-            .B(row_num[7]), .C(\beak_colliding_N_271[7] ), .Z(n16_adj_414));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i16_3_lut (.A(n14_adj_437), 
+            .B(row_num[7]), .C(\beak_colliding_N_271[7] ), .Z(n16_adj_436));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i16_3_lut.INIT = "0x8e8e";
     FA2 add_50_add_4_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .A1(GND_net), 
         .B1(\RGB_o_5__N_109[0] ), .C1(VCC_net), .D1(n8845), .CI1(n8845), 
         .CO0(n8845), .CO1(n6333), .S1(beak_colliding_N_271[0]));
     defparam add_50_add_4_1.INIT0 = "0xc33c";
     defparam add_50_add_4_1.INIT1 = "0xc33c";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i14_3_lut (.A(n12_adj_416), 
-            .B(row_num[6]), .C(\beak_colliding_N_271[6] ), .Z(n14_adj_415));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i14_3_lut (.A(n12_adj_438), 
+            .B(row_num[6]), .C(\beak_colliding_N_271[6] ), .Z(n14_adj_437));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i14_3_lut.INIT = "0x8e8e";
     FA2 add_175_add_4_9 (.A0(GND_net), .B0(\bigbird_y_pos[8] ), .C0(GND_net), 
         .D0(n6382), .CI0(n6382), .A1(GND_net), .B1(\bigbird_y_pos[9] ), 
@@ -1352,76 +826,76 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
         .CO0(n8815), .CO1(n6376), .S1(RGB_o_5__N_109[1]));
     defparam add_175_add_4_1.INIT0 = "0xc33c";
     defparam add_175_add_4_1.INIT1 = "0xc33c";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i12_3_lut (.A(n10_adj_417), 
-            .B(row_num[5]), .C(\beak_colliding_N_271[5] ), .Z(n12_adj_416));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i12_3_lut (.A(n10_adj_439), 
+            .B(row_num[5]), .C(\beak_colliding_N_271[5] ), .Z(n12_adj_438));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i10_3_lut (.A(n8_adj_418), 
-            .B(row_num[4]), .C(\beak_colliding_N_271[4] ), .Z(n10_adj_417));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i10_3_lut (.A(n8_adj_440), 
+            .B(row_num[4]), .C(\beak_colliding_N_271[4] ), .Z(n10_adj_439));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i8_3_lut (.A(n6_adj_419), 
-            .B(row_num[3]), .C(\beak_colliding_N_271[3] ), .Z(n8_adj_418));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i8_3_lut (.A(n6_adj_441), 
+            .B(row_num[3]), .C(\beak_colliding_N_271[3] ), .Z(n8_adj_440));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i8_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i6_3_lut (.A(n4_adj_420), 
-            .B(row_num[2]), .C(\beak_colliding_N_271[2] ), .Z(n6_adj_419));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_51_i6_3_lut (.A(n4_adj_442), 
+            .B(row_num[2]), .C(\beak_colliding_N_271[2] ), .Z(n6_adj_441));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i6_3_lut.INIT = "0x8e8e";
     (* lut_function="(!(A ((C)+!B)+!A !(B ((D)+!C)+!B !(C+!(D)))))" *) LUT4 LessThan_51_i4_4_lut (.A(beak_colliding_N_271[0]), 
             .B(row_num[1]), .C(beak_colliding_N_271[1]), .D(row_num[0]), 
-            .Z(n4_adj_420));   /* synthesis lineinfo="@0(38[90],38[108])"*/
+            .Z(n4_adj_442));   /* synthesis lineinfo="@0(38[90],38[108])"*/
     defparam LessThan_51_i4_4_lut.INIT = "0x4d0c";
-    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_39 (.A(col_num[9]), 
+    (* lut_function="(!(A+!(B)))" *) LUT4 i1_2_lut_adj_46 (.A(col_num[9]), 
             .B(n1039), .Z(n7505));
-    defparam i1_2_lut_adj_39.INIT = "0x4444";
-    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i1_3_lut_adj_40 (.A(n6_adj_421), 
+    defparam i1_2_lut_adj_46.INIT = "0x4444";
+    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i1_3_lut_adj_47 (.A(n6_adj_443), 
             .B(n7499), .C(col_num[3]), .Z(n7490));
-    defparam i1_3_lut_adj_40.INIT = "0xc8c8";
+    defparam i1_3_lut_adj_47.INIT = "0xc8c8";
     (* lut_function="(A+(B))" *) LUT4 i440_2_lut (.A(col_num[6]), .B(col_num[7]), 
             .Z(n877));   /* synthesis lineinfo="@0(35[64],35[82])"*/
     defparam i440_2_lut.INIT = "0xeeee";
     (* lut_function="(A (B))" *) LUT4 i337_2_lut (.A(col_num[1]), .B(col_num[2]), 
-            .Z(n6_adj_421));
+            .Z(n6_adj_443));
     defparam i337_2_lut.INIT = "0x8888";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_41 (.A(col_num[5]), .B(col_num[4]), 
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_48 (.A(col_num[5]), .B(col_num[4]), 
             .Z(n7499));
-    defparam i1_2_lut_adj_41.INIT = "0x8888";
+    defparam i1_2_lut_adj_48.INIT = "0x8888";
     (* lut_function="(A+!(B+(C+!(D))))" *) LUT4 i77_4_lut (.A(n7507), .B(col_num[9]), 
             .C(valid_N_44), .D(n7478), .Z(n258));   /* synthesis lineinfo="@0(35[3],37[131])"*/
     defparam i77_4_lut.INIT = "0xabaa";
-    (* lut_function="(A (B (C+(D))))" *) LUT4 i3_4_lut_adj_42 (.A(n161), .B(n6_adj_380), 
+    (* lut_function="(A (B (C+(D))))" *) LUT4 i3_4_lut_adj_49 (.A(n161), .B(n6_adj_402), 
             .C(n1045), .D(n1058), .Z(n7478));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i3_4_lut_adj_42.INIT = "0x8880";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i20_3_lut (.A(n18_adj_422), 
+    defparam i3_4_lut_adj_49.INIT = "0x8880";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i20_3_lut (.A(n18_adj_444), 
             .B(screen_colliding_N_237[9]), .C(row_num[9]), .Z(n161));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i20_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_43 (.A(col_num[3]), 
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_50 (.A(col_num[3]), 
             .B(n1042), .C(col_num[5]), .D(col_num[4]), .Z(n1045));
-    defparam i1_4_lut_adj_43.INIT = "0xc8c0";
+    defparam i1_4_lut_adj_50.INIT = "0xc8c0";
     (* lut_function="(A (B)+!A (B+!(C+(D))))" *) LUT4 i1401_4_lut (.A(n7470), 
-            .B(RGB_o_5__N_57), .C(n6_adj_423), .D(n7476), .Z(RGB_c_5));   /* synthesis lineinfo="@0(33[11],42[16])"*/
+            .B(RGB_o_5__N_57), .C(n6_adj_445), .D(n7476), .Z(RGB_c_5));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i1401_4_lut.INIT = "0xcccd";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i18_3_lut (.A(n16_adj_424), 
-            .B(screen_colliding_N_237[8]), .C(row_num[8]), .Z(n18_adj_422));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i18_3_lut (.A(n16_adj_446), 
+            .B(screen_colliding_N_237[8]), .C(row_num[8]), .Z(n18_adj_444));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i18_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B)+!A (B+(C+(D))))" *) LUT4 i2_4_lut_adj_44 (.A(col_num[9]), 
-            .B(n7508), .C(n7478), .D(n8_adj_425), .Z(n6_adj_423));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i2_4_lut_adj_44.INIT = "0xdddc";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i16_3_lut (.A(n14_adj_426), 
-            .B(screen_colliding_N_237[7]), .C(row_num[7]), .Z(n16_adj_424));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B)+!A (B+(C+(D))))" *) LUT4 i2_4_lut_adj_51 (.A(col_num[9]), 
+            .B(n7508), .C(n7478), .D(n8_adj_447), .Z(n6_adj_445));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i2_4_lut_adj_51.INIT = "0xdddc";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i16_3_lut (.A(n14_adj_448), 
+            .B(screen_colliding_N_237[7]), .C(row_num[7]), .Z(n16_adj_446));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i16_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+(C)))" *) LUT4 i1_3_lut_adj_45 (.A(n1039), .B(n7482), 
-            .C(n7480), .Z(n8_adj_425));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i1_3_lut_adj_45.INIT = "0xa8a8";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i14_3_lut (.A(n12_adj_427), 
-            .B(screen_colliding_N_237[6]), .C(row_num[6]), .Z(n14_adj_426));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+(C)))" *) LUT4 i1_3_lut_adj_52 (.A(n1039), .B(n7482), 
+            .C(n7480), .Z(n8_adj_447));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i1_3_lut_adj_52.INIT = "0xa8a8";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i14_3_lut (.A(n12_adj_449), 
+            .B(screen_colliding_N_237[6]), .C(row_num[6]), .Z(n14_adj_448));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i14_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i12_3_lut (.A(n10_adj_428), 
-            .B(screen_colliding_N_237[5]), .C(row_num[5]), .Z(n12_adj_427));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i12_3_lut (.A(n10_adj_450), 
+            .B(screen_colliding_N_237[5]), .C(row_num[5]), .Z(n12_adj_449));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i10_3_lut (.A(n8_adj_429), 
-            .B(screen_colliding_N_237[4]), .C(row_num[4]), .Z(n10_adj_428));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i10_3_lut (.A(n8_adj_451), 
+            .B(screen_colliding_N_237[4]), .C(row_num[4]), .Z(n10_adj_450));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i10_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_46 (.A(n7482), .B(n7505), 
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_53 (.A(n7482), .B(n7505), 
             .Z(n7507));
-    defparam i1_2_lut_adj_46.INIT = "0x8888";
+    defparam i1_2_lut_adj_53.INIT = "0x8888";
     FA2 add_174_add_4_7 (.A0(GND_net), .B0(\p_x_str[6] ), .C0(GND_net), 
         .D0(n6305), .CI0(n6305), .A1(GND_net), .B1(\p_x_str[7] ), .C1(GND_net), 
         .D1(n8839), .CI1(n8839), .CO0(n8839), .CO1(n6307), .S0(\RGB_o_5__N_63[6] ), 
@@ -1459,8 +933,8 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1_2_lut_4_lut (.A(col_num[6]), 
             .B(col_num[7]), .C(col_num[5]), .D(col_num[4]), .Z(n993));   /* synthesis lineinfo="@0(37[41],37[59])"*/
     defparam i1_2_lut_4_lut.INIT = "0xfffe";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i8_3_lut (.A(n6_adj_430), 
-            .B(screen_colliding_N_237[3]), .C(row_num[3]), .Z(n8_adj_429));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i8_3_lut (.A(n6_adj_452), 
+            .B(screen_colliding_N_237[3]), .C(row_num[3]), .Z(n8_adj_451));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i8_3_lut.INIT = "0x8e8e";
     FA2 add_26_add_4_5 (.A0(GND_net), .B0(\bigbird_y_pos[3] ), .C0(GND_net), 
         .D0(n6324), .CI0(n6324), .A1(GND_net), .B1(\bigbird_y_pos[4] ), 
@@ -1582,64 +1056,64 @@ module game_renderer (output \RGB_o_5__N_63[5] , input [9:0]col_num, input [9:0]
         .CO0(n8779), .CO1(n6397), .S1(n57[0]));
     defparam add_28_add_4_1.INIT0 = "0xc33c";
     defparam add_28_add_4_1.INIT1 = "0xc33c";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i6_3_lut (.A(n4_adj_431), 
-            .B(screen_colliding_N_237[2]), .C(row_num[2]), .Z(n6_adj_430));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 LessThan_41_i6_3_lut (.A(n4_adj_453), 
+            .B(screen_colliding_N_237[2]), .C(row_num[2]), .Z(n6_adj_452));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i6_3_lut.INIT = "0x8e8e";
     (* lut_function="(A+(B+(C)))" *) LUT4 i1224_2_lut_3_lut (.A(n7508), .B(n7514), 
             .C(row_num[9]), .Z(n1665));
     defparam i1224_2_lut_3_lut.INIT = "0xfefe";
     (* lut_function="(!(A (B (C (D))+!B (C+(D)))+!A ((C)+!B)))" *) LUT4 LessThan_41_i4_4_lut (.A(screen_colliding_N_237[0]), 
             .B(screen_colliding_N_237[1]), .C(row_num[1]), .D(row_num[0]), 
-            .Z(n4_adj_431));   /* synthesis lineinfo="@0(37[112],37[130])"*/
+            .Z(n4_adj_453));   /* synthesis lineinfo="@0(37[112],37[130])"*/
     defparam LessThan_41_i4_4_lut.INIT = "0x0c8e";
     (* lut_function="(A (B (C (D))+!B (D))+!A (B (C (D))+!B ((D)+!C)))" *) LUT4 i1232_4_lut_4_lut (.A(n258), 
             .B(n7488), .C(n1665), .D(n262), .Z(RGB_c_0));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i1232_4_lut_4_lut.INIT = "0xf301";
     (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1545_4_lut (.A(col_num[3]), 
-            .B(col_num[8]), .C(n993), .D(n6_adj_421), .Z(n1986));
+            .B(col_num[8]), .C(n993), .D(n6_adj_443), .Z(n1986));
     defparam i1545_4_lut.INIT = "0xc8c0";
-    (* lut_function="(!(A ((C)+!B)+!A ((C (D))+!B)))" *) LUT4 i2_4_lut_adj_47 (.A(n1934), 
-            .B(n4_adj_432), .C(col_num[8]), .D(n877), .Z(n7480));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i2_4_lut_adj_47.INIT = "0x0c4c";
+    (* lut_function="(!(A ((C)+!B)+!A ((C (D))+!B)))" *) LUT4 i2_4_lut_adj_54 (.A(n1934), 
+            .B(n4_adj_454), .C(col_num[8]), .D(n877), .Z(n7480));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i2_4_lut_adj_54.INIT = "0x0c4c";
     (* lut_function="(A (B+(C))+!A (B))" *) LUT4 i6967_3_lut (.A(n4), .B(n1053), 
             .C(row_num[5]), .Z(n7775));
     defparam i6967_3_lut.INIT = "0xecec";
     (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1493_4_lut (.A(col_num[0]), 
-            .B(col_num[5]), .C(n875), .D(n6_adj_421), .Z(n1934));
+            .B(col_num[5]), .C(n875), .D(n6_adj_443), .Z(n1934));
     defparam i1493_4_lut.INIT = "0xc8c0";
-    (* lut_function="(A (B (C+!(D))+!B !((D)+!C)))" *) LUT4 i1_4_lut_adj_48 (.A(RGB_o_5__N_85), 
-            .B(n18_adj_434), .C(row_num[9]), .D(\bigbird_y_pos[9] ), .Z(n4_adj_432));   /* synthesis lineinfo="@0(35[3],36[126])"*/
-    defparam i1_4_lut_adj_48.INIT = "0x80a8";
+    (* lut_function="(A (B (C+!(D))+!B !((D)+!C)))" *) LUT4 i1_4_lut_adj_55 (.A(RGB_o_5__N_85), 
+            .B(n18_adj_456), .C(row_num[9]), .D(\bigbird_y_pos[9] ), .Z(n4_adj_454));   /* synthesis lineinfo="@0(35[3],36[126])"*/
+    defparam i1_4_lut_adj_55.INIT = "0x80a8";
     (* lut_function="(A (B)+!A (B+!(C+!(D))))" *) LUT4 i1411_4_lut (.A(n5), 
             .B(n951), .C(n7470), .D(n7775), .Z(RGB_c_2));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i1411_4_lut.INIT = "0xcdcc";
-    (* lut_function="(A (B+(C))+!A (B))" *) LUT4 i1_3_lut_adj_49 (.A(n1042), 
+    (* lut_function="(A (B+(C))+!A (B))" *) LUT4 i1_3_lut_adj_56 (.A(n1042), 
             .B(n1058), .C(n7490), .Z(RGB_o_5__N_85));
-    defparam i1_3_lut_adj_49.INIT = "0xecec";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_50 (.A(game_over), .B(n258), 
+    defparam i1_3_lut_adj_56.INIT = "0xecec";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_57 (.A(game_over), .B(n258), 
             .Z(n5));
-    defparam i1_2_lut_adj_50.INIT = "0xeeee";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i18_3_lut (.A(n16_adj_435), 
-            .B(row_num[8]), .C(\bigbird_y_pos[8] ), .Z(n18_adj_434));   /* synthesis lineinfo="@0(35[89],35[102])"*/
+    defparam i1_2_lut_adj_57.INIT = "0xeeee";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i18_3_lut (.A(n16_adj_457), 
+            .B(row_num[8]), .C(\bigbird_y_pos[8] ), .Z(n18_adj_456));   /* synthesis lineinfo="@0(35[89],35[102])"*/
     defparam y_pos_9__I_0_i18_3_lut.INIT = "0x8e8e";
     (* lut_function="(A (B+!(C+(D)))+!A (B))" *) LUT4 i1412_4_lut (.A(game_over), 
             .B(n951), .C(n258), .D(n1665), .Z(RGB_c_1));   /* synthesis lineinfo="@0(33[11],42[16])"*/
     defparam i1412_4_lut.INIT = "0xccce";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i16_3_lut (.A(n14_adj_436), 
-            .B(row_num[7]), .C(\bigbird_y_pos[7] ), .Z(n16_adj_435));   /* synthesis lineinfo="@0(35[89],35[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i16_3_lut (.A(n14_adj_458), 
+            .B(row_num[7]), .C(\bigbird_y_pos[7] ), .Z(n16_adj_457));   /* synthesis lineinfo="@0(35[89],35[102])"*/
     defparam y_pos_9__I_0_i16_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i14_3_lut (.A(n12_adj_437), 
-            .B(row_num[6]), .C(\bigbird_y_pos[6] ), .Z(n14_adj_436));   /* synthesis lineinfo="@0(35[89],35[102])"*/
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i14_3_lut (.A(n12_adj_459), 
+            .B(row_num[6]), .C(\bigbird_y_pos[6] ), .Z(n14_adj_458));   /* synthesis lineinfo="@0(35[89],35[102])"*/
     defparam y_pos_9__I_0_i14_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A+(B (C)+!B (C+(D))))" *) LUT4 i2_4_lut_adj_51 (.A(n258), 
+    (* lut_function="(A+(B (C)+!B (C+(D))))" *) LUT4 i2_4_lut_adj_58 (.A(n258), 
             .B(n1665), .C(n262), .D(n7779), .Z(RGB_c_3));   /* synthesis lineinfo="@0(33[11],42[16])"*/
-    defparam i2_4_lut_adj_51.INIT = "0xfbfa";
-    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i12_3_lut (.A(n10_adj_364), 
-            .B(row_num[5]), .C(\bigbird_y_pos[5] ), .Z(n12_adj_437));   /* synthesis lineinfo="@0(35[89],35[102])"*/
+    defparam i2_4_lut_adj_58.INIT = "0xfbfa";
+    (* lut_function="(A (B+!(C))+!A !((C)+!B))" *) LUT4 y_pos_9__I_0_i12_3_lut (.A(n10_adj_386), 
+            .B(row_num[5]), .C(\bigbird_y_pos[5] ), .Z(n12_adj_459));   /* synthesis lineinfo="@0(35[89],35[102])"*/
     defparam y_pos_9__I_0_i12_3_lut.INIT = "0x8e8e";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_52 (.A(game_over), .B(n7488), 
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_59 (.A(game_over), .B(n7488), 
             .Z(n7779));   /* synthesis lineinfo="@0(33[11],42[16])"*/
-    defparam i1_2_lut_adj_52.INIT = "0xeeee";
+    defparam i1_2_lut_adj_59.INIT = "0xeeee";
     VHI i1 (.Z(VCC_net));
     
 endmodule
@@ -1696,6 +1170,532 @@ module \lscc_pll(DIVR="3",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORT
     defparam u_PLL_B.ENABLE_ICEGATE_PORTB = "0";
     defparam u_PLL_B.TEST_MODE = "0";
     defparam u_PLL_B.FREQUENCY_PIN_REFERENCECLK = "48.000000";
+    VHI i1 (.Z(VCC_net));
+    
+endmodule
+
+//
+// Verilog Description of module game_state
+//
+
+module game_state (input clappy_c, output game_over, output \bigbird_y_pos[8] , 
+            output \RGB_o_5__N_109[0] , input [9:0]screen_colliding_N_237, 
+            output \bigbird_y_pos[3] , output \bigbird_y_pos[1] , output \bigbird_y_pos[2] , 
+            output \p_x_str[9] , output \p_x_str[8] , output \p_x_str[7] , 
+            output \p_x_str[6] , output \p_x_str[5] , output \p_x_str[4] , 
+            output \p_x_str[3] , output \p_x_str[2] , output \p_x_str[1] , 
+            output \bigbird_y_pos[9] , input is_over_N_199, output reset, 
+            input n7088, input GND_net, output \bigbird_y_pos[5] , input clk, 
+            input \beak_colliding_N_271[7] , input \beak_colliding_N_271[8] , 
+            input \beak_colliding_N_271[6] , output n2030, input \RGB_o_5__N_63[7] , 
+            input \RGB_o_5__N_63[9] , input \RGB_o_5__N_63[8] , output beak_colliding_N_281, 
+            output n2006, input \beak_colliding_N_271[2] , input \beak_colliding_N_271[5] , 
+            input \beak_colliding_N_271[4] , input \beak_colliding_N_271[3] , 
+            output n6931, output \bigbird_y_pos[7] , input \RGB_o_5__N_109[4] , 
+            input \RGB_o_5__N_109[2] , input \RGB_o_5__N_109[3] , output n6925, 
+            output \bigbird_y_pos[6] , output \bigbird_y_pos[4] , output head_colliding_N_305, 
+            input \tail_colliding_N_353[2] , input \tail_colliding_N_353[5] , 
+            input \tail_colliding_N_353[4] , input \tail_colliding_N_353[3] , 
+            output n2042, input \RGB_o_5__N_63[5] , input \RGB_o_5__N_63[4] , 
+            output n1048, input \RGB_o_5__N_63[1] , input \RGB_o_5__N_63[3] , 
+            input \RGB_o_5__N_63[2] , output n2026, output n6915, input \RGB_o_5__N_109[5] , 
+            output n1966, output n1049, input \RGB_o_5__N_63[6] , output n1924, 
+            input n376);
+    
+    (* is_clock=1 *) wire [22:0]forty_eight_mhz_counter;   /* synthesis lineinfo="@1(20[9],20[32])"*/
+    (* is_clock=1 *) wire clk;   /* synthesis lineinfo="@3(79[8],79[11])"*/
+    
+    wire bird_y_pos_9__N_192;
+    wire [10:0]n62;
+    
+    wire n1078, n1095, reset_N_197;
+    wire [9:0]n45;
+    wire [9:0]wait_counter;   /* synthesis lineinfo="@1(29[9],29[21])"*/
+    
+    wire n6894, n6, n4;
+    wire [9:0]n45_adj_385;
+    
+    wire VCC_net, n6390, n8944, n6392, n6388, n8941;
+    wire [19:0]n85;
+    wire [19:0]n149;
+    
+    wire n1970, n4_adj_378, n1920, n15_adj_379, n14_adj_380, n5_adj_381, 
+        n6_adj_382, n1046, n8_adj_383, n6386, n8938, n6355, n8974, 
+        n6357, n8971, n8935, n6373, n9001, n6_adj_384, n6371, 
+        n8998, n6369, n8995, n6367, n8992, n6365, n8989, n6363, 
+        n8986, n6361, n8983, n6359, n8980, n8977, n6437, n8932, 
+        n6435, n8893, n6433, n8890, n6431, n8887, n6429, n8884, 
+        n8881, n6425, n8929, n6423, n8926, n6421, n8923, n6419, 
+        n8920, n8917, n6394, n8950, n8947, GND_net_c;
+    
+    (* lut_function="(!((B)+!A))" *) LUT4 i108_2_lut (.A(clappy_c), .B(game_over), 
+            .Z(bird_y_pos_9__N_192));   /* synthesis lineinfo="@3(7[4],7[10])"*/
+    defparam i108_2_lut.INIT = "0x2222";
+    FD1P3XZ bird_y_pos_i0_i0 (.D(n62[1]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\RGB_o_5__N_109[0] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i0.REGSET = "RESET";
+    defparam bird_y_pos_i0_i0.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i3 (.D(n62[4]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[3] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i3.REGSET = "RESET";
+    defparam bird_y_pos_i0_i3.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C (D))))" *) LUT4 i3_4_lut (.A(game_over), .B(reset_N_197), 
+            .C(clappy_c), .D(screen_colliding_N_237[9]), .Z(n1095));
+    defparam i3_4_lut.INIT = "0x8000";
+    FD1P3XZ bird_y_pos_i0_i1 (.D(n62[2]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[1] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i1.REGSET = "RESET";
+    defparam bird_y_pos_i0_i1.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i2 (.D(n62[3]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[2] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i2.REGSET = "SET";
+    defparam bird_y_pos_i0_i2.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i9 (.D(n45[9]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[9] ));
+    defparam pipe_x_start_182__i9.REGSET = "SET";
+    defparam pipe_x_start_182__i9.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i8 (.D(n45[8]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[8] ));
+    defparam pipe_x_start_182__i8.REGSET = "SET";
+    defparam pipe_x_start_182__i8.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i4_4_lut (.A(wait_counter[9]), 
+            .B(n6894), .C(wait_counter[7]), .D(n6), .Z(reset_N_197));
+    defparam i4_4_lut.INIT = "0xfffe";
+    FD1P3XZ pipe_x_start_182__i7 (.D(n45[7]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[7] ));
+    defparam pipe_x_start_182__i7.REGSET = "SET";
+    defparam pipe_x_start_182__i7.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i6 (.D(n45[6]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[6] ));
+    defparam pipe_x_start_182__i6.REGSET = "SET";
+    defparam pipe_x_start_182__i6.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i5 (.D(n45[5]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[5] ));
+    defparam pipe_x_start_182__i5.REGSET = "SET";
+    defparam pipe_x_start_182__i5.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i4 (.D(n45[4]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[4] ));
+    defparam pipe_x_start_182__i4.REGSET = "RESET";
+    defparam pipe_x_start_182__i4.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i3 (.D(n45[3]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[3] ));
+    defparam pipe_x_start_182__i3.REGSET = "SET";
+    defparam pipe_x_start_182__i3.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ pipe_x_start_182__i2 (.D(n45[2]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[2] ));
+    defparam pipe_x_start_182__i2.REGSET = "RESET";
+    defparam pipe_x_start_182__i2.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C+(D))))" *) LUT4 i2_4_lut (.A(wait_counter[5]), 
+            .B(wait_counter[4]), .C(wait_counter[3]), .D(n4), .Z(n6894));
+    defparam i2_4_lut.INIT = "0x8880";
+    FD1P3XZ pipe_x_start_182__i1 (.D(n45[1]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(game_over), .Q(\p_x_str[1] ));
+    defparam pipe_x_start_182__i1.REGSET = "RESET";
+    defparam pipe_x_start_182__i1.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i9 (.D(n62[10]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[9] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i9.REGSET = "RESET";
+    defparam bird_y_pos_i0_i9.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i0 (.D(n45_adj_385[0]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[0]));
+    defparam wait_counter_183__i0.REGSET = "RESET";
+    defparam wait_counter_183__i0.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i9 (.D(n45_adj_385[9]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[9]));
+    defparam wait_counter_183__i9.REGSET = "RESET";
+    defparam wait_counter_183__i9.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(wait_counter[6]), .B(wait_counter[8]), 
+            .Z(n6));
+    defparam i1_2_lut.INIT = "0xeeee";
+    FD1P3XZ wait_counter_183__i8 (.D(n45_adj_385[8]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[8]));
+    defparam wait_counter_183__i8.REGSET = "RESET";
+    defparam wait_counter_183__i8.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i7 (.D(n45_adj_385[7]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[7]));
+    defparam wait_counter_183__i7.REGSET = "RESET";
+    defparam wait_counter_183__i7.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B (C)))" *) LUT4 i1_3_lut (.A(wait_counter[2]), .B(wait_counter[0]), 
+            .C(wait_counter[1]), .Z(n4));
+    defparam i1_3_lut.INIT = "0xeaea";
+    FD1P3XZ wait_counter_183__i6 (.D(n45_adj_385[6]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[6]));
+    defparam wait_counter_183__i6.REGSET = "RESET";
+    defparam wait_counter_183__i6.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i5 (.D(n45_adj_385[5]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[5]));
+    defparam wait_counter_183__i5.REGSET = "RESET";
+    defparam wait_counter_183__i5.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i4 (.D(n45_adj_385[4]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[4]));
+    defparam wait_counter_183__i4.REGSET = "RESET";
+    defparam wait_counter_183__i4.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i3 (.D(n45_adj_385[3]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[3]));
+    defparam wait_counter_183__i3.REGSET = "RESET";
+    defparam wait_counter_183__i3.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i2 (.D(n45_adj_385[2]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[2]));
+    defparam wait_counter_183__i2.REGSET = "RESET";
+    defparam wait_counter_183__i2.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ wait_counter_183__i1 (.D(n45_adj_385[1]), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(is_over_N_199), .Q(wait_counter[1]));
+    defparam wait_counter_183__i1.REGSET = "RESET";
+    defparam wait_counter_183__i1.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ is_over_98 (.D(n7088), .SP(VCC_net), .CK(forty_eight_mhz_counter[19]), 
+            .SR(GND_net_c), .Q(game_over));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam is_over_98.REGSET = "RESET";
+    defparam is_over_98.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B (C)))" *) LUT4 reset_I_0_101_3_lut (.A(game_over), 
+            .B(reset_N_197), .C(clappy_c), .Z(reset));   /* synthesis lineinfo="@1(92[20],92[70])"*/
+    defparam reset_I_0_101_3_lut.INIT = "0x8080";
+    FD1P3XZ bird_y_pos_i0_i5 (.D(n62[6]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[5] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i5.REGSET = "SET";
+    defparam bird_y_pos_i0_i5.SRMODE = "CE_OVER_LSR";
+    FA2 wait_counter_183_add_4_7 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[5]), 
+        .D0(n6390), .CI0(n6390), .A1(GND_net), .B1(GND_net), .C1(wait_counter[6]), 
+        .D1(n8944), .CI1(n8944), .CO0(n8944), .CO1(n6392), .S0(n45_adj_385[5]), 
+        .S1(n45_adj_385[6]));
+    defparam wait_counter_183_add_4_7.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_7.INIT1 = "0xc33c";
+    FA2 wait_counter_183_add_4_5 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[3]), 
+        .D0(n6388), .CI0(n6388), .A1(GND_net), .B1(GND_net), .C1(wait_counter[4]), 
+        .D1(n8941), .CI1(n8941), .CO0(n8941), .CO1(n6390), .S0(n45_adj_385[3]), 
+        .S1(n45_adj_385[4]));
+    defparam wait_counter_183_add_4_5.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_5.INIT1 = "0xc33c";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i19 (.D(n85[19]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(forty_eight_mhz_counter[19]));
+    defparam forty_eight_mhz_counter_181_190__i19.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i19.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i18 (.D(n85[18]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[18]));
+    defparam forty_eight_mhz_counter_181_190__i18.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i18.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i17 (.D(n85[17]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[17]));
+    defparam forty_eight_mhz_counter_181_190__i17.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i17.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i16 (.D(n85[16]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[16]));
+    defparam forty_eight_mhz_counter_181_190__i16.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i16.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i15 (.D(n85[15]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[15]));
+    defparam forty_eight_mhz_counter_181_190__i15.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i15.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i14 (.D(n85[14]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[14]));
+    defparam forty_eight_mhz_counter_181_190__i14.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i14.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i13 (.D(n85[13]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[13]));
+    defparam forty_eight_mhz_counter_181_190__i13.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i13.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i12 (.D(n85[12]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[12]));
+    defparam forty_eight_mhz_counter_181_190__i12.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i12.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1589_4_lut (.A(\beak_colliding_N_271[7] ), 
+            .B(\beak_colliding_N_271[8] ), .C(n1970), .D(\beak_colliding_N_271[6] ), 
+            .Z(n2030));
+    defparam i1589_4_lut.INIT = "0xccc8";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i11 (.D(n85[11]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[11]));
+    defparam forty_eight_mhz_counter_181_190__i11.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i11.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i10 (.D(n85[10]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[10]));
+    defparam forty_eight_mhz_counter_181_190__i10.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i10.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+(C))+!A (B+(C (D))))" *) LUT4 i280_4_lut (.A(\RGB_o_5__N_63[7] ), 
+            .B(\RGB_o_5__N_63[9] ), .C(\RGB_o_5__N_63[8] ), .D(n4_adj_378), 
+            .Z(beak_colliding_N_281));
+    defparam i280_4_lut.INIT = "0xfcec";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i9 (.D(n85[9]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[9]));
+    defparam forty_eight_mhz_counter_181_190__i9.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i9.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i8 (.D(n85[8]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[8]));
+    defparam forty_eight_mhz_counter_181_190__i8.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i8.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i7 (.D(n85[7]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[7]));
+    defparam forty_eight_mhz_counter_181_190__i7.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i7.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i6 (.D(n85[6]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[6]));
+    defparam forty_eight_mhz_counter_181_190__i6.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i6.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i5 (.D(n85[5]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[5]));
+    defparam forty_eight_mhz_counter_181_190__i5.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i5.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i4 (.D(n85[4]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[4]));
+    defparam forty_eight_mhz_counter_181_190__i4.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i4.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1565_4_lut (.A(n1920), 
+            .B(\p_x_str[8] ), .C(\p_x_str[6] ), .D(\p_x_str[7] ), .Z(n2006));
+    defparam i1565_4_lut.INIT = "0xccc8";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1529_4_lut (.A(\beak_colliding_N_271[2] ), 
+            .B(\beak_colliding_N_271[5] ), .C(\beak_colliding_N_271[4] ), 
+            .D(\beak_colliding_N_271[3] ), .Z(n1970));
+    defparam i1529_4_lut.INIT = "0xc8c0";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i3 (.D(n85[3]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[3]));
+    defparam forty_eight_mhz_counter_181_190__i3.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i3.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i2 (.D(n85[2]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[2]));
+    defparam forty_eight_mhz_counter_181_190__i2.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i2.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i8_4_lut (.A(n15_adj_379), .B(screen_colliding_N_237[4]), 
+            .C(n14_adj_380), .D(screen_colliding_N_237[0]), .Z(n6931));
+    defparam i8_4_lut.INIT = "0xfffe";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i1 (.D(n85[1]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[1]));
+    defparam forty_eight_mhz_counter_181_190__i1.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i1.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i7 (.D(n62[8]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[7] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i7.REGSET = "RESET";
+    defparam bird_y_pos_i0_i7.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i6 (.D(n62[7]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[6] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i6.REGSET = "SET";
+    defparam bird_y_pos_i0_i6.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i2_3_lut (.A(\RGB_o_5__N_109[4] ), 
+            .B(\RGB_o_5__N_109[2] ), .C(\RGB_o_5__N_109[3] ), .Z(n6925));
+    defparam i2_3_lut.INIT = "0xfefe";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i6_4_lut (.A(screen_colliding_N_237[5]), 
+            .B(screen_colliding_N_237[1]), .C(screen_colliding_N_237[6]), 
+            .D(screen_colliding_N_237[2]), .Z(n15_adj_379));
+    defparam i6_4_lut.INIT = "0xfffe";
+    (* lut_function="(A+(B+(C)))" *) LUT4 i5_3_lut (.A(screen_colliding_N_237[8]), 
+            .B(screen_colliding_N_237[7]), .C(screen_colliding_N_237[3]), 
+            .Z(n14_adj_380));
+    defparam i5_3_lut.INIT = "0xfefe";
+    FD1P3XZ forty_eight_mhz_counter_181_190__i0 (.D(n85[0]), .SP(VCC_net), 
+            .CK(clk), .SR(GND_net_c), .Q(n149[0]));
+    defparam forty_eight_mhz_counter_181_190__i0.REGSET = "RESET";
+    defparam forty_eight_mhz_counter_181_190__i0.SRMODE = "CE_OVER_LSR";
+    FD1P3XZ bird_y_pos_i0_i4 (.D(n62[5]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[4] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i4.REGSET = "RESET";
+    defparam bird_y_pos_i0_i4.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+(C+(D)))+!A (B+(D)))" *) LUT4 i1_4_lut (.A(n5_adj_381), 
+            .B(\RGB_o_5__N_63[9] ), .C(n6_adj_382), .D(\RGB_o_5__N_63[8] ), 
+            .Z(head_colliding_N_305));
+    defparam i1_4_lut.INIT = "0xffec";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1601_4_lut (.A(\tail_colliding_N_353[2] ), 
+            .B(\tail_colliding_N_353[5] ), .C(\tail_colliding_N_353[4] ), 
+            .D(\tail_colliding_N_353[3] ), .Z(n2042));
+    defparam i1601_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A (B)+!A (B (C+(D))))" *) LUT4 i1_4_lut_adj_30 (.A(\RGB_o_5__N_63[5] ), 
+            .B(n1046), .C(\RGB_o_5__N_63[4] ), .D(n8_adj_383), .Z(n1048));
+    defparam i1_4_lut_adj_30.INIT = "0xccc8";
+    FA2 wait_counter_183_add_4_3 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[1]), 
+        .D0(n6386), .CI0(n6386), .A1(GND_net), .B1(GND_net), .C1(wait_counter[2]), 
+        .D1(n8938), .CI1(n8938), .CO0(n8938), .CO1(n6388), .S0(n45_adj_385[1]), 
+        .S1(n45_adj_385[2]));
+    defparam wait_counter_183_add_4_3.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_3.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_3 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[1]), .D0(n6355), .CI0(n6355), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[2]), .D1(n8974), .CI1(n8974), .CO0(n8974), .CO1(n6357), 
+        .S0(n85[1]), .S1(n85[2]));
+    defparam forty_eight_mhz_counter_181_190_add_4_3.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_3.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_1 (.A0(GND_net), .B0(GND_net), 
+        .C0(GND_net), .A1(GND_net), .B1(VCC_net), .C1(n149[0]), .D1(n8971), 
+        .CI1(n8971), .CO0(n8971), .CO1(n6355), .S1(n85[0]));
+    defparam forty_eight_mhz_counter_181_190_add_4_1.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_1.INIT1 = "0xc33c";
+    FA2 wait_counter_183_add_4_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
+        .A1(GND_net), .B1(VCC_net), .C1(wait_counter[0]), .D1(n8935), 
+        .CI1(n8935), .CO0(n8935), .CO1(n6386), .S1(n45_adj_385[0]));
+    defparam wait_counter_183_add_4_1.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_1.INIT1 = "0xc33c";
+    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i350_3_lut (.A(\RGB_o_5__N_63[1] ), 
+            .B(\RGB_o_5__N_63[3] ), .C(\RGB_o_5__N_63[2] ), .Z(n8_adj_383));
+    defparam i350_3_lut.INIT = "0xc8c8";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1585_4_lut (.A(\bigbird_y_pos[2] ), 
+            .B(\bigbird_y_pos[5] ), .C(\bigbird_y_pos[4] ), .D(\bigbird_y_pos[3] ), 
+            .Z(n2026));
+    defparam i1585_4_lut.INIT = "0xc8c0";
+    FA2 forty_eight_mhz_counter_181_190_add_4_21 (.A0(GND_net), .B0(GND_net), 
+        .C0(forty_eight_mhz_counter[19]), .D0(n6373), .CI0(n6373), .A1(GND_net), 
+        .B1(GND_net), .C1(GND_net), .D1(n9001), .CI1(n9001), .CO0(n9001), 
+        .S0(n85[19]));
+    defparam forty_eight_mhz_counter_181_190_add_4_21.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_21.INIT1 = "0xc33c";
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i4_4_lut_adj_31 (.A(\p_x_str[6] ), 
+            .B(\p_x_str[5] ), .C(\p_x_str[7] ), .D(n6_adj_384), .Z(n6915));
+    defparam i4_4_lut_adj_31.INIT = "0xfffe";
+    (* lut_function="(A (B+(C (D)))+!A (B))" *) LUT4 i1_4_lut_adj_32 (.A(\p_x_str[3] ), 
+            .B(\p_x_str[4] ), .C(\p_x_str[1] ), .D(\p_x_str[2] ), .Z(n6_adj_384));
+    defparam i1_4_lut_adj_32.INIT = "0xeccc";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1525_4_lut (.A(\RGB_o_5__N_109[2] ), 
+            .B(\RGB_o_5__N_109[5] ), .C(\RGB_o_5__N_109[4] ), .D(\RGB_o_5__N_109[3] ), 
+            .Z(n1966));
+    defparam i1525_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_33 (.A(\RGB_o_5__N_63[3] ), 
+            .B(n1046), .C(\RGB_o_5__N_63[5] ), .D(\RGB_o_5__N_63[4] ), 
+            .Z(n1049));
+    defparam i1_4_lut_adj_33.INIT = "0xc8c0";
+    (* lut_function="(A+(B (C)+!B (C (D))))" *) LUT4 i1_4_lut_adj_34 (.A(\RGB_o_5__N_63[6] ), 
+            .B(\RGB_o_5__N_63[3] ), .C(\RGB_o_5__N_63[5] ), .D(\RGB_o_5__N_63[4] ), 
+            .Z(n4_adj_378));
+    defparam i1_4_lut_adj_34.INIT = "0xfaea";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1479_4_lut (.A(\p_x_str[2] ), 
+            .B(\p_x_str[5] ), .C(\p_x_str[4] ), .D(\p_x_str[3] ), .Z(n1920));
+    defparam i1479_4_lut.INIT = "0xc8c0";
+    (* lut_function="(A (B (C+(D)))+!A (B (C)))" *) LUT4 i1_4_lut_adj_35 (.A(\RGB_o_5__N_63[1] ), 
+            .B(\RGB_o_5__N_63[4] ), .C(\RGB_o_5__N_63[3] ), .D(\RGB_o_5__N_63[2] ), 
+            .Z(n5_adj_381));
+    defparam i1_4_lut_adj_35.INIT = "0xc8c0";
+    (* lut_function="(A (B)+!A (B (C)))" *) LUT4 i1483_3_lut (.A(\p_x_str[3] ), 
+            .B(\p_x_str[5] ), .C(\p_x_str[4] ), .Z(n1924));
+    defparam i1483_3_lut.INIT = "0xc8c8";
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_36 (.A(\RGB_o_5__N_63[6] ), 
+            .B(\RGB_o_5__N_63[7] ), .Z(n1046));
+    defparam i1_2_lut_adj_36.INIT = "0x8888";
+    FA2 forty_eight_mhz_counter_181_190_add_4_19 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[17]), .D0(n6371), .CI0(n6371), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[18]), .D1(n8998), .CI1(n8998), .CO0(n8998), .CO1(n6373), 
+        .S0(n85[17]), .S1(n85[18]));
+    defparam forty_eight_mhz_counter_181_190_add_4_19.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_19.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_17 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[15]), .D0(n6369), .CI0(n6369), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[16]), .D1(n8995), .CI1(n8995), .CO0(n8995), .CO1(n6371), 
+        .S0(n85[15]), .S1(n85[16]));
+    defparam forty_eight_mhz_counter_181_190_add_4_17.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_17.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_15 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[13]), .D0(n6367), .CI0(n6367), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[14]), .D1(n8992), .CI1(n8992), .CO0(n8992), .CO1(n6369), 
+        .S0(n85[13]), .S1(n85[14]));
+    defparam forty_eight_mhz_counter_181_190_add_4_15.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_15.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_13 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[11]), .D0(n6365), .CI0(n6365), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[12]), .D1(n8989), .CI1(n8989), .CO0(n8989), .CO1(n6367), 
+        .S0(n85[11]), .S1(n85[12]));
+    defparam forty_eight_mhz_counter_181_190_add_4_13.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_13.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_11 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[9]), .D0(n6363), .CI0(n6363), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[10]), .D1(n8986), .CI1(n8986), .CO0(n8986), .CO1(n6365), 
+        .S0(n85[9]), .S1(n85[10]));
+    defparam forty_eight_mhz_counter_181_190_add_4_11.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_11.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_9 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[7]), .D0(n6361), .CI0(n6361), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[8]), .D1(n8983), .CI1(n8983), .CO0(n8983), .CO1(n6363), 
+        .S0(n85[7]), .S1(n85[8]));
+    defparam forty_eight_mhz_counter_181_190_add_4_9.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_9.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_7 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[5]), .D0(n6359), .CI0(n6359), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[6]), .D1(n8980), .CI1(n8980), .CO0(n8980), .CO1(n6361), 
+        .S0(n85[5]), .S1(n85[6]));
+    defparam forty_eight_mhz_counter_181_190_add_4_7.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_7.INIT1 = "0xc33c";
+    FA2 forty_eight_mhz_counter_181_190_add_4_5 (.A0(GND_net), .B0(GND_net), 
+        .C0(n149[3]), .D0(n6357), .CI0(n6357), .A1(GND_net), .B1(GND_net), 
+        .C1(n149[4]), .D1(n8977), .CI1(n8977), .CO0(n8977), .CO1(n6359), 
+        .S0(n85[3]), .S1(n85[4]));
+    defparam forty_eight_mhz_counter_181_190_add_4_5.INIT0 = "0xc33c";
+    defparam forty_eight_mhz_counter_181_190_add_4_5.INIT1 = "0xc33c";
+    FA2 add_5852_11 (.A0(GND_net), .B0(\bigbird_y_pos[9] ), .C0(bird_y_pos_9__N_192), 
+        .D0(n6437), .CI0(n6437), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
+        .D1(n8932), .CI1(n8932), .CO0(n8932), .S0(n62[10]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_11.INIT0 = "0xc33c";
+    defparam add_5852_11.INIT1 = "0xc33c";
+    FA2 add_5852_9 (.A0(GND_net), .B0(\bigbird_y_pos[7] ), .C0(bird_y_pos_9__N_192), 
+        .D0(n6435), .CI0(n6435), .A1(GND_net), .B1(\bigbird_y_pos[8] ), 
+        .C1(bird_y_pos_9__N_192), .D1(n8893), .CI1(n8893), .CO0(n8893), 
+        .CO1(n6437), .S0(n62[8]), .S1(n62[9]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_9.INIT0 = "0xc33c";
+    defparam add_5852_9.INIT1 = "0xc33c";
+    FA2 add_5852_7 (.A0(GND_net), .B0(\bigbird_y_pos[5] ), .C0(bird_y_pos_9__N_192), 
+        .D0(n6433), .CI0(n6433), .A1(GND_net), .B1(\bigbird_y_pos[6] ), 
+        .C1(bird_y_pos_9__N_192), .D1(n8890), .CI1(n8890), .CO0(n8890), 
+        .CO1(n6435), .S0(n62[6]), .S1(n62[7]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_7.INIT0 = "0xc33c";
+    defparam add_5852_7.INIT1 = "0xc33c";
+    FA2 add_5852_5 (.A0(GND_net), .B0(\bigbird_y_pos[3] ), .C0(n376), 
+        .D0(n6431), .CI0(n6431), .A1(GND_net), .B1(\bigbird_y_pos[4] ), 
+        .C1(bird_y_pos_9__N_192), .D1(n8887), .CI1(n8887), .CO0(n8887), 
+        .CO1(n6433), .S0(n62[4]), .S1(n62[5]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_5.INIT0 = "0xc33c";
+    defparam add_5852_5.INIT1 = "0xc33c";
+    FA2 add_5852_3 (.A0(GND_net), .B0(\bigbird_y_pos[1] ), .C0(n376), 
+        .D0(n6429), .CI0(n6429), .A1(GND_net), .B1(\bigbird_y_pos[2] ), 
+        .C1(is_over_N_199), .D1(n8884), .CI1(n8884), .CO0(n8884), .CO1(n6431), 
+        .S0(n62[2]), .S1(n62[3]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_3.INIT0 = "0xc33c";
+    defparam add_5852_3.INIT1 = "0xc33c";
+    FA2 add_5852_1 (.A0(GND_net), .B0(bird_y_pos_9__N_192), .C0(GND_net), 
+        .A1(GND_net), .B1(\RGB_o_5__N_109[0] ), .C1(is_over_N_199), .D1(n8881), 
+        .CI1(n8881), .CO0(n8881), .CO1(n6429), .S1(n62[1]));   /* synthesis lineinfo="@1(66[18],69[48])"*/
+    defparam add_5852_1.INIT0 = "0xc33c";
+    defparam add_5852_1.INIT1 = "0xc33c";
+    FA2 add_379_9 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[8] ), .D0(n6425), 
+        .CI0(n6425), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[9] ), 
+        .D1(n8929), .CI1(n8929), .CO0(n8929), .S0(n45[8]), .S1(n45[9]));
+    defparam add_379_9.INIT0 = "0xc33c";
+    defparam add_379_9.INIT1 = "0xc33c";
+    FA2 add_379_7 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[6] ), .D0(n6423), 
+        .CI0(n6423), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[7] ), 
+        .D1(n8926), .CI1(n8926), .CO0(n8926), .CO1(n6425), .S0(n45[6]), 
+        .S1(n45[7]));
+    defparam add_379_7.INIT0 = "0xc33c";
+    defparam add_379_7.INIT1 = "0xc33c";
+    FA2 add_379_5 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[4] ), .D0(n6421), 
+        .CI0(n6421), .A1(GND_net), .B1(VCC_net), .C1(\p_x_str[5] ), 
+        .D1(n8923), .CI1(n8923), .CO0(n8923), .CO1(n6423), .S0(n45[4]), 
+        .S1(n45[5]));
+    defparam add_379_5.INIT0 = "0xc33c";
+    defparam add_379_5.INIT1 = "0xc33c";
+    FA2 add_379_3 (.A0(GND_net), .B0(VCC_net), .C0(\p_x_str[2] ), .D0(n6419), 
+        .CI0(n6419), .A1(GND_net), .B1(GND_net), .C1(\p_x_str[3] ), 
+        .D1(n8920), .CI1(n8920), .CO0(n8920), .CO1(n6421), .S0(n45[2]), 
+        .S1(n45[3]));
+    defparam add_379_3.INIT0 = "0xc33c";
+    defparam add_379_3.INIT1 = "0xc33c";
+    FA2 add_379_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), .A1(GND_net), 
+        .B1(VCC_net), .C1(\p_x_str[1] ), .D1(n8917), .CI1(n8917), .CO0(n8917), 
+        .CO1(n6419), .S1(n45[1]));
+    defparam add_379_1.INIT0 = "0xc33c";
+    defparam add_379_1.INIT1 = "0xc33c";
+    FA2 wait_counter_183_add_4_11 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[9]), 
+        .D0(n6394), .CI0(n6394), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
+        .D1(n8950), .CI1(n8950), .CO0(n8950), .S0(n45_adj_385[9]));
+    defparam wait_counter_183_add_4_11.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_11.INIT1 = "0xc33c";
+    FA2 wait_counter_183_add_4_9 (.A0(GND_net), .B0(GND_net), .C0(wait_counter[7]), 
+        .D0(n6392), .CI0(n6392), .A1(GND_net), .B1(GND_net), .C1(wait_counter[8]), 
+        .D1(n8947), .CI1(n8947), .CO0(n8947), .CO1(n6394), .S0(n45_adj_385[7]), 
+        .S1(n45_adj_385[8]));
+    defparam wait_counter_183_add_4_9.INIT0 = "0xc33c";
+    defparam wait_counter_183_add_4_9.INIT1 = "0xc33c";
+    (* lut_function="(A (B (C)))" *) LUT4 i2_2_lut_3_lut (.A(\RGB_o_5__N_63[5] ), 
+            .B(\RGB_o_5__N_63[6] ), .C(\RGB_o_5__N_63[7] ), .Z(n6_adj_382));
+    defparam i2_2_lut_3_lut.INIT = "0x8080";
+    (* lut_function="((B (C+!(D))+!B !(D))+!A)" *) LUT4 i7341_4_lut_4_lut (.A(game_over), 
+            .B(reset_N_197), .C(clappy_c), .D(screen_colliding_N_237[9]), 
+            .Z(n1078));
+    defparam i7341_4_lut_4_lut.INIT = "0xd5ff";
+    VLO i27 (.Z(GND_net_c));
+    FD1P3XZ bird_y_pos_i0_i8 (.D(n62[9]), .SP(n1078), .CK(forty_eight_mhz_counter[19]), 
+            .SR(n1095), .Q(\bigbird_y_pos[8] ));   /* synthesis lineinfo="@1(65[3],73[10])"*/
+    defparam bird_y_pos_i0_i8.REGSET = "RESET";
+    defparam bird_y_pos_i0_i8.SRMODE = "CE_OVER_LSR";
     VHI i1 (.Z(VCC_net));
     
 endmodule

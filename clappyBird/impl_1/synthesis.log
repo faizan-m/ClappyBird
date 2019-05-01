@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2018 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 28 22:32:01 2019
+Wed May 01 11:16:54 2019
 
 
 Command Line:  C:\lscc\radiant\1.0\ispfpga\bin\nt64\synthesis.exe -f clappyBird_impl_1_lattice.synproj -gui -msgset C:/WorkSpace/gits/ClappyBird/clappyBird/promote.xml 
@@ -220,9 +220,9 @@ Top 10 highest fanout non-clock nets:
   Net : vga_inst/row_num[7], loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 151.051  MB
+Peak Memory Usage: 151.785  MB
 
 --------------------------------------------------------------
-Total CPU time for LSE flow : 3.531  secs
-Total REAL time for LSE flow : 3.000  secs
+Total CPU time for LSE flow : 3.813  secs
+Total REAL time for LSE flow : 5.000  secs
 --------------------------------------------------------------

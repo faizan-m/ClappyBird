@@ -119,7 +119,7 @@ port map(
 	col => col_num
 );
 
-testpattern_inst : game_renderer 
+gamerenderer_inst : game_renderer 
 port map(
 	valid_i => visible_area,
 	row_i => row_num,
